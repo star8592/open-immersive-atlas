@@ -8,6 +8,15 @@
 > **This is a curated, evidence-based index and knowledge archive — not a fork of any third-party product and not a replacement for Three.js, A-Frame, or Blender.**  
 > 本仓库是经过出处核验的双语精选技术索引，不是第三方产品镜像，也不是一个新的 3D 引擎。
 
+## Runnable code labs / 原创可运行技术实验
+
+**[Spatial Lab 01 — Procedural Terrain LOD / 原创 WebGL2 地形 LOD 实验](labs/terrain-lod/)**
+
+An independent, dependency-free WebGL2 demonstration with 49 real geometry chunks, near/far LOD selection, edge skirts, tiny-stone procedural shading, orbit controls, and live CPU frame-interval statistics. The first real headless Chrome smoke test passed low/high LOD switching, wireframe/fog toggles, orbit/zoom and reset. This is a functional smoke test under software rendering, **not** evidence of hardware GPU FPS.  
+原创实验不依赖第三方模型和资产，独立验证可旋转的真实三维地形、LOD、尺度参照与帧间隔。已通过软件渲染模式的 Chrome 操作测试，尚不代表真实 GPU 性能。
+
+[Technical limitations / 技术边界](labs/terrain-lod/README.md) · [Browser smoke test / 浏览器验收脚本](labs/terrain-lod/test-browser.mjs)
+
 ## First edition / 首批收录
 
 **66 independently described references · 4 categories · Chinese and English for every record.**

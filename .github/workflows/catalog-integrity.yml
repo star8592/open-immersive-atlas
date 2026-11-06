@@ -15,6 +15,10 @@ jobs:
           python-version: '3.12'
       - name: Validate bilingual project schema and public-only URLs
         run: python3 scripts/validate_catalog.py
+      - name: Validate standalone WebGL2 lab JavaScript syntax
+        run: |
+          node --check labs/terrain-lod/app.js
+          node --check labs/terrain-lod/test-browser.mjs
       - name: Check generated Markdown reproducibility
         run: |
           python3 scripts/build_catalog.py
