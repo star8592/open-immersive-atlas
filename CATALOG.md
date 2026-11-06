@@ -1,8 +1,8 @@
 # Curated Projects · 双语项目档案
 
-> **64 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
+> **66 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
 >
-> **64 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
+> **66 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
 
 [Home / 首页](README.md) · [Search / 搜索](index.html) · [Data / 数据](data/projects.json)
 
@@ -568,8 +568,8 @@ English: Study chunked loading, component architecture, compression and web perf
 English: Integrates 3D scenes with conventional website state, routing and UI workflows.
 
 **值得学习 / What to learn**  
-中文：学习 React 与实时渲染生命周期边界，避免高频状态触发不必要重渲染。  
-English: Study React/render-loop boundaries and avoid costly high-frequency reconciliations.
+中文：研究组件化游戏场景与帧循环；v10.0.0-alpha.6 默认采用可回退 WebGL2 的新 WebGPURenderer，但旧 GLSL 需评估 /legacy，Alpha 不可直接视为生产稳定版。  
+English: Study composable game scenes and frame scheduling; v10.0.0-alpha.6 defaults to a WebGL2-capable WebGPURenderer but legacy GLSL may need /legacy; alpha is not a stable production baseline.
 
 
 ### Blender
@@ -1146,4 +1146,40 @@ English: Renders physically plausible reflections, refraction, depth of field an
 **值得学习 / What to learn**  
 中文：用于材质对照和商品静帧，不把重型路径追踪作为所有实时游戏场景的默认方案。  
 English: Use it for material baselines and product stills, not as the default for every real-time game.
+
+
+### React Three Rapier
+
+- **Official / 官方**: https://react-three-rapier.pmnd.rs/  
+- **Code / 源码**: https://github.com/pmndrs/react-three-rapier  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT (wrapper code); visual assets and integration terms separate
+
+**中文简介：** 把 Rapier WASM 刚体物理接入 React Three Fiber 的可复用组件库。  
+**English:** A React Three Fiber integration for WASM-based Rapier rigid-body physics.
+
+**为什么厉害 / Why it stands out**  
+中文：通过明确的刚体、碰撞器、关节、传感器与事件接口，为浏览器三维世界建立可信的接触和空间行为。  
+English: Exposes rigid bodies, colliders, joints, sensors and collision events to make spatial behavior testable in browser 3D.
+
+**值得学习 / What to learn**  
+中文：研究物理固定步长与渲染插值、视觉网格和碰撞体分离、车轮接地以及人物与场景的碰撞；不把物理库当成现成车辆模拟。  
+English: Study fixed simulation steps, interpolated rendering, distinct render/collision meshes and wheel or avatar contacts; do not mistake the library for a complete vehicle model.
+
+
+### W3C Immersive Web — WebXR Samples
+
+- **Official / 官方**: https://immersive-web.github.io/webxr-samples/  
+- **Code / 源码**: https://github.com/immersive-web/webxr-samples  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT (software); external media and device datasets require separate review
+
+**中文简介：** 由 Immersive Web 工作社区维护的 WebXR API 示例，覆盖 VR、AR、控制器与空间交互。  
+**English:** Immersive Web community examples covering WebXR VR, AR, controllers and spatial interaction APIs.
+
+**为什么厉害 / Why it stands out**  
+中文：将会话、参考坐标系、锚点、命中测试、手部输入、传送和空间音频拆成可阅读、可独立验证的示例。  
+English: Separates sessions, reference spaces, anchors, hit tests, hand input, teleportation and spatial audio into readable test cases.
+
+**值得学习 / What to learn**  
+中文：学习按设备与会话模式探测能力、统一输入抽象和XR降级；不能从WebGPU支持推断WebGPU-XR支持。  
+English: Learn device- and session-specific feature detection, portable input abstraction and graceful fallback; WebGPU alone does not establish WebGPU-XR support.
 
