@@ -954,6 +954,686 @@
         "game"
       ],
       "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "supersplat-editor",
+      "name": "SuperSplat Editor 3.0",
+      "category": "pipelines",
+      "website": "https://superspl.at/editor",
+      "repository": "https://github.com/playcanvas/supersplat",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/playcanvas/supersplat",
+      "upstream_license": "MIT editor; hosted SuperSplat services proprietary",
+      "summary": {
+        "zh": "PlayCanvas 开源的浏览器高斯泼溅编辑器，3.0 采用 WebGPU 驱动大规模场景的编辑和可视化。",
+        "en": "An open-source browser-based Gaussian splat editor whose 3.0 architecture uses WebGPU for large-scale editing."
+      },
+      "strength": {
+        "zh": "作者把高斯投影、视锥剔除、GPU 排序、选择与导出改成 GPU 与流式处理，降低 JS 堆压力。",
+        "en": "GPU compute projection, culling, sorting, selection and streamed export reduce JavaScript heap pressure."
+      },
+      "learning": {
+        "zh": "重点拆解 3.0 的 GPU radix sort、分块 GPU 存储、选择遮挡与内存基准；不把云端 Studio 误认为开源。",
+        "en": "Study GPU radix sort, chunked storage, occlusion-aware selection and memory benchmarks; separate open editor from hosted Studio."
+      },
+      "tags": [
+        "3DGS",
+        "WebGPU",
+        "GPU-compute",
+        "editing"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "supersplat-viewer",
+      "name": "SuperSplat Viewer",
+      "category": "pipelines",
+      "website": "https://superspl.at/",
+      "repository": "https://github.com/playcanvas/supersplat-viewer",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/playcanvas/supersplat-viewer",
+      "upstream_license": "MIT viewer; hosted platform and uploaded content separate",
+      "summary": {
+        "zh": "面向高斯泼溅场景的可自托管静态网页查看器，支持不同高斯资产格式与碰撞数据。",
+        "en": "A self-hostable static viewer for Gaussian splat scenes, supporting multiple splat formats and optional collision assets."
+      },
+      "strength": {
+        "zh": "官方文档披露 WebGPU 优先、WebGL 回退以及独立碰撞文件入口，兼顾视觉质量与浏览器可用性。",
+        "en": "The documented WebGPU-first/WebGL-fallback path and separate collision inputs serve both visuals and navigability."
+      },
+      "learning": {
+        "zh": "研究 viewer 的设置文件、碰撞 GLB、海报首屏及不同终端的回退表现。",
+        "en": "Study viewer settings, collision GLB, loading posters and cross-device fallback behavior."
+      },
+      "tags": [
+        "3DGS",
+        "WebGPU",
+        "viewer",
+        "collider"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "splat-transform",
+      "name": "SplatTransform",
+      "category": "pipelines",
+      "website": "https://developer.playcanvas.com/user-manual/splat-transform/",
+      "repository": "https://github.com/playcanvas/splat-transform",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/playcanvas/splat-transform",
+      "upstream_license": "MIT library/CLI; source scan data separate",
+      "summary": {
+        "zh": "高斯泼溅格式转换和批处理工具，支持 PLY、SOG、SPZ 等格式及流式多层级输出。",
+        "en": "A CLI and library for converting and batch-processing splats across PLY, SOG, SPZ and other formats."
+      },
+      "strength": {
+        "zh": "将合并、几何变换、筛选、局部性优化、LOD 和碰撞数据生成组织为确定性工具链。",
+        "en": "Combines transforms, filtering, spatial reordering, merging, LOD and collision outputs in a reproducible pipeline."
+      },
+      "learning": {
+        "zh": "测一组相同场景从 PLY 到 Streamed SOG 的体积、首帧时间与碰撞近似误差。",
+        "en": "Measure file size, first-frame latency and collision approximation for PLY→Streamed SOG."
+      },
+      "tags": [
+        "3DGS",
+        "compression",
+        "LOD",
+        "CLI"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "model-viewer",
+      "name": "Google <model-viewer>",
+      "category": "infrastructure",
+      "website": "https://modelviewer.dev/",
+      "repository": "https://github.com/google/model-viewer",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/google/model-viewer",
+      "upstream_license": "Apache-2.0 code; imported model assets separate",
+      "summary": {
+        "zh": "通过 Web Component 将 GLB/glTF 放入网站，并在兼容设备上交接 AR 展示。",
+        "en": "A Web Component for placing interactive glTF/GLB assets into a page and handing off to AR on supported devices."
+      },
+      "strength": {
+        "zh": "将模型查看、轨道控制和网站布局解耦，另有渲染一致性测试工具。",
+        "en": "Separates model display from website layout, with companion render-fidelity tooling."
+      },
+      "learning": {
+        "zh": "比较同一套 GLB 在 model-viewer、Three.js 与商品详情页的真实显示与交互差异。",
+        "en": "Compare the same GLB across model-viewer, custom Three.js and product detail pages."
+      },
+      "tags": [
+        "web-component",
+        "glTF",
+        "AR",
+        "viewer"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "three-mesh-bvh",
+      "name": "three-mesh-bvh",
+      "category": "infrastructure",
+      "website": "https://github.com/gkjohnson/three-mesh-bvh",
+      "repository": "https://github.com/gkjohnson/three-mesh-bvh",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/gkjohnson/three-mesh-bvh",
+      "upstream_license": "MIT",
+      "summary": {
+        "zh": "为 Three.js Mesh 构建 BVH 加速结构，显著改善复杂模型上的 Raycast 和空间查询。",
+        "en": "A BVH acceleration structure for Three.js meshes, speeding up raycasting and spatial queries."
+      },
+      "strength": {
+        "zh": "用层级包围体减少三角形相交测试，适合编辑器选择、场景拾取、局部碰撞和距离查询。",
+        "en": "Hierarchical bounds prune triangle intersection tests for picking, editing, collision queries and distance checks."
+      },
+      "learning": {
+        "zh": "建立高面数 GLB 上 Raycast 与 BVH 的基准并验证动态 Mesh 更新成本。",
+        "en": "Benchmark plain raycasts versus BVH against high-poly GLBs and quantify dynamic mesh update costs."
+      },
+      "tags": [
+        "BVH",
+        "raycast",
+        "collision",
+        "Three.js"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "postprocessing",
+      "name": "pmndrs postprocessing",
+      "category": "infrastructure",
+      "website": "https://pmndrs.github.io/postprocessing/public/demo/",
+      "repository": "https://github.com/pmndrs/postprocessing",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/pmndrs/postprocessing",
+      "upstream_license": "Check current upstream license; WebGL examples documented",
+      "summary": {
+        "zh": "Three.js 的 EffectComposer 后处理库，用 RenderPass 和 EffectPass 组织画面效果。",
+        "en": "A postprocessing library for Three.js that organizes fullscreen effects as render and effect passes."
+      },
+      "strength": {
+        "zh": "公开说明线性工作流、HDR 半浮点中间缓冲与 Bloom 等效果的正确组合方式。",
+        "en": "Documents linear color workflow, HDR half-float buffers and composable effects such as bloom."
+      },
+      "learning": {
+        "zh": "核对 SRGB/线性光/HDR 顺序，避免叠加后处理造成带状、过曝和帧率下降。",
+        "en": "Validate sRGB/linear/HDR order and measure banding, clipping and GPU cost."
+      },
+      "tags": [
+        "HDR",
+        "bloom",
+        "WebGL",
+        "Three.js"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "cesiumjs",
+      "name": "CesiumJS",
+      "category": "engines",
+      "website": "https://cesium.com/cesiumjs",
+      "repository": "https://github.com/CesiumGS/cesium",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/CesiumGS/cesium",
+      "upstream_license": "Apache-2.0 engine; Cesium ion/data licensing separate",
+      "summary": {
+        "zh": "用于三维地球、全球地形、地理时序和动态数据可视化的浏览器引擎。",
+        "en": "A browser engine for 3D globes, global terrain, time-dependent geospatial data and visualization."
+      },
+      "strength": {
+        "zh": "开放格式、全球尺度数据管理与可视化更新机制适合大型地形世界的技术对照。",
+        "en": "Open formats and globe-scale data management provide a reference for huge 3D terrains."
+      },
+      "learning": {
+        "zh": "学习地理坐标、瓦片级别、视域剔除和地理数据授权；不把 ion 订阅当成引擎许可证。",
+        "en": "Study coordinate systems, tile LOD, visibility and geodata rights; do not conflate ion subscriptions with engine licensing."
+      },
+      "tags": [
+        "geospatial",
+        "3D-Tiles",
+        "terrain",
+        "LOD"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "3d-tiles-renderer",
+      "name": "3d-tiles-renderer",
+      "category": "infrastructure",
+      "website": "https://github.com/NASA-AMMOS/3DTilesRendererJS",
+      "repository": "https://github.com/NASA-AMMOS/3DTilesRendererJS",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/NASA-AMMOS/3DTilesRendererJS",
+      "upstream_license": "Check current upstream LICENSE; tile data separately licensed",
+      "summary": {
+        "zh": "将 3D Tiles 分层空间数据带入 Three.js、Babylon.js 和 PlayCanvas 的渲染库。",
+        "en": "A renderer for 3D Tiles datasets with Three.js, Babylon.js and PlayCanvas integrations."
+      },
+      "strength": {
+        "zh": "按需流式读取大型几何瓦片，帮助现有引擎处理大范围城市、火星及地形数据。",
+        "en": "Streams tiled geometric data for existing engines, including large city or planetary scenes."
+      },
+      "learning": {
+        "zh": "研究瓦片请求调度、显存与网络预算、几何正确性和不同引擎一致性。",
+        "en": "Study tile request scheduling, GPU/network budgets, geometry correctness and cross-engine fidelity."
+      },
+      "tags": [
+        "3D-Tiles",
+        "streaming",
+        "terrain",
+        "Three.js"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "drei",
+      "name": "@react-three/drei",
+      "category": "infrastructure",
+      "website": "https://drei.docs.pmnd.rs/",
+      "repository": "https://github.com/pmndrs/drei",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/pmndrs/drei",
+      "upstream_license": "Check current upstream LICENSE",
+      "summary": {
+        "zh": "面向 React Three Fiber 的常用 3D 控件与现成组件集合。",
+        "en": "A helper/component library for React Three Fiber applications."
+      },
+      "strength": {
+        "zh": "把轨道控制、环境光照、加载器和场景交互等重复工程化需求封装成组件。",
+        "en": "Packages reusable controls, environment helpers, asset loaders and scene interactions."
+      },
+      "learning": {
+        "zh": "研究哪些组件能加快产品展示开发，哪些高频更新需直接 Three.js 控制。",
+        "en": "Evaluate which helpers accelerate product viewers and which high-frequency paths need direct Three.js."
+      },
+      "tags": [
+        "React",
+        "Three.js",
+        "components"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "theatre-js",
+      "name": "Theatre.js",
+      "category": "infrastructure",
+      "website": "https://www.theatrejs.com/",
+      "repository": "https://github.com/theatre-js/theatre",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/theatre-js/theatre",
+      "upstream_license": "Apache-2.0 public repository; 1.0 development disclosed in private",
+      "summary": {
+        "zh": "支持可视化时间轴和程序化控制的网页精密动画编排工具。",
+        "en": "A timeline-based animation toolkit for detailed motion design and programmatic control."
+      },
+      "strength": {
+        "zh": "把镜头位置、关键帧和微交互作为可编辑数据，而不仅是脚本里散落的 Tween。",
+        "en": "Turns camera paths, keyframes and micro-interactions into editable data rather than scattered tweens."
+      },
+      "learning": {
+        "zh": "用一段原创 3D 产品分镜验证关键帧与用户拖动的正确交互；关注公开版本滞后说明。",
+        "en": "Prototype an original product shot with keyframes plus user scrubbing, noting the public release lag."
+      },
+      "tags": [
+        "animation",
+        "timeline",
+        "camera"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "threlte",
+      "name": "Threlte",
+      "category": "engines",
+      "website": "https://threlte.xyz/",
+      "repository": "https://github.com/threlte/threlte",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/threlte/threlte",
+      "upstream_license": "Check upstream project license",
+      "summary": {
+        "zh": "为 Svelte 应用提供声明式 Three.js 场景集成。",
+        "en": "A declarative Three.js integration for Svelte applications."
+      },
+      "strength": {
+        "zh": "利用 Svelte 的响应式状态与组件结构搭建 3D 页面，适合非 React 项目。",
+        "en": "Uses Svelte reactivity and components for 3D pages without requiring React."
+      },
+      "learning": {
+        "zh": "比较同一场景在 Threlte 和原生 Three.js 中的更新、资源释放与渲染开销。",
+        "en": "Compare update cycles, disposal and rendering cost against vanilla Three.js."
+      },
+      "tags": [
+        "Svelte",
+        "Three.js",
+        "framework"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "tresjs",
+      "name": "TresJS",
+      "category": "engines",
+      "website": "https://tresjs.org/",
+      "repository": "https://github.com/Tresjs/tres",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/Tresjs/tres",
+      "upstream_license": "Check upstream project license",
+      "summary": {
+        "zh": "面向 Vue 的声明式 Three.js 生态，便于在 Vue 网站中组合三维组件。",
+        "en": "A declarative Three.js ecosystem for integrating scenes into Vue applications."
+      },
+      "strength": {
+        "zh": "将 Vue 响应式状态和图形实体组合，为普通业务页面添加可控 3D 内容。",
+        "en": "Combines Vue reactivity with graphic entities to add interactive 3D into conventional apps."
+      },
+      "learning": {
+        "zh": "对照同一 GLB 商品页在 Vue/TresJS 与 Three.js 的交互延迟及内存使用。",
+        "en": "Compare input latency and memory for the same GLB viewer across Vue/TresJS and native Three.js."
+      },
+      "tags": [
+        "Vue",
+        "Three.js",
+        "framework"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "ogl",
+      "name": "OGL",
+      "category": "engines",
+      "website": "https://github.com/oframe/ogl",
+      "repository": "https://github.com/oframe/ogl",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/oframe/ogl",
+      "upstream_license": "Check upstream license",
+      "summary": {
+        "zh": "轻量级 WebGL 渲染库，适合自定义 Shader 和高控制力的交互视觉项目。",
+        "en": "A lightweight WebGL library oriented toward custom shaders and controlled visual experiences."
+      },
+      "strength": {
+        "zh": "抽象层较薄，便于在视觉实验中直接管理着色器和缓冲区。",
+        "en": "A relatively thin abstraction gives visual experiments direct control over shaders and buffers."
+      },
+      "learning": {
+        "zh": "学习渲染基础和 GPU 数据组织，再评估其与大型游戏引擎的职责边界。",
+        "en": "Learn render fundamentals and GPU data layout, while assessing the boundary with full engines."
+      },
+      "tags": [
+        "WebGL",
+        "shader",
+        "lightweight"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "regl",
+      "name": "regl",
+      "category": "engines",
+      "website": "https://regl-project.github.io/regl/",
+      "repository": "https://github.com/regl-project/regl",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/regl-project/regl",
+      "upstream_license": "Check upstream license",
+      "summary": {
+        "zh": "以声明式命令组织 WebGL draw calls 的函数式渲染工具。",
+        "en": "A functional WebGL toolkit organized around declarative draw commands."
+      },
+      "strength": {
+        "zh": "将 WebGL 状态与绘制命令组合为可复用的调用结构。",
+        "en": "Packages WebGL state and draw commands into reusable invocation units."
+      },
+      "learning": {
+        "zh": "研究 draw command、状态管理及直接 WebGL 与 Three.js 的性能差异。",
+        "en": "Study draw commands, state management and performance versus raw WebGL or Three.js."
+      },
+      "tags": [
+        "WebGL",
+        "draw-call",
+        "API"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "cannon-es",
+      "name": "cannon-es",
+      "category": "infrastructure",
+      "website": "https://pmndrs.github.io/cannon-es/",
+      "repository": "https://github.com/pmndrs/cannon-es",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/pmndrs/cannon-es",
+      "upstream_license": "Check upstream LICENSE",
+      "summary": {
+        "zh": "JavaScript/TypeScript 生态的 3D 刚体物理与碰撞引擎。",
+        "en": "A JavaScript/TypeScript 3D rigid-body physics engine."
+      },
+      "strength": {
+        "zh": "提供轻量的浏览器物理选择，便于对照 Rapier 的集成成本与计算性能。",
+        "en": "Offers a comparatively lightweight browser-physics choice for benchmarking against Rapier."
+      },
+      "learning": {
+        "zh": "在同一场景比较固定步长、刚体堆叠稳定性与碰撞开销。",
+        "en": "Compare fixed-step stacking stability and collision cost with another engine."
+      },
+      "tags": [
+        "physics",
+        "rigid-body",
+        "JS"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "spector-js",
+      "name": "Spector.js",
+      "category": "infrastructure",
+      "website": "https://spector.babylonjs.com/",
+      "repository": "https://github.com/BabylonJS/Spector.js",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/BabylonJS/Spector.js",
+      "upstream_license": "Check current upstream LICENSE",
+      "summary": {
+        "zh": "浏览器 WebGL 帧捕获与 GPU 绘制命令调试工具。",
+        "en": "A WebGL frame capture and graphics debugging tool for the browser."
+      },
+      "strength": {
+        "zh": "把复杂帧的 shader、纹理、状态和 draw calls 拆开分析，定位黑屏与性能热点。",
+        "en": "Inspects shaders, textures, state and draw calls to diagnose black frames and GPU bottlenecks."
+      },
+      "learning": {
+        "zh": "对我们游戏的黑幕、材质状态错误和多余 Draw Call 做真实帧捕获分析。",
+        "en": "Capture real frames to investigate black geometry, incorrect materials and redundant draw calls."
+      },
+      "tags": [
+        "GPU-debug",
+        "WebGL",
+        "profiling"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "gltf-sample-viewer",
+      "name": "Khronos glTF Sample Viewer",
+      "category": "infrastructure",
+      "website": "https://github.khronos.org/glTF-Sample-Viewer-Release/",
+      "repository": "https://github.com/KhronosGroup/glTF-Sample-Viewer",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/KhronosGroup/glTF-Sample-Viewer",
+      "upstream_license": "Check current repository license and asset-by-asset rights",
+      "summary": {
+        "zh": "Khronos 官方 glTF 2.0 参考查看器，用于验证 PBR 材质和扩展支持。",
+        "en": "The Khronos reference glTF 2.0 viewer for evaluating PBR materials and extensions."
+      },
+      "strength": {
+        "zh": "提供独立于我们渲染器的模型对照基线，帮助区分资产缺陷和引擎缺陷。",
+        "en": "Provides a renderer-independent asset baseline to distinguish model defects from engine bugs."
+      },
+      "learning": {
+        "zh": "用同一 GLB 对照官方 Viewer、Three.js、Godot 的外观与动画差异。",
+        "en": "Compare a GLB's materials and animation in the reference viewer, Three.js and Godot."
+      },
+      "tags": [
+        "glTF",
+        "PBR",
+        "conformance"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "gltf-validator",
+      "name": "Khronos glTF Validator",
+      "category": "infrastructure",
+      "website": "https://github.khronos.org/glTF-Validator/",
+      "repository": "https://github.com/KhronosGroup/glTF-Validator",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/KhronosGroup/glTF-Validator",
+      "upstream_license": "Apache-2.0",
+      "summary": {
+        "zh": "按 glTF 2.0 标准检查 GLB/glTF 结构、材质、动画及扩展的官方验证工具。",
+        "en": "The official validator for glTF 2.0 structures, buffers, animations, images and extensions."
+      },
+      "strength": {
+        "zh": "给出机器可读的 JSON 问题报告，能把资产发布从肉眼挑错升级成自动校验。",
+        "en": "Produces machine-readable JSON reports that turn asset compliance into an automated release check."
+      },
+      "learning": {
+        "zh": "把 Validator 加入资产工厂，结合可视对照和碰撞检查而非把语法通过当视觉合格。",
+        "en": "Integrate validation into asset QA alongside visual comparison and collision tests."
+      },
+      "tags": [
+        "glTF",
+        "validation",
+        "QA"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "gltf-sample-models",
+      "name": "Khronos glTF Sample Models",
+      "category": "infrastructure",
+      "website": "https://github.com/KhronosGroup/glTF-Sample-Models",
+      "repository": "https://github.com/KhronosGroup/glTF-Sample-Models",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/KhronosGroup/glTF-Sample-Models",
+      "upstream_license": "Per-model licenses vary; do not assume blanket reuse",
+      "summary": {
+        "zh": "Khronos 维护的 glTF 示例模型集合，覆盖多种材质、动画与扩展测试场景。",
+        "en": "A curated collection of glTF sample assets spanning materials, animation and extensions."
+      },
+      "strength": {
+        "zh": "提供具备明确参考预期的模型，用于发现不同引擎间 PBR 与格式兼容差异。",
+        "en": "Supplies reference assets for testing PBR and compatibility across rendering engines."
+      },
+      "learning": {
+        "zh": "逐模型核对授权，挑选允许的样本构建多引擎外观回归测试。",
+        "en": "Audit each model's license before using it in cross-engine visual regression tests."
+      },
+      "tags": [
+        "glTF",
+        "fixtures",
+        "PBR"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "draco",
+      "name": "Google Draco",
+      "category": "infrastructure",
+      "website": "https://google.github.io/draco/",
+      "repository": "https://github.com/google/draco",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/google/draco",
+      "upstream_license": "Apache-2.0",
+      "summary": {
+        "zh": "Google 开源的 3D 网格与点云几何压缩库。",
+        "en": "Google's open-source geometry compression for 3D meshes and point clouds."
+      },
+      "strength": {
+        "zh": "大幅压缩可传输几何数据，代价是解码时间与运行端处理开销。",
+        "en": "Reduces geometry payload size at the cost of decoding work."
+      },
+      "learning": {
+        "zh": "测 Draco 与 Meshopt 在同一 GLB 上的文件大小、解码耗时和设备兼容。",
+        "en": "Compare Draco and Meshopt on the same GLB for size, decode time and compatibility."
+      },
+      "tags": [
+        "compression",
+        "mesh",
+        "glTF"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "basis-universal",
+      "name": "Basis Universal",
+      "category": "infrastructure",
+      "website": "https://github.com/BinomialLLC/basis_universal",
+      "repository": "https://github.com/BinomialLLC/basis_universal",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/BinomialLLC/basis_universal",
+      "upstream_license": "Check current upstream LICENSE; texture source rights separate",
+      "summary": {
+        "zh": "面向 GPU 纹理的超压缩与多平台转码工具。",
+        "en": "A supercompressed texture codec and transcoding toolkit for GPU delivery."
+      },
+      "strength": {
+        "zh": "一次存储即可按目标设备转码为不同的 GPU 纹理格式，有利于减小带宽和显存占用。",
+        "en": "Stores compressed textures once and transcodes for platform GPU formats to improve delivery."
+      },
+      "learning": {
+        "zh": "比较 KTX2/Basis 和原始 PNG 的画质、带宽、启动耗时及显存表现。",
+        "en": "Benchmark KTX2/Basis against PNG for quality, bandwidth, startup time and GPU memory."
+      },
+      "tags": [
+        "texture",
+        "KTX2",
+        "compression"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "stats-js",
+      "name": "stats.js",
+      "category": "infrastructure",
+      "website": "https://github.com/mrdoob/stats.js",
+      "repository": "https://github.com/mrdoob/stats.js",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/mrdoob/stats.js",
+      "upstream_license": "MIT",
+      "summary": {
+        "zh": "极简的浏览器 FPS、帧时间与内存实时监测面板。",
+        "en": "A compact browser panel displaying FPS, frame time and memory metrics."
+      },
+      "strength": {
+        "zh": "不隐藏真实性能状态，快速监测过度 Shader、分辨率和循环开销。",
+        "en": "Exposes basic real-time performance signals for expensive shaders, resolution and loops."
+      },
+      "learning": {
+        "zh": "将轻量监控接入开发场景，并用浏览器 Performance 工具交叉验证。",
+        "en": "Embed basic monitoring in development scenes and cross-check with browser profiling."
+      },
+      "tags": [
+        "FPS",
+        "profiling",
+        "debug"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "three-gpu-pathtracer",
+      "name": "three-gpu-pathtracer",
+      "category": "infrastructure",
+      "website": "https://gkjohnson.github.io/three-gpu-pathtracer/",
+      "repository": "https://github.com/gkjohnson/three-gpu-pathtracer",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/gkjohnson/three-gpu-pathtracer",
+      "upstream_license": "Check current upstream LICENSE",
+      "summary": {
+        "zh": "结合 Three.js、BVH 和 GPU 计算着色器的渐进式物理路径追踪项目。",
+        "en": "A progressive physically based path tracer combining Three.js, BVH and GPU compute shaders."
+      },
+      "strength": {
+        "zh": "在浏览器内实现具有真实反射、折射、焦外与光源采样的高品质渲染。",
+        "en": "Renders physically plausible reflections, refraction, depth of field and sampled lighting in-browser."
+      },
+      "learning": {
+        "zh": "用于材质对照和商品静帧，不把重型路径追踪作为所有实时游戏场景的默认方案。",
+        "en": "Use it for material baselines and product stills, not as the default for every real-time game."
+      },
+      "tags": [
+        "path-tracing",
+        "WebGPU",
+        "BVH"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "playcanvas-web-components",
+      "name": "PlayCanvas Web Components",
+      "category": "engines",
+      "website": "https://developer.playcanvas.com/user-manual/web-components/",
+      "repository": "https://github.com/playcanvas/web-components",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/playcanvas/web-components",
+      "upstream_license": "MIT repository; editor/hosted services separate",
+      "summary": {
+        "zh": "通过自定义 HTML 元素创建和配置 PlayCanvas 三维场景的组件方案。",
+        "en": "A set of HTML custom elements for constructing and configuring PlayCanvas scenes."
+      },
+      "strength": {
+        "zh": "将一些 3D 场景配置转化成声明式标记，降低产品网页整合门槛。",
+        "en": "Expresses common scene configuration in declarative HTML, simplifying product-site integration."
+      },
+      "learning": {
+        "zh": "研究静态网页中的 3D 初始化、可访问性和资源加载边界。",
+        "en": "Study 3D initialization, accessibility and asset loading in conventional pages."
+      },
+      "tags": [
+        "web-component",
+        "PlayCanvas",
+        "HTML"
+      ],
+      "reviewed_on": "2026-11-07"
     }
   ]
 }
