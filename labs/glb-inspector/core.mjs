@@ -13,7 +13,8 @@ function parse(bytes,name){
   let jsonBytes=bytes,bin=null,format='glTF';
   if((bytes.length>=4&&dv.getUint32(0,true)===0x46546c67)||name.toLowerCase().endsWith('.glb')){
     format='GLB';
-    if(bytes.length<20||dv.getUint32(0,true)!==0x46546c67)failure('MAGIC','GLB 文件头无效','Invalid GLB header');
+    if(bytes.length<20)failure('TRUNCATED','GLB 文件头不完整','Truncated GLB header');
+    if(dv.getUint32(0,true)!==0x46546c67)failure('MAGIC','GLB 魔数无效','Invalid GLB magic');
     if(dv.getUint32(4,true)!==2)failure('VERSION','仅支持 GLB v2','GLB v2 required');
     if(dv.getUint32(8,true)!==bytes.length)failure('LENGTH','GLB 文件长度不一致','GLB header length mismatch');
     let offset=12,chunk=0;
