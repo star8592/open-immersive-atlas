@@ -17,6 +17,13 @@ An independent, dependency-free WebGL2 demonstration with 49 real geometry chunk
 
 [Technical limitations / 技术边界](labs/terrain-lod/README.md) · [Browser smoke test / 浏览器验收脚本](labs/terrain-lod/test-browser.mjs)
 
+**[Spatial Lab 02 — Offline GLB Asset Inspector / 原创 GLB/glTF 离线模型检查台](labs/glb-inspector/)**
+
+A local-only browser tool that parses GLB v2 or glTF JSON, checks binary chunk boundaries, BufferViews, Accessors, mesh references, node hierarchy and transforms, and exports bilingual findings as JSON. **No upload and no external model URI requests.** Its handcrafted triangle sample and malformed fixtures passed **15/15 core tests**; a real headless Chrome browser smoke test passed local import, malformed input, bilingual UI, privacy checks and export. This is deliberately **not** a Khronos conformance certificate or full rendered model QA.  
+支持本地文件读取、结构错误诊断及报告导出；内置原创测试素材，经过独立浏览器操作验收，第三方模型绝不上传。
+
+[Technical note / 技术边界](labs/glb-inspector/README.md) · [Core tests / 结构测试](labs/glb-inspector/test-core.mjs) · [Browser smoke / 浏览器测试](labs/glb-inspector/test-browser.mjs)
+
 ## First edition / 首批收录
 
 **66 independently described references · 4 categories · Chinese and English for every record.**
