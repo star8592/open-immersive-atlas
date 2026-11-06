@@ -40,20 +40,20 @@ All linked photographs, concept art, videos, Unity Asset Store bundles, characte
 **B — Engine defaults and ground / 颜色空间与基础地形**
 - Disclosed engine path: Unity Terrain with URP in 2022.3/6.3; linear rather than gamma color space for the intended lighting; no secret bespoke terrain engine claimed.
 - Begin with grass and soil terrain layers. Block large slopes and valleys before polishing small props. Path irregularity and valley/bridge route connectivity are important.
-- Reported tools: [Path Painter II](https://assetstore.unity.com/) for smooth terrain shaping; [F-Texture Tools](https://assetstore.unity.com/) for quick edits and seamless textures; always verify the **exact package and current rights** before acquiring them. No assumption that an Asset Store purchase can be re-licensed.
+- Reported tools: [Path Painter II](https://assetstore.unity.com/packages/tools/terrain/path-painter-ii-184623) for smooth terrain shaping; [F-Texture Tools](https://assetstore.unity.com/packages/tools/utilities/f-texture-tools-274837) for quick edits and seamless textures; always verify the **exact package and current rights** before acquiring them. No assumption that an Asset Store purchase can be re-licensed.
 - Interesting author-specific shortcut: take a controlled, post-processing-free grass scene screenshot and turn it into a seamless base terrain texture, then align that texture's hue with actual 3D grass. **This is a described author workflow**, not a recommendation to reuse his art.
 
 **C — Grass-first world building / 先建立草地，不是先堆建筑**
 - The author starts with densely vegetated terrain before fine modeling. Align detail objects with the terrain surface and vary their tint, density and silhouettes.
 - Darken grass roots to approximate contact shading at much lower cost than calculating dense per-blade SSAO. Avoid overly thick repeated alpha-card layers.
 - Trees, rocks, stairs, paths, bridges and grass must respect the same physical terrain. Remove clashing grass inside solid objects; nest nearby vegetation selectively.
-- Author-described vegetation source: Unity Asset Store **Meadow Environment — Stylized Pack**, with supplemental **Fantastic Ancient Forest**. **Not included in this repo, and license coverage remains per asset.**
+- Author-described vegetation source: Unity Asset Store **Meadow Environment — Stylized Pack**, with supplemental **Fantastic Ancient Forest**. [Meadow Environment — Stylized Pack](https://assetstore.unity.com/packages/3d/environments/fantasy/meadow-environment-stylized-pack-314902) and [FANTASTIC — Ancient Forest](https://assetstore.unity.com/packages/3d/environments/fantastic-ancient-forest-281914) are **not included in this repo, and license coverage remains per asset**.
 
 **D — Terrain geometry and topology / 有道路逻辑的空间**
 - Rough elevations → variable-width footpaths → edge vegetation → rocks → bridges → architecture; bridge crossings must connect walkable surfaces, not just look pretty in a screenshot.
 - Avoid perfect-width artificial banks or paths; keep low-frequency erosion shapes and local slope changes.
-- Riverbeds: softened raised banks, visible plant-water transition, adjustable depth/shoreline tint, plausible water-level continuity. The author cites [Stylized Water 3](https://assetstore.unity.com/), with version choice depending on Unity version, not a globally reusable source shader.
-- Architecture: reuse a compatible existing piece in a new *original* design, then visually age it with moss and projector decals; verify real passage clearance and collider layout.
+- Riverbeds: softened raised banks, visible plant-water transition, adjustable depth/shoreline tint, plausible water-level continuity. The author cites [Stylized Water 3](https://assetstore.unity.com/packages/vfx/shaders/stylized-water-3-287769), with version choice depending on Unity version, not a globally reusable source shader.
+- Architecture: the author cites the [Sun Temple](https://assetstore.unity.com/packages/3d/environments/sun-temple-115417) pack as a source for a bridge-like piece; in our own work, reuse only licensed compatible pieces in a new *original* design, then visually age it with moss and projector decals; verify real passage clearance and collider layout.
 
 **E — Ecology as an artist's scatter algorithm / 生态驱动散布**
 - Root/rock/bridge neighborhoods get clustered low vegetation; waterline gets reeds and marsh plants; woodland shade gets mushrooms and larger leaf masses.
@@ -61,7 +61,7 @@ All linked photographs, concept art, videos, Unity Asset Store bundles, characte
 - Scatter with constraints: slope, sun exposure, water distance, road clearance, prop exclusion and deterministic seeds. This last sentence is **our proposed production generalization**, not a claim the author implemented those fields.
 
 **F — Final atmosphere and visual readability / 最后做光影与微特效**
-- The author reports using **Artistic Tilt Shift** on an angled camera, moss decals, leaf/butterfly particles and lighting adjustments.
+- The author reports using [Artistic: Tilt Shift](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/artistic-tilt-shift-265465) on an angled camera, moss decals, leaf/butterfly particles and lighting adjustments.
 - Important: blur should never destroy character silhouette, task object visibility, or camera rotation usability.
 - Show both fixed-view and freely rotating 3D camera modes in any future implementation; otherwise beautiful composited screenshots may conceal broken spatial topology.
 
