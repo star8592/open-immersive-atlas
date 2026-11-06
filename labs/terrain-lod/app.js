@@ -284,7 +284,7 @@ function start(gl){
   window.__oiaTerrainLab=Object.freeze({getStats:()=>({
     renderer:'WebGL2',initialized:true,mode:mode.value,wireframe:wire.checked,
     fog:fog.checked,pebbles:rocks.checked,triangleCount,lodCounts:[...lodCounts],
-    terrainTiles:tiles.length,frameIntervalP95Ms:lastP95,fps:lastFPS,width,height:heightPx
+    terrainTiles:tiles.length,frameIntervalP95Ms:lastP95,fps:lastFPS,width,height:heightPx,cameraDistance:camera.distance,cameraYaw:camera.yaw,glErrorCode:gl.getError()
   })});
   requestAnimationFrame(frame);
 }
