@@ -72,7 +72,7 @@ async function inspect(data,name){
 }
 async function inspectFile(file){
   if(!file)return;
-  if(file.size>MAX_BYTES){await inspect(new Uint8Array(MAX_BYTES+1),file.name);return;}
+  if(file.size>MAX_BYTES){latest=null;exportBtn.disabled=true;report.hidden=true;$('empty').hidden=false;status.classList.add('danger');status.textContent=language==='zh'?'文件超过 64 MiB 限制':'File exceeds 64 MiB limit';window.__oiaInspectorLastError={code:'SIZE',message:'File exceeds 64 MiB limit'};return;}
   const data=new Uint8Array(await file.arrayBuffer());await inspect(data,file.name);
 }
 input.addEventListener('change',()=>inspectFile(input.files?.[0]));
