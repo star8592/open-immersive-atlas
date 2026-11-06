@@ -19,6 +19,15 @@ jobs:
         run: |
           node --check labs/terrain-lod/app.js
           node --check labs/terrain-lod/test-browser.mjs
+      - name: Validate GLB inspector source and test syntax
+        run: |
+          node --check labs/glb-inspector/core.mjs
+          node --check labs/glb-inspector/app.mjs
+          node --check labs/glb-inspector/sample.mjs
+          node --check labs/glb-inspector/test-core.mjs
+          node --check labs/glb-inspector/test-browser.mjs
+      - name: Run offline GLB structural regression tests
+        run: node --test labs/glb-inspector/test-core.mjs
       - name: Check generated Markdown reproducibility
         run: |
           python3 scripts/build_catalog.py
