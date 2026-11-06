@@ -4,7 +4,7 @@
 
 **我们不是在复刻一个 Three.js，而是在建立一座可持续增长的 3D 技术图书馆。** 收录高质量三维网站、交互游戏、AI 三维工具、渲染算法、开源游戏引擎、资产制作与验收工具。每个项目都有中英文介绍、独特优势、值得学习的实现机制、原作者链接与许可证信息。
 
-**四大分类：** 沉浸式 3D 作品｜AI 3D 工厂｜框架与游戏引擎｜渲染、物理与工程基础设施。首版收录 **34** 条，按真实一手证据和较谨慎的许可表述建档。
+**四大分类：** 沉浸式 3D 作品｜AI 3D 工厂｜框架与游戏引擎｜渲染、物理与工程基础设施。当前收录 **64** 条，按真实一手证据和较谨慎的许可表述建档。
 
 ## 建档的三个原则
 
@@ -40,5 +40,8 @@
 - [AnyKit：AI 模型尺寸、朝向、材质、LOD 和统一画风](docs/cases/anykit.md)
 - [AnyScene + AnyShot：可重建的场景生产与专业镜头渲染](docs/cases/anyscene-anyshot.md)
 - [Bruno Simon Folio：真实物理、游戏主循环与 GLB 资源管线](docs/cases/bruno-folio.md)
+- [SuperSplat 3.0：GPU 计算架构、流式导出、WebMCP 与大场景内存](docs/cases/supersplat-3-webgpu.md)
+- [glTF 资产 QA：结构、几何、材质、碰撞和跨引擎交付](docs/cases/gltf-asset-qa.md)
+- [AI 驱动 3D 编辑器：受限操作、视角令牌、撤销历史](docs/cases/web3d-agent-editing.md)
 
 每篇均区分作者已经公开的技术、我们建议的原创实验以及尚未验证的指标。
