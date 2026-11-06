@@ -1,0 +1,959 @@
+{
+  "schema_version": "1.0.0",
+  "as_of": "2026-11-07",
+  "mission": {
+    "zh": "可溯源的中英双语 3D 网站、工具、引擎与生产流程技术档案",
+    "en": "Evidence-based bilingual atlas of 3D experiences, tools, engines and production workflows"
+  },
+  "projects": [
+    {
+      "id": "viper-11",
+      "name": "VIPER 11",
+      "category": "experiences",
+      "website": "https://viperoneone.com/",
+      "repository": null,
+      "evidence": "creator-notes",
+      "evidence_url": "https://viperoneone.com/notes/",
+      "upstream_license": "Proprietary; technical notes only",
+      "summary": {
+        "zh": "浏览器内运行的高拟真战机模拟器，公开十五篇工程制作笔记。",
+        "en": "A high-fidelity fighter simulator in a browser, accompanied by fifteen engineering notes."
+      },
+      "strength": {
+        "zh": "把真实地形、体积云、摄影镜头、六自由度飞控和声音整合成一致的飞行体验。",
+        "en": "Combines real terrain, volumetric clouds, camera optics, six-degree-of-freedom flight dynamics and audio into one convincing experience."
+      },
+      "learning": {
+        "zh": "研究时域体积云、四叉树地形 LOD、参数化飞机零件、输入/物理分离；完整游戏源码未确认开放。",
+        "en": "Study temporal volumetrics, quadtree terrain LOD, parametric aircraft parts and input/physics separation; full game source has not been verified as open."
+      },
+      "tags": [
+        "Three.js",
+        "GLSL",
+        "volumetrics",
+        "physics"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "bruno-folio-2025",
+      "name": "Bruno Simon Folio 2025",
+      "category": "experiences",
+      "website": "https://bruno-simon.com/",
+      "repository": "https://github.com/brunosimon/folio-2025",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/brunosimon/folio-2025",
+      "upstream_license": "MIT (repository; server code excluded)",
+      "summary": {
+        "zh": "把作品集做成可驾驶、可碰撞和可探索的三维游戏。",
+        "en": "A portfolio transformed into a drivable, collision-enabled, explorable 3D world."
+      },
+      "strength": {
+        "zh": "开源了主循环依赖顺序、物理车辆、天气、音频、素材压缩与 Blender 工程。",
+        "en": "Shares game-loop dependency order, vehicle physics, weather, audio, asset compression and Blender sources."
+      },
+      "learning": {
+        "zh": "学习输入→固定物理→视觉→渲染的执行顺序，优化模型和纹理交付。",
+        "en": "Learn input → fixed physics → visuals → render scheduling and optimized model/texture delivery."
+      },
+      "tags": [
+        "Three.js",
+        "TSL",
+        "Rapier",
+        "game-loop"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "oryzo-lusion",
+      "name": "ORYZO by Lusion",
+      "category": "experiences",
+      "website": "https://oryzo.ai/",
+      "repository": null,
+      "evidence": "official-site",
+      "evidence_url": "https://oryzo.ai/",
+      "upstream_license": "Site proprietary; source not confirmed",
+      "summary": {
+        "zh": "以虚构消费品为主角的电影级交互式 3D 产品网站。",
+        "en": "A cinematic interactive 3D product experience built around a fictional consumer object."
+      },
+      "strength": {
+        "zh": "用有限的高品质物体、材质与镜头表现替代庞杂的页面堆砌。",
+        "en": "Uses a tightly art-directed hero object, materials and camera motion instead of a cluttered interface."
+      },
+      "learning": {
+        "zh": "研究产品特写、滚动叙事与光照层次；具体渲染栈待源码证实。",
+        "en": "Study product close-ups, scroll-directed storytelling and lighting hierarchy; render stack remains unverified."
+      },
+      "tags": [
+        "product",
+        "camera",
+        "scroll"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "ivress",
+      "name": "IVRESS — Spin a Tale",
+      "category": "experiences",
+      "website": "https://brand.ivress.co.jp/",
+      "repository": null,
+      "evidence": "creator-article",
+      "evidence_url": "https://brand.ivress.co.jp/",
+      "upstream_license": "Site proprietary; no reuse permission inferred",
+      "summary": {
+        "zh": "面向品牌叙事的高品质三维交互作品。",
+        "en": "A polished, interactive 3D experience for brand storytelling."
+      },
+      "strength": {
+        "zh": "制作团队公开讨论 Three.js WebGPURenderer 与 TSL 的双渲染后端实践。",
+        "en": "Its makers discuss Three.js WebGPURenderer and TSL with a WebGL fallback path."
+      },
+      "learning": {
+        "zh": "研究同一节点材质在 WebGPU/WebGL2 之间的验证与降级策略。",
+        "en": "Study testing and fallback strategy for node materials across WebGPU and WebGL2."
+      },
+      "tags": [
+        "WebGPU",
+        "TSL",
+        "WebGL2"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "explore-primland",
+      "name": "Explore Primland",
+      "category": "experiences",
+      "website": "https://explore.ownprimland.com/",
+      "repository": null,
+      "evidence": "official-site",
+      "evidence_url": "https://explore.ownprimland.com/",
+      "upstream_license": "Site proprietary; source not confirmed",
+      "summary": {
+        "zh": "以沉浸式地形与场景漫游展现真实目的地。",
+        "en": "An immersive geographic and scenic exploration experience."
+      },
+      "strength": {
+        "zh": "把空间导览、景深与镜头节奏用于传达真实地域的氛围。",
+        "en": "Uses spatial navigation, depth and pacing to convey the atmosphere of a real destination."
+      },
+      "learning": {
+        "zh": "学习大尺度场景的镜头路线、空气透视与分级细节；技术栈未经源码核实。",
+        "en": "Study camera paths, atmospheric perspective and detail hierarchy in large worlds; stack is not source-verified."
+      },
+      "tags": [
+        "terrain",
+        "camera",
+        "travel"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "igloo-inc",
+      "name": "Igloo Inc",
+      "category": "experiences",
+      "website": "https://igloo.inc/",
+      "repository": null,
+      "evidence": "official-site",
+      "evidence_url": "https://igloo.inc/",
+      "upstream_license": "Site proprietary; source not confirmed",
+      "summary": {
+        "zh": "以冰材质与沉浸式互动塑造独特品牌视觉语言。",
+        "en": "An immersive brand site shaped around ice-like materials and interaction."
+      },
+      "strength": {
+        "zh": "统一材质主题和精确打光能形成强烈识别度，而不必堆积场景。",
+        "en": "A coherent material signature and precise lighting create identity without sprawling scenes."
+      },
+      "learning": {
+        "zh": "研究折射、粗糙度和环境反射的统一美术规范；内部 Shader 未验证。",
+        "en": "Study cohesive refraction, roughness and environmental reflection; internal shaders remain unverified."
+      },
+      "tags": [
+        "materials",
+        "branding"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "lacoste-ace-breaker",
+      "name": "Lacoste Ace Breaker",
+      "category": "experiences",
+      "website": "https://members-play.lacoste.com/ace-breaker-rg/gb/en/",
+      "repository": null,
+      "evidence": "official-site",
+      "evidence_url": "https://members-play.lacoste.com/ace-breaker-rg/gb/en/",
+      "upstream_license": "Brand experience; source not public",
+      "summary": {
+        "zh": "把品牌宣传转化成可操作的网页小游戏体验。",
+        "en": "Turns a brand campaign into a playable browser mini-game."
+      },
+      "strength": {
+        "zh": "短操作反馈和明确的交互目标比纯粹被动观看更容易建立参与感。",
+        "en": "Short feedback loops and clear player goals create participation beyond passive viewing."
+      },
+      "learning": {
+        "zh": "研究从进入、控制提示到核心玩法和分享的首分钟体验；不复制商标/美术。",
+        "en": "Study onboarding, input hints, the first-minute core loop and sharing; do not copy branding or artwork."
+      },
+      "tags": [
+        "browser-game",
+        "onboarding"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "shopify-editions",
+      "name": "Shopify Editions",
+      "category": "experiences",
+      "website": "https://www.shopify.com/editions/spring2026",
+      "repository": null,
+      "evidence": "official-site",
+      "evidence_url": "https://www.shopify.com/editions/spring2026",
+      "upstream_license": "Commercial website; no license to copy",
+      "summary": {
+        "zh": "用滚动章节和动效介绍大型产品版本更新。",
+        "en": "Uses scroll-driven chapters and motion to explain a major product release."
+      },
+      "strength": {
+        "zh": "在视觉叙事之外保留内容层级和可阅读文字，而不是让 3D 吞没信息。",
+        "en": "Preserves readable information architecture alongside visual motion instead of letting 3D overwhelm content."
+      },
+      "learning": {
+        "zh": "研究滚动时间线、性能降级和语义化页面的共存。",
+        "en": "Study scroll timelines, progressive enhancement and semantic content preservation."
+      },
+      "tags": [
+        "scroll",
+        "storytelling",
+        "UX"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "nasa-eyes",
+      "name": "NASA Eyes",
+      "category": "experiences",
+      "website": "https://eyes.nasa.gov/",
+      "repository": null,
+      "evidence": "official-product",
+      "evidence_url": "https://eyes.nasa.gov/",
+      "upstream_license": "US government data/site terms vary by asset; verify individually",
+      "summary": {
+        "zh": "由科学数据驱动的太阳系、地球和航天任务交互式三维可视化。",
+        "en": "Interactive 3D visualizations of the solar system, Earth and missions driven by scientific data."
+      },
+      "strength": {
+        "zh": "真实信息与可探索空间结合，证明 3D 也可以是严肃的工具。",
+        "en": "Links authentic information to explorable space, showing that 3D can be a serious utility."
+      },
+      "learning": {
+        "zh": "学习分层数据、时间轴、轨道可视化与用户易读性；图像/数据授权逐项核查。",
+        "en": "Study layered data, time controls, orbit visuals and legibility; review data/image rights per source."
+      },
+      "tags": [
+        "data-visualization",
+        "science"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "laarpi-3d",
+      "name": "Laarpi 3D Examples",
+      "category": "experiences",
+      "website": "https://laarpi.com/examples/3d-websites",
+      "repository": null,
+      "evidence": "creator-article",
+      "evidence_url": "https://laarpi.com/examples/3d-websites",
+      "upstream_license": "Examples are proprietary unless separately licensed",
+      "summary": {
+        "zh": "展示参数化 3D 商品展示与工程表达的组合思路。",
+        "en": "Examples of combining parametric 3D products with technical presentation."
+      },
+      "strength": {
+        "zh": "让尺寸、二维规格与三维模型依赖同一个参数源，减少不一致。",
+        "en": "A shared parametric source can drive dimensions, 2D specification views and 3D models."
+      },
+      "learning": {
+        "zh": "学习参数映射与尺寸驱动的可靠交互；案例具体技术须单独验证。",
+        "en": "Learn parameter mapping and dimension-driven interaction; verify each case's technical implementation."
+      },
+      "tags": [
+        "parametric",
+        "CAD",
+        "product"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "anyscene",
+      "name": "AnyScene",
+      "category": "pipelines",
+      "website": "https://github.com/apekshik/anyscene",
+      "repository": "https://github.com/apekshik/anyscene",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/apekshik/anyscene",
+      "upstream_license": "MIT code; generated models/service terms separate",
+      "summary": {
+        "zh": "从参考图或文字 Brief 构建可重建的 Blender 场景、道具、灯光和镜头。",
+        "en": "Builds reproducible Blender scenes, props, lights and shots from references or a written brief."
+      },
+      "strength": {
+        "zh": "同一物件让两个生成器竞争，用同光照对比选优，再做几何接触和视觉纠错。",
+        "en": "Competes two 3D generators per prop, compares like-for-like renders, then checks contact and visual defects."
+      },
+      "learning": {
+        "zh": "学习资产清单、来源记录、脚本可重建场景、独立质量审查与 GPU 排队。",
+        "en": "Learn asset manifests, provenance, scripted rebuilds, independent visual critique and GPU queues."
+      },
+      "tags": [
+        "Blender",
+        "AI-3D",
+        "scene-build"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "anykit",
+      "name": "AnyKit",
+      "category": "pipelines",
+      "website": "https://github.com/apekshik/anykit",
+      "repository": "https://github.com/apekshik/anykit",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/apekshik/anykit",
+      "upstream_license": "MIT code; generated assets separate",
+      "summary": {
+        "zh": "从风格参考生成同一美术语言的游戏道具套件。",
+        "en": "Creates cohesive production-oriented 3D prop kits from style references."
+      },
+      "strength": {
+        "zh": "逐件校准真实米制尺寸、朝向、原点、玻璃材质和 LOD，输出独立 GLB 与整套资产库。",
+        "en": "Normalizes real-world meters, orientation, origin, glass and LOD per prop; exports individual GLBs and a shared library."
+      },
+      "learning": {
+        "zh": "重点研究 normalize.py、模型对照、独立 critic 与可续跑的幂等请求。",
+        "en": "Prioritize normalize.py, model comparisons, independent critique and resumable idempotent jobs."
+      },
+      "tags": [
+        "Blender",
+        "GLB",
+        "LOD",
+        "AI-3D"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "anyshot",
+      "name": "AnyShot",
+      "category": "pipelines",
+      "website": "https://github.com/apekshik/anyshot",
+      "repository": "https://github.com/apekshik/anyshot",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/apekshik/anyshot",
+      "upstream_license": "MIT code; cloud compute billed separately",
+      "summary": {
+        "zh": "根据场景与自然语言自动规划摄影机、预览镜头并生成最终影像。",
+        "en": "Plans cameras from a 3D scene and language brief, previews shots and delivers graded imagery."
+      },
+      "strength": {
+        "zh": "镜头逐帧防穿模，先低成本预览再渲染，支持云端分片、缓存及恢复。",
+        "en": "Checks camera clearance frame by frame, blocks cheaply before final renders, and supports chunked rendering and resume."
+      },
+      "learning": {
+        "zh": "学习机位规划、镜头路径、深度焦点、异步帧块调度和可恢复任务。",
+        "en": "Learn shot planning, camera paths, rack focus, asynchronous frame chunks and retry safety."
+      },
+      "tags": [
+        "cinematography",
+        "Blender",
+        "render-farm"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "video-to-game",
+      "name": "Video-to-Game",
+      "category": "pipelines",
+      "website": "https://github.com/lovisdotio/video-to-game",
+      "repository": "https://github.com/lovisdotio/video-to-game",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/lovisdotio/video-to-game",
+      "upstream_license": "MIT (repository; upstream asset rights separate)",
+      "summary": {
+        "zh": "以原创视觉参考视频指导 Three.js 游戏制作和效果验收。",
+        "en": "Uses original reference videos to guide Three.js game creation and visual verification."
+      },
+      "strength": {
+        "zh": "把镜头/色彩/资产明确化，再通过并排画面对照和实际键盘试玩验证可玩性。",
+        "en": "Formalizes camera, palette and assets, then checks side-by-side images and actual keyboard play."
+      },
+      "learning": {
+        "zh": "学习视频到 SPEC 的转译、固定机位画面对比与操控测试。",
+        "en": "Learn video-to-SPEC translation, locked-camera visual comparisons and input-driven tests."
+      },
+      "tags": [
+        "Three.js",
+        "video",
+        "workflow"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "assetfurnace",
+      "name": "AssetFurnace",
+      "category": "pipelines",
+      "website": "https://github.com/Bingeljell/image-to-3dlab",
+      "repository": "https://github.com/Bingeljell/image-to-3dlab",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/Bingeljell/image-to-3dlab",
+      "upstream_license": "Apache-2.0 project; model weights/licensing separate",
+      "summary": {
+        "zh": "面向图像转 3D 的工作台，组织多种生成后端和资产处理流程。",
+        "en": "An image-to-3D workbench orchestrating several generation backends and asset processing steps."
+      },
+      "strength": {
+        "zh": "将生成、缩面、纹理处理、Rig 和质量比较纳入可重复管线。",
+        "en": "Connects generation, decimation, texture processing, rigging and comparisons in a repeatable pipeline."
+      },
+      "learning": {
+        "zh": "先审显存、模型权重和第三方授权，再在小样本上验收实际 GLB。",
+        "en": "Audit VRAM, model weights and third-party rights, then validate real GLBs on a small sample."
+      },
+      "tags": [
+        "image-to-3D",
+        "pipeline",
+        "GPU"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "trellis-2",
+      "name": "TRELLIS.2",
+      "category": "pipelines",
+      "website": "https://github.com/microsoft/TRELLIS.2",
+      "repository": "https://github.com/microsoft/TRELLIS.2",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/microsoft/TRELLIS.2",
+      "upstream_license": "Repository MIT; dependencies/checkpoints require review",
+      "summary": {
+        "zh": "研究级图像转高质量三维资产模型，强调高保真几何与材质表达。",
+        "en": "A research-grade image-to-3D model emphasizing high-fidelity geometry and materials."
+      },
+      "strength": {
+        "zh": "提供高质量资产生成的技术基准，但算力门槛可能显著高于日常显卡预算。",
+        "en": "Offers a quality benchmark for asset synthesis while demanding substantial compute."
+      },
+      "learning": {
+        "zh": "参考官方硬件门槛，不把 16GB 显卡视为已经验证可稳定跑通。",
+        "en": "Respect documented hardware requirements; do not treat 16 GB GPUs as validated."
+      },
+      "tags": [
+        "AI-3D",
+        "PBR",
+        "research"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "marble",
+      "name": "World Labs Marble",
+      "category": "pipelines",
+      "website": "https://www.worldlabs.ai/",
+      "repository": null,
+      "evidence": "official-product",
+      "evidence_url": "https://www.worldlabs.ai/",
+      "upstream_license": "Proprietary cloud service; terms required",
+      "summary": {
+        "zh": "把文本、图片或视频转换为可探索的三维场景表示。",
+        "en": "Turns text, images or video into explorable 3D scene representations."
+      },
+      "strength": {
+        "zh": "强调持久空间、可视化资产与独立碰撞网格的组合。",
+        "en": "Emphasizes persistent space and the pairing of visual assets with separate collision geometry."
+      },
+      "learning": {
+        "zh": "研究视觉层与物理层分离、成本、输出权属及场景质量稳定性。",
+        "en": "Study visual/physics separation, cost, output rights and scene consistency."
+      },
+      "tags": [
+        "world-model",
+        "3DGS",
+        "cloud"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "spark-3dgs",
+      "name": "Spark 3DGS",
+      "category": "pipelines",
+      "website": "https://github.com/sparkjsdev/spark",
+      "repository": "https://github.com/sparkjsdev/spark",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/sparkjsdev/spark",
+      "upstream_license": "Check current upstream LICENSE",
+      "summary": {
+        "zh": "面向 Three.js 的浏览器高斯泼溅渲染库。",
+        "en": "A browser Gaussian-splat rendering library for Three.js."
+      },
+      "strength": {
+        "zh": "可以把复杂扫描场景作为视觉层接入 Web 3D，再配合独立 Collider。",
+        "en": "Renders dense scanned spaces as a visual layer in Web3D while physics uses separate colliders."
+      },
+      "learning": {
+        "zh": "学习 3DGS 与 Mesh 共场景的遮挡、深度、排序和性能权衡。",
+        "en": "Study occlusion, depth, sorting and performance when mixing 3DGS with meshes."
+      },
+      "tags": [
+        "3DGS",
+        "Three.js",
+        "renderer"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "three-js",
+      "name": "Three.js",
+      "category": "engines",
+      "website": "https://threejs.org/",
+      "repository": "https://github.com/mrdoob/three.js",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/mrdoob/three.js",
+      "upstream_license": "MIT",
+      "summary": {
+        "zh": "浏览器 3D 图形的核心开源 JavaScript 库。",
+        "en": "A foundational open-source JavaScript library for 3D graphics in the browser."
+      },
+      "strength": {
+        "zh": "场景图、相机、材质、动画和现代 WebGPU/TSL 路径都拥有成熟生态。",
+        "en": "Combines a mature scene graph, cameras, materials, animation and a modern WebGPU/TSL direction."
+      },
+      "learning": {
+        "zh": "理解渲染循环、资源缓存、LOD、Instancing、WebGL2 与 WebGPU 差异。",
+        "en": "Understand render loops, caches, LOD, instancing and WebGL2/WebGPU tradeoffs."
+      },
+      "tags": [
+        "WebGL",
+        "WebGPU",
+        "framework"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "a-frame",
+      "name": "A-Frame",
+      "category": "engines",
+      "website": "https://aframe.io/",
+      "repository": "https://github.com/aframevr/aframe",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/aframevr/aframe",
+      "upstream_license": "MIT (verify current repository)",
+      "summary": {
+        "zh": "建立在 Three.js 上、用 HTML 和实体组件系统制作 WebXR/VR 场景的框架。",
+        "en": "An HTML-first, entity-component framework for WebXR/VR scenes built on Three.js."
+      },
+      "strength": {
+        "zh": "使用声明式组件降低 VR 场景开发门槛，同时保留 Three.js 扩展能力。",
+        "en": "Makes immersive scenes approachable through declarative components while preserving Three.js extensibility."
+      },
+      "learning": {
+        "zh": "学习 ECS、组件复用、XR 输入映射与渐进式交互。",
+        "en": "Study ECS, component reuse, XR input mapping and progressive interaction."
+      },
+      "tags": [
+        "WebXR",
+        "ECS",
+        "Three.js"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "babylonjs",
+      "name": "Babylon.js",
+      "category": "engines",
+      "website": "https://www.babylonjs.com/",
+      "repository": "https://github.com/BabylonJS/Babylon.js",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/BabylonJS/Babylon.js",
+      "upstream_license": "Apache-2.0 (engine repository)",
+      "summary": {
+        "zh": "涵盖渲染、材质、动画、物理集成与编辑器生态的 Web 3D 引擎。",
+        "en": "A Web 3D engine covering rendering, materials, animation, physics integration and tooling."
+      },
+      "strength": {
+        "zh": "具有更完整的引擎式 API 与可视化调试工具，适合大型应用原型。",
+        "en": "Provides an engine-style API and rich debugging tools suited to larger applications."
+      },
+      "learning": {
+        "zh": "对照 Three.js 的场景管理与 Shader 工具链，评估跨引擎资产格式。",
+        "en": "Compare scene management and shader tooling with Three.js and assess cross-engine assets."
+      },
+      "tags": [
+        "WebGPU",
+        "engine",
+        "editor"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "playcanvas",
+      "name": "PlayCanvas",
+      "category": "engines",
+      "website": "https://playcanvas.com/",
+      "repository": "https://github.com/playcanvas/engine",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/playcanvas/engine",
+      "upstream_license": "MIT (engine; editor/cloud terms separate)",
+      "summary": {
+        "zh": "专为 Web 实时交互设计的引擎，提供组件化运行时与可视化制作平台。",
+        "en": "A web-first real-time engine with a component runtime and visual production tooling."
+      },
+      "strength": {
+        "zh": "适合交互式商品、轻量游戏和多人协作式场景迭代。",
+        "en": "Suited to interactive products, lightweight games and collaborative scene iteration."
+      },
+      "learning": {
+        "zh": "学习分包加载、组件架构、压缩与浏览器端性能预算。",
+        "en": "Study chunked loading, component architecture, compression and web performance budgets."
+      },
+      "tags": [
+        "engine",
+        "web",
+        "ECS"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "react-three-fiber",
+      "name": "React Three Fiber",
+      "category": "engines",
+      "website": "https://r3f.docs.pmnd.rs/",
+      "repository": "https://github.com/pmndrs/react-three-fiber",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/pmndrs/react-three-fiber",
+      "upstream_license": "MIT",
+      "summary": {
+        "zh": "用 React 声明式组件组织 Three.js 场景。",
+        "en": "A React reconciler for declaratively building Three.js scenes."
+      },
+      "strength": {
+        "zh": "使 3D 场景与普通网站状态、路由和 UI 工作流更自然结合。",
+        "en": "Integrates 3D scenes with conventional website state, routing and UI workflows."
+      },
+      "learning": {
+        "zh": "学习 React 与实时渲染生命周期边界，避免高频状态触发不必要重渲染。",
+        "en": "Study React/render-loop boundaries and avoid costly high-frequency reconciliations."
+      },
+      "tags": [
+        "React",
+        "Three.js",
+        "UI"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "category": "engines",
+      "website": "https://www.blender.org/",
+      "repository": "https://github.com/blender/blender",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/blender/blender",
+      "upstream_license": "GPL-2.0-or-later (software; review linked assets)",
+      "summary": {
+        "zh": "开放源码的建模、雕刻、绑定、动画、材质与渲染综合 DCC。",
+        "en": "An open-source DCC suite for modeling, sculpting, rigging, animation, shading and rendering."
+      },
+      "strength": {
+        "zh": "Python 脚本与背景模式可把人工制作步骤转成可复现的生产流水线。",
+        "en": "Python automation and headless mode turn artistic operations into reproducible pipelines."
+      },
+      "learning": {
+        "zh": "研究资产标准化、批量处理、Rig 骨骼约束、Cycles 输出与脚本重建。",
+        "en": "Study asset normalization, batch processing, rig constraints, Cycles output and scripted rebuilds."
+      },
+      "tags": [
+        "DCC",
+        "Python",
+        "GLB"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "godot",
+      "name": "Godot",
+      "category": "engines",
+      "website": "https://godotengine.org/",
+      "repository": "https://github.com/godotengine/godot",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/godotengine/godot",
+      "upstream_license": "MIT",
+      "summary": {
+        "zh": "跨平台的开源 2D/3D 游戏引擎，提供完整场景节点、动画和物理工作流。",
+        "en": "An open-source 2D/3D game engine with complete scenes, animation and physics workflows."
+      },
+      "strength": {
+        "zh": "对小团队的快速可玩性验证与非 Web 原生交付具有工程优势。",
+        "en": "Offers an integrated gameplay workflow for small teams and non-web-native builds."
+      },
+      "learning": {
+        "zh": "研究 GLB 导入、角色动画状态机与 Web 导出限制，不预设 WebGPU 网页可用。",
+        "en": "Study GLB import, animation state machines and web export limits; do not assume WebGPU web export."
+      },
+      "tags": [
+        "game-engine",
+        "animation"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "unity",
+      "name": "Unity",
+      "category": "engines",
+      "website": "https://unity.com/",
+      "repository": null,
+      "evidence": "official-product",
+      "evidence_url": "https://unity.com/",
+      "upstream_license": "Proprietary commercial engine; terms/fees vary",
+      "summary": {
+        "zh": "面向多平台实时互动、游戏与工业可视化的商业引擎。",
+        "en": "A commercial engine for multiplatform games, interactive experiences and industrial visualization."
+      },
+      "strength": {
+        "zh": "规模化资产导入、工具生态和可用插件众多，利于项目交付。",
+        "en": "Broad asset workflows and mature tooling support production delivery."
+      },
+      "learning": {
+        "zh": "研究 GLB/FBX 资产兼容和浏览器交付限制；授权费与条款按项目审核。",
+        "en": "Review GLB/FBX workflows and browser constraints; verify license terms per project."
+      },
+      "tags": [
+        "game-engine",
+        "commercial"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "unreal-engine",
+      "name": "Unreal Engine",
+      "category": "engines",
+      "website": "https://www.unrealengine.com/",
+      "repository": null,
+      "evidence": "official-product",
+      "evidence_url": "https://www.unrealengine.com/",
+      "upstream_license": "Proprietary/EULA; source access is not open-source",
+      "summary": {
+        "zh": "面向高保真大型三维场景、电影与复杂游戏的商业引擎。",
+        "en": "A commercial engine for high-fidelity worlds, cinematics and complex games."
+      },
+      "strength": {
+        "zh": "Nanite、Lumen 和电影化内容生产为高品质资产标准提供参考。",
+        "en": "Nanite, Lumen and cinematic pipelines provide a reference for premium asset quality."
+      },
+      "learning": {
+        "zh": "研究资产尺度、PBR 和动作重定向；不能把源码可见等同 OSI 开源。",
+        "en": "Study asset scale, PBR and animation retargeting; source access does not mean OSI open source."
+      },
+      "tags": [
+        "game-engine",
+        "cinematics"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "rapier",
+      "name": "Rapier",
+      "category": "infrastructure",
+      "website": "https://rapier.rs/",
+      "repository": "https://github.com/dimforge/rapier",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/dimforge/rapier",
+      "upstream_license": "Apache-2.0",
+      "summary": {
+        "zh": "Rust 实现的高性能刚体、碰撞检测和查询物理库，带 JavaScript/WASM 生态。",
+        "en": "A high-performance Rust physics library with collision detection, queries and JS/WASM bindings."
+      },
+      "strength": {
+        "zh": "把真实碰撞与视觉 Mesh 分离，有助于消除穿模、滑行和动作错位。",
+        "en": "Separates collision physics from render meshes, reducing clipping and animation mismatches."
+      },
+      "learning": {
+        "zh": "学习固定步长、碰撞体、角色控制器和可重放测试。",
+        "en": "Study fixed timesteps, collider design, character control and replay testing."
+      },
+      "tags": [
+        "Rust",
+        "WASM",
+        "physics"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "three-geospatial",
+      "name": "three-geospatial",
+      "category": "infrastructure",
+      "website": "https://github.com/takram-design-engineering/three-geospatial",
+      "repository": "https://github.com/takram-design-engineering/three-geospatial",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/takram-design-engineering/three-geospatial",
+      "upstream_license": "Check current upstream LICENSE",
+      "summary": {
+        "zh": "Three.js 体系的地理空间渲染与大气相关技术集合。",
+        "en": "A Three.js geospatial rendering and atmospheric technology toolkit."
+      },
+      "strength": {
+        "zh": "能够研究真实地形、天空大气及体积云的分层实现方案。",
+        "en": "Offers a learning path for terrain, atmospheric sky and cloud-related rendering."
+      },
+      "learning": {
+        "zh": "重点核查各子模块 shader API、许可证与 Three.js 版本兼容。",
+        "en": "Review per-module shader APIs, license and Three.js compatibility."
+      },
+      "tags": [
+        "terrain",
+        "atmosphere",
+        "Three.js"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "gltf-transform",
+      "name": "glTF Transform",
+      "category": "infrastructure",
+      "website": "https://gltf-transform.dev/",
+      "repository": "https://github.com/donmccurdy/glTF-Transform",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/donmccurdy/glTF-Transform",
+      "upstream_license": "MIT",
+      "summary": {
+        "zh": "对 glTF/GLB 进行变换、检查、压缩与优化的工具链。",
+        "en": "A toolkit for transforming, inspecting, compressing and optimizing glTF/GLB."
+      },
+      "strength": {
+        "zh": "把纹理编码、网格压缩和批处理变成资产发布过程的一部分。",
+        "en": "Turns texture encoding, geometry compression and batch transforms into a release pipeline."
+      },
+      "learning": {
+        "zh": "建立 GLB 文件大小、材质兼容与视觉误差的自动验收。",
+        "en": "Build automated checks for GLB size, material compatibility and visual error."
+      },
+      "tags": [
+        "glTF",
+        "compression",
+        "pipeline"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "meshoptimizer",
+      "name": "meshoptimizer",
+      "category": "infrastructure",
+      "website": "https://meshoptimizer.org/",
+      "repository": "https://github.com/zeux/meshoptimizer",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/zeux/meshoptimizer",
+      "upstream_license": "MIT",
+      "summary": {
+        "zh": "网格拓扑与索引优化、压缩和 LOD 的高性能基础库。",
+        "en": "A fast library for mesh topology/index optimization, compression and LOD."
+      },
+      "strength": {
+        "zh": "在画质可接受的前提下降低带宽、GPU 顶点处理和模型复杂度。",
+        "en": "Reduces bandwidth and vertex work while preserving acceptable visual quality."
+      },
+      "learning": {
+        "zh": "研究 gltfpack、Meshopt 解码与按距离动态 LOD。",
+        "en": "Study gltfpack, Meshopt decoding and distance-based LOD."
+      },
+      "tags": [
+        "LOD",
+        "mesh",
+        "compression"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "vggt",
+      "name": "VGGT",
+      "category": "infrastructure",
+      "website": "https://github.com/facebookresearch/vggt",
+      "repository": "https://github.com/facebookresearch/vggt",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/facebookresearch/vggt",
+      "upstream_license": "Code and checkpoint licenses differ; commercial weights only where permitted",
+      "summary": {
+        "zh": "从多视图图片恢复摄像机、深度和空间几何关系的视觉模型。",
+        "en": "A vision model recovering camera poses, depth and geometric structure from multi-view imagery."
+      },
+      "strength": {
+        "zh": "帮助把参考图连接到具有空间尺度的场景重建流程。",
+        "en": "Helps bridge reference images and spatially grounded scene reconstruction."
+      },
+      "learning": {
+        "zh": "研究镜头标定、COLMAP 数据出口；不可把输出当完整可玩 Mesh 或角色 Rig。",
+        "en": "Study camera calibration and COLMAP export; outputs are not automatically playable meshes or rigs."
+      },
+      "tags": [
+        "computer-vision",
+        "camera",
+        "reconstruction"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "prompt2rig",
+      "name": "prompt2rig",
+      "category": "infrastructure",
+      "website": "https://github.com/blendi-remade/prompt2rig",
+      "repository": "https://github.com/blendi-remade/prompt2rig",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/blendi-remade/prompt2rig",
+      "upstream_license": "Apache-2.0 repo; SMPL-X/other weights separately restricted",
+      "summary": {
+        "zh": "尝试从文本与动作视频自动生产角色动作并映射骨骼。",
+        "en": "A research pipeline for generating and retargeting character motion from prompts and video."
+      },
+      "strength": {
+        "zh": "把动作来源和骨骼映射流程模块化，为动画工厂提供候选输入。",
+        "en": "Modularizes motion sourcing and retargeting for an animation pipeline."
+      },
+      "learning": {
+        "zh": "验证关节方向、IK、手握武器与 Root Motion；不要仅凭视频外观判定动作正确。",
+        "en": "Test joint axes, IK, weapon grip and root motion rather than accepting a pretty preview."
+      },
+      "tags": [
+        "animation",
+        "rigging",
+        "AI"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "gua-game-qa",
+      "name": "Gua Game QA",
+      "category": "infrastructure",
+      "website": "https://github.com/gua-project/gua",
+      "repository": "https://github.com/gua-project/gua",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/gua-project/gua",
+      "upstream_license": "Review current upstream LICENSE",
+      "summary": {
+        "zh": "通过结构化游戏状态和可重复操作做游戏自动化测试。",
+        "en": "Automation tooling using structured game state and reproducible actions."
+      },
+      "strength": {
+        "zh": "将游戏状态、虚拟时间和动作轨迹纳入可验证的质量反馈循环。",
+        "en": "Makes game state, virtual time and action traces part of a repeatable QA loop."
+      },
+      "learning": {
+        "zh": "借鉴语义操作接口，不能未经验证声称工具直接支持所有 Three.js 游戏。",
+        "en": "Borrow semantic game testing ideas; do not assume it supports all Three.js games."
+      },
+      "tags": [
+        "testing",
+        "QA",
+        "game"
+      ],
+      "reviewed_on": "2026-11-07"
+    }
+  ]
+}
