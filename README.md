@@ -10,7 +10,7 @@
 
 ## First edition / 首批收录
 
-**64 independently described references · 4 categories · Chinese and English for every record.**
+**66 independently described references · 4 categories · Chinese and English for every record.**
 
 | Category / 分类 | Contents / 内容 |
 |---|---|
@@ -81,3 +81,11 @@ Read independent technical case studies, with primary sources, concrete engineer
 - [Agent-operable 3D editors — safe operations and undo / AI 操作三维编辑器](docs/cases/web3d-agent-editing.md)
 
 These essays are authored analysis of public sources, **not** upstream source mirrors or measured local reproductions. / 它们是公开资料的原创分析，不是第三方源码镜像或本地性能验收报告。
+
+## 2026-11-07 continued research / 持续研究增补
+
+- [R3F v10 alpha WebGPU migration / R3F v10 Alpha 与双渲染器迁移](docs/cases/r3f-v10-webgpu-migration.md) — production-safe version boundaries and visual QA / 稳定版本边界与画质验收。
+- [React Three Rapier physics / 真实物理、碰撞与接触](docs/cases/react-three-rapier-physics.md) — original game physics experiment designs / 原创游戏物理实验。
+- [WebXR spatial input / 多设备空间输入](docs/cases/webxr-spatial-interaction.md) — capability detection and fallback / 设备能力探测与降级。
+
+These are independently researched public guides, **not** evidence of internal game deployment. / 以上为公开研究文档，尚不等于内部游戏已集成。
