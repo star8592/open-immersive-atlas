@@ -640,8 +640,8 @@
         "en": "Integrates 3D scenes with conventional website state, routing and UI workflows."
       },
       "learning": {
-        "zh": "学习 React 与实时渲染生命周期边界，避免高频状态触发不必要重渲染。",
-        "en": "Study React/render-loop boundaries and avoid costly high-frequency reconciliations."
+        "zh": "研究组件化游戏场景与帧循环；v10.0.0-alpha.6 默认采用可回退 WebGL2 的新 WebGPURenderer，但旧 GLSL 需评估 /legacy，Alpha 不可直接视为生产稳定版。",
+        "en": "Study composable game scenes and frame scheduling; v10.0.0-alpha.6 defaults to a WebGL2-capable WebGPURenderer but legacy GLSL may need /legacy; alpha is not a stable production baseline."
       },
       "tags": [
         "React",
@@ -1800,6 +1800,64 @@
         "browser-editor",
         "MCP",
         "WebGPU"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "react-three-rapier",
+      "name": "React Three Rapier",
+      "category": "infrastructure",
+      "website": "https://react-three-rapier.pmnd.rs/",
+      "repository": "https://github.com/pmndrs/react-three-rapier",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/pmndrs/react-three-rapier",
+      "upstream_license": "MIT (wrapper code); visual assets and integration terms separate",
+      "summary": {
+        "zh": "把 Rapier WASM 刚体物理接入 React Three Fiber 的可复用组件库。",
+        "en": "A React Three Fiber integration for WASM-based Rapier rigid-body physics."
+      },
+      "strength": {
+        "zh": "通过明确的刚体、碰撞器、关节、传感器与事件接口，为浏览器三维世界建立可信的接触和空间行为。",
+        "en": "Exposes rigid bodies, colliders, joints, sensors and collision events to make spatial behavior testable in browser 3D."
+      },
+      "learning": {
+        "zh": "研究物理固定步长与渲染插值、视觉网格和碰撞体分离、车轮接地以及人物与场景的碰撞；不把物理库当成现成车辆模拟。",
+        "en": "Study fixed simulation steps, interpolated rendering, distinct render/collision meshes and wheel or avatar contacts; do not mistake the library for a complete vehicle model."
+      },
+      "tags": [
+        "Rapier",
+        "React Three Fiber",
+        "physics",
+        "collision"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "webxr-samples",
+      "name": "W3C Immersive Web — WebXR Samples",
+      "category": "infrastructure",
+      "website": "https://immersive-web.github.io/webxr-samples/",
+      "repository": "https://github.com/immersive-web/webxr-samples",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/immersive-web/webxr-samples",
+      "upstream_license": "MIT (software); external media and device datasets require separate review",
+      "summary": {
+        "zh": "由 Immersive Web 工作社区维护的 WebXR API 示例，覆盖 VR、AR、控制器与空间交互。",
+        "en": "Immersive Web community examples covering WebXR VR, AR, controllers and spatial interaction APIs."
+      },
+      "strength": {
+        "zh": "将会话、参考坐标系、锚点、命中测试、手部输入、传送和空间音频拆成可阅读、可独立验证的示例。",
+        "en": "Separates sessions, reference spaces, anchors, hit tests, hand input, teleportation and spatial audio into readable test cases."
+      },
+      "learning": {
+        "zh": "学习按设备与会话模式探测能力、统一输入抽象和XR降级；不能从WebGPU支持推断WebGPU-XR支持。",
+        "en": "Learn device- and session-specific feature detection, portable input abstraction and graceful fallback; WebGPU alone does not establish WebGPU-XR support."
+      },
+      "tags": [
+        "WebXR",
+        "VR",
+        "AR",
+        "input"
       ],
       "reviewed_on": "2026-11-07"
     }
