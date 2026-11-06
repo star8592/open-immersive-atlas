@@ -1,8 +1,8 @@
 # Curated Projects · 双语项目档案
 
-> **34 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
+> **58 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
 >
-> **34 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
+> **58 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
 
 [Home / 首页](README.md) · [Search / 搜索](index.html) · [Data / 数据](data/projects.json)
 
@@ -324,6 +324,60 @@ English: Renders dense scanned spaces as a visual layer in Web3D while physics u
 English: Study occlusion, depth, sorting and performance when mixing 3DGS with meshes.
 
 
+### SuperSplat Editor 3.0
+
+- **Official / 官方**: https://superspl.at/editor  
+- **Code / 源码**: https://github.com/playcanvas/supersplat  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT editor; hosted SuperSplat services proprietary
+
+**中文简介：** PlayCanvas 开源的浏览器高斯泼溅编辑器，3.0 采用 WebGPU 驱动大规模场景的编辑和可视化。  
+**English:** An open-source browser-based Gaussian splat editor whose 3.0 architecture uses WebGPU for large-scale editing.
+
+**为什么厉害 / Why it stands out**  
+中文：作者把高斯投影、视锥剔除、GPU 排序、选择与导出改成 GPU 与流式处理，降低 JS 堆压力。  
+English: GPU compute projection, culling, sorting, selection and streamed export reduce JavaScript heap pressure.
+
+**值得学习 / What to learn**  
+中文：重点拆解 3.0 的 GPU radix sort、分块 GPU 存储、选择遮挡与内存基准；不把云端 Studio 误认为开源。  
+English: Study GPU radix sort, chunked storage, occlusion-aware selection and memory benchmarks; separate open editor from hosted Studio.
+
+
+### SuperSplat Viewer
+
+- **Official / 官方**: https://superspl.at/  
+- **Code / 源码**: https://github.com/playcanvas/supersplat-viewer  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT viewer; hosted platform and uploaded content separate
+
+**中文简介：** 面向高斯泼溅场景的可自托管静态网页查看器，支持不同高斯资产格式与碰撞数据。  
+**English:** A self-hostable static viewer for Gaussian splat scenes, supporting multiple splat formats and optional collision assets.
+
+**为什么厉害 / Why it stands out**  
+中文：官方文档披露 WebGPU 优先、WebGL 回退以及独立碰撞文件入口，兼顾视觉质量与浏览器可用性。  
+English: The documented WebGPU-first/WebGL-fallback path and separate collision inputs serve both visuals and navigability.
+
+**值得学习 / What to learn**  
+中文：研究 viewer 的设置文件、碰撞 GLB、海报首屏及不同终端的回退表现。  
+English: Study viewer settings, collision GLB, loading posters and cross-device fallback behavior.
+
+
+### SplatTransform
+
+- **Official / 官方**: https://developer.playcanvas.com/user-manual/splat-transform/  
+- **Code / 源码**: https://github.com/playcanvas/splat-transform  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT library/CLI; source scan data separate
+
+**中文简介：** 高斯泼溅格式转换和批处理工具，支持 PLY、SOG、SPZ 等格式及流式多层级输出。  
+**English:** A CLI and library for converting and batch-processing splats across PLY, SOG, SPZ and other formats.
+
+**为什么厉害 / Why it stands out**  
+中文：将合并、几何变换、筛选、局部性优化、LOD 和碰撞数据生成组织为确定性工具链。  
+English: Combines transforms, filtering, spatial reordering, merging, LOD and collision outputs in a reproducible pipeline.
+
+**值得学习 / What to learn**  
+中文：测一组相同场景从 PLY 到 Streamed SOG 的体积、首帧时间与碰撞近似误差。  
+English: Measure file size, first-frame latency and collision approximation for PLY→Streamed SOG.
+
+
 ## Frameworks & Engines / 框架与引擎
 
 ### Three.js
@@ -486,6 +540,114 @@ English: Nanite, Lumen and cinematic pipelines provide a reference for premium a
 English: Study asset scale, PBR and animation retargeting; source access does not mean OSI open source.
 
 
+### CesiumJS
+
+- **Official / 官方**: https://cesium.com/cesiumjs  
+- **Code / 源码**: https://github.com/CesiumGS/cesium  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Apache-2.0 engine; Cesium ion/data licensing separate
+
+**中文简介：** 用于三维地球、全球地形、地理时序和动态数据可视化的浏览器引擎。  
+**English:** A browser engine for 3D globes, global terrain, time-dependent geospatial data and visualization.
+
+**为什么厉害 / Why it stands out**  
+中文：开放格式、全球尺度数据管理与可视化更新机制适合大型地形世界的技术对照。  
+English: Open formats and globe-scale data management provide a reference for huge 3D terrains.
+
+**值得学习 / What to learn**  
+中文：学习地理坐标、瓦片级别、视域剔除和地理数据授权；不把 ion 订阅当成引擎许可证。  
+English: Study coordinate systems, tile LOD, visibility and geodata rights; do not conflate ion subscriptions with engine licensing.
+
+
+### Threlte
+
+- **Official / 官方**: https://threlte.xyz/  
+- **Code / 源码**: https://github.com/threlte/threlte  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check upstream project license
+
+**中文简介：** 为 Svelte 应用提供声明式 Three.js 场景集成。  
+**English:** A declarative Three.js integration for Svelte applications.
+
+**为什么厉害 / Why it stands out**  
+中文：利用 Svelte 的响应式状态与组件结构搭建 3D 页面，适合非 React 项目。  
+English: Uses Svelte reactivity and components for 3D pages without requiring React.
+
+**值得学习 / What to learn**  
+中文：比较同一场景在 Threlte 和原生 Three.js 中的更新、资源释放与渲染开销。  
+English: Compare update cycles, disposal and rendering cost against vanilla Three.js.
+
+
+### TresJS
+
+- **Official / 官方**: https://tresjs.org/  
+- **Code / 源码**: https://github.com/Tresjs/tres  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check upstream project license
+
+**中文简介：** 面向 Vue 的声明式 Three.js 生态，便于在 Vue 网站中组合三维组件。  
+**English:** A declarative Three.js ecosystem for integrating scenes into Vue applications.
+
+**为什么厉害 / Why it stands out**  
+中文：将 Vue 响应式状态和图形实体组合，为普通业务页面添加可控 3D 内容。  
+English: Combines Vue reactivity with graphic entities to add interactive 3D into conventional apps.
+
+**值得学习 / What to learn**  
+中文：对照同一 GLB 商品页在 Vue/TresJS 与 Three.js 的交互延迟及内存使用。  
+English: Compare input latency and memory for the same GLB viewer across Vue/TresJS and native Three.js.
+
+
+### OGL
+
+- **Official / 官方**: https://github.com/oframe/ogl  
+- **Code / 源码**: https://github.com/oframe/ogl  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check upstream license
+
+**中文简介：** 轻量级 WebGL 渲染库，适合自定义 Shader 和高控制力的交互视觉项目。  
+**English:** A lightweight WebGL library oriented toward custom shaders and controlled visual experiences.
+
+**为什么厉害 / Why it stands out**  
+中文：抽象层较薄，便于在视觉实验中直接管理着色器和缓冲区。  
+English: A relatively thin abstraction gives visual experiments direct control over shaders and buffers.
+
+**值得学习 / What to learn**  
+中文：学习渲染基础和 GPU 数据组织，再评估其与大型游戏引擎的职责边界。  
+English: Learn render fundamentals and GPU data layout, while assessing the boundary with full engines.
+
+
+### regl
+
+- **Official / 官方**: https://regl-project.github.io/regl/  
+- **Code / 源码**: https://github.com/regl-project/regl  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check upstream license
+
+**中文简介：** 以声明式命令组织 WebGL draw calls 的函数式渲染工具。  
+**English:** A functional WebGL toolkit organized around declarative draw commands.
+
+**为什么厉害 / Why it stands out**  
+中文：将 WebGL 状态与绘制命令组合为可复用的调用结构。  
+English: Packages WebGL state and draw commands into reusable invocation units.
+
+**值得学习 / What to learn**  
+中文：研究 draw command、状态管理及直接 WebGL 与 Three.js 的性能差异。  
+English: Study draw commands, state management and performance versus raw WebGL or Three.js.
+
+
+### PlayCanvas Web Components
+
+- **Official / 官方**: https://developer.playcanvas.com/user-manual/web-components/  
+- **Code / 源码**: https://github.com/playcanvas/web-components  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT repository; editor/hosted services separate
+
+**中文简介：** 通过自定义 HTML 元素创建和配置 PlayCanvas 三维场景的组件方案。  
+**English:** A set of HTML custom elements for constructing and configuring PlayCanvas scenes.
+
+**为什么厉害 / Why it stands out**  
+中文：将一些 3D 场景配置转化成声明式标记，降低产品网页整合门槛。  
+English: Expresses common scene configuration in declarative HTML, simplifying product-site integration.
+
+**值得学习 / What to learn**  
+中文：研究静态网页中的 3D 初始化、可访问性和资源加载边界。  
+English: Study 3D initialization, accessibility and asset loading in conventional pages.
+
+
 ## Rendering & Engineering Infrastructure / 渲染与工程技术
 
 ### Rapier
@@ -612,4 +774,274 @@ English: Makes game state, virtual time and action traces part of a repeatable Q
 **值得学习 / What to learn**  
 中文：借鉴语义操作接口，不能未经验证声称工具直接支持所有 Three.js 游戏。  
 English: Borrow semantic game testing ideas; do not assume it supports all Three.js games.
+
+
+### Google <model-viewer>
+
+- **Official / 官方**: https://modelviewer.dev/  
+- **Code / 源码**: https://github.com/google/model-viewer  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Apache-2.0 code; imported model assets separate
+
+**中文简介：** 通过 Web Component 将 GLB/glTF 放入网站，并在兼容设备上交接 AR 展示。  
+**English:** A Web Component for placing interactive glTF/GLB assets into a page and handing off to AR on supported devices.
+
+**为什么厉害 / Why it stands out**  
+中文：将模型查看、轨道控制和网站布局解耦，另有渲染一致性测试工具。  
+English: Separates model display from website layout, with companion render-fidelity tooling.
+
+**值得学习 / What to learn**  
+中文：比较同一套 GLB 在 model-viewer、Three.js 与商品详情页的真实显示与交互差异。  
+English: Compare the same GLB across model-viewer, custom Three.js and product detail pages.
+
+
+### three-mesh-bvh
+
+- **Official / 官方**: https://github.com/gkjohnson/three-mesh-bvh  
+- **Code / 源码**: https://github.com/gkjohnson/three-mesh-bvh  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT
+
+**中文简介：** 为 Three.js Mesh 构建 BVH 加速结构，显著改善复杂模型上的 Raycast 和空间查询。  
+**English:** A BVH acceleration structure for Three.js meshes, speeding up raycasting and spatial queries.
+
+**为什么厉害 / Why it stands out**  
+中文：用层级包围体减少三角形相交测试，适合编辑器选择、场景拾取、局部碰撞和距离查询。  
+English: Hierarchical bounds prune triangle intersection tests for picking, editing, collision queries and distance checks.
+
+**值得学习 / What to learn**  
+中文：建立高面数 GLB 上 Raycast 与 BVH 的基准并验证动态 Mesh 更新成本。  
+English: Benchmark plain raycasts versus BVH against high-poly GLBs and quantify dynamic mesh update costs.
+
+
+### pmndrs postprocessing
+
+- **Official / 官方**: https://pmndrs.github.io/postprocessing/public/demo/  
+- **Code / 源码**: https://github.com/pmndrs/postprocessing  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check current upstream license; WebGL examples documented
+
+**中文简介：** Three.js 的 EffectComposer 后处理库，用 RenderPass 和 EffectPass 组织画面效果。  
+**English:** A postprocessing library for Three.js that organizes fullscreen effects as render and effect passes.
+
+**为什么厉害 / Why it stands out**  
+中文：公开说明线性工作流、HDR 半浮点中间缓冲与 Bloom 等效果的正确组合方式。  
+English: Documents linear color workflow, HDR half-float buffers and composable effects such as bloom.
+
+**值得学习 / What to learn**  
+中文：核对 SRGB/线性光/HDR 顺序，避免叠加后处理造成带状、过曝和帧率下降。  
+English: Validate sRGB/linear/HDR order and measure banding, clipping and GPU cost.
+
+
+### 3d-tiles-renderer
+
+- **Official / 官方**: https://github.com/NASA-AMMOS/3DTilesRendererJS  
+- **Code / 源码**: https://github.com/NASA-AMMOS/3DTilesRendererJS  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check current upstream LICENSE; tile data separately licensed
+
+**中文简介：** 将 3D Tiles 分层空间数据带入 Three.js、Babylon.js 和 PlayCanvas 的渲染库。  
+**English:** A renderer for 3D Tiles datasets with Three.js, Babylon.js and PlayCanvas integrations.
+
+**为什么厉害 / Why it stands out**  
+中文：按需流式读取大型几何瓦片，帮助现有引擎处理大范围城市、火星及地形数据。  
+English: Streams tiled geometric data for existing engines, including large city or planetary scenes.
+
+**值得学习 / What to learn**  
+中文：研究瓦片请求调度、显存与网络预算、几何正确性和不同引擎一致性。  
+English: Study tile request scheduling, GPU/network budgets, geometry correctness and cross-engine fidelity.
+
+
+### @react-three/drei
+
+- **Official / 官方**: https://drei.docs.pmnd.rs/  
+- **Code / 源码**: https://github.com/pmndrs/drei  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check current upstream LICENSE
+
+**中文简介：** 面向 React Three Fiber 的常用 3D 控件与现成组件集合。  
+**English:** A helper/component library for React Three Fiber applications.
+
+**为什么厉害 / Why it stands out**  
+中文：把轨道控制、环境光照、加载器和场景交互等重复工程化需求封装成组件。  
+English: Packages reusable controls, environment helpers, asset loaders and scene interactions.
+
+**值得学习 / What to learn**  
+中文：研究哪些组件能加快产品展示开发，哪些高频更新需直接 Three.js 控制。  
+English: Evaluate which helpers accelerate product viewers and which high-frequency paths need direct Three.js.
+
+
+### Theatre.js
+
+- **Official / 官方**: https://www.theatrejs.com/  
+- **Code / 源码**: https://github.com/theatre-js/theatre  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Apache-2.0 public repository; 1.0 development disclosed in private
+
+**中文简介：** 支持可视化时间轴和程序化控制的网页精密动画编排工具。  
+**English:** A timeline-based animation toolkit for detailed motion design and programmatic control.
+
+**为什么厉害 / Why it stands out**  
+中文：把镜头位置、关键帧和微交互作为可编辑数据，而不仅是脚本里散落的 Tween。  
+English: Turns camera paths, keyframes and micro-interactions into editable data rather than scattered tweens.
+
+**值得学习 / What to learn**  
+中文：用一段原创 3D 产品分镜验证关键帧与用户拖动的正确交互；关注公开版本滞后说明。  
+English: Prototype an original product shot with keyframes plus user scrubbing, noting the public release lag.
+
+
+### cannon-es
+
+- **Official / 官方**: https://pmndrs.github.io/cannon-es/  
+- **Code / 源码**: https://github.com/pmndrs/cannon-es  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check upstream LICENSE
+
+**中文简介：** JavaScript/TypeScript 生态的 3D 刚体物理与碰撞引擎。  
+**English:** A JavaScript/TypeScript 3D rigid-body physics engine.
+
+**为什么厉害 / Why it stands out**  
+中文：提供轻量的浏览器物理选择，便于对照 Rapier 的集成成本与计算性能。  
+English: Offers a comparatively lightweight browser-physics choice for benchmarking against Rapier.
+
+**值得学习 / What to learn**  
+中文：在同一场景比较固定步长、刚体堆叠稳定性与碰撞开销。  
+English: Compare fixed-step stacking stability and collision cost with another engine.
+
+
+### Spector.js
+
+- **Official / 官方**: https://spector.babylonjs.com/  
+- **Code / 源码**: https://github.com/BabylonJS/Spector.js  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check current upstream LICENSE
+
+**中文简介：** 浏览器 WebGL 帧捕获与 GPU 绘制命令调试工具。  
+**English:** A WebGL frame capture and graphics debugging tool for the browser.
+
+**为什么厉害 / Why it stands out**  
+中文：把复杂帧的 shader、纹理、状态和 draw calls 拆开分析，定位黑屏与性能热点。  
+English: Inspects shaders, textures, state and draw calls to diagnose black frames and GPU bottlenecks.
+
+**值得学习 / What to learn**  
+中文：对我们游戏的黑幕、材质状态错误和多余 Draw Call 做真实帧捕获分析。  
+English: Capture real frames to investigate black geometry, incorrect materials and redundant draw calls.
+
+
+### Khronos glTF Sample Viewer
+
+- **Official / 官方**: https://github.khronos.org/glTF-Sample-Viewer-Release/  
+- **Code / 源码**: https://github.com/KhronosGroup/glTF-Sample-Viewer  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check current repository license and asset-by-asset rights
+
+**中文简介：** Khronos 官方 glTF 2.0 参考查看器，用于验证 PBR 材质和扩展支持。  
+**English:** The Khronos reference glTF 2.0 viewer for evaluating PBR materials and extensions.
+
+**为什么厉害 / Why it stands out**  
+中文：提供独立于我们渲染器的模型对照基线，帮助区分资产缺陷和引擎缺陷。  
+English: Provides a renderer-independent asset baseline to distinguish model defects from engine bugs.
+
+**值得学习 / What to learn**  
+中文：用同一 GLB 对照官方 Viewer、Three.js、Godot 的外观与动画差异。  
+English: Compare a GLB's materials and animation in the reference viewer, Three.js and Godot.
+
+
+### Khronos glTF Validator
+
+- **Official / 官方**: https://github.khronos.org/glTF-Validator/  
+- **Code / 源码**: https://github.com/KhronosGroup/glTF-Validator  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Apache-2.0
+
+**中文简介：** 按 glTF 2.0 标准检查 GLB/glTF 结构、材质、动画及扩展的官方验证工具。  
+**English:** The official validator for glTF 2.0 structures, buffers, animations, images and extensions.
+
+**为什么厉害 / Why it stands out**  
+中文：给出机器可读的 JSON 问题报告，能把资产发布从肉眼挑错升级成自动校验。  
+English: Produces machine-readable JSON reports that turn asset compliance into an automated release check.
+
+**值得学习 / What to learn**  
+中文：把 Validator 加入资产工厂，结合可视对照和碰撞检查而非把语法通过当视觉合格。  
+English: Integrate validation into asset QA alongside visual comparison and collision tests.
+
+
+### Khronos glTF Sample Models
+
+- **Official / 官方**: https://github.com/KhronosGroup/glTF-Sample-Models  
+- **Code / 源码**: https://github.com/KhronosGroup/glTF-Sample-Models  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Per-model licenses vary; do not assume blanket reuse
+
+**中文简介：** Khronos 维护的 glTF 示例模型集合，覆盖多种材质、动画与扩展测试场景。  
+**English:** A curated collection of glTF sample assets spanning materials, animation and extensions.
+
+**为什么厉害 / Why it stands out**  
+中文：提供具备明确参考预期的模型，用于发现不同引擎间 PBR 与格式兼容差异。  
+English: Supplies reference assets for testing PBR and compatibility across rendering engines.
+
+**值得学习 / What to learn**  
+中文：逐模型核对授权，挑选允许的样本构建多引擎外观回归测试。  
+English: Audit each model's license before using it in cross-engine visual regression tests.
+
+
+### Google Draco
+
+- **Official / 官方**: https://google.github.io/draco/  
+- **Code / 源码**: https://github.com/google/draco  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Apache-2.0
+
+**中文简介：** Google 开源的 3D 网格与点云几何压缩库。  
+**English:** Google's open-source geometry compression for 3D meshes and point clouds.
+
+**为什么厉害 / Why it stands out**  
+中文：大幅压缩可传输几何数据，代价是解码时间与运行端处理开销。  
+English: Reduces geometry payload size at the cost of decoding work.
+
+**值得学习 / What to learn**  
+中文：测 Draco 与 Meshopt 在同一 GLB 上的文件大小、解码耗时和设备兼容。  
+English: Compare Draco and Meshopt on the same GLB for size, decode time and compatibility.
+
+
+### Basis Universal
+
+- **Official / 官方**: https://github.com/BinomialLLC/basis_universal  
+- **Code / 源码**: https://github.com/BinomialLLC/basis_universal  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check current upstream LICENSE; texture source rights separate
+
+**中文简介：** 面向 GPU 纹理的超压缩与多平台转码工具。  
+**English:** A supercompressed texture codec and transcoding toolkit for GPU delivery.
+
+**为什么厉害 / Why it stands out**  
+中文：一次存储即可按目标设备转码为不同的 GPU 纹理格式，有利于减小带宽和显存占用。  
+English: Stores compressed textures once and transcodes for platform GPU formats to improve delivery.
+
+**值得学习 / What to learn**  
+中文：比较 KTX2/Basis 和原始 PNG 的画质、带宽、启动耗时及显存表现。  
+English: Benchmark KTX2/Basis against PNG for quality, bandwidth, startup time and GPU memory.
+
+
+### stats.js
+
+- **Official / 官方**: https://github.com/mrdoob/stats.js  
+- **Code / 源码**: https://github.com/mrdoob/stats.js  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT
+
+**中文简介：** 极简的浏览器 FPS、帧时间与内存实时监测面板。  
+**English:** A compact browser panel displaying FPS, frame time and memory metrics.
+
+**为什么厉害 / Why it stands out**  
+中文：不隐藏真实性能状态，快速监测过度 Shader、分辨率和循环开销。  
+English: Exposes basic real-time performance signals for expensive shaders, resolution and loops.
+
+**值得学习 / What to learn**  
+中文：将轻量监控接入开发场景，并用浏览器 Performance 工具交叉验证。  
+English: Embed basic monitoring in development scenes and cross-check with browser profiling.
+
+
+### three-gpu-pathtracer
+
+- **Official / 官方**: https://gkjohnson.github.io/three-gpu-pathtracer/  
+- **Code / 源码**: https://github.com/gkjohnson/three-gpu-pathtracer  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Check current upstream LICENSE
+
+**中文简介：** 结合 Three.js、BVH 和 GPU 计算着色器的渐进式物理路径追踪项目。  
+**English:** A progressive physically based path tracer combining Three.js, BVH and GPU compute shaders.
+
+**为什么厉害 / Why it stands out**  
+中文：在浏览器内实现具有真实反射、折射、焦外与光源采样的高品质渲染。  
+English: Renders physically plausible reflections, refraction, depth of field and sampled lighting in-browser.
+
+**值得学习 / What to learn**  
+中文：用于材质对照和商品静帧，不把重型路径追踪作为所有实时游戏场景的默认方案。  
+English: Use it for material baselines and product stills, not as the default for every real-time game.
 
