@@ -1,8 +1,8 @@
 # Curated Projects · 双语项目档案
 
-> **58 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
+> **64 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
 >
-> **58 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
+> **64 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
 
 [Home / 首页](README.md) · [Search / 搜索](index.html) · [Data / 数据](data/projects.json)
 
@@ -177,6 +177,91 @@ English: A shared parametric source can drive dimensions, 2D specification views
 **值得学习 / What to learn**  
 中文：学习参数映射与尺寸驱动的可靠交互；案例具体技术须单独验证。  
 English: Learn parameter mapping and dimension-driven interaction; verify each case's technical implementation.
+
+
+### Aten7 — Toom Archives
+
+- **Official / 官方**: https://immersive-g.com/projects/aten7/  
+- **Evidence / 证据**: `creator-article` · **Upstream rights / 上游权属**: Original site/brand assets proprietary; case-study analysis only
+
+**中文简介：** Immersive Garden 创作的科幻 WebGL 世界，融合动态季节、粒子和可探索的未来遗迹。  
+**English:** A sci-fi WebGL world by Immersive Garden with changing seasons, particles and explorable future architecture.
+
+**为什么厉害 / Why it stands out**  
+中文：叙事系统与环境天气、视觉符号实时同步，让场景本身承担剧情传达。  
+English: Narrative, environmental weather and visual symbols evolve together so the world carries the story.
+
+**值得学习 / What to learn**  
+中文：学习同一建筑在天气、季节和视觉阶段变化时的资产组织方式，不能臆测源码 Shader。  
+English: Study how one environment supports weather, seasons and story beats without inventing undocumented shader internals.
+
+
+### Cartier in Time
+
+- **Official / 官方**: https://immersive-g.com/projects/cartier-in-time/  
+- **Evidence / 证据**: `creator-article` · **Upstream rights / 上游权属**: Cartier video/branding and creator work remain proprietary
+
+**中文简介：** 围绕十二小时、十二部短片设计的沉浸式品牌交互叙事。  
+**English:** An immersive brand story structured as twelve hours and twelve cinematic shorts.
+
+**为什么厉害 / Why it stands out**  
+中文：用钟表时针作为导航隐喻，形成独特的时间轮播与镜头转场。  
+English: Uses a clock-hand metaphor as navigation for an unusual time-based carousel and cinematic transitions.
+
+**值得学习 / What to learn**  
+中文：学习把产品隐喻转译成时间轴交互，重点研究镜头节奏而非复制品牌素材。  
+English: Study translating a product metaphor into timeline navigation; learn pacing without copying brand assets.
+
+
+### ITom Sketch Portfolio
+
+- **Official / 官方**: https://itomdev.com/  
+- **Evidence / 证据**: `creator-article` · **Upstream rights / 上游权属**: Creator portfolio proprietary; no source reuse implied
+
+**中文简介：** 以手绘纹理三维走廊取代普通网页滚动的互动作品集。  
+**English:** An interactive portfolio using a hand-drawn 3D corridor instead of conventional scrolling.
+
+**为什么厉害 / Why it stands out**  
+中文：官方项目介绍披露 React、Three.js 与 GSAP 的组合，以及进入不同房间的导航形式。  
+English: The creator describes React, Three.js and GSAP driving room-by-room navigation and illustrated textures.
+
+**值得学习 / What to learn**  
+中文：研究三维走廊中的入口、返回、镜头位移、纹理过渡和触控可用性。  
+English: Study doors, transitions, camera travel, navigation recovery and touch accessibility.
+
+
+### Immersive Garden — Studio Works
+
+- **Official / 官方**: https://immersive-g.com/projects/  
+- **Evidence / 证据**: `official-site` · **Upstream rights / 上游权属**: Agency work and client assets proprietary
+
+**中文简介：** 创意技术工作室的沉浸式 WebGL 网站案例库，涵盖奢侈品牌、科幻叙事和数字展览。  
+**English:** A studio portfolio of immersive WebGL experiences spanning luxury brands, sci-fi worlds and digital exhibitions.
+
+**为什么厉害 / Why it stands out**  
+中文：多个不同行业案例展示如何围绕单一品牌想法设计互动节奏，而不是堆特效。  
+English: Shows how interactive pacing can grow from a brand idea instead of stacking effects indiscriminately.
+
+**值得学习 / What to learn**  
+中文：逐案例追溯制作方原始文章、可访问项目和已披露技术，不把整个作品集当开源素材。  
+English: Trace original creator case studies, live experiences and documented techniques case by case.
+
+
+### Active Theory — Studio Experiences
+
+- **Official / 官方**: https://activetheory.net/  
+- **Evidence / 证据**: `official-site` · **Upstream rights / 上游权属**: Client projects and studio technology proprietary
+
+**中文简介：** 专注大型交互式品牌活动与实时 Web 3D 的创意技术工作室。  
+**English:** A creative technology studio known for large-scale interactive brand campaigns and real-time web experiences.
+
+**为什么厉害 / Why it stands out**  
+中文：用具有游戏引擎特性的交互逻辑组织营销网站，兼顾大场景叙事。  
+English: Applies game-like interaction logic to complex web narratives and large spatial experiences.
+
+**值得学习 / What to learn**  
+中文：研究进度保存、输入反馈和复杂网站的运行时组织，具体技术栈逐项目核实。  
+English: Study progress, input feedback and runtime organization; verify each project's stack separately.
 
 
 ## 3D & AI Production Pipelines / 3D 与 AI 工厂
@@ -376,6 +461,23 @@ English: Combines transforms, filtering, spatial reordering, merging, LOD and co
 **值得学习 / What to learn**  
 中文：测一组相同场景从 PLY 到 Streamed SOG 的体积、首帧时间与碰撞近似误差。  
 English: Measure file size, first-frame latency and collision approximation for PLY→Streamed SOG.
+
+
+### Spline — Interactive 3D Editor
+
+- **Official / 官方**: https://spline.design/  
+- **Evidence / 证据**: `official-product` · **Upstream rights / 上游权属**: Proprietary hosted product; pricing and export rights vary by plan
+
+**中文简介：** 可在浏览器协作制作实时三维内容的编辑器，支持交互、状态、动画、导出及 MCP 接入。  
+**English:** A collaborative browser editor for interactive 3D with states, animation, exports and MCP-based agent workflows.
+
+**为什么厉害 / Why it stands out**  
+中文：把建模、状态事件与可嵌入网页的交互结果保留在同一个可编辑工程里。  
+English: Keeps modeling, event states and publishable interactions within the same editable project.
+
+**值得学习 / What to learn**  
+中文：研究其基于对象的 MCP 编辑与原生 WebGPU/WebGL 输出模型；审查导出和商业条款。  
+English: Study object-level MCP editing and WebGPU/WebGL runtime delivery while reviewing export and commercial terms.
 
 
 ## Frameworks & Engines / 框架与引擎
