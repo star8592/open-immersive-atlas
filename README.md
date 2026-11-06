@@ -10,7 +10,7 @@
 
 ## First edition / 首批收录
 
-**34 independently described references · 4 categories · Chinese and English for every record.**
+**64 independently described references · 4 categories · Chinese and English for every record.**
 
 | Category / 分类 | Contents / 内容 |
 |---|---|
@@ -61,6 +61,13 @@ This repository's **original prose, structured catalog and code** are published 
 
 Created: **2026-11-07**. Catalog entries are research references, not verified hands-on benchmarks unless explicitly indicated.
 
+## Newly verified research tracks / 新增重点研究方向
+
+- **SuperSplat 3.0:** WebGPU compute, GPU-resident splat data, streamed exports, native WebMCP; the Editor is WebGPU-only while the Viewer separately supports WebGL fallback. / GPU 数据驻留与计算排序；编辑器和查看器兼容性不同。
+- **glTF QA:** Khronos Validator + reference render + geometry/LOD + collision/runtime tests. / 用文件规范、材质、物理和真实运行四层验收模型。
+- **Spline + WebMCP:** explicit agent operations with scopes, stable IDs, view tokens, undo and preview. / 让 AI 编辑具备明确作用域、版本、可回退与视觉证据。
+- **Creator-led experiences:** Aten7, Cartier in Time, ITom and Immersive Garden case studies, separating first-party creator disclosures from proprietary code. / 新增来自制作方的一手作品案例。
+
 ## Featured deep dives / 专题技术拆解
 
 Read independent technical case studies, with primary sources, concrete engineering mechanisms and license-safe experiments:
@@ -69,5 +76,8 @@ Read independent technical case studies, with primary sources, concrete engineer
 - [AnyKit — normalizing AI-generated models into coherent asset kits / 将 AI 模型做成可靠资产](docs/cases/anykit.md)
 - [AnyScene + AnyShot — reproducible scenes and camera pipelines / 可重建场景与镜头工厂](docs/cases/anyscene-anyshot.md)
 - [Bruno Simon Folio — real physics, game loop and browser asset pipeline / 可玩网站与物理主循环](docs/cases/bruno-folio.md)
+- [SuperSplat 3.0 — WebGPU compute, memory and browser WebMCP / GPU 计算、内存与原生 AI 编辑](docs/cases/supersplat-3-webgpu.md)
+- [glTF Asset QA — specification, geometry, materials and runtime / 游戏级资产验收](docs/cases/gltf-asset-qa.md)
+- [Agent-operable 3D editors — safe operations and undo / AI 操作三维编辑器](docs/cases/web3d-agent-editing.md)
 
 These essays are authored analysis of public sources, **not** upstream source mirrors or measured local reproductions. / 它们是公开资料的原创分析，不是第三方源码镜像或本地性能验收报告。
