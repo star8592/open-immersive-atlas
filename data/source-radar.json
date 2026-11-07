@@ -1,0 +1,353 @@
+{
+  "schema": "oia-primary-source-radar-v1",
+  "reviewed_on": "2026-11-07",
+  "mission": {
+    "zh": "收集高价值的一手标准、制作复盘、玩家体验、商业发行与可授权素材，不与开源代码项目混为一谈。",
+    "en": "Track first-party standards, postmortems, player experience, distribution and licensed assets separately from open-source repositories."
+  },
+  "record_count": 18,
+  "sources": [
+    {
+      "id": "gdc-vault",
+      "category": "制作经验与复盘",
+      "name": "GDC Vault",
+      "url": "https://gdcvault.com/browse",
+      "source_kind": "conference-archive",
+      "summary": {
+        "zh": "收集一线游戏开发团队的技术分享、设计取舍与制作复盘，区分可公开观看和订阅内容。",
+        "en": "Talks and postmortems from production game teams; check free versus subscription access."
+      },
+      "learning": {
+        "zh": "挑选真正解释机制和失败教训的演讲，提炼实验假设，不转载付费音视频。",
+        "en": "Extract testable production lessons; do not redistribute subscriber videos."
+      },
+      "rights_note": "Conference content is copyrighted; link to sessions, do not rehost.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "gamedeveloper-postmortems",
+      "category": "制作经验与复盘",
+      "name": "Game Developer Postmortems",
+      "url": "https://www.gamedeveloper.com/keyword/postmortems",
+      "source_kind": "editorial-archive",
+      "summary": {
+        "zh": "按设计、技术与制作结果阅读开发者复盘，特别关注失败原因和迭代转折点。",
+        "en": "Industry postmortems covering design choices, development outcomes and failures."
+      },
+      "learning": {
+        "zh": "将假设、实际结果和反例分类成游戏可复用的设计判断。",
+        "en": "Convert assumptions, outcomes and counterexamples into design review notes."
+      },
+      "rights_note": "Copyright retained by writers and publisher; links and original summaries only.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "igda-dss",
+      "category": "行业数据与用户",
+      "name": "IGDA Developer Satisfaction Survey",
+      "url": "https://igda.org/dss/",
+      "source_kind": "research-report",
+      "summary": {
+        "zh": "通过协会开发者调查研究行业开发条件与人员生态，不将从业者调查误当玩家偏好。",
+        "en": "Developer survey on working conditions and industry demographics, not player preferences."
+      },
+      "learning": {
+        "zh": "建立开发团队能力与风险研究基线，并保留报告统计口径。",
+        "en": "Keep report methodology and sampling limits when interpreting industry capacity."
+      },
+      "rights_note": "Published research; follow report citation and reuse terms.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "steamworks-utm",
+      "category": "发行与增长",
+      "name": "Steamworks UTM Analytics",
+      "url": "https://partner.steamgames.com/doc/marketing/utm_analytics",
+      "source_kind": "official-guide",
+      "summary": {
+        "zh": "官方说明商店访问、可信访问及愿望单或购买等归因转化的口径和限制。",
+        "en": "Official definitions for campaign visits, trusted traffic and attributed wishlists or sales."
+      },
+      "learning": {
+        "zh": "为推广设计来源参数、去机器人流量和转化漏斗；不混淆访客与玩家。",
+        "en": "Design campaign funnels, bot filters and conversion tracking without equating visits to players."
+      },
+      "rights_note": "Official docs; Steam store data is permissioned and aggregate, not public player logs.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "itch-creators",
+      "category": "发行与增长",
+      "name": "itch.io Creator Documentation",
+      "url": "https://itch.io/docs/creators/getting-started",
+      "source_kind": "official-guide",
+      "summary": {
+        "zh": "讲述项目页面、标签、发布更新与创作者后台浏览/下载/购买分析。",
+        "en": "Official creator guide for publishing, tags and dashboard views/download/sales metrics."
+      },
+      "learning": {
+        "zh": "研究试玩页面 A/B 展示和作品更新节奏；实际后台数据必须有账号权限。",
+        "en": "Study play-page presentation and update cadence; private creator analytics need authorization."
+      },
+      "rights_note": "Public guide; account analytics and third-party games are not public data.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "game-accessibility",
+      "category": "交互与可玩性",
+      "name": "Game Accessibility Guidelines",
+      "url": "https://gameaccessibilityguidelines.com/",
+      "source_kind": "professional-guideline",
+      "summary": {
+        "zh": "由开发者与无障碍专业人员整理的基础、进阶和高级游戏可访问性建议。",
+        "en": "Practical game accessibility guidance organized by effort and complexity."
+      },
+      "learning": {
+        "zh": "建立手柄、字幕、颜色、输入重映射和认知负担的体验验收计划。",
+        "en": "Test subtitles, color, remapping, controllers and cognitive load in gameplay."
+      },
+      "rights_note": "Guidance copyrighted by creators; original checklists allowed with attribution.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "wcag22",
+      "category": "交互与可玩性",
+      "name": "W3C WCAG 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "source_kind": "technical-standard",
+      "summary": {
+        "zh": "W3C 网页可访问性标准，可用于游戏平台导航、账户、购买和游戏外层 UI。",
+        "en": "W3C accessibility standard for web navigation, controls and platform shell."
+      },
+      "learning": {
+        "zh": "独立评估焦点、对比度、输入与键盘导航，不能因自动通过就声称合规。",
+        "en": "Check focus, contrast, keyboard and pointer interactions beyond automated checks."
+      },
+      "rights_note": "W3C technical standard; follow W3C document license.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "mdn-gamepad",
+      "category": "交互与可玩性",
+      "name": "MDN Gamepad API",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API",
+      "source_kind": "official-guide",
+      "summary": {
+        "zh": "浏览器手柄输入与事件接口说明，涉及设备连接、按键和轴状态。",
+        "en": "Browser game-controller connection, button and axis API reference."
+      },
+      "learning": {
+        "zh": "建立 PC 手柄与移动触控分开的输入适配层，验证热插拔和映射。",
+        "en": "Design gamepad input adapter and test hotplug, mapping and fallback."
+      },
+      "rights_note": "MDN documentation; API compatibility varies by browser/device.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "gltf-spec",
+      "category": "文件标准与性能",
+      "name": "Khronos glTF Specification",
+      "url": "https://github.com/KhronosGroup/glTF/blob/main/specification/2.0/Specification.adoc",
+      "source_kind": "technical-standard",
+      "summary": {
+        "zh": "glTF 2.0 数据规范，用于确认网格、材质、动画和扩展的语义及合法性。",
+        "en": "Authoritative glTF 2.0 schema and semantics for meshes, materials and animation."
+      },
+      "learning": {
+        "zh": "让结构验证、材质引用和扩展处理建立在规范而非猜测上。",
+        "en": "Build asset validation and extension handling on the actual specification."
+      },
+      "rights_note": "Standard text and external models have separate rights.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "ktx-artist-guide",
+      "category": "文件标准与性能",
+      "name": "Khronos KTX Artist Guide",
+      "url": "https://github.com/KhronosGroup/3D-Formats-Guidelines/blob/main/KTXArtistGuide.md",
+      "source_kind": "official-guide",
+      "summary": {
+        "zh": "官方材质师指南区分 ETC1S、UASTC 及颜色与数据纹理的压缩策略。",
+        "en": "Artist-oriented KTX2 guidance explaining codec choice for color and data textures."
+      },
+      "learning": {
+        "zh": "按法线、粗糙度、颜色分配压缩参数，实际测显存、模糊和压缩瑕疵。",
+        "en": "Tune KTX codecs by map role and test memory and visible artifacts."
+      },
+      "rights_note": "Khronos guide; sample images and tools retain their own license.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "khronos-sample-assets",
+      "category": "文件标准与性能",
+      "name": "Khronos glTF Sample Assets",
+      "url": "https://github.khronos.org/glTF-Assets/",
+      "source_kind": "standard-fixtures",
+      "summary": {
+        "zh": "包含材质、扩展、动画与模型变体的可搜索验证素材库，每个模型授权不同。",
+        "en": "Searchable glTF validation scenes covering materials, extensions and animation."
+      },
+      "learning": {
+        "zh": "从素材库选能自动验收的参考模型，但逐个核查授权及对应源文件。",
+        "en": "Use reference fixtures for importer QA; audit every model's individual rights."
+      },
+      "rights_note": "Per-asset licenses vary; not a blanket free-commercial asset library.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "webgpu-spec",
+      "category": "文件标准与性能",
+      "name": "W3C WebGPU Specification",
+      "url": "https://www.w3.org/TR/webgpu/",
+      "source_kind": "technical-standard",
+      "summary": {
+        "zh": "浏览器 GPU 绘图与计算、缓冲区、管线、查询及安全行为的正式规范。",
+        "en": "W3C WebGPU API specification for pipelines, buffers, queries and security."
+      },
+      "learning": {
+        "zh": "设计双后端一致性与设备丢失测试，区分规范与浏览器实现差异。",
+        "en": "Test device loss and WebGL fallback against spec and real implementations."
+      },
+      "rights_note": "Technical standard; browser availability/feature flags vary.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "polyhaven-license",
+      "category": "可授权美术资源",
+      "name": "Poly Haven License",
+      "url": "https://polyhaven.com/license",
+      "source_kind": "asset-license",
+      "summary": {
+        "zh": "官方说明 HDRI、材质和 3D 模型资产 CC0，同时明确网站其他内容与 API 条款的边界。",
+        "en": "Official CC0 scope for site assets, distinguished from site content and API terms."
+      },
+      "learning": {
+        "zh": "建立可靠的商用素材候选池，记录每件作品来源并尊重 API 使用条款。",
+        "en": "Source potential commercial assets while respecting per-item provenance and API terms."
+      },
+      "rights_note": "CC0 applies to listed assets; site branding, site content and API terms are separate.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "ambientcg-license",
+      "category": "可授权美术资源",
+      "name": "ambientCG License",
+      "url": "https://docs.ambientcg.com/license/",
+      "source_kind": "asset-license",
+      "summary": {
+        "zh": "官方文档声明素材以 CC0 许可提供，支持游戏内使用和二次加工。",
+        "en": "Official ambientCG CC0 asset policy covering materials and models."
+      },
+      "learning": {
+        "zh": "为不同环境材质收集真实 PBR 对照，避免依赖生成式模型凭空猜贴图。",
+        "en": "Collect real PBR reference materials with source metadata for environment art."
+      },
+      "rights_note": "Downloadable assets CC0; individual project context and site API terms still matter.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "kenney-license",
+      "category": "可授权美术资源",
+      "name": "Kenney Asset Use FAQ",
+      "url": "https://kenney.nl/support",
+      "source_kind": "asset-license",
+      "summary": {
+        "zh": "官方说明资产页面的素材采用 CC0 商用许可，但 Logo 不是可自由复用资产。",
+        "en": "Kenney's official FAQ confirms CC0 game assets with separate logo rights."
+      },
+      "learning": {
+        "zh": "用可溯源图形和音效做原创测试原型，保留版本与资产包说明。",
+        "en": "Use traceable art/audio packs in test scenes, preserving package versions."
+      },
+      "rights_note": "Game assets on asset pages CC0; logos and other site materials are not.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "websplatter-paper",
+      "category": "前沿论文与基准",
+      "name": "WebSplatter ACM Multimedia 2026",
+      "url": "https://websplatter.github.io/",
+      "source_kind": "research-paper",
+      "summary": {
+        "zh": "WebGPU 原生 3DGS 跨架构渲染研究，作者报告多设备性能和画质测试。",
+        "en": "WebGPU-native splat rendering paper with author-reported cross-device evaluation."
+      },
+      "learning": {
+        "zh": "研究排序避免死锁和透明度性能，不将论文速度比视作本地实测。",
+        "en": "Study sort synchronization and opacity pipeline; benchmark author claims independently."
+      },
+      "rights_note": "Research content attributed to authors; code and demo assets require separate licenses.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "hy3d-bench-paper",
+      "category": "前沿论文与基准",
+      "name": "HY3D-Bench 2026",
+      "url": "https://arxiv.org/abs/2602.03907",
+      "source_kind": "research-paper",
+      "summary": {
+        "zh": "三维生成数据集和结构化部件标注方向的研究，用于建立资产质量考题。",
+        "en": "3D generation benchmark emphasizing curated assets and part-level decomposition."
+      },
+      "learning": {
+        "zh": "借鉴合成数据和可拆分部件的评价思路；先核对实际可公开下载的授权。",
+        "en": "Adapt part-level evaluation concepts; verify actual benchmark data distribution rights."
+      },
+      "rights_note": "Research paper is not a blanket dataset reuse license.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "gdc-procedural",
+      "category": "制作经验与复盘",
+      "name": "GDC Procedural Generation Talks",
+      "url": "https://gdcvault.com/procedural-generation",
+      "source_kind": "conference-archive",
+      "summary": {
+        "zh": "集中研究程序化关卡、地形与叙事生成的实际项目经验及失败记录。",
+        "en": "GDC archive for procedural generation presentations and lessons."
+      },
+      "learning": {
+        "zh": "以可玩的地图连通性和节奏为验收目标，不只生成看起来复杂的图案。",
+        "en": "Validate generated levels for reachability and pacing, not visual novelty alone."
+      },
+      "rights_note": "GDC sessions may be paywalled/copyrighted; reference only.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    }
+  ]
+}
