@@ -62,7 +62,49 @@
         "overflow": false
       }
     ],
-    "desktop_hover_note": "Headless Chrome reported matchMedia('(hover:hover)') false, so physical-desktop pointer hover was not validated. The click-to-play player was browser-validated on both pages; hover implementation is conditional on real desktop hover support."
+    "desktop_hover_note": "Headless Chrome reported matchMedia('(hover:hover)') false, so physical-desktop pointer hover was not validated. The click-to-play player was browser-validated on both pages; hover implementation is conditional on real desktop hover support.",
+    "featured_motion_reel": {
+      "desktop_2026_web": {
+        "featured_cards": 3,
+        "real_time_chrome_playing": 3,
+        "all_video_ready_state": 4,
+        "all_paused": false,
+        "example_media": [
+          "fal.ai",
+          "Dayroom",
+          "Kaching"
+        ],
+        "horizontal_overflow": false
+      },
+      "desktop_ai_web": {
+        "featured_cards": 2,
+        "real_time_chrome_playing": 2,
+        "all_video_ready_state": 4,
+        "all_paused": false,
+        "example_media": [
+          "Ninefold game studio",
+          "Tape Room recording studio"
+        ],
+        "horizontal_overflow": false
+      },
+      "mobile_390_2026_web": {
+        "featured_cards": 3,
+        "loaded_video_metadata": 3,
+        "filtered_motion_posts": 9,
+        "horizontal_overflow": false,
+        "native_controls": true
+      },
+      "mobile_390_ai_web": {
+        "featured_cards": 2,
+        "loaded_video_metadata": 2,
+        "filtered_motion_posts": 2,
+        "horizontal_overflow": false,
+        "native_controls": true
+      },
+      "device": "Z890 Google Chrome 157 real-time headless CDP; isolated profile; videos hosted on same GitHub Pages origin",
+      "semantics": "Muted scroll captures, not an audit of 3D interactions; full source site links attached"
+    },
+    "browser_qa_status": "PASS for real-time playback desktop featured reels and mobile loading/filter layout"
   },
   "copyright": "Short, credited, muted editorial screen recordings of third-party sites. The source authors retain their rights, and media are not licensed for resale or as client marketing assets.",
   "productization": "Users can see actual visual movement before opening source, and can open the source for full interactive experience. 2-frame screenshots are kept as separate non-video evidence."
