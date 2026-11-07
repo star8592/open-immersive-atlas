@@ -1,0 +1,155 @@
+{
+  "schema": "oia-research-lanes-v1",
+  "updated_on": "2026-11-07",
+  "scope": "public-source-based-research-only",
+  "parallel_workstreams": 5,
+  "run_mode": "on-demand-when-actively-executed",
+  "status_legend": {
+    "research": "First-pass bilingual case committed; not necessarily experimentally reproduced",
+    "prototype": "No original working demonstration claimed",
+    "game_integration": "Private product changes require separate real-device QA"
+  },
+  "lanes": [
+    {
+      "id": "lane-01",
+      "number": 1,
+      "name": {
+        "zh": "地形碰撞与导航",
+        "en": "Terrain physics & navigation"
+      },
+      "focus": {
+        "zh": "独立碰撞体、胶囊角色、坡度台阶、贴地与 NPC 寻路",
+        "en": "Collision meshes, kinematic controller, slopes, steps, grounding and NPC navmeshes"
+      },
+      "status": {
+        "research": "first-pass-published",
+        "prototype": "not-built",
+        "game_integration": "not-verified"
+      },
+      "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/4",
+      "research_file": "docs/research/2026-11-07-five-streams/01-terrain-collision-navigation.md",
+      "sources": [
+        "https://rapier.rs/docs/user_guides/javascript/character_controller/",
+        "https://github.com/gkjohnson/three-mesh-bvh",
+        "https://github.com/isaac-mason/recast-navigation-js"
+      ],
+      "next_test": {
+        "zh": "固定时间步的坡道/台阶/墙壁关卡，检测角色穿透和寻路误差",
+        "en": "Reproducible slope/stair/wall fixture with fixed-step contact and path tests"
+      }
+    },
+    {
+      "id": "lane-02",
+      "number": 2,
+      "name": {
+        "zh": "连续地形 LOD",
+        "en": "Continuous terrain LOD"
+      },
+      "focus": {
+        "zh": "CDLOD 过渡带、Clipmap、RTIN、接缝和几何渐变",
+        "en": "CDLOD morph bands, geometry clipmaps, RTIN, cracks and geometry continuity"
+      },
+      "status": {
+        "research": "first-pass-published",
+        "prototype": "not-built",
+        "game_integration": "not-verified"
+      },
+      "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/5",
+      "research_file": "docs/research/2026-11-07-five-streams/02-continuous-terrain-lod.md",
+      "sources": [
+        "https://github.com/fstrugar/CDLOD",
+        "https://developer.nvidia.com/gpugems/gpugems2/part-i-geometric-complexity/chapter-2-terrain-rendering-using-gpu-based-geometry",
+        "https://github.com/mapbox/martini"
+      ],
+      "next_test": {
+        "zh": "离散 LOD/裙边对比连续渐变，量测相邻边缘误差和时间跳变",
+        "en": "Compare discrete skirts against morphing with edge error and temporal popping"
+      }
+    },
+    {
+      "id": "lane-03",
+      "number": 3,
+      "name": {
+        "zh": "角色行走与足部 IK",
+        "en": "Locomotion and foot IK"
+      },
+      "focus": {
+        "zh": "动作混合、步频、足部锁定、膝关节轴、骨盆高度校正",
+        "en": "Animation blending, cadence, foot planting, knee axes and pelvis correction"
+      },
+      "status": {
+        "research": "first-pass-published",
+        "prototype": "not-built",
+        "game_integration": "not-verified"
+      },
+      "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/6",
+      "research_file": "docs/research/2026-11-07-five-streams/03-locomotion-foot-ik.md",
+      "sources": [
+        "https://threejs.org/manual/pages/animation-system.html",
+        "https://threejs.org/docs/pages/CCDIKSolver.html",
+        "https://github.com/MULUALEM-TEKLE/IK-test"
+      ],
+      "next_test": {
+        "zh": "原创双腿骨架测试，记录滑步距离、膝盖反折与落脚误差",
+        "en": "Original two-leg rig measuring planted-foot drift, knee inversion and grounding"
+      }
+    },
+    {
+      "id": "lane-04",
+      "number": 4,
+      "name": {
+        "zh": "3D 资产自动分类与验收",
+        "en": "Automated 3D asset routing & QA"
+      },
+      "focus": {
+        "zh": "规则人造物参数化重建、有机网格减面、LOD、官方 glTF 合规与外观验收",
+        "en": "Parametric reconstruction vs decimation, LOD, Khronos conformance and visual QA"
+      },
+      "status": {
+        "research": "first-pass-published",
+        "prototype": "not-built",
+        "game_integration": "not-verified"
+      },
+      "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/7",
+      "research_file": "docs/research/2026-11-07-five-streams/04-asset-classification-qa.md",
+      "sources": [
+        "https://github.com/KhronosGroup/glTF-Validator",
+        "https://gltf-transform.dev/",
+        "https://github.com/zeux/meshoptimizer"
+      ],
+      "next_test": {
+        "zh": "原创机械形体和有机资产测试集，比较重建精度、LOD 视觉损失及导出结构",
+        "en": "Synthetic manufactured/organic fixtures with geometry fidelity and validator checks"
+      }
+    },
+    {
+      "id": "lane-05",
+      "number": 5,
+      "name": {
+        "zh": "自然氛围与绘画化美术",
+        "en": "Painterly nature & atmosphere"
+      },
+      "focus": {
+        "zh": "生态植被、尺度、空气透视、水彩纸张、边缘颜料与镜头构图",
+        "en": "Ecological vegetation, scale, aerial perspective, paper grain, pigment edges and composition"
+      },
+      "status": {
+        "research": "first-pass-published",
+        "prototype": "not-built",
+        "game_integration": "not-verified"
+      },
+      "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/8",
+      "research_file": "docs/research/2026-11-07-five-streams/05-painterly-nature.md",
+      "sources": [
+        "https://github.com/mattatz/THREE.Watercolor",
+        "https://github.com/yomotsu/vegetation",
+        "https://github.com/pmndrs/postprocessing",
+        "https://github.com/franky-adl/watercolor-reveal-effect"
+      ],
+      "next_test": {
+        "zh": "同一原创场景的 PBR/水彩/墨绘盲测，验证自然感、可读性与 GPU 耗时",
+        "en": "Original landscape PBR/watercolor/ink ablation with legibility and GPU timing"
+      }
+    }
+  ]
+}

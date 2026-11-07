@@ -40,6 +40,8 @@ jobs:
           node --check labs/renderer-compare/test-cdp-windows.cjs
       - name: Run shared WebGPU/WebGL2 geometry and clip tests
         run: node --test labs/renderer-compare/test-core.mjs labs/renderer-compare/test-timing.mjs
+      - name: Validate five independent source-backed research lanes
+        run: python3 scripts/validate_research_lanes.py
       - name: Check generated Markdown reproducibility
         run: |
           python3 scripts/build_catalog.py

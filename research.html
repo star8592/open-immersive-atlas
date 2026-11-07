@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Open Immersive Atlas: five independent bilingual, evidence-backed Web3D research streams.">
+<link rel="icon" href="data:,"><title>Five Web3D Research Lanes · OIA</title>
+<style>
+:root{color-scheme:dark;--bg:#09121e;--card:#152738;--line:#365268;--text:#edf4f7;--sub:#acc2cf;--mint:#85e5d4}
+*{box-sizing:border-box}body{background:radial-gradient(circle at 75% 0,#194157,transparent 45%),var(--bg);color:var(--text);font:15px/1.6 system-ui,"Noto Sans SC",sans-serif;margin:0}main{max-width:1180px;margin:auto;padding:33px 24px 80px}
+a{color:var(--mint);text-decoration:none}a:hover{text-decoration:underline}
+nav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}nav a{font-size:.9rem}
+h1{font-size:clamp(2rem,5vw,3.8rem);line-height:1.09;letter-spacing:-.04em;margin:40px 0 15px}h1 b{color:var(--mint)}.lead{color:#c5d8e1;max-width:900px;font-size:1.05rem;margin-bottom:24px}
+.bar{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:25px;align-items:center;justify-content:space-between}
+button{border:1px solid #538781;background:#193c48;color:#eaffff;border-radius:11px;padding:11px 15px;cursor:pointer;font:inherit}
+small{color:var(--sub)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+article{background:linear-gradient(140deg,#19374a,#112232);border:1px solid var(--line);border-radius:16px;padding:22px;min-height:285px;display:flex;flex-direction:column;gap:10px}
+article h2{margin:0;font-size:1.22rem}article p{color:#d2e4eb;margin:0}.kicker{font-size:.77rem;letter-spacing:.1em;color:var(--mint);font-weight:700}
+.status{font-size:.8rem;color:#b2c8d4;background:#0c202d;border-radius:8px;padding:8px 10px}.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:auto;padding-top:12px;font-size:.91rem}
+.notice{margin-top:24px;border-top:1px solid var(--line);padding-top:19px;color:var(--sub)}
+@media(max-width:500px){main{padding:24px 15px 60px}.grid{grid-template-columns:1fr}}
+</style></head><body><main>
+<nav><a href="./">← OIA / 主页</a><a href="https://github.com/star8592/open-immersive-atlas/tree/main/docs/research/2026-11-07-five-streams">Original research files / 技术档案</a><button id="language" type="button" aria-label="Switch between Chinese and English">English</button></nav>
+<h1><b>Five Research Lanes</b><br>五线并行研究</h1>
+<p class="lead" id="lead">五条独立 Web3D 研究线：先查证成熟技术和原作者资料，再写出可检验的实验标准。这里记录研究进度，不把“资料已找到”冒充“游戏功能已完成”。</p>
+<div class="bar"><span id="summary" aria-live="polite">Loading / 数据加载中…</span><small id="date"></small></div><div id="grid" class="grid" aria-live="polite"></div>
+<div id="notice" class="notice">本页面是基于 GitHub 文件发布的研究状态快照，不会自行运行后台智能体；涉及私有游戏的研发和资产不会公开。</div>
+</main><script>
+let data=null,lang='zh';const $=id=>document.getElementById(id);
+const make=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
+const status={zh:'研究首稿已发布 · 原创原型未开始 · 游戏集成未验证',en:'Research case published · Original prototype not built · Game integration unverified'};
+function render(){
+ $('language').textContent=lang==='zh'?'English':'中文';
+ $('lead').textContent=lang==='zh'?
+ '五条独立 Web3D 研究线：先查证成熟技术和原作者资料，再写出可检验的实验标准。这里记录研究进度，不把“资料已找到”冒充“游戏功能已完成”。':
+ 'Five independent source-verified Web3D research streams. Each publishes bilingual analysis and reproducible acceptance contracts. Research completion is not software implementation.';
+ $('notice').textContent=lang==='zh'?
+ '这是 GitHub 文件的静态快照，不是自动运行的后台 AI。私有游戏与客户资产始终在独立的私有系统中。':
+ 'This is a dated GitHub snapshot, not five autonomous background agents. Proprietary games and private assets remain isolated.';
+ if(!data)return;
+ $('date').textContent=(lang==='zh'?'最后校核：':'Reviewed: ')+data.updated_on;
+ $('summary').textContent=(lang==='zh'?'独立分线：':'Independent lanes: ')+data.lanes.length;
+ const grid=$('grid');grid.replaceChildren();
+ for(const item of data.lanes){
+  const article=make('article');
+  article.append(make('div',(lang==='zh'?'分线 ':'LANE ')+String(item.number).padStart(2,'0'),'kicker'));
+  article.append(make('h2',item.name[lang]));
+  article.append(make('p',item.focus[lang]));
+  article.append(make('div',status[lang],'status'));
+  const what=make('p',(lang==='zh'?'下一项测试：':'Next test: ')+item.next_test[lang]);article.append(what);
+  const links=make('div',undefined,'links');
+  const study=make('a',lang==='zh'?'深入阅读 / 双语档案':'Read bilingual case');study.href='https://github.com/star8592/open-immersive-atlas/blob/main/'+item.research_file;study.rel='noopener noreferrer';
+  const issue=make('a',lang==='zh'?'独立研究任务':'Independent issue');issue.href=item.issue_url;issue.rel='noopener noreferrer';
+  links.append(study,issue);article.append(links);grid.append(article);
+ }
+}
+$('language').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';render();});
+fetch('./data/research-lanes.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(x=>{if(x.schema!=='oia-research-lanes-v1')throw Error('Unexpected data version');data=x;render()}).catch(e=>{$('summary').textContent='Research index unavailable / 研究数据暂不可用: '+e.message;});
+</script></body></html>
