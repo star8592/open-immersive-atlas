@@ -1,8 +1,8 @@
 # Curated Projects · 双语项目档案
 
-> **77 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
+> **122 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
 >
-> **77 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
+> **122 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
 
 [Home / 首页](README.md) · [Search / 搜索](index.html) · [Data / 数据](data/projects.json)
 
@@ -349,6 +349,168 @@ English: The creator's clips combine terrain-reactive Jeep driving, grass contac
 English: Study wheel contact and suspension, deformable grass, simulated water and terrain cohesion; specific engine and source remain unverified.
 
 
+### Mindustry
+
+- **Official / 官方**: https://github.com/Anuken/Mindustry  
+- **Code / 源码**: https://github.com/Anuken/Mindustry  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 结合资源运输、生产链、塔防和即时战略规则的开源游戏。  
+**English:** Open-source game combining conveyor logistics, production chains and RTS defense.
+
+**为什么厉害 / Why it stands out**  
+中文：生产物流与防守压力互相影响，形成清晰的扩张与反馈循环。  
+English: Production logistics and defense pressure reinforce readable expansion loops.
+
+**值得学习 / What to learn**  
+中文：研究玩家选择、产能瓶颈和战斗节奏；角色美术和商标权利需区分。  
+English: Analyze choices, bottlenecks and combat pacing; respect separate art and trademark rights.
+
+
+### OpenRA
+
+- **Official / 官方**: https://www.openra.net/  
+- **Code / 源码**: https://github.com/OpenRA/OpenRA  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 用于经典即时战略玩法的开源引擎与可运行模组体系。  
+**English:** Open-source RTS engine and playable mod ecosystem for classic-style strategy.
+
+**为什么厉害 / Why it stands out**  
+中文：单位指令、规则脚本、阵营平衡与多人同步相互衔接。  
+English: Connects unit commands, rules, faction balancing and multiplayer synchronization.
+
+**值得学习 / What to learn**  
+中文：研究阵营差异化、寻路与可复现回放；经典游戏素材并不自动获得许可。  
+English: Study faction differentiation, routing and deterministic replays; original franchise assets remain separately licensed.
+
+
+### 0 A.D.
+
+- **Official / 官方**: https://play0ad.com/  
+- **Code / 源码**: https://github.com/0ad/0ad  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 历史主题实时战略游戏及其公开引擎研发体系。  
+**English:** Historical real-time strategy game with open engine development.
+
+**为什么厉害 / Why it stands out**  
+中文：涵盖资源经济、单位编队、建筑与环境细节的完整游戏工程。  
+English: Integrates economy, formations, buildings and environmental detail into a full RTS.
+
+**值得学习 / What to learn**  
+中文：拆解 AI、编队、战斗信息反馈和美术资源分级；需审查艺术授权。  
+English: Study AI, formations and battle feedback with explicit art/license audits.
+
+
+### Veloren
+
+- **Official / 官方**: https://veloren.net/  
+- **Code / 源码**: https://github.com/veloren/veloren  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** Rust 制作的开源体素世界多人动作角色扮演游戏。  
+**English:** Rust open-source voxel-world multiplayer action RPG.
+
+**为什么厉害 / Why it stands out**  
+中文：程序化世界、角色动作、协作服务器与装备系统形成完整生态。  
+English: Combines generated worlds, character animation, cooperative servers and equipment.
+
+**值得学习 / What to learn**  
+中文：研究大地形流式加载、动作状态与网络预测，先验证 Web 端可用性。  
+English: Study streaming, locomotion and networking while checking browser export feasibility.
+
+
+### Unciv
+
+- **Official / 官方**: https://github.com/yairm210/Unciv  
+- **Code / 源码**: https://github.com/yairm210/Unciv  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 以规则、资源与决策反馈为中心的开源回合制策略游戏。  
+**English:** Open-source turn-based strategy game focused on rules and decisions.
+
+**为什么厉害 / Why it stands out**  
+中文：将战略回合与数据驱动单位科技树分离，易于测试平衡。  
+English: Keeps turn simulation and data-defined units and technology separable.
+
+**值得学习 / What to learn**  
+中文：研究科技树、AI 评估、存档与长局耐玩性，不复制特定 IP 表达。  
+English: Study tech trees, AI evaluation, saves and long-session retention without copying IP.
+
+
+### Endless Sky
+
+- **Official / 官方**: https://endless-sky.github.io/  
+- **Code / 源码**: https://github.com/endless-sky/endless-sky  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 开放世界太空交易、任务和舰船战斗游戏的开源工程。  
+**English:** Open-source space trading, missions and ship-combat sandbox.
+
+**为什么厉害 / Why it stands out**  
+中文：多分支任务与自由经济行为形成长期自主目标。  
+English: Connects branching missions and open-ended trading into long-term goals.
+
+**值得学习 / What to learn**  
+中文：研究任务数据模型、经济反馈和内容扩展，不复制作者剧情素材。  
+English: Study mission schemas, economy feedback and extensible content without reusing authored narrative.
+
+
+### OpenTTD
+
+- **Official / 官方**: https://www.openttd.org/  
+- **Code / 源码**: https://github.com/OpenTTD/OpenTTD  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 以网络、运输经济与长期发展为核心的开源经营模拟游戏。  
+**English:** Open-source transport/economy simulation with long-horizon networks.
+
+**为什么厉害 / Why it stands out**  
+中文：路网、运输和供需关系构成可长期优化的沙盒。  
+English: Road/rail networks and supply-demand dynamics create durable optimization gameplay.
+
+**值得学习 / What to learn**  
+中文：拆解大规模路径、经济循环和存档兼容，不依赖华丽 3D 也能有深玩法。  
+English: Study large networks, economy loops and save compatibility independent of 3D fidelity.
+
+
+### Widelands
+
+- **Official / 官方**: https://www.widelands.org/  
+- **Code / 源码**: https://github.com/widelands/widelands  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 注重生产链和道路物流的开源建设与即时战略游戏。  
+**English:** Open-source building/RTS game driven by economic production chains.
+
+**为什么厉害 / Why it stands out**  
+中文：道路、仓储、工人调配直接影响资源吞吐和战略瓶颈。  
+English: Roads, stockpiles and worker routing shape throughput and strategic constraints.
+
+**值得学习 / What to learn**  
+中文：学习多层生产链可视化和动态供需，减少 RTS 中无意义等待。  
+English: Study production-chain visualization and dynamic demand to reduce idle RTS phases.
+
+
+### OpenRCT2
+
+- **Official / 官方**: https://openrct2.io/  
+- **Code / 源码**: https://github.com/OpenRCT2/OpenRCT2  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 游乐园建造、游客行为和设施经济模拟的社区开源工程。  
+**English:** Community-developed theme-park construction and visitor simulation.
+
+**为什么厉害 / Why it stands out**  
+中文：细致的游客代理与经营约束产生可观察的连锁反馈。  
+English: Detailed visitor simulation and management constraints generate visible feedback loops.
+
+**值得学习 / What to learn**  
+中文：研究游客决策、队列拥堵、景观价值与经营 UI；不能默认原版素材可自由分发。  
+English: Study visitor AI, queues and UI; original game data is not automatically redistributable.
+
+
 ## 3D & AI Production Pipelines / 3D 与 AI 工厂
 
 ### AnyScene
@@ -599,6 +761,186 @@ English: Includes reproducible seeded geometry, five LOD stages, Web Worker gene
 **值得学习 / What to learn**  
 中文：吸收种类化的植物与石块程序、苔藓和真实米制接口；最终叶片和花朵仍需美术师定义材质与外形。  
 English: Learn botanical type systems, rock/moss layering and meter-scale APIs; commissioned or authored leaf/flower art must determine the final look.
+
+
+### WebDGS
+
+- **Official / 官方**: https://krispy-kenay.github.io/WebDGS/  
+- **Code / 源码**: https://github.com/krispy-kenay/WebDGS  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 可在浏览器本地进行 Gaussian Splatting 训练与实时观察的实验实现。  
+**English:** A browser-native Gaussian Splatting training and viewing experiment.
+
+**为什么厉害 / Why it stands out**  
+中文：在 WebGPU 中完成前向渲染、反向梯度与训练过程可视化。  
+English: Implements forward rendering, backward gradients and training visualization in WebGPU.
+
+**值得学习 / What to learn**  
+中文：研究静态网站内训练资源调度与 splat 密度管理，而非假定所有设备可跑。  
+English: Study browser-side training budgets and splat densification without assuming universal device support.
+
+
+### Hunyuan3D 2.1
+
+- **Official / 官方**: https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1  
+- **Code / 源码**: https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 腾讯混元的图像到三维资产生成与 PBR 纹理模型工程。  
+**English:** Tencent's image-to-3D asset generation and PBR texture pipeline.
+
+**为什么厉害 / Why it stands out**  
+中文：将几何与物理材质生成串接，并公开训练与推理实现供研究。  
+English: Connects shape generation with PBR material synthesis and published research code.
+
+**值得学习 / What to learn**  
+中文：关注多视图材质一致性、纹理烘焙与游戏 LOD；权重许可要单独核验。  
+English: Assess multiview material fidelity, baking and game LOD; verify model-weight rights separately.
+
+
+### HunyuanWorld 1.0
+
+- **Official / 官方**: https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0  
+- **Code / 源码**: https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 面向可探索三维世界生成的研究代码和模型发布项目。  
+**English:** Research code and model release for generating explorable 3D worlds.
+
+**为什么厉害 / Why it stands out**  
+中文：把单物件生成扩展到世界场景层次，涉及场景组织与可浏览表示。  
+English: Moves beyond single objects to organized worlds and navigable representations.
+
+**值得学习 / What to learn**  
+中文：验证空间一致性、场景连通性、物件尺度与真正碰撞，不只看视频效果。  
+English: Test spatial continuity, world scale, navigability and collisions rather than demos alone.
+
+
+### Microsoft TRELLIS
+
+- **Official / 官方**: https://github.com/microsoft/TRELLIS  
+- **Code / 源码**: https://github.com/microsoft/TRELLIS  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 使用结构化三维潜变量进行多种三维表示生成的研究实现。  
+**English:** Structured-latent 3D generation for meshes, Gaussian splats and radiance representations.
+
+**为什么厉害 / Why it stands out**  
+中文：同一潜表示可解码为不同 3D 格式，便于比较下游资产输出。  
+English: Decodes shared structured latents into multiple 3D output representations.
+
+**值得学习 / What to learn**  
+中文：比较不同表面表示的网格质量、可编辑性与游戏导入开销。  
+English: Compare output representations for topology, editing and real-time game import costs.
+
+
+### LDtk
+
+- **Official / 官方**: https://ldtk.io/  
+- **Code / 源码**: https://github.com/deepnight/ldtk  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 强调结构化关卡数据和规则式瓦片绘制的二维编辑器。  
+**English:** 2D level editor built around structured scene data and rule-based tiles.
+
+**为什么厉害 / Why it stands out**  
+中文：把实体 schema、自动图块与关卡编辑操作组合为可复用工作流。  
+English: Combines entity schemas, autotiles and level editing workflows.
+
+**值得学习 / What to learn**  
+中文：学习批量地图、标签、交互标注与自动测试数据导出。  
+English: Study batch map authoring, tags, interactive markers and test-data exports.
+
+
+### Tiled Map Editor
+
+- **Official / 官方**: https://www.mapeditor.org/  
+- **Code / 源码**: https://github.com/mapeditor/tiled  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 支持多层 Tilemap、对象标注和多格式导出的游戏地图编辑器。  
+**English:** Tilemap editor with layered maps, object metadata and export formats.
+
+**为什么厉害 / Why it stands out**  
+中文：将地形和逻辑对象分别建层，使规则与地图美术更易协作。  
+English: Separates visual layers and semantic objects for reliable level workflows.
+
+**值得学习 / What to learn**  
+中文：研究地图格式、触发器标签和自动化关卡一致性检查。  
+English: Study map formats, trigger metadata and automated level consistency tests.
+
+
+### Khronos KTX-Software
+
+- **Official / 官方**: https://www.khronos.org/ktx/  
+- **Code / 源码**: https://github.com/KhronosGroup/KTX-Software  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** Khronos 维护的 KTX 纹理封装、读写和转码工具链。  
+**English:** Khronos-maintained tools for KTX texture storage and transcoding.
+
+**为什么厉害 / Why it stands out**  
+中文：让纹理以适于 GPU 的压缩形式交付，降低运行时显存和传输压力。  
+English: Packages GPU-friendly compressed textures for efficient runtime delivery.
+
+**值得学习 / What to learn**  
+中文：基于色彩/法线图角色选择 UASTC/ETC1S，测纹理质量、载入和显存。  
+English: Select codecs by texture role and test quality, startup and VRAM.
+
+
+### Assimp
+
+- **Official / 官方**: https://github.com/assimp/assimp  
+- **Code / 源码**: https://github.com/assimp/assimp  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 多种 3D 文件格式的资产导入与数据转换工具库。  
+**English:** Asset import and conversion library supporting many 3D formats.
+
+**为什么厉害 / Why it stands out**  
+中文：把多源模型统一为可处理的网格、材质和层级数据。  
+English: Normalizes diverse source formats into processable meshes, materials and hierarchy.
+
+**值得学习 / What to learn**  
+中文：研究真实工业/游戏资产导入的单位、坐标、材质和骨骼信息丢失。  
+English: Measure scale, coordinate, material and skeleton fidelity during import.
+
+
+### MMPose
+
+- **Official / 官方**: https://mmpose.readthedocs.io/  
+- **Code / 源码**: https://github.com/open-mmlab/mmpose  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 开源人体姿态估计工具箱，支持多种关键点与人体结构任务。  
+**English:** Open-source human pose estimation toolbox for keypoint and pose tasks.
+
+**为什么厉害 / Why it stands out**  
+中文：为视频动作参考提供关节追踪起点，能和角色重定向流程解耦。  
+English: Provides joint-tracking inputs for video motion references and retargeting.
+
+**值得学习 / What to learn**  
+中文：必须补足时间平滑、三维求解、足部接触和运动学验证；2D 关键点非 3D 动捕。  
+English: Add temporal smoothing, depth and foot contacts; 2D keypoints are not full 3D mocap.
+
+
+### PyTorch3D
+
+- **Official / 官方**: https://github.com/facebookresearch/pytorch3d  
+- **Code / 源码**: https://github.com/facebookresearch/pytorch3d  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 三维网格、可微渲染和几何处理的研究工具包。  
+**English:** Research toolkit for 3D mesh processing and differentiable rendering.
+
+**为什么厉害 / Why it stands out**  
+中文：适合构建几何损失与多视图误差测试，以评估模型重建效果。  
+English: Supports geometry losses and multiview error experiments for reconstruction.
+
+**值得学习 / What to learn**  
+中文：比较法线、几何和渲染误差；研究结果仍需 WebGPU 真实运行验收。  
+English: Measure normals, geometry and render errors; verify browser runtime independently.
 
 
 ## Frameworks & Engines / 框架与引擎
@@ -869,6 +1211,96 @@ English: Expresses common scene configuration in declarative HTML, simplifying p
 **值得学习 / What to learn**  
 中文：研究静态网页中的 3D 初始化、可访问性和资源加载边界。  
 English: Study 3D initialization, accessibility and asset loading in conventional pages.
+
+
+### Bevy Engine
+
+- **Official / 官方**: https://bevy.org/  
+- **Code / 源码**: https://github.com/bevyengine/bevy  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** Rust 编写的数据驱动 ECS 游戏引擎与现代渲染技术生态。  
+**English:** Rust data-driven ECS game engine and modern renderer ecosystem.
+
+**为什么厉害 / Why it stands out**  
+中文：将组件、系统与资源调度分离，为复杂游戏状态更新提供结构范例。  
+English: Separates components, systems and scheduling for complex gameplay state updates.
+
+**值得学习 / What to learn**  
+中文：学习实体系统与数据生命周期，不把原生平台能力误认为浏览器全部可用。  
+English: Study ECS lifecycle and scheduling, while checking web platform feature parity.
+
+
+### Phaser
+
+- **Official / 官方**: https://phaser.io/  
+- **Code / 源码**: https://github.com/phaserjs/phaser  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 成熟的 HTML5 2D 游戏引擎，包含场景、动画、输入与资源管理。  
+**English:** Mature HTML5 2D game framework for scenes, animation, input and assets.
+
+**为什么厉害 / Why it stands out**  
+中文：完整的交互和关卡循环可作为轻量浏览器游戏生产参考。  
+English: A complete interaction and scene lifecycle for production-oriented browser games.
+
+**值得学习 / What to learn**  
+中文：用于卡牌、益智、2D 战斗的状态与交互设计，不硬套 3D 资产路径。  
+English: Reuse patterns for cards, puzzles and 2D combat; keep 3D pipelines separate.
+
+
+### PixiJS
+
+- **Official / 官方**: https://pixijs.com/  
+- **Code / 源码**: https://github.com/pixijs/pixijs  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 强调 2D 高效绘制、动画精灵与交互的浏览器图形框架。  
+**English:** 2D browser rendering framework for sprite batching and interactive scenes.
+
+**为什么厉害 / Why it stands out**  
+中文：可将复杂 2D 图层和动画绘制从游戏规则中解耦。  
+English: Separates efficient 2D display composition from gameplay rules.
+
+**值得学习 / What to learn**  
+中文：学习批处理、图集和 UI 动效；它本身不是完整 RPG 规则引擎。  
+English: Study batching, atlases and UI animation; not a complete RPG game engine.
+
+
+### GDevelop
+
+- **Official / 官方**: https://gdevelop.io/  
+- **Code / 源码**: https://github.com/4ian/GDevelop  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 面向游戏快速原型的可视化事件式编辑器和跨平台引擎。  
+**English:** Visual event-based game editor and cross-platform engine.
+
+**为什么厉害 / Why it stands out**  
+中文：用可视化逻辑、场景与测试缩短从想法到可玩的验证时间。  
+English: Shortens concept-to-playable iteration with visual events and scene workflows.
+
+**值得学习 / What to learn**  
+中文：拆解玩法事件模板与低门槛制作流程，不盲目照搬编辑器整体。  
+English: Study event templates and accessible production workflows, not wholesale editor copying.
+
+
+### raylib
+
+- **Official / 官方**: https://www.raylib.com/  
+- **Code / 源码**: https://github.com/raysan5/raylib  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 轻量的跨平台图形、音频和游戏输入编程库。  
+**English:** Small cross-platform programming library for graphics, audio and game input.
+
+**为什么厉害 / Why it stands out**  
+中文：API 清晰且示例密集，适合验证最小游戏机制和引擎能力。  
+English: Clear APIs and focused examples make gameplay and graphics experiments easy to isolate.
+
+**值得学习 / What to learn**  
+中文：用最少依赖建立独立输入、物理与渲染教学原型。  
+English: Build minimal independent input, simulation and rendering prototypes.
 
 
 ## Rendering & Engineering Infrastructure / 渲染与工程技术
@@ -1375,4 +1807,382 @@ English: A compact, inspectable implementation of float-texture heightfields, di
 **值得学习 / What to learn**  
 中文：作为 WebGL2 水体兼容基线；不要把画面波纹直接等同于真实河流流体求解或车辆浮力。  
 English: Use as a reproducible WebGL2 baseline, not as proof of full flowing-water or vehicle-buoyancy physics.
+
+
+### WebSplatter
+
+- **Official / 官方**: https://websplatter.github.io/  
+- **Code / 源码**: https://github.com/websplatter/WebSplatter  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 浏览器 WebGPU 原生的 3D Gaussian Splatting 渲染研究与实现。  
+**English:** WebGPU-native browser 3D Gaussian Splatting research renderer.
+
+**为什么厉害 / Why it stands out**  
+中文：用无等待排序与栅格管线处理跨架构同步差异，而不是照搬 CUDA。  
+English: Uses wait-free sorting and hardware rasterization to address cross-architecture synchronization.
+
+**值得学习 / What to learn**  
+中文：对照不同 GPU 的 splat 排序、透明度、画质和显存；作者速度数据须独立复测。  
+English: Benchmark splat sorting, opacity, quality and VRAM across GPUs; independently verify author speed claims.
+
+
+### Gaussian Splatting Wang Tiles Renderer
+
+- **Official / 官方**: https://yunfan.zone/gswt_webpage/  
+- **Code / 源码**: https://github.com/zengyf131/gswt_renderer  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 利用 Wang Tiles 程序化拼接扩展 Gaussian Splatting 地形的 WebGPU 渲染器。  
+**English:** WebGPU renderer for procedural Wang-tile Gaussian Splatting terrains.
+
+**为什么厉害 / Why it stands out**  
+中文：把预生成片段合并、LOD 混合和无界地形浏览结合起来。  
+English: Combines prepared tile merging, LOD blending and extensible terrain exploration.
+
+**值得学习 / What to learn**  
+中文：拆解 tile 接缝、视距 LOD 与流式显存；注意仓库仅开放渲染器部分。  
+English: Study tile seams, distance LOD and streaming; the constructor is not included in this repo.
+
+
+### Recast Navigation JS
+
+- **Official / 官方**: https://github.com/isaac-mason/recast-navigation-js  
+- **Code / 源码**: https://github.com/isaac-mason/recast-navigation-js  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 可在 JavaScript 环境运行的 Recast/Detour 导航网格和寻路集成。  
+**English:** JavaScript integration of Recast/Detour navmesh generation and routing.
+
+**为什么厉害 / Why it stands out**  
+中文：将可通行多边形构建、寻路与运行时游戏逻辑分开。  
+English: Separates walkability mesh construction and route planning from game logic.
+
+**值得学习 / What to learn**  
+中文：研究 NPC 半径、坡度、台阶与动态避障；导航网格不代替碰撞体。  
+English: Test agent radius, slopes, steps and obstacles; navmeshes do not replace colliders.
+
+
+### CDLOD
+
+- **Official / 官方**: https://github.com/fstrugar/CDLOD  
+- **Code / 源码**: https://github.com/fstrugar/CDLOD  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 基于视距的四叉树地形层级细节算法原作者代码。  
+**English:** Original distance-driven quadtree terrain LOD implementation.
+
+**为什么厉害 / Why it stands out**  
+中文：使用距离分层和渐变减少地形层级切换时的几何突变。  
+English: Uses distance selection and geomorph transitions to mitigate terrain LOD popping.
+
+**值得学习 / What to learn**  
+中文：对照裙边和渐变的边界误差；原实现架构较旧，不能直接复制到 WebGPU。  
+English: Measure skirts versus morph transition; old renderer architecture needs modernization.
+
+
+### Mapbox MARTINI
+
+- **Official / 官方**: https://github.com/mapbox/martini  
+- **Code / 源码**: https://github.com/mapbox/martini  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 从规则高程网格生成误差受控的不规则三角地形网格。  
+**English:** Error-driven triangulated irregular networks generated from elevation grids.
+
+**为什么厉害 / Why it stands out**  
+中文：以地形误差分配面数，避免对平缓区域平均加密。  
+English: Allocates triangles by terrain error instead of uniform refinement.
+
+**值得学习 / What to learn**  
+中文：量化邻瓦片接缝、误差阈值与动态更新成本；不等于连续 Morph LOD。  
+English: Measure tile seams, error tolerance and update costs; not automatic geomorph LOD.
+
+
+### WaveFunctionCollapse
+
+- **Official / 官方**: https://github.com/mxgmn/WaveFunctionCollapse  
+- **Code / 源码**: https://github.com/mxgmn/WaveFunctionCollapse  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 从局部样本模式构建符合邻接约束的新地图与图案。  
+**English:** Constraint-based procedural map and pattern generation from sample neighborhoods.
+
+**为什么厉害 / Why it stands out**  
+中文：最小熵选择与约束传播形成可控而多样的关卡局部组合。  
+English: Uses entropy-guided choices and propagation for varied constrained layouts.
+
+**值得学习 / What to learn**  
+中文：做有出口、有连通性和可解条件的关卡，检测无解状态并可靠回退。  
+English: Add reachable exits and solvability constraints, with explicit contradiction fallback.
+
+
+### Dear ImGui
+
+- **Official / 官方**: https://github.com/ocornut/imgui  
+- **Code / 源码**: https://github.com/ocornut/imgui  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 专为开发工具而设计的即时模式调试和编辑界面库。  
+**English:** Immediate-mode GUI library for debugging tools and editors.
+
+**为什么厉害 / Why it stands out**  
+中文：快速构造场景检查器、参数面板和调试仪表盘，而非正式游戏 HUD。  
+English: Builds inspectors and parameter controls rapidly, distinct from final player HUDs.
+
+**值得学习 / What to learn**  
+中文：借鉴调试工具的可观察性，保留玩家界面与开发者界面分离。  
+English: Use developer diagnostics while keeping production player UI separate.
+
+
+### Colyseus
+
+- **Official / 官方**: https://colyseus.io/  
+- **Code / 源码**: https://github.com/colyseus/colyseus  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 面向多人实时游戏的 Node.js 房间和状态同步服务器框架。  
+**English:** Node.js framework for realtime multiplayer rooms and state synchronization.
+
+**为什么厉害 / Why it stands out**  
+中文：房间生命周期与状态差量同步减少多人游戏应用层重复代码。  
+English: Room lifecycle and state patches reduce duplicated multiplayer application code.
+
+**值得学习 / What to learn**  
+中文：做多人游戏网络时测权威状态、断线重连、作弊防护和负载。  
+English: Evaluate authority, reconnects, cheat resistance and load rather than assuming plug-and-play.
+
+
+### Nakama
+
+- **Official / 官方**: https://heroiclabs.com/nakama/  
+- **Code / 源码**: https://github.com/heroiclabs/nakama  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 提供游戏用户、社交和实时多人功能的开源服务端。  
+**English:** Open-source server for game identities, social features and realtime multiplayer.
+
+**为什么厉害 / Why it stands out**  
+中文：复用账号、匹配、排行榜和部分实时服务，减少业务基础建设。  
+English: Provides authentication, matchmaking and leaderboard infrastructure as building blocks.
+
+**值得学习 / What to learn**  
+中文：评估部署成本与延迟，以及玩家隐私；不把后端功能当成留存保证。  
+English: Measure hosting cost, latency and privacy; backend features do not guarantee retention.
+
+
+### SpacetimeDB
+
+- **Official / 官方**: https://spacetimedb.com/  
+- **Code / 源码**: https://github.com/clockworklabs/SpacetimeDB  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 结合实时数据库和服务端计算的游戏应用数据架构。  
+**English:** Realtime database architecture combining data storage with server-side computation.
+
+**为什么厉害 / Why it stands out**  
+中文：让状态变更与客户端订阅形成统一的数据交互模式。  
+English: Unifies state mutation and subscribed client updates.
+
+**值得学习 / What to learn**  
+中文：研究高并发房间的数据一致性与时延，不直接替代游戏物理引擎。  
+English: Test contention, consistency and latency; not a replacement for game physics.
+
+
+### Yjs
+
+- **Official / 官方**: https://yjs.dev/  
+- **Code / 源码**: https://github.com/yjs/yjs  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 用于多人协作共享文档和场景编辑的 CRDT 数据结构库。  
+**English:** CRDT-based shared state foundation for collaborative editing.
+
+**为什么厉害 / Why it stands out**  
+中文：支持多人并发修改、离线合并和协作编辑工具的基础机制。  
+English: Supports concurrent edits, offline merging and collaborative tooling.
+
+**值得学习 / What to learn**  
+中文：用于关卡编辑协作和注释，不把弱一致 CRDT 直接当权威竞技战斗状态。  
+English: Use for collaborative level editing; not authoritative competitive combat simulation.
+
+
+### Howler.js
+
+- **Official / 官方**: https://howlerjs.com/  
+- **Code / 源码**: https://github.com/goldfire/howler.js  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 面向浏览器游戏的跨平台音效和音乐播放管理库。  
+**English:** Cross-browser audio playback library suitable for game sound effects.
+
+**为什么厉害 / Why it stands out**  
+中文：统一音频格式回退、加载与播放控制，减少浏览器音频兼容代码。  
+English: Abstracts audio loading, format fallbacks and playback across browsers.
+
+**值得学习 / What to learn**  
+中文：研究战斗音效混音和用户手势解锁；音频资源仍需独立授权。  
+English: Test combat mixing and gesture unlock; sound assets still require licenses.
+
+
+### Tone.js
+
+- **Official / 官方**: https://tonejs.github.io/  
+- **Code / 源码**: https://github.com/Tonejs/Tone.js  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 浏览器中的音乐时序、合成器和音频处理框架。  
+**English:** Browser-based music scheduling, synthesis and audio processing framework.
+
+**为什么厉害 / Why it stands out**  
+中文：支持程序化声音事件、时间轴与交互反馈，而非只能播放固定文件。  
+English: Supports synthesized sound events and precise scheduling beyond fixed samples.
+
+**值得学习 / What to learn**  
+中文：研究技能反馈音色与时间同步；实际乐曲和录音版权另行核查。  
+English: Prototype reactive skill audio and timing while auditing music and sample rights.
+
+
+### Google Filament
+
+- **Official / 官方**: https://google.github.io/filament/  
+- **Code / 源码**: https://github.com/google/filament  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 强调物理材质与跨平台一致性的实时渲染引擎。  
+**English:** Real-time physically based renderer emphasizing cross-platform material consistency.
+
+**为什么厉害 / Why it stands out**  
+中文：成熟的光照、材质和色彩管理可作为游戏资产视觉参考实现。  
+English: A strong reference for lighting, materials and color management.
+
+**值得学习 / What to learn**  
+中文：以固定相机对比 PBR 外观；不要把不同引擎的曝光结果误当几何错误。  
+English: Use fixed-camera PBR crosschecks without mistaking exposure differences for geometry faults.
+
+
+### Playwright
+
+- **Official / 官方**: https://playwright.dev/  
+- **Code / 源码**: https://github.com/microsoft/playwright  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 适用于浏览器游戏菜单、登录、交互和跨浏览器回归的自动化工具。  
+**English:** Browser automation framework for interactive game UI and regression tests.
+
+**为什么厉害 / Why it stands out**  
+中文：可用确定输入验证页面流程、异常和截图，不只依赖人工反复点选。  
+English: Enables scripted interaction, failure capture and screenshots across browsers.
+
+**值得学习 / What to learn**  
+中文：设计输入、碰撞和渲染相关回归；浏览器 UI 成功不等于 3D 物理已正确。  
+English: Automate interaction/visual smoke; UI success alone does not validate physics.
+
+
+### axe-core
+
+- **Official / 官方**: https://github.com/dequelabs/axe-core  
+- **Code / 源码**: https://github.com/dequelabs/axe-core  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 程序化检测网页可访问性问题的开源规则引擎。  
+**English:** Open-source automated web accessibility rule engine.
+
+**为什么厉害 / Why it stands out**  
+中文：可检查菜单、表单和语义可访问性，提升游戏网站的导航和操作质量。  
+English: Audits UI semantics and keyboard issues to improve game-site accessibility.
+
+**值得学习 / What to learn**  
+中文：与真人键盘/手柄和低视力测试结合，不能仅凭自动规则宣称完全合规。  
+English: Combine automated checks with real keyboard/controller tests; no full compliance claim.
+
+
+### Lighthouse
+
+- **Official / 官方**: https://developer.chrome.com/docs/lighthouse/  
+- **Code / 源码**: https://github.com/GoogleChrome/lighthouse  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 衡量网站性能、加载和无障碍体验的自动化审计工具。  
+**English:** Automated audits for site performance, loading and accessibility.
+
+**为什么厉害 / Why it stands out**  
+中文：把首屏资源、缓存与网页质量变成有证据的报告。  
+English: Turns startup, caching and page quality into reproducible reports.
+
+**值得学习 / What to learn**  
+中文：用于游戏入口加载与营销页面；WebGL/WebGPU 游戏内 GPU p95 另测。  
+English: Audit game entry and discovery pages; measure in-game GPU timing separately.
+
+
+### Sentry JavaScript
+
+- **Official / 官方**: https://sentry.io/  
+- **Code / 源码**: https://github.com/getsentry/sentry-javascript  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 收集运行时异常、错误链和可选性能问题的前端监控 SDK。  
+**English:** JavaScript error-monitoring SDK with runtime diagnostics and performance context.
+
+**为什么厉害 / Why it stands out**  
+中文：有助于定位线上 WebGPU 初始化、上下文丢失及跨浏览器异常。  
+English: Can trace WebGPU initialization failures, context loss and browser-specific crashes.
+
+**值得学习 / What to learn**  
+中文：增加采样与隐私保护；错误收集须征得合理授权且避免含玩家敏感信息。  
+English: Apply sampling and privacy controls; avoid collecting sensitive player data.
+
+
+### PostHog
+
+- **Official / 官方**: https://posthog.com/  
+- **Code / 源码**: https://github.com/PostHog/posthog  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 产品分析和事件实验平台，适合分析游戏入口、教程与转化漏斗。  
+**English:** Product analytics and experimentation platform for onboarding funnels.
+
+**为什么厉害 / Why it stands out**  
+中文：将打开、开始、完成、退出等玩家事件形成可比较的转化路径。  
+English: Connects start, tutorial, completion and exit events into comparable funnels.
+
+**值得学习 / What to learn**  
+中文：事件必须去重、合规且排除开发者试玩，不能直接把点击量算活跃玩家。  
+English: Deduplicate events, separate internal tests, and never equate clicks with active players.
+
+
+### OpenTelemetry JavaScript
+
+- **Official / 官方**: https://opentelemetry.io/  
+- **Code / 源码**: https://github.com/open-telemetry/opentelemetry-js  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** 用于客户端和服务端日志、指标与链路追踪的开放遥测工具。  
+**English:** Open instrumentation for traces, metrics and logs across JS services.
+
+**为什么厉害 / Why it stands out**  
+中文：统一客户端请求、游戏 API、后端响应与运行链路的观察模型。  
+English: Correlates client requests, game APIs and backend response paths.
+
+**值得学习 / What to learn**  
+中文：研究最小化采集和不上传个人数据；显示链路数据不等于证明某原因。  
+English: Minimize collection and protect privacy; traces are evidence, not causal proof.
+
+
+### React Three XR
+
+- **Official / 官方**: https://github.com/pmndrs/xr  
+- **Code / 源码**: https://github.com/pmndrs/xr  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+
+**中文简介：** React Three Fiber 生态的 WebXR 交互和控制器适配工具。  
+**English:** WebXR interaction and controller integration for React Three Fiber.
+
+**为什么厉害 / Why it stands out**  
+中文：建立手柄、交互空间和沉浸式视图的可复用输入结构。  
+English: Provides reusable spatial input, controllers and immersive view primitives.
+
+**值得学习 / What to learn**  
+中文：研究平板/PC/XR 不同操作输入，不把桌面鼠标设计直接照搬到 XR。  
+English: Compare tablet, desktop and XR control contracts instead of copying mouse UI.
 
