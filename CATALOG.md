@@ -1,8 +1,8 @@
 # Curated Projects · 双语项目档案
 
-> **122 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
+> **136 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
 >
-> **122 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
+> **136 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
 
 [Home / 首页](README.md) · [Search / 搜索](index.html) · [Data / 数据](data/projects.json)
 
@@ -388,8 +388,8 @@ English: Study faction differentiation, routing and deterministic replays; origi
 ### 0 A.D.
 
 - **Official / 官方**: https://play0ad.com/  
-- **Code / 源码**: https://github.com/0ad/0ad  
-- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse
+- **Code / 源码**: https://gitea.wildfiregames.com/0ad/0ad  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Active official Gitea source; individual engine/code and art licenses vary; previous 0ad/0ad GitHub mirror archived in 2024
 
 **中文简介：** 历史主题实时战略游戏及其公开引擎研发体系。  
 **English:** Historical real-time strategy game with open engine development.
@@ -399,8 +399,8 @@ English: Study faction differentiation, routing and deterministic replays; origi
 English: Integrates economy, formations, buildings and environmental detail into a full RTS.
 
 **值得学习 / What to learn**  
-中文：拆解 AI、编队、战斗信息反馈和美术资源分级；需审查艺术授权。  
-English: Study AI, formations and battle feedback with explicit art/license audits.
+中文：研究当前 Gitea 活跃源码的 AI、编队与资源经济；GitHub 旧镜像已归档，不应作为更新源。  
+English: Study current Gitea source for AI, formations and economy; the previous GitHub mirror is archived.
 
 
 ### Veloren
@@ -509,6 +509,42 @@ English: Detailed visitor simulation and management constraints generate visible
 **值得学习 / What to learn**  
 中文：研究游客决策、队列拥堵、景观价值与经营 UI；不能默认原版素材可自由分发。  
 English: Study visitor AI, queues and UI; original game data is not automatically redistributable.
+
+
+### Minerust
+
+- **Official / 官方**: https://github.com/B4rtekk1/Minerust  
+- **Code / 源码**: https://github.com/B4rtekk1/Minerust  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 基于 Rust/wgpu 的实验性体素沙盒，包含 GPU 裁剪和异步世界构建。  
+**English:** Experimental Rust/wgpu voxel sandbox with GPU culling and asynchronous world generation.
+
+**为什么厉害 / Why it stands out**  
+中文：以 GPU 间接绘制、共享缓冲分配和计算着色器裁剪降低大世界提交压力。  
+English: Uses indirect rendering, shared GPU buffers and compute culling for broad worlds.
+
+**值得学习 / What to learn**  
+中文：研究无界地形数据流和 GPU 负载；作者 FPS 宣传需独立硬件测量。  
+English: Study streaming and GPU budgets; independently benchmark author-reported FPS.
+
+
+### Tank AI Strategy Demo
+
+- **Official / 官方**: https://github.com/XiangLi2004/Game_AI_Demo  
+- **Code / 源码**: https://github.com/XiangLi2004/Game_AI_Demo  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 在同一坦克竞技场比较 FSM、行为树、Utility 和 GOAP 决策逻辑的教学工程。  
+**English:** Unity tank arena comparing FSM, behavior trees, utility AI and GOAP under shared rules.
+
+**为什么厉害 / Why it stands out**  
+中文：相同单位和胜负规则降低算法对比中的玩法变量干扰。  
+English: Holds arena rules constant while changing NPC decision architecture.
+
+**值得学习 / What to learn**  
+中文：改造成原创 RTS 对照测试，比较敌人反应、掩护、目标和可解释性。  
+English: Build original RTS experiments comparing reactions, cover, targets and explainability.
 
 
 ## 3D & AI Production Pipelines / 3D 与 AI 工厂
@@ -941,6 +977,78 @@ English: Supports geometry losses and multiview error experiments for reconstruc
 **值得学习 / What to learn**  
 中文：比较法线、几何和渲染误差；研究结果仍需 WebGPU 真实运行验收。  
 English: Measure normals, geometry and render errors; verify browser runtime independently.
+
+
+### three.ws Motion
+
+- **Official / 官方**: https://github.com/nirholas/three-ws-motion  
+- **Code / 源码**: https://github.com/nirholas/three-ws-motion  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 将结构化动作描述生成标准 Three.js 骨骼动画片段的工具。  
+**English:** Converts structured motion instructions into Three.js skeletal animation clips.
+
+**为什么厉害 / Why it stands out**  
+中文：将 IK、平衡、足部接触和动作缓动组合进可复现的运动处理流水线。  
+English: Models IK, balance, foot-ground contact and easing in reproducible animation generation.
+
+**值得学习 / What to learn**  
+中文：用原创骨架检验膝关节方向、足锁和真实步幅；作者的跨骨架效果需复测。  
+English: Test knee direction, foot locks and stride on original rigs; independently verify rig compatibility.
+
+
+### three.ws Retarget
+
+- **Official / 官方**: https://github.com/nirholas/three-ws-retarget  
+- **Code / 源码**: https://github.com/nirholas/three-ws-retarget  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 针对不同人形骨骼命名与绑定姿势的 Three.js 动作重定向工具。  
+**English:** Humanoid animation retargeting across differing bone names and bind poses.
+
+**为什么厉害 / Why it stands out**  
+中文：使用标准骨架命名映射与静态姿势旋转校正，减少跨模型动作变形。  
+English: Maps skeleton conventions and corrects rest-pose transforms for clip reuse.
+
+**值得学习 / What to learn**  
+中文：重点复核髋部轴、肩部旋转、镜像关节和骨骼缺失时的安全退出。  
+English: Audit hip axes, shoulders, mirrored joints and graceful failure on missing bones.
+
+
+### Rigger (Blender)
+
+- **Official / 官方**: https://github.com/asu37/Rigger  
+- **Code / 源码**: https://github.com/asu37/Rigger  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: GPL-3.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 为 Blender 自动建立控制骨架、蒙皮、动画重定向和游戏导出流程的插件。  
+**English:** Blender rigging addon for control rigs, skinning, retargeting and game export.
+
+**为什么厉害 / Why it stands out**  
+中文：提供人体/动物模板、IK 控制器、参考标记与可复用的导出骨架方案。  
+English: Combines humanoid/animal templates, IK controls, landmarks and export skeletons.
+
+**值得学习 / What to learn**  
+中文：研究统一骨骼工厂与反向骨骼问题；GPL 插件代码不可随意混入闭源库。  
+English: Study rig automation and bone-axis QA; respect GPL when distributing addon code.
+
+
+### GameFactory-3A
+
+- **Official / 官方**: https://github.com/OpenDCAI/GameFactory-3A  
+- **Code / 源码**: https://github.com/OpenDCAI/GameFactory-3A  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 把游戏需求、图像、模型、动作、音频和引擎接入组织为 AI 生产流水线的开源框架。  
+**English:** Open research framework connecting game requirements, art, 3D assets, motion, audio and engines.
+
+**为什么厉害 / Why it stands out**  
+中文：以工具调用、任务拆分、引擎适配器与测试脚手架组织 AI 制作流程。  
+English: Organizes AI production with task decomposition, adapters and testing scaffolds.
+
+**值得学习 / What to learn**  
+中文：评估端到端可执行率与资产质量，不能因仓库声称 3A 就认定质量达到 3A。  
+English: Measure end-to-end success and asset quality; repository branding is not AAA proof.
 
 
 ## Frameworks & Engines / 框架与引擎
@@ -1611,22 +1719,22 @@ English: Produces machine-readable JSON reports that turn asset compliance into 
 English: Integrate validation into asset QA alongside visual comparison and collision tests.
 
 
-### Khronos glTF Sample Models
+### Khronos glTF Sample Assets
 
-- **Official / 官方**: https://github.com/KhronosGroup/glTF-Sample-Models  
-- **Code / 源码**: https://github.com/KhronosGroup/glTF-Sample-Models  
-- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Per-model licenses vary; do not assume blanket reuse
+- **Official / 官方**: https://github.khronos.org/glTF-Assets/  
+- **Code / 源码**: https://github.com/KhronosGroup/glTF-Sample-Assets  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: Per-model license and credits vary in the actively maintained glTF-Sample-Assets collection; legacy glTF-Sample-Models repository archived
 
-**中文简介：** Khronos 维护的 glTF 示例模型集合，覆盖多种材质、动画与扩展测试场景。  
-**English:** A curated collection of glTF sample assets spanning materials, animation and extensions.
+**中文简介：** Khronos 持续维护的 glTF 2.0 示例资产集合，包含按材质与扩展分类的可搜索测试模型。  
+**English:** The maintained Khronos glTF 2.0 sample-assets collection for material, extension and viewer compatibility.
 
 **为什么厉害 / Why it stands out**  
 中文：提供具备明确参考预期的模型，用于发现不同引擎间 PBR 与格式兼容差异。  
 English: Supplies reference assets for testing PBR and compatibility across rendering engines.
 
 **值得学习 / What to learn**  
-中文：逐模型核对授权，挑选允许的样本构建多引擎外观回归测试。  
-English: Audit each model's license before using it in cross-engine visual regression tests.
+中文：使用官方活跃集合做跨引擎材质测试，逐模型阅读目录内授权与来源；旧 Sample-Models 仓库已归档。  
+English: Use the active sample-assets collection for cross-engine QA, reading each model license; the old Sample-Models repo is archived.
 
 
 ### Google Draco
@@ -2185,4 +2293,148 @@ English: Provides reusable spatial input, controllers and immersive view primiti
 **值得学习 / What to learn**  
 中文：研究平板/PC/XR 不同操作输入，不把桌面鼠标设计直接照搬到 XR。  
 English: Compare tablet, desktop and XR control contracts instead of copying mouse UI.
+
+
+### LimboAI
+
+- **Official / 官方**: https://github.com/limbonaut/limboai  
+- **Code / 源码**: https://github.com/limbonaut/limboai  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 面向 Godot 4 的行为树、层级状态机、可视化调试与编辑器插件。  
+**English:** Godot 4 behavior trees and hierarchical state machines with visual tooling and debugging.
+
+**为什么厉害 / Why it stands out**  
+中文：将 AI 决策树和状态变迁并列，允许设计师观察 NPC 当前执行分支。  
+English: Combines behavior trees with state machines and exposes active decisions to designers.
+
+**值得学习 / What to learn**  
+中文：拆解 Boss 打断、敌人警戒与追击状态；仍需按战斗规则编写动作节点。  
+English: Study boss interrupts and chase/alert states, while authoring game-specific actions.
+
+
+### Beehave
+
+- **Official / 官方**: https://github.com/bitbrain/beehave  
+- **Code / 源码**: https://github.com/bitbrain/beehave  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 基于 Godot 场景树节点的行为树 AI 插件，专注 NPC 行为组织。  
+**English:** Godot scene-tree behavior-tree addon for modular NPC action selection.
+
+**为什么厉害 / Why it stands out**  
+中文：把叶子任务、选择器与顺序器作为可编辑结构，降低 AI 逻辑耦合。  
+English: Exposes editable selectors, sequences and leaf actions to reduce behavior coupling.
+
+**值得学习 / What to learn**  
+中文：研究反应式敌人与可视调试；复杂目标规划可能仍需其他规划器。  
+English: Study reactive enemies and debugging; long-horizon goals may still need a planner.
+
+
+### AI Toolkit (C++)
+
+- **Official / 官方**: https://github.com/linkdd/aitoolkit  
+- **Code / 源码**: https://github.com/linkdd/aitoolkit  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 支持 FSM、行为树、Utility AI 与 GOAP 的 C++ 头文件工具集。  
+**English:** Header-only C++ toolkit covering FSM, behavior trees, utility AI and GOAP.
+
+**为什么厉害 / Why it stands out**  
+中文：在同一小型库里呈现多种决策范式，便于对比复杂度与可调试性。  
+English: Offers several decision paradigms in one small codebase for comparison.
+
+**值得学习 / What to learn**  
+中文：用同一战斗场景测试行为选择与规划成本，不盲目采用最复杂方案。  
+English: Compare decision quality and planning cost in one arena before choosing complexity.
+
+
+### Game AI Cheatsheet
+
+- **Official / 官方**: https://github.com/CanReader/game-ai-cheatsheet  
+- **Code / 源码**: https://github.com/CanReader/game-ai-cheatsheet  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 包含 FSM、行为树、GOAP、Utility、寻路和感知的可测试游戏 AI 参考实现。  
+**English:** Test-backed reference examples of game AI decision, pathfinding, steering and perception.
+
+**为什么厉害 / Why it stands out**  
+中文：以独立小型 Python 样例解释算法适用条件，方便做算法对照实验。  
+English: Uses small tested Python examples to compare AI algorithms and trade-offs.
+
+**值得学习 / What to learn**  
+中文：学习 AI 决策算法的验收指标和反例，而不是复制整套游戏架构。  
+English: Borrow test properties and counterexamples, not a full game architecture.
+
+
+### gdxAI
+
+- **Official / 官方**: https://github.com/libgdx/gdx-ai  
+- **Code / 源码**: https://github.com/libgdx/gdx-ai  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 面向游戏的 Java AI 框架，提供行为树、路径、转向和有限状态机。  
+**English:** Java game AI framework with behavior trees, paths, steering and state machines.
+
+**为什么厉害 / Why it stands out**  
+中文：把空间移动与行为决策分成模块化算法，具备经典成熟接口。  
+English: Separates movement and decision algorithms into reusable components.
+
+**值得学习 / What to learn**  
+中文：提炼算法与测试模型；libGDX Java 依赖不适合直接嵌进浏览器 TS 引擎。  
+English: Study algorithm contracts; Java/libGDX dependencies are not drop-in TypeScript code.
+
+
+### BehaviorTree.CPP
+
+- **Official / 官方**: https://github.com/BehaviorTree/BehaviorTree.CPP  
+- **Code / 源码**: https://github.com/BehaviorTree/BehaviorTree.CPP  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 用于 C++ 决策和机器人系统的高性能行为树框架，具备节点与运行时调试工具。  
+**English:** C++ behavior-tree framework with modular nodes, composition and runtime observability.
+
+**为什么厉害 / Why it stands out**  
+中文：展示复杂行为执行树的分离建模、故障恢复与可观察性。  
+English: Demonstrates composable action trees, recovery and behavior observability.
+
+**值得学习 / What to learn**  
+中文：学习异步节点和诊断日志，用于构建大量 NPC 的可解释行为系统。  
+English: Study async nodes and traces for explainable multi-NPC decisions.
+
+
+### Recast & Detour
+
+- **Official / 官方**: https://github.com/recastnavigation/recastnavigation  
+- **Code / 源码**: https://github.com/recastnavigation/recastnavigation  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: Zlib (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 经典导航网格生成、路径查询与人群移动算法的原始 C++ 项目。  
+**English:** Original C++ navigation-mesh construction, path queries and crowd simulation.
+
+**为什么厉害 / Why it stands out**  
+中文：将可行走地表、寻路和局部避障分离，广泛用于游戏导航工程。  
+English: Separates navigable surface generation, route queries and local crowd motion.
+
+**值得学习 / What to learn**  
+中文：验证坡度、代理半径、动态障碍与碰撞的独立边界。  
+English: Verify slopes, agent radii, dynamic obstacles and separation from physics colliders.
+
+
+### BepuPhysics2
+
+- **Official / 官方**: https://github.com/bepu/bepuphysics2  
+- **Code / 源码**: https://github.com/bepu/bepuphysics2  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately
+
+**中文简介：** 面向多线程 CPU 的高性能刚体物理与约束求解引擎。  
+**English:** High-performance multithreaded CPU rigid-body and constraint simulation engine.
+
+**为什么厉害 / Why it stands out**  
+中文：通过数据导向布局、批处理与约束求解研究大量刚体的物理性能。  
+English: Uses data-oriented layout, batching and constraints for large rigid-body workloads.
+
+**值得学习 / What to learn**  
+中文：作为物理性能设计参考；C# 实现与浏览器 WebAssembly/JavaScript 路线需独立比较。  
+English: Use as physics architecture reference; evaluate web-runtime compatibility separately.
 

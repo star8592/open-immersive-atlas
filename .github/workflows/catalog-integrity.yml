@@ -40,6 +40,8 @@ jobs:
           node --check labs/renderer-compare/test-cdp-windows.cjs
       - name: Run shared WebGPU/WebGL2 geometry and clip tests
         run: node --test labs/renderer-compare/test-core.mjs labs/renderer-compare/test-timing.mjs
+      - name: Validate normalized repository identities and license evidence
+        run: python3 scripts/audit_repository_health.py
       - name: Validate independent first-party source radar
         run: python3 scripts/validate_source_radar.py
       - name: Validate five independent source-backed research lanes

@@ -34,11 +34,19 @@ Two original native pipelines use the **same packed terrain geometry and camera*
 **GPU Timestamp Query upgrade / 真正 GPU 渲染计时：** Spatial Lab 03 now uses optional WebGPU `timestamp-query` and WebGL2 `EXT_disjoint_timer_query_webgl2`, with 24 asynchronous per-backend samples, explicit unsupported/disjoint reporting and downloadable raw sample data. Actual Windows Intel Xe-LPG browser runs succeeded at all four geometry densities (each API collected 24/24 samples), without implying a general API performance ranking. [Bilingual technical case](docs/cases/gpu-browser-timestamp-queries.md) · [Hardware evidence JSON](labs/renderer-compare/evidence/2026-11-07-intel-xe-lpg-gpu-timers.json).  
 **实测升级：** 第三个实验现在支持真正的 GPU 通道时间戳查询；Intel Xe-LPG 的四档几何在 Windows Chrome 已完成 WebGL2/WebGPU 两后端共八组 GPU 计时，结果及限制公开，不把个别数据推广为普遍性能结论。
 
+## NPC AI & motion-quality research / 战斗与动作质量专题（2026-11-07）
+
+A second, more selective discovery cycle verified **14 additional AI, animation, rigging, physics and experimental-voxel repositories** against live GitHub metadata, including their detected SPDX license and archived state (136 project records total). The [Primary Source Radar](sources.html) has expanded to **27 original works**, including official GDC 2026 Kung Fu motion and learned character locomotion sessions, motion matching, game architecture and physics articles.
+
+New source-level analysis documents how to diagnose incorrect sword grip and mirrored hands, foot sliding, reversed knees, weak combat choreography and NPC decision quality before investing in a complex motion generator. **No private-game animation repair or new production integration is claimed.**
+
+[Read the bilingual game AI & motion study](docs/research/game-ai-motion-quality-2026-11-07.md) · [Review repository license/health audit](scripts/audit_repository_health.py) · [Source Radar](sources.html)
+
 ## Expanded game intelligence / 游戏研发视野扩展（2026-11-07）
 
-**45 additional source-verified public repositories** have been catalogued across research-grade WebGPU/3DGS, AI asset generation, procedural levels, playable RTS/simulation/RPG references, game engines, multiplayer infrastructure, audio, automation, accessibility and analytics. The catalog now has **122 bilingual project records**. Public repository existence was verified; **their runtime quality and licensing for individual art, model weights and datasets are not automatically verified**.
+**45 additional source-verified public repositories** have been catalogued across research-grade WebGPU/3DGS, AI asset generation, procedural levels, playable RTS/simulation/RPG references, game engines, multiplayer infrastructure, audio, automation, accessibility and analytics. That first broad discovery batch reached **122 bilingual project records**. Public repository existence was verified; **their runtime quality and licensing for individual art, model weights and datasets are not automatically verified**.
 
-**18 original-source references**, separately indexed in the [searchable Source Radar](sources.html), cover GDC technical talks, developer postmortems, IGDA research, Steamworks/itch publishing, accessibility, W3C/Khronos standards, CC0 art licensing and current research papers. Not every resource is free or usable commercially; each has an explicit rights caveat.
+**The initial 18 original-source references**, separately indexed in the [searchable Source Radar](sources.html), cover GDC technical talks, developer postmortems, IGDA research, Steamworks/itch publishing, accessibility, W3C/Khronos standards, CC0 art licensing and current research papers. Not every resource is free or usable commercially; each has an explicit rights caveat.
 
 - [Source Radar / 一手资料与行业情报](sources.html)
 - [What to adopt and validate / 本轮研究结论及验收路线](docs/research/broad-discovery-2026-11-07.md)
@@ -46,7 +54,7 @@ Two original native pipelines use the **same packed terrain geometry and camera*
 
 ## First edition / 首批收录
 
-**122 independently described references · 4 categories · Chinese and English for every record.**
+**136 independently described references · 4 categories · Chinese and English for every record.**
 
 | Category / 分类 | Contents / 内容 |
 |---|---|

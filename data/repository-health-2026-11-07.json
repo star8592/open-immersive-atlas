@@ -1,0 +1,912 @@
+{
+  "schema": "oia-repository-audit-v1",
+  "checked_utc": "2026-11-07T03:13:06+00:00",
+  "catalog_count": 136,
+  "github_references": 112,
+  "summary": {
+    "active": 112
+  },
+  "limits": [
+    "Metadata only: no local runtime claims",
+    "Detected repository license does not automatically cover artwork, game data, fonts or model weights",
+    "Missing may mean transfer, alias, API access or deletion and needs manual review"
+  ],
+  "repositories": [
+    {
+      "catalog_id": "bruno-folio-2025",
+      "queried": "brunosimon/folio-2025",
+      "status": "active",
+      "canonical": "brunosimon/folio-2025",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-04T15:16:21Z"
+    },
+    {
+      "catalog_id": "anyscene",
+      "queried": "apekshik/anyscene",
+      "status": "active",
+      "canonical": "apekshik/anyscene",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-04T06:47:27Z"
+    },
+    {
+      "catalog_id": "anykit",
+      "queried": "apekshik/anykit",
+      "status": "active",
+      "canonical": "apekshik/anykit",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-01T23:00:10Z"
+    },
+    {
+      "catalog_id": "anyshot",
+      "queried": "apekshik/anyshot",
+      "status": "active",
+      "canonical": "apekshik/anyshot",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-01T22:24:00Z"
+    },
+    {
+      "catalog_id": "video-to-game",
+      "queried": "lovisdotio/video-to-game",
+      "status": "active",
+      "canonical": "lovisdotio/video-to-game",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-29T03:46:55Z"
+    },
+    {
+      "catalog_id": "assetfurnace",
+      "queried": "Bingeljell/image-to-3dlab",
+      "status": "active",
+      "canonical": "Bingeljell/image-to-3dlab",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-06T17:49:07Z"
+    },
+    {
+      "catalog_id": "trellis-2",
+      "queried": "microsoft/TRELLIS.2",
+      "status": "active",
+      "canonical": "microsoft/TRELLIS.2",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-07-10T12:34:32Z"
+    },
+    {
+      "catalog_id": "spark-3dgs",
+      "queried": "sparkjsdev/spark",
+      "status": "active",
+      "canonical": "sparkjsdev/spark",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-20T04:12:52Z"
+    },
+    {
+      "catalog_id": "three-js",
+      "queried": "mrdoob/three.js",
+      "status": "active",
+      "canonical": "mrdoob/three.js",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-06T22:54:43Z"
+    },
+    {
+      "catalog_id": "a-frame",
+      "queried": "aframevr/aframe",
+      "status": "active",
+      "canonical": "aframevr/aframe",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-07-13T15:27:11Z"
+    },
+    {
+      "catalog_id": "babylonjs",
+      "queried": "BabylonJS/Babylon.js",
+      "status": "active",
+      "canonical": "BabylonJS/Babylon.js",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-07T01:54:01Z"
+    },
+    {
+      "catalog_id": "playcanvas",
+      "queried": "playcanvas/engine",
+      "status": "active",
+      "canonical": "playcanvas/engine",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-07T02:13:39Z"
+    },
+    {
+      "catalog_id": "react-three-fiber",
+      "queried": "pmndrs/react-three-fiber",
+      "status": "active",
+      "canonical": "pmndrs/react-three-fiber",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-21T15:24:39Z"
+    },
+    {
+      "catalog_id": "blender",
+      "queried": "blender/blender",
+      "status": "active",
+      "canonical": "blender/blender",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-06T23:34:52Z"
+    },
+    {
+      "catalog_id": "godot",
+      "queried": "godotengine/godot",
+      "status": "active",
+      "canonical": "godotengine/godot",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-06T01:51:23Z"
+    },
+    {
+      "catalog_id": "rapier",
+      "queried": "dimforge/rapier",
+      "status": "active",
+      "canonical": "dimforge/rapier",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-01T21:48:29Z"
+    },
+    {
+      "catalog_id": "three-geospatial",
+      "queried": "takram-design-engineering/three-geospatial",
+      "status": "active",
+      "canonical": "takram-design-engineering/three-geospatial",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-05-27T06:40:25Z"
+    },
+    {
+      "catalog_id": "gltf-transform",
+      "queried": "donmccurdy/glTF-Transform",
+      "status": "active",
+      "canonical": "donmccurdy/glTF-Transform",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-20T11:41:51Z"
+    },
+    {
+      "catalog_id": "meshoptimizer",
+      "queried": "zeux/meshoptimizer",
+      "status": "active",
+      "canonical": "zeux/meshoptimizer",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-14T17:27:17Z"
+    },
+    {
+      "catalog_id": "vggt",
+      "queried": "facebookresearch/vggt",
+      "status": "active",
+      "canonical": "facebookresearch/vggt",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-05-19T03:39:39Z"
+    },
+    {
+      "catalog_id": "prompt2rig",
+      "queried": "blendi-remade/prompt2rig",
+      "status": "active",
+      "canonical": "blendi-remade/prompt2rig",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-10-21T00:44:37Z"
+    },
+    {
+      "catalog_id": "gua-game-qa",
+      "queried": "gua-project/gua",
+      "status": "active",
+      "canonical": "gua-project/gua",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-06T09:55:15Z"
+    },
+    {
+      "catalog_id": "supersplat-editor",
+      "queried": "playcanvas/supersplat",
+      "status": "active",
+      "canonical": "playcanvas/supersplat",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-31T22:22:37Z"
+    },
+    {
+      "catalog_id": "supersplat-viewer",
+      "queried": "playcanvas/supersplat-viewer",
+      "status": "active",
+      "canonical": "playcanvas/supersplat-viewer",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-06T10:33:15Z"
+    },
+    {
+      "catalog_id": "splat-transform",
+      "queried": "playcanvas/splat-transform",
+      "status": "active",
+      "canonical": "playcanvas/splat-transform",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-06T10:36:25Z"
+    },
+    {
+      "catalog_id": "model-viewer",
+      "queried": "google/model-viewer",
+      "status": "active",
+      "canonical": "google/model-viewer",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-05T23:13:19Z"
+    },
+    {
+      "catalog_id": "three-mesh-bvh",
+      "queried": "gkjohnson/three-mesh-bvh",
+      "status": "active",
+      "canonical": "gkjohnson/three-mesh-bvh",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-06T07:19:06Z"
+    },
+    {
+      "catalog_id": "postprocessing",
+      "queried": "pmndrs/postprocessing",
+      "status": "active",
+      "canonical": "pmndrs/postprocessing",
+      "license_spdx": "Zlib",
+      "last_push_utc": "2026-11-01T16:04:04Z"
+    },
+    {
+      "catalog_id": "cesiumjs",
+      "queried": "CesiumGS/cesium",
+      "status": "active",
+      "canonical": "CesiumGS/cesium",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-06T23:34:19Z"
+    },
+    {
+      "catalog_id": "3d-tiles-renderer",
+      "queried": "NASA-AMMOS/3DTilesRendererJS",
+      "status": "active",
+      "canonical": "NASA-AMMOS/3DTilesRendererJS",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-07T03:02:00Z"
+    },
+    {
+      "catalog_id": "drei",
+      "queried": "pmndrs/drei",
+      "status": "active",
+      "canonical": "pmndrs/drei",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-21T09:19:21Z"
+    },
+    {
+      "catalog_id": "theatre-js",
+      "queried": "theatre-js/theatre",
+      "status": "active",
+      "canonical": "theatre-js/theatre",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2024-08-14T13:20:18Z"
+    },
+    {
+      "catalog_id": "threlte",
+      "queried": "threlte/threlte",
+      "status": "active",
+      "canonical": "threlte/threlte",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-02T21:07:04Z"
+    },
+    {
+      "catalog_id": "tresjs",
+      "queried": "Tresjs/tres",
+      "status": "active",
+      "canonical": "Tresjs/tres",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-03T14:05:54Z"
+    },
+    {
+      "catalog_id": "ogl",
+      "queried": "oframe/ogl",
+      "status": "active",
+      "canonical": "oframe/ogl",
+      "license_spdx": null,
+      "last_push_utc": "2025-04-13T07:51:49Z"
+    },
+    {
+      "catalog_id": "regl",
+      "queried": "regl-project/regl",
+      "status": "active",
+      "canonical": "regl-project/regl",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-17T02:38:06Z"
+    },
+    {
+      "catalog_id": "cannon-es",
+      "queried": "pmndrs/cannon-es",
+      "status": "active",
+      "canonical": "pmndrs/cannon-es",
+      "license_spdx": "MIT",
+      "last_push_utc": "2024-01-06T04:10:33Z"
+    },
+    {
+      "catalog_id": "spector-js",
+      "queried": "BabylonJS/Spector.js",
+      "status": "active",
+      "canonical": "BabylonJS/Spector.js",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-05T06:43:41Z"
+    },
+    {
+      "catalog_id": "gltf-sample-viewer",
+      "queried": "KhronosGroup/glTF-Sample-Viewer",
+      "status": "active",
+      "canonical": "KhronosGroup/glTF-Sample-Viewer",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-06T00:28:41Z"
+    },
+    {
+      "catalog_id": "gltf-validator",
+      "queried": "KhronosGroup/glTF-Validator",
+      "status": "active",
+      "canonical": "KhronosGroup/glTF-Validator",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-10-06T19:02:48Z"
+    },
+    {
+      "catalog_id": "gltf-sample-models",
+      "queried": "KhronosGroup/glTF-Sample-Assets",
+      "status": "active",
+      "canonical": "KhronosGroup/glTF-Sample-Assets",
+      "license_spdx": null,
+      "last_push_utc": "2026-11-05T17:29:50Z"
+    },
+    {
+      "catalog_id": "draco",
+      "queried": "google/draco",
+      "status": "active",
+      "canonical": "google/draco",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-10-16T21:02:17Z"
+    },
+    {
+      "catalog_id": "basis-universal",
+      "queried": "BinomialLLC/basis_universal",
+      "status": "active",
+      "canonical": "BinomialLLC/basis_universal",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-10-30T18:07:49Z"
+    },
+    {
+      "catalog_id": "stats-js",
+      "queried": "mrdoob/stats.js",
+      "status": "active",
+      "canonical": "mrdoob/stats.js",
+      "license_spdx": "MIT",
+      "last_push_utc": "2024-10-11T03:59:02Z"
+    },
+    {
+      "catalog_id": "three-gpu-pathtracer",
+      "queried": "gkjohnson/three-gpu-pathtracer",
+      "status": "active",
+      "canonical": "gkjohnson/three-gpu-pathtracer",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-06T20:35:51Z"
+    },
+    {
+      "catalog_id": "playcanvas-web-components",
+      "queried": "playcanvas/web-components",
+      "status": "active",
+      "canonical": "playcanvas/web-components",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-01T11:49:27Z"
+    },
+    {
+      "catalog_id": "react-three-rapier",
+      "queried": "pmndrs/react-three-rapier",
+      "status": "active",
+      "canonical": "pmndrs/react-three-rapier",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-12T05:06:24Z"
+    },
+    {
+      "catalog_id": "webxr-samples",
+      "queried": "immersive-web/webxr-samples",
+      "status": "active",
+      "canonical": "immersive-web/webxr-samples",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-26T19:52:40Z"
+    },
+    {
+      "catalog_id": "just-a-simple-tree",
+      "queried": "MikeFernandez-Pro/just-a-simple-tree",
+      "status": "active",
+      "canonical": "MikeFernandez-Pro/just-a-simple-tree",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-01T18:16:14Z"
+    },
+    {
+      "catalog_id": "threejs-field-grass",
+      "queried": "matthew-kissinger/threejs-field-grass",
+      "status": "active",
+      "canonical": "matthew-kissinger/threejs-field-grass",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-08-25T18:06:33Z"
+    },
+    {
+      "catalog_id": "yomotsu-vegetation",
+      "queried": "yomotsu/vegetation",
+      "status": "active",
+      "canonical": "yomotsu/vegetation",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-02T12:53:14Z"
+    },
+    {
+      "catalog_id": "evan-wallace-webgl-water",
+      "queried": "evanw/webgl-water",
+      "status": "active",
+      "canonical": "evanw/webgl-water",
+      "license_spdx": null,
+      "last_push_utc": "2022-12-31T11:43:00Z"
+    },
+    {
+      "catalog_id": "jeantimex-webgpu-water",
+      "queried": "jeantimex/webgpu-water",
+      "status": "active",
+      "canonical": "jeantimex/webgpu-water",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-06-21T15:40:57Z"
+    },
+    {
+      "catalog_id": "swek-webgl2-water",
+      "queried": "HowdyKeith/swek-webgl2-water",
+      "status": "active",
+      "canonical": "HowdyKeith/swek-webgl2-water",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-07-12T22:25:14Z"
+    },
+    {
+      "catalog_id": "websplatter-cross-device",
+      "queried": "websplatter/WebSplatter",
+      "status": "active",
+      "canonical": "websplatter/WebSplatter",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-08-29T11:34:03Z"
+    },
+    {
+      "catalog_id": "webdgs-browser-training",
+      "queried": "krispy-kenay/WebDGS",
+      "status": "active",
+      "canonical": "krispy-kenay/WebDGS",
+      "license_spdx": null,
+      "last_push_utc": "2026-10-17T10:58:41Z"
+    },
+    {
+      "catalog_id": "gaussian-wang-tile-renderer",
+      "queried": "zengyf131/gswt_renderer",
+      "status": "active",
+      "canonical": "zengyf131/gswt_renderer",
+      "license_spdx": "MIT",
+      "last_push_utc": "2025-12-13T08:52:58Z"
+    },
+    {
+      "catalog_id": "hunyuan3d-21",
+      "queried": "Tencent-Hunyuan/Hunyuan3D-2.1",
+      "status": "active",
+      "canonical": "Tencent-Hunyuan/Hunyuan3D-2.1",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2025-10-17T10:10:07Z"
+    },
+    {
+      "catalog_id": "hunyuanworld-10",
+      "queried": "Tencent-Hunyuan/HunyuanWorld-1.0",
+      "status": "active",
+      "canonical": "Tencent-Hunyuan/HunyuanWorld-1.0",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-04-15T17:27:25Z"
+    },
+    {
+      "catalog_id": "microsoft-trellis-original",
+      "queried": "microsoft/TRELLIS",
+      "status": "active",
+      "canonical": "microsoft/TRELLIS",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-27T05:03:08Z"
+    },
+    {
+      "catalog_id": "recast-navigation-js",
+      "queried": "isaac-mason/recast-navigation-js",
+      "status": "active",
+      "canonical": "isaac-mason/recast-navigation-js",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-30T06:19:46Z"
+    },
+    {
+      "catalog_id": "cdlod-terrain",
+      "queried": "fstrugar/CDLOD",
+      "status": "active",
+      "canonical": "fstrugar/CDLOD",
+      "license_spdx": "MIT",
+      "last_push_utc": "2018-03-11T02:32:20Z"
+    },
+    {
+      "catalog_id": "mapbox-martini",
+      "queried": "mapbox/martini",
+      "status": "active",
+      "canonical": "mapbox/martini",
+      "license_spdx": "ISC",
+      "last_push_utc": "2026-06-24T10:21:40Z"
+    },
+    {
+      "catalog_id": "wave-function-collapse",
+      "queried": "mxgmn/WaveFunctionCollapse",
+      "status": "active",
+      "canonical": "mxgmn/WaveFunctionCollapse",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-10-15T12:21:27Z"
+    },
+    {
+      "catalog_id": "bevy-engine",
+      "queried": "bevyengine/bevy",
+      "status": "active",
+      "canonical": "bevyengine/bevy",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-06T22:54:58Z"
+    },
+    {
+      "catalog_id": "phaser-html5",
+      "queried": "phaserjs/phaser",
+      "status": "active",
+      "canonical": "phaserjs/phaser",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-08-21T06:56:13Z"
+    },
+    {
+      "catalog_id": "pixijs-2d",
+      "queried": "pixijs/pixijs",
+      "status": "active",
+      "canonical": "pixijs/pixijs",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-06T22:28:33Z"
+    },
+    {
+      "catalog_id": "gdevelop-creator",
+      "queried": "4ian/GDevelop",
+      "status": "active",
+      "canonical": "4ian/GDevelop",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-07T00:33:33Z"
+    },
+    {
+      "catalog_id": "raylib-engine",
+      "queried": "raysan5/raylib",
+      "status": "active",
+      "canonical": "raysan5/raylib",
+      "license_spdx": "Zlib",
+      "last_push_utc": "2026-11-05T13:04:57Z"
+    },
+    {
+      "catalog_id": "dear-imgui",
+      "queried": "ocornut/imgui",
+      "status": "active",
+      "canonical": "ocornut/imgui",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-05T19:36:23Z"
+    },
+    {
+      "catalog_id": "mindustry-source",
+      "queried": "Anuken/Mindustry",
+      "status": "active",
+      "canonical": "Anuken/Mindustry",
+      "license_spdx": "GPL-3.0",
+      "last_push_utc": "2026-11-04T20:39:10Z"
+    },
+    {
+      "catalog_id": "openra-rts",
+      "queried": "OpenRA/OpenRA",
+      "status": "active",
+      "canonical": "OpenRA/OpenRA",
+      "license_spdx": "GPL-3.0",
+      "last_push_utc": "2026-10-28T21:29:09Z"
+    },
+    {
+      "catalog_id": "veloren-voxel-rpg",
+      "queried": "veloren/veloren",
+      "status": "active",
+      "canonical": "veloren/veloren",
+      "license_spdx": "GPL-3.0",
+      "last_push_utc": "2026-10-30T01:14:55Z"
+    },
+    {
+      "catalog_id": "unciv-strategy",
+      "queried": "yairm210/Unciv",
+      "status": "active",
+      "canonical": "yairm210/Unciv",
+      "license_spdx": "MPL-2.0",
+      "last_push_utc": "2026-11-06T13:10:22Z"
+    },
+    {
+      "catalog_id": "endless-sky-open-game",
+      "queried": "endless-sky/endless-sky",
+      "status": "active",
+      "canonical": "endless-sky/endless-sky",
+      "license_spdx": "GPL-3.0",
+      "last_push_utc": "2026-11-07T03:10:02Z"
+    },
+    {
+      "catalog_id": "openttd-simulation",
+      "queried": "OpenTTD/OpenTTD",
+      "status": "active",
+      "canonical": "OpenTTD/OpenTTD",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-06T20:54:48Z"
+    },
+    {
+      "catalog_id": "widelands-rts",
+      "queried": "widelands/widelands",
+      "status": "active",
+      "canonical": "widelands/widelands",
+      "license_spdx": "GPL-2.0",
+      "last_push_utc": "2026-11-05T23:39:05Z"
+    },
+    {
+      "catalog_id": "openrct2-park",
+      "queried": "OpenRCT2/OpenRCT2",
+      "status": "active",
+      "canonical": "OpenRCT2/OpenRCT2",
+      "license_spdx": "GPL-3.0",
+      "last_push_utc": "2026-11-05T15:17:43Z"
+    },
+    {
+      "catalog_id": "ldtk-level-editor",
+      "queried": "deepnight/ldtk",
+      "status": "active",
+      "canonical": "deepnight/ldtk",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-05T18:22:31Z"
+    },
+    {
+      "catalog_id": "tiled-map-editor",
+      "queried": "mapeditor/tiled",
+      "status": "active",
+      "canonical": "mapeditor/tiled",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-02T07:53:48Z"
+    },
+    {
+      "catalog_id": "colyseus-server",
+      "queried": "colyseus/colyseus",
+      "status": "active",
+      "canonical": "colyseus/colyseus",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-07T01:01:26Z"
+    },
+    {
+      "catalog_id": "nakama-game-backend",
+      "queried": "heroiclabs/nakama",
+      "status": "active",
+      "canonical": "heroiclabs/nakama",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-06T11:39:39Z"
+    },
+    {
+      "catalog_id": "spacetimedb-realtime",
+      "queried": "clockworklabs/SpacetimeDB",
+      "status": "active",
+      "canonical": "clockworklabs/SpacetimeDB",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-06T23:35:37Z"
+    },
+    {
+      "catalog_id": "yjs-crdt",
+      "queried": "yjs/yjs",
+      "status": "active",
+      "canonical": "yjs/yjs",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-05T18:26:15Z"
+    },
+    {
+      "catalog_id": "howler-web-audio",
+      "queried": "goldfire/howler.js",
+      "status": "active",
+      "canonical": "goldfire/howler.js",
+      "license_spdx": "MIT",
+      "last_push_utc": "2025-11-23T23:49:01Z"
+    },
+    {
+      "catalog_id": "tonejs-synthesis",
+      "queried": "Tonejs/Tone.js",
+      "status": "active",
+      "canonical": "Tonejs/Tone.js",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-01T01:18:02Z"
+    },
+    {
+      "catalog_id": "ktx-official-tools",
+      "queried": "KhronosGroup/KTX-Software",
+      "status": "active",
+      "canonical": "KhronosGroup/KTX-Software",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-06T23:51:59Z"
+    },
+    {
+      "catalog_id": "assimp-importer",
+      "queried": "assimp/assimp",
+      "status": "active",
+      "canonical": "assimp/assimp",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-06T09:59:01Z"
+    },
+    {
+      "catalog_id": "google-filament",
+      "queried": "google/filament",
+      "status": "active",
+      "canonical": "google/filament",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-07T00:01:42Z"
+    },
+    {
+      "catalog_id": "playwright-game-qa",
+      "queried": "microsoft/playwright",
+      "status": "active",
+      "canonical": "microsoft/playwright",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-07T01:02:39Z"
+    },
+    {
+      "catalog_id": "axe-accessibility",
+      "queried": "dequelabs/axe-core",
+      "status": "active",
+      "canonical": "dequelabs/axe-core",
+      "license_spdx": "MPL-2.0",
+      "last_push_utc": "2026-11-05T16:47:50Z"
+    },
+    {
+      "catalog_id": "chrome-lighthouse",
+      "queried": "GoogleChrome/lighthouse",
+      "status": "active",
+      "canonical": "GoogleChrome/lighthouse",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-06T00:24:31Z"
+    },
+    {
+      "catalog_id": "sentry-js-monitoring",
+      "queried": "getsentry/sentry-javascript",
+      "status": "active",
+      "canonical": "getsentry/sentry-javascript",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-06T22:46:41Z"
+    },
+    {
+      "catalog_id": "posthog-product-analytics",
+      "queried": "PostHog/posthog",
+      "status": "active",
+      "canonical": "PostHog/posthog",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-11-07T03:12:52Z"
+    },
+    {
+      "catalog_id": "otel-javascript",
+      "queried": "open-telemetry/opentelemetry-js",
+      "status": "active",
+      "canonical": "open-telemetry/opentelemetry-js",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-11-06T21:49:05Z"
+    },
+    {
+      "catalog_id": "mmpose-pose-estimation",
+      "queried": "open-mmlab/mmpose",
+      "status": "active",
+      "canonical": "open-mmlab/mmpose",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2025-08-04T07:30:50Z"
+    },
+    {
+      "catalog_id": "pytorch3d-toolkit",
+      "queried": "facebookresearch/pytorch3d",
+      "status": "active",
+      "canonical": "facebookresearch/pytorch3d",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-10-31T21:39:25Z"
+    },
+    {
+      "catalog_id": "pmndrs-xr",
+      "queried": "pmndrs/xr",
+      "status": "active",
+      "canonical": "pmndrs/xr",
+      "license_spdx": "NOASSERTION",
+      "last_push_utc": "2026-10-15T13:54:07Z"
+    },
+    {
+      "catalog_id": "limboai-behavior-tree",
+      "queried": "limbonaut/limboai",
+      "status": "active",
+      "canonical": "limbonaut/limboai",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-30T10:48:45Z"
+    },
+    {
+      "catalog_id": "beehave-godot",
+      "queried": "bitbrain/beehave",
+      "status": "active",
+      "canonical": "bitbrain/beehave",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-09-20T21:03:24Z"
+    },
+    {
+      "catalog_id": "aitoolkit-cpp",
+      "queried": "linkdd/aitoolkit",
+      "status": "active",
+      "canonical": "linkdd/aitoolkit",
+      "license_spdx": "MIT",
+      "last_push_utc": "2024-05-08T14:18:53Z"
+    },
+    {
+      "catalog_id": "game-ai-cheatsheet",
+      "queried": "CanReader/game-ai-cheatsheet",
+      "status": "active",
+      "canonical": "CanReader/game-ai-cheatsheet",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-10-10T15:54:06Z"
+    },
+    {
+      "catalog_id": "three-ws-motion",
+      "queried": "nirholas/three-ws-motion",
+      "status": "active",
+      "canonical": "nirholas/three-ws-motion",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-10-10T22:13:46Z"
+    },
+    {
+      "catalog_id": "three-ws-retarget",
+      "queried": "nirholas/three-ws-retarget",
+      "status": "active",
+      "canonical": "nirholas/three-ws-retarget",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-10-11T00:58:58Z"
+    },
+    {
+      "catalog_id": "blender-rigger",
+      "queried": "asu37/Rigger",
+      "status": "active",
+      "canonical": "asu37/Rigger",
+      "license_spdx": "GPL-3.0",
+      "last_push_utc": "2026-10-19T07:17:37Z"
+    },
+    {
+      "catalog_id": "gamefactory-3a",
+      "queried": "OpenDCAI/GameFactory-3A",
+      "status": "active",
+      "canonical": "OpenDCAI/GameFactory-3A",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-10-29T07:11:30Z"
+    },
+    {
+      "catalog_id": "minerust-voxel",
+      "queried": "B4rtekk1/Minerust",
+      "status": "active",
+      "canonical": "B4rtekk1/Minerust",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-05T22:54:06Z"
+    },
+    {
+      "catalog_id": "gdx-ai",
+      "queried": "libgdx/gdx-ai",
+      "status": "active",
+      "canonical": "libgdx/gdx-ai",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2024-10-01T16:56:55Z"
+    },
+    {
+      "catalog_id": "behavior-tree-cpp",
+      "queried": "BehaviorTree/BehaviorTree.CPP",
+      "status": "active",
+      "canonical": "BehaviorTree/BehaviorTree.CPP",
+      "license_spdx": "MIT",
+      "last_push_utc": "2026-11-06T09:33:32Z"
+    },
+    {
+      "catalog_id": "recast-detour",
+      "queried": "recastnavigation/recastnavigation",
+      "status": "active",
+      "canonical": "recastnavigation/recastnavigation",
+      "license_spdx": "Zlib",
+      "last_push_utc": "2026-02-27T07:17:13Z"
+    },
+    {
+      "catalog_id": "bepu-physics2",
+      "queried": "bepu/bepuphysics2",
+      "status": "active",
+      "canonical": "bepu/bepuphysics2",
+      "license_spdx": "Apache-2.0",
+      "last_push_utc": "2026-10-11T03:36:10Z"
+    },
+    {
+      "catalog_id": "tank-ai-benchmark",
+      "queried": "XiangLi2004/Game_AI_Demo",
+      "status": "active",
+      "canonical": "XiangLi2004/Game_AI_Demo",
+      "license_spdx": "MIT",
+      "last_push_utc": "2025-12-13T05:56:35Z"
+    }
+  ]
+}

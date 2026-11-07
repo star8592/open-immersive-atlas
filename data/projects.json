@@ -1469,31 +1469,36 @@
     },
     {
       "id": "gltf-sample-models",
-      "name": "Khronos glTF Sample Models",
+      "name": "Khronos glTF Sample Assets",
       "category": "infrastructure",
-      "website": "https://github.com/KhronosGroup/glTF-Sample-Models",
-      "repository": "https://github.com/KhronosGroup/glTF-Sample-Models",
+      "website": "https://github.khronos.org/glTF-Assets/",
+      "repository": "https://github.com/KhronosGroup/glTF-Sample-Assets",
       "evidence": "source-code",
-      "evidence_url": "https://github.com/KhronosGroup/glTF-Sample-Models",
-      "upstream_license": "Per-model licenses vary; do not assume blanket reuse",
+      "evidence_url": "https://github.com/KhronosGroup/glTF-Sample-Assets",
+      "upstream_license": "Per-model license and credits vary in the actively maintained glTF-Sample-Assets collection; legacy glTF-Sample-Models repository archived",
       "summary": {
-        "zh": "Khronos 维护的 glTF 示例模型集合，覆盖多种材质、动画与扩展测试场景。",
-        "en": "A curated collection of glTF sample assets spanning materials, animation and extensions."
+        "zh": "Khronos 持续维护的 glTF 2.0 示例资产集合，包含按材质与扩展分类的可搜索测试模型。",
+        "en": "The maintained Khronos glTF 2.0 sample-assets collection for material, extension and viewer compatibility."
       },
       "strength": {
         "zh": "提供具备明确参考预期的模型，用于发现不同引擎间 PBR 与格式兼容差异。",
         "en": "Supplies reference assets for testing PBR and compatibility across rendering engines."
       },
       "learning": {
-        "zh": "逐模型核对授权，挑选允许的样本构建多引擎外观回归测试。",
-        "en": "Audit each model's license before using it in cross-engine visual regression tests."
+        "zh": "使用官方活跃集合做跨引擎材质测试，逐模型阅读目录内授权与来源；旧 Sample-Models 仓库已归档。",
+        "en": "Use the active sample-assets collection for cross-engine QA, reading each model license; the old Sample-Models repo is archived."
       },
       "tags": [
         "glTF",
         "fixtures",
         "PBR"
       ],
-      "reviewed_on": "2026-11-07"
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "legacy_id_retained": true,
+        "successor_checked_on": "2026-11-07",
+        "archived_predecessor": "https://github.com/KhronosGroup/glTF-Sample-Models"
+      }
     },
     {
       "id": "draco",
@@ -2702,10 +2707,10 @@
       "name": "0 A.D.",
       "category": "experiences",
       "website": "https://play0ad.com/",
-      "repository": "https://github.com/0ad/0ad",
+      "repository": "https://gitea.wildfiregames.com/0ad/0ad",
       "evidence": "source-code",
-      "evidence_url": "https://github.com/0ad/0ad",
-      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "evidence_url": "https://gitea.wildfiregames.com/0ad/0ad",
+      "upstream_license": "Active official Gitea source; individual engine/code and art licenses vary; previous 0ad/0ad GitHub mirror archived in 2024",
       "summary": {
         "zh": "历史主题实时战略游戏及其公开引擎研发体系。",
         "en": "Historical real-time strategy game with open engine development."
@@ -2715,15 +2720,20 @@
         "en": "Integrates economy, formations, buildings and environmental detail into a full RTS."
       },
       "learning": {
-        "zh": "拆解 AI、编队、战斗信息反馈和美术资源分级；需审查艺术授权。",
-        "en": "Study AI, formations and battle feedback with explicit art/license audits."
+        "zh": "研究当前 Gitea 活跃源码的 AI、编队与资源经济；GitHub 旧镜像已归档，不应作为更新源。",
+        "en": "Study current Gitea source for AI, formations and economy; the previous GitHub mirror is archived."
       },
       "tags": [
         "RTS",
         "open-game",
         "3D"
       ],
-      "reviewed_on": "2026-11-07"
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository_checked_on": "2026-11-07",
+        "source_host": "gitea.wildfiregames.com",
+        "old_archived_mirror": "https://github.com/0ad/0ad"
+      }
     },
     {
       "id": "veloren-voxel-rpg",
@@ -3452,6 +3462,510 @@
         "3D"
       ],
       "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "limboai-behavior-tree",
+      "name": "LimboAI",
+      "category": "infrastructure",
+      "website": "https://github.com/limbonaut/limboai",
+      "repository": "https://github.com/limbonaut/limboai",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/limbonaut/limboai",
+      "upstream_license": "GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "面向 Godot 4 的行为树、层级状态机、可视化调试与编辑器插件。",
+        "en": "Godot 4 behavior trees and hierarchical state machines with visual tooling and debugging."
+      },
+      "strength": {
+        "zh": "将 AI 决策树和状态变迁并列，允许设计师观察 NPC 当前执行分支。",
+        "en": "Combines behavior trees with state machines and exposes active decisions to designers."
+      },
+      "learning": {
+        "zh": "拆解 Boss 打断、敌人警戒与追击状态；仍需按战斗规则编写动作节点。",
+        "en": "Study boss interrupts and chase/alert states, while authoring game-specific actions."
+      },
+      "tags": [
+        "AI",
+        "behavior-tree",
+        "Godot"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "MIT",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-10-30",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "beehave-godot",
+      "name": "Beehave",
+      "category": "infrastructure",
+      "website": "https://github.com/bitbrain/beehave",
+      "repository": "https://github.com/bitbrain/beehave",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/bitbrain/beehave",
+      "upstream_license": "GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "基于 Godot 场景树节点的行为树 AI 插件，专注 NPC 行为组织。",
+        "en": "Godot scene-tree behavior-tree addon for modular NPC action selection."
+      },
+      "strength": {
+        "zh": "把叶子任务、选择器与顺序器作为可编辑结构，降低 AI 逻辑耦合。",
+        "en": "Exposes editable selectors, sequences and leaf actions to reduce behavior coupling."
+      },
+      "learning": {
+        "zh": "研究反应式敌人与可视调试；复杂目标规划可能仍需其他规划器。",
+        "en": "Study reactive enemies and debugging; long-horizon goals may still need a planner."
+      },
+      "tags": [
+        "AI",
+        "behavior-tree",
+        "Godot"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "MIT",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-09-20",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "aitoolkit-cpp",
+      "name": "AI Toolkit (C++)",
+      "category": "infrastructure",
+      "website": "https://github.com/linkdd/aitoolkit",
+      "repository": "https://github.com/linkdd/aitoolkit",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/linkdd/aitoolkit",
+      "upstream_license": "GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "支持 FSM、行为树、Utility AI 与 GOAP 的 C++ 头文件工具集。",
+        "en": "Header-only C++ toolkit covering FSM, behavior trees, utility AI and GOAP."
+      },
+      "strength": {
+        "zh": "在同一小型库里呈现多种决策范式，便于对比复杂度与可调试性。",
+        "en": "Offers several decision paradigms in one small codebase for comparison."
+      },
+      "learning": {
+        "zh": "用同一战斗场景测试行为选择与规划成本，不盲目采用最复杂方案。",
+        "en": "Compare decision quality and planning cost in one arena before choosing complexity."
+      },
+      "tags": [
+        "AI",
+        "GOAP",
+        "C++"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "MIT",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2024-05-08",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "game-ai-cheatsheet",
+      "name": "Game AI Cheatsheet",
+      "category": "infrastructure",
+      "website": "https://github.com/CanReader/game-ai-cheatsheet",
+      "repository": "https://github.com/CanReader/game-ai-cheatsheet",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/CanReader/game-ai-cheatsheet",
+      "upstream_license": "GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "包含 FSM、行为树、GOAP、Utility、寻路和感知的可测试游戏 AI 参考实现。",
+        "en": "Test-backed reference examples of game AI decision, pathfinding, steering and perception."
+      },
+      "strength": {
+        "zh": "以独立小型 Python 样例解释算法适用条件，方便做算法对照实验。",
+        "en": "Uses small tested Python examples to compare AI algorithms and trade-offs."
+      },
+      "learning": {
+        "zh": "学习 AI 决策算法的验收指标和反例，而不是复制整套游戏架构。",
+        "en": "Borrow test properties and counterexamples, not a full game architecture."
+      },
+      "tags": [
+        "AI",
+        "reference",
+        "pathfinding"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "MIT",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-10-10",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "three-ws-motion",
+      "name": "three.ws Motion",
+      "category": "pipelines",
+      "website": "https://github.com/nirholas/three-ws-motion",
+      "repository": "https://github.com/nirholas/three-ws-motion",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/nirholas/three-ws-motion",
+      "upstream_license": "GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "将结构化动作描述生成标准 Three.js 骨骼动画片段的工具。",
+        "en": "Converts structured motion instructions into Three.js skeletal animation clips."
+      },
+      "strength": {
+        "zh": "将 IK、平衡、足部接触和动作缓动组合进可复现的运动处理流水线。",
+        "en": "Models IK, balance, foot-ground contact and easing in reproducible animation generation."
+      },
+      "learning": {
+        "zh": "用原创骨架检验膝关节方向、足锁和真实步幅；作者的跨骨架效果需复测。",
+        "en": "Test knee direction, foot locks and stride on original rigs; independently verify rig compatibility."
+      },
+      "tags": [
+        "animation",
+        "IK",
+        "Three.js"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "Apache-2.0",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-10-10",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "three-ws-retarget",
+      "name": "three.ws Retarget",
+      "category": "pipelines",
+      "website": "https://github.com/nirholas/three-ws-retarget",
+      "repository": "https://github.com/nirholas/three-ws-retarget",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/nirholas/three-ws-retarget",
+      "upstream_license": "GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "针对不同人形骨骼命名与绑定姿势的 Three.js 动作重定向工具。",
+        "en": "Humanoid animation retargeting across differing bone names and bind poses."
+      },
+      "strength": {
+        "zh": "使用标准骨架命名映射与静态姿势旋转校正，减少跨模型动作变形。",
+        "en": "Maps skeleton conventions and corrects rest-pose transforms for clip reuse."
+      },
+      "learning": {
+        "zh": "重点复核髋部轴、肩部旋转、镜像关节和骨骼缺失时的安全退出。",
+        "en": "Audit hip axes, shoulders, mirrored joints and graceful failure on missing bones."
+      },
+      "tags": [
+        "animation",
+        "retargeting",
+        "humanoid"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "Apache-2.0",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-10-11",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "blender-rigger",
+      "name": "Rigger (Blender)",
+      "category": "pipelines",
+      "website": "https://github.com/asu37/Rigger",
+      "repository": "https://github.com/asu37/Rigger",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/asu37/Rigger",
+      "upstream_license": "GitHub licenseInfo: GPL-3.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "为 Blender 自动建立控制骨架、蒙皮、动画重定向和游戏导出流程的插件。",
+        "en": "Blender rigging addon for control rigs, skinning, retargeting and game export."
+      },
+      "strength": {
+        "zh": "提供人体/动物模板、IK 控制器、参考标记与可复用的导出骨架方案。",
+        "en": "Combines humanoid/animal templates, IK controls, landmarks and export skeletons."
+      },
+      "learning": {
+        "zh": "研究统一骨骼工厂与反向骨骼问题；GPL 插件代码不可随意混入闭源库。",
+        "en": "Study rig automation and bone-axis QA; respect GPL when distributing addon code."
+      },
+      "tags": [
+        "Blender",
+        "rigging",
+        "animation"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "GPL-3.0",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-10-19",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "gamefactory-3a",
+      "name": "GameFactory-3A",
+      "category": "pipelines",
+      "website": "https://github.com/OpenDCAI/GameFactory-3A",
+      "repository": "https://github.com/OpenDCAI/GameFactory-3A",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/OpenDCAI/GameFactory-3A",
+      "upstream_license": "GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "把游戏需求、图像、模型、动作、音频和引擎接入组织为 AI 生产流水线的开源框架。",
+        "en": "Open research framework connecting game requirements, art, 3D assets, motion, audio and engines."
+      },
+      "strength": {
+        "zh": "以工具调用、任务拆分、引擎适配器与测试脚手架组织 AI 制作流程。",
+        "en": "Organizes AI production with task decomposition, adapters and testing scaffolds."
+      },
+      "learning": {
+        "zh": "评估端到端可执行率与资产质量，不能因仓库声称 3A 就认定质量达到 3A。",
+        "en": "Measure end-to-end success and asset quality; repository branding is not AAA proof."
+      },
+      "tags": [
+        "AI-game",
+        "pipeline",
+        "automation"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "Apache-2.0",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-10-29",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "minerust-voxel",
+      "name": "Minerust",
+      "category": "experiences",
+      "website": "https://github.com/B4rtekk1/Minerust",
+      "repository": "https://github.com/B4rtekk1/Minerust",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/B4rtekk1/Minerust",
+      "upstream_license": "GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "基于 Rust/wgpu 的实验性体素沙盒，包含 GPU 裁剪和异步世界构建。",
+        "en": "Experimental Rust/wgpu voxel sandbox with GPU culling and asynchronous world generation."
+      },
+      "strength": {
+        "zh": "以 GPU 间接绘制、共享缓冲分配和计算着色器裁剪降低大世界提交压力。",
+        "en": "Uses indirect rendering, shared GPU buffers and compute culling for broad worlds."
+      },
+      "learning": {
+        "zh": "研究无界地形数据流和 GPU 负载；作者 FPS 宣传需独立硬件测量。",
+        "en": "Study streaming and GPU budgets; independently benchmark author-reported FPS."
+      },
+      "tags": [
+        "voxel",
+        "wgpu",
+        "terrain"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "MIT",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-11-05",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "gdx-ai",
+      "name": "gdxAI",
+      "category": "infrastructure",
+      "website": "https://github.com/libgdx/gdx-ai",
+      "repository": "https://github.com/libgdx/gdx-ai",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/libgdx/gdx-ai",
+      "upstream_license": "GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "面向游戏的 Java AI 框架，提供行为树、路径、转向和有限状态机。",
+        "en": "Java game AI framework with behavior trees, paths, steering and state machines."
+      },
+      "strength": {
+        "zh": "把空间移动与行为决策分成模块化算法，具备经典成熟接口。",
+        "en": "Separates movement and decision algorithms into reusable components."
+      },
+      "learning": {
+        "zh": "提炼算法与测试模型；libGDX Java 依赖不适合直接嵌进浏览器 TS 引擎。",
+        "en": "Study algorithm contracts; Java/libGDX dependencies are not drop-in TypeScript code."
+      },
+      "tags": [
+        "AI",
+        "steering",
+        "Java"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "Apache-2.0",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2024-10-01",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "behavior-tree-cpp",
+      "name": "BehaviorTree.CPP",
+      "category": "infrastructure",
+      "website": "https://github.com/BehaviorTree/BehaviorTree.CPP",
+      "repository": "https://github.com/BehaviorTree/BehaviorTree.CPP",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/BehaviorTree/BehaviorTree.CPP",
+      "upstream_license": "GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "用于 C++ 决策和机器人系统的高性能行为树框架，具备节点与运行时调试工具。",
+        "en": "C++ behavior-tree framework with modular nodes, composition and runtime observability."
+      },
+      "strength": {
+        "zh": "展示复杂行为执行树的分离建模、故障恢复与可观察性。",
+        "en": "Demonstrates composable action trees, recovery and behavior observability."
+      },
+      "learning": {
+        "zh": "学习异步节点和诊断日志，用于构建大量 NPC 的可解释行为系统。",
+        "en": "Study async nodes and traces for explainable multi-NPC decisions."
+      },
+      "tags": [
+        "AI",
+        "behavior-tree",
+        "C++"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "MIT",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-11-06",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "recast-detour",
+      "name": "Recast & Detour",
+      "category": "infrastructure",
+      "website": "https://github.com/recastnavigation/recastnavigation",
+      "repository": "https://github.com/recastnavigation/recastnavigation",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/recastnavigation/recastnavigation",
+      "upstream_license": "GitHub licenseInfo: Zlib (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "经典导航网格生成、路径查询与人群移动算法的原始 C++ 项目。",
+        "en": "Original C++ navigation-mesh construction, path queries and crowd simulation."
+      },
+      "strength": {
+        "zh": "将可行走地表、寻路和局部避障分离，广泛用于游戏导航工程。",
+        "en": "Separates navigable surface generation, route queries and local crowd motion."
+      },
+      "learning": {
+        "zh": "验证坡度、代理半径、动态障碍与碰撞的独立边界。",
+        "en": "Verify slopes, agent radii, dynamic obstacles and separation from physics colliders."
+      },
+      "tags": [
+        "navmesh",
+        "pathfinding",
+        "crowds"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "Zlib",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-02-27",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "bepu-physics2",
+      "name": "BepuPhysics2",
+      "category": "infrastructure",
+      "website": "https://github.com/bepu/bepuphysics2",
+      "repository": "https://github.com/bepu/bepuphysics2",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/bepu/bepuphysics2",
+      "upstream_license": "GitHub licenseInfo: Apache-2.0 (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "面向多线程 CPU 的高性能刚体物理与约束求解引擎。",
+        "en": "High-performance multithreaded CPU rigid-body and constraint simulation engine."
+      },
+      "strength": {
+        "zh": "通过数据导向布局、批处理与约束求解研究大量刚体的物理性能。",
+        "en": "Uses data-oriented layout, batching and constraints for large rigid-body workloads."
+      },
+      "learning": {
+        "zh": "作为物理性能设计参考；C# 实现与浏览器 WebAssembly/JavaScript 路线需独立比较。",
+        "en": "Use as physics architecture reference; evaluate web-runtime compatibility separately."
+      },
+      "tags": [
+        "physics",
+        "rigidbody",
+        "performance"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "Apache-2.0",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2026-10-11",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
+    },
+    {
+      "id": "tank-ai-benchmark",
+      "name": "Tank AI Strategy Demo",
+      "category": "experiences",
+      "website": "https://github.com/XiangLi2004/Game_AI_Demo",
+      "repository": "https://github.com/XiangLi2004/Game_AI_Demo",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/XiangLi2004/Game_AI_Demo",
+      "upstream_license": "GitHub licenseInfo: MIT (checked 2026-11-07); review dependency, artwork, weights and other bundled rights separately",
+      "summary": {
+        "zh": "在同一坦克竞技场比较 FSM、行为树、Utility 和 GOAP 决策逻辑的教学工程。",
+        "en": "Unity tank arena comparing FSM, behavior trees, utility AI and GOAP under shared rules."
+      },
+      "strength": {
+        "zh": "相同单位和胜负规则降低算法对比中的玩法变量干扰。",
+        "en": "Holds arena rules constant while changing NPC decision architecture."
+      },
+      "learning": {
+        "zh": "改造成原创 RTS 对照测试，比较敌人反应、掩护、目标和可解释性。",
+        "en": "Build original RTS experiments comparing reactions, cover, targets and explainability."
+      },
+      "tags": [
+        "AI",
+        "RTS",
+        "benchmark"
+      ],
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository": "GitHub API live verified",
+        "license_spdx": "MIT",
+        "license_checked_on": "2026-11-07",
+        "last_source_push_utc": "2025-12-13",
+        "archived": false,
+        "local_runtime": "not-tested"
+      }
     }
   ]
 }
