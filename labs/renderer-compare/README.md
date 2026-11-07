@@ -43,6 +43,15 @@ WebGPU generally requires HTTPS or localhost and a suitable adapter. This lab at
 
 **中文：** 已通过最小清屏程序确认 Linux 无头 Chrome 157 的 SwiftShader WebGPU 软件设备异常销毁，因此默认不将该软件适配器当作可靠 WebGPU 性能设备。必要时可用上述参数进行故障诊断，但不能将其结果与真实显卡比较。
 
+## Independent real-browser acceptance / 双浏览器环境真实验收（2026-11-07）
+
+1. **Linux Z890, Chrome 157, headless SwiftShader:** WebGL2 renderer and fallback tests passed. The independent minimal WebGPU clear-only experiment lost its SwiftShader device with "Device was destroyed." Consequently, the lab correctly recognizes the software adapter and skips it by default.
+2. **Windows Chrome, isolated headless browser profile, WebGPU enabled:** both original rendering pipelines initialized with **18,432 triangles / 9,409 vertices / 697 × 300 pixels** and each reached **171 consecutive drawn frames** with WebGL2 error code 0 and WebGPU error code 0.
+3. **Windows sequential sample:** both renderers separately completed **40 warm-up frames + 120 measured frames** at the same dimensions and geometry. JS call p95 was approximately 0.10 ms (WebGL2 draw call path) versus 0.30 ms (WebGPU command encoding/submit path); rAF frame interval p95 was approximately 16.8 ms for both.
+4. **Interpretation:** The above establishes functional compatibility and successful sequential sampling on the tested Windows browser. These numbers do **not** measure GPU shader or render-pass execution time, and they are not proof that WebGL2 outperforms WebGPU. Device/driver details, thermal conditions and repeated independent GPU-timestamp benchmarks are required for actual hardware speed claims.
+
+**中文说明：** Windows Chrome 同场景两个后端都完成真实绘制，并顺序预热、采样通过。上述 API 调用时间与浏览器帧间隔不能解释为 GPU 算力排名；Linux 无头 SwiftShader 的 WebGPU 失败则通过独立最小程序复现过，属于测试环境的实际局限。
+
 ## Run / 运行
 
 From repository root / 在仓库根目录运行：
