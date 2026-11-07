@@ -1,4 +1,5 @@
 // OIA Spatial Lab 03 — original renderers with the exact same packed terrain mesh.
+import {nanosecondsToMs,elapsedNanosecondsToMs} from './timing.mjs';
 // Does not claim that WebGL command calls equal WebGPU queue submission timings.
 const VS=[
 '#version 300 es',
@@ -76,9 +77,12 @@ export function createWebGL2(canvas,geometry){
   gl.bindVertexArray(null);
   const loc={vp:gl.getUniformLocation(program,'uVP'),
     eye:gl.getUniformLocation(program,'uEye'),fog:gl.getUniformLocation(program,'uFog')};
+  const timerExt=gl.getExtension('EXT_disjoint_timer_query_webgl2');
   let disposed=false;
   return{
     api:'WebGL2',
+    getTimerSupport:()=>timerExt?{available:true,method:'EXT_disjoint_timer_query_webgl2',unit:'ns'}:
+      {available:false,reason:'WebGL2 EXT_disjoint_timer_query_webgl2 unavailable'},
     render(frame,flags){
       if(disposed)throw Error('WebGL2 renderer destroyed');
       gl.viewport(0,0,canvas.width,canvas.height);
@@ -88,6 +92,26 @@ export function createWebGL2(canvas,geometry){
       gl.uniform3fv(loc.eye,frame.eye);gl.uniform1f(loc.fog,flags.fog?1:0);
       gl.bindVertexArray(vao);gl.drawElements(gl.TRIANGLES,geometry.indices.length,gl.UNSIGNED_INT,0);
       gl.bindVertexArray(null);
+    },
+    async measureGpuPass(frame,flags) {
+      if(!timerExt||disposed)return null;
+      if(gl.getParameter(timerExt.GPU_DISJOINT_EXT))return null;
+      const query=gl.createQuery();
+      if(!query)return null;
+      try{
+        gl.beginQuery(timerExt.TIME_ELAPSED_EXT,query);
+        try{this.render(frame,flags);}finally{gl.endQuery(timerExt.TIME_ELAPSED_EXT);}
+        const started=performance.now();
+        while(!disposed&&performance.now()-started<1800){
+          await new Promise(resolve=>setTimeout(resolve,16));
+          if(gl.getParameter(timerExt.GPU_DISJOINT_EXT))return null;
+          if(gl.getQueryParameter(query,gl.QUERY_RESULT_AVAILABLE)){
+            const ns=gl.getQueryParameter(query,gl.QUERY_RESULT);
+            return elapsedNanosecondsToMs(ns);
+          }
+        }
+        return null; // Query timed out, was disjoint, or context was lost.
+      }finally{gl.deleteQuery(query);}
     },
     getError:()=>gl.getError(),
     destroy(){if(disposed)return;disposed=true;gl.deleteBuffer(vb);gl.deleteBuffer(ib);gl.deleteVertexArray(vao);gl.deleteProgram(program);}
@@ -112,7 +136,15 @@ export async function createWebGPU(canvas,geometry){
   if(software&&!new URL(location.href).searchParams.has('allowSoftwareWebGPU')){
     throw Error('Only a software WebGPU adapter is available ('+rendererName+'). Comparison disabled to protect WebGL2; open on hardware or use ?allowSoftwareWebGPU for diagnostic-only testing.');
   }
-  const device=await adapter.requestDevice();
+  const timerFeature='timestamp-query';
+  let timerReason=adapter.features.has(timerFeature)?'':'Adapter does not advertise timestamp-query';
+  let device;
+  if(adapter.features.has(timerFeature)){
+    try { device=await adapter.requestDevice({requiredFeatures:[timerFeature]}); }
+    catch(e){timerReason='Timestamp-enabled device request rejected: '+String(e.message||e);
+      device=await adapter.requestDevice();}
+  }else device=await adapter.requestDevice();
+  const hasTimestamp=device.features.has(timerFeature);
   const ctx=canvas.getContext('webgpu');
   if(!ctx){device.destroy();throw Error('WebGPU canvas unavailable');}
   const format=navigator.gpu.getPreferredCanvasFormat();
@@ -145,8 +177,10 @@ export async function createWebGPU(canvas,geometry){
     .catch(e=>{lost=true;lostReason=e?.message||'device lost';});
   return{
     api:'WebGPU',
+    getTimerSupport:()=>hasTimestamp?{available:true,method:'WebGPU timestamp-query',unit:'ns'}:
+      {available:false,reason:timerReason||'Timestamp-query not granted by WebGPU device'},
     getAdapterInfo:()=>({vendor:String(info.vendor||''),architecture:String(info.architecture||''),device:String(info.device||''),description:String(info.description||'')}),
-    render(frame,flags){
+    render(frame,flags,timer=null){
       if(disposed||lost||deviceError)throw Error('WebGPU unavailable: '+(lostReason||deviceError||'renderer destroyed'));
       if(w!==canvas.width||h!==canvas.height){
         depth?.destroy();w=canvas.width;h=canvas.height;
@@ -157,14 +191,37 @@ export async function createWebGPU(canvas,geometry){
       uniforms.set([flags.fog?1:0,0,0,0],20);
       device.queue.writeBuffer(ub,0,uniforms);
       const encoder=device.createCommandEncoder();
-      const pass=encoder.beginRenderPass({
+      const descriptor={
         colorAttachments:[{view:ctx.getCurrentTexture().createView(),clearValue:{r:.07,g:.14,b:.18,a:1},loadOp:'clear',storeOp:'store'}],
         depthStencilAttachment:{view:depth.createView(),depthClearValue:1,depthLoadOp:'clear',depthStoreOp:'store'}
-      });
+      };
+      if(timer)descriptor.timestampWrites={querySet:timer.query,beginningOfPassWriteIndex:0,endOfPassWriteIndex:1};
+      const pass=encoder.beginRenderPass(descriptor);
       pass.setPipeline(pipeline);pass.setBindGroup(0,bind);
       pass.setVertexBuffer(0,vb);pass.setIndexBuffer(ib,'uint32');
       pass.drawIndexed(geometry.indices.length);pass.end();
+      if(timer){
+        encoder.resolveQuerySet(timer.query,0,2,timer.resolved,0);
+        encoder.copyBufferToBuffer(timer.resolved,0,timer.readback,0,16);
+      }
       device.queue.submit([encoder.finish()]);
+    },
+    async measureGpuPass(frame,flags){
+      if(!hasTimestamp||disposed||lost)return null;
+      const query=device.createQuerySet({type:'timestamp',count:2});
+      const resolved=device.createBuffer({size:16,usage:GPUBufferUsage.QUERY_RESOLVE|GPUBufferUsage.COPY_SRC});
+      const readback=device.createBuffer({size:16,usage:GPUBufferUsage.COPY_DST|GPUBufferUsage.MAP_READ});
+      let mapped=false;
+      try{
+        this.render(frame,flags,{query,resolved,readback});
+        await readback.mapAsync(GPUMapMode.READ);
+        mapped=true;
+        const nanos=new BigUint64Array(readback.getMappedRange(0,16));
+        return nanosecondsToMs(nanos[0],nanos[1]);
+      }finally{
+        if(mapped)readback.unmap();
+        readback.destroy();resolved.destroy();query.destroy();
+      }
     },
     getError:()=>lost?lostReason||'DEVICE_LOST':deviceError||0,
     destroy(){if(disposed)return;disposed=true;depth?.destroy();vb.destroy();ib.destroy();ub.destroy();ctx.unconfigure();device.destroy();}
