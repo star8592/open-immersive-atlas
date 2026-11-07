@@ -3,7 +3,7 @@
 **Discover outstanding 3D experiences. Understand how they work. Learn from the best.**  
 **发现卓越的三维作品，理解它们如何实现，向最优秀的创作者学习。**
 
-[中文说明](README.zh-CN.md) · [Bilingual catalog / 双语目录](CATALOG.md) · [Interactive explorer / 交互检索](index.html) · [Contribute / 参与贡献](CONTRIBUTING.md)
+[中文说明](README.zh-CN.md) · [Bilingual catalog / 双语目录](CATALOG.md) · [Interactive explorer / 交互检索](index.html) · [Creator Atlas / 作者图谱](creators.html) · [Creator profiles / 作者资料](CREATORS.md) · [Contribute / 参与贡献](CONTRIBUTING.md)
 
 > **This is a curated, evidence-based index and knowledge archive — not a fork of any third-party product and not a replacement for Three.js, A-Frame, or Blender.**  
 > 本仓库是经过出处核验的双语精选技术索引，不是第三方产品镜像，也不是一个新的 3D 引擎。
@@ -36,7 +36,7 @@ Two original native pipelines use the **same packed terrain geometry and camera*
 
 ## First edition / 首批收录
 
-**73 independently described references · 4 categories · Chinese and English for every record.**
+**77 independently described references · 4 categories · Chinese and English for every record.**
 
 | Category / 分类 | Contents / 内容 |
 |---|---|
@@ -125,3 +125,11 @@ These are independently researched public guides, **not** evidence of internal g
 - [Tiny Delivery terrain transitions and grounded trails / 地表材质与轮迹专题](docs/cases/sinica-terrain-heightblend-vfx.md).
 
 New verified references include Tiny Delivery, Dordogne, Tiny Glade, Kayla Kosik's Cozy Cottage, Just a Simple Tree, Three.js Field Grass and Yomotsu Vegetation. **These are evidence-indexed studies, not claims of locally integrated high-fidelity gameplay.** / 以上仅为公开技术与美术方法研究，不代表游戏已经完成美术重构。
+
+## Wildward: procedural wilderness × terrain-responsive vehicle × simulated river / 程序化荒野技术专题
+
+Source-audited **three actual creator videos** plus the original introduction: [Wildward independent technical case](docs/cases/wildward-procedural-expedition-driving-water.md). The `@PlayWildward` account publicly describes Jeep driving with terrain response, procedural-grass contact, simulated water and a 1–4-player expedition. The author **has not disclosed implementation source or physics/renderer details**. The similarly named medieval-fantasy website cannot be attributed to the account without evidence. / 已审阅三段作者视频与一条介绍，分析车与地形、草和水的联动，明确哪些机制仍未获源码证明。
+
+Three linked, source-checked browser water references are now part of the project catalog: [Evan Wallace's WebGL water](https://github.com/evanw/webgl-water), [Jean Timex's WebGPU water](https://github.com/jeantimex/webgpu-water) and [SweK's single-file WebGL2 water](https://github.com/HowdyKeith/swek-webgl2-water). Do not confuse their separate licensing with Wildward promotional video rights. / 本轮 73→77 条中英双语项目记录。
+
+**[Search creators by expertise / 按专长检索作者](creators.html)** · [Bilingual biographies, representative works, rights and evidence / 双语作者档案](CREATORS.md) · [JSON data](data/creators.json). The new people atlas contains **16 individual creators + 1 project account**; team membership for Wildward remains unverified. / 作者图谱含 16 位个人作者和 1 个未核实成员身份的项目账号。
