@@ -69,6 +69,7 @@ async function runOne(url,extraArgs,tag){
       const sample=done.benchmarkResult.rendererModes[api].gpuPassMs;
       assert.ok(sample,'Every renderer must explicitly report GPU timer support or absence');
       assert.equal(sample.requested,24);
+      assert.equal(sample.samplesMs.length,sample.collected,'Exported raw GPU sample count');
       assert.ok(['complete','partial','unsupported','unavailable','error'].includes(sample.status));
       if(sample.status==='unsupported')assert.equal(sample.p95Ms,null,'Unsupported GPU queries must not fake GPU timings');
       if(sample.collected>0){
