@@ -80,7 +80,7 @@ function mount(url,label,opts={}){
  if(secureAsset(entry.scroll)){
   const scroll=el("img","snapshot-scroll");scroll.src=secureAsset(entry.scroll);scroll.alt="";scroll.loading="lazy";scroll.decoding="async";open.append(scroll)
  }
- const labelBadge=el("span","snapshot-label","真实网站截图 · "+(opts.year||"2026"));open.append(labelBadge);
+ const labelBadge=el("span","snapshot-label",(opts.kind||"真实网站截图")+" · "+(opts.year||"2026"));open.append(labelBadge);
  open.onclick=()=>preview(entry,label,url);
  shell.append(open);
  if(secureAsset(entry.scroll)){
