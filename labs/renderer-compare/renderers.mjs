@@ -118,8 +118,8 @@ export async function createWebGPU(canvas,geometry){
   const format=navigator.gpu.getPreferredCanvasFormat();
   ctx.configure({device,format,alphaMode:'opaque'});
   const shader=device.createShaderModule({code:WGSL});
-  const info=await shader.getCompilationInfo();
-  const errors=info.messages.filter(m=>m.type==='error');
+  const compilation=await shader.getCompilationInfo();
+  const errors=compilation.messages.filter(m=>m.type==='error');
   if(errors.length){device.destroy();throw Error('WGSL: '+errors.map(x=>x.message).join(' | '));}
   const pipeline=device.createRenderPipeline({
     layout:'auto',
