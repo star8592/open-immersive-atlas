@@ -634,6 +634,57 @@
       "priority": "P1",
       "reviewed_on": "2026-11-07",
       "research_status": "source-linked"
+    },
+    {
+      "id": "wildward-expedition-team",
+      "name": "Wildward (@PlayWildward) — creator account",
+      "handle": "@PlayWildward",
+      "entity_type": "project-team (individuals not verified)",
+      "discipline": "natural-effects",
+      "tags": [
+        "vehicle-driving",
+        "water-simulation",
+        "grass-contact",
+        "procedural-terrain",
+        "co-op-expedition",
+        "atmospheric-environment"
+      ],
+      "profile_url": "https://x.com/PlayWildward",
+      "works": [
+        {
+          "title": "Driving, interactions & simulated water / 驾驶与模拟水",
+          "url": "https://x.com/PlayWildward/status/2118723059444297933",
+          "kind": "video"
+        },
+        {
+          "title": "Jeep and procedural grass / 车辆与程序化草",
+          "url": "https://x.com/PlayWildward/status/2118672374379717001",
+          "kind": "video"
+        },
+        {
+          "title": "Procedural world & autumn / 程序化秋季世界",
+          "url": "https://x.com/PlayWildward/status/2118380623672787389",
+          "kind": "video"
+        },
+        {
+          "title": "Project introduction / 项目介绍",
+          "url": "https://x.com/PlayWildward/status/2118369897654927406",
+          "kind": "post"
+        }
+      ],
+      "specialty": {
+        "zh": "以三维越野车贯穿程序化森林、自然地形、草被交互和河流水体的多系统视觉表达；项目称支持一至四人合作。",
+        "en": "A cooperative wilderness project presenting Jeep driving, terrain response, grass interaction and simulated rivers in cohesive 3D scenes."
+      },
+      "reusable_methods": {
+        "zh": "研究车轮接地、植被动态、涉水波纹、光色构图及地表生态过渡；目前只有公开视频，真实引擎和源码未核实。",
+        "en": "Study vehicle-ground contacts, grass deformation, river disturbance, coherent color design and ecosystem transitions; no engine source has been verified."
+      },
+      "evidence_url": "https://x.com/PlayWildward/status/2118672374379717001",
+      "rights_note": "Source videos are promotional posts, not open-source or reusable game assets. Do not associate with wildwardgames.com medieval-fantasy studio without direct identity proof.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "video-observed-source-unverified"
     }
   ]
 }
