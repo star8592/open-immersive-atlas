@@ -2193,6 +2193,1265 @@
         "single-file"
       ],
       "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "websplatter-cross-device",
+      "name": "WebSplatter",
+      "category": "infrastructure",
+      "website": "https://websplatter.github.io/",
+      "repository": "https://github.com/websplatter/WebSplatter",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/websplatter/WebSplatter",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "浏览器 WebGPU 原生的 3D Gaussian Splatting 渲染研究与实现。",
+        "en": "WebGPU-native browser 3D Gaussian Splatting research renderer."
+      },
+      "strength": {
+        "zh": "用无等待排序与栅格管线处理跨架构同步差异，而不是照搬 CUDA。",
+        "en": "Uses wait-free sorting and hardware rasterization to address cross-architecture synchronization."
+      },
+      "learning": {
+        "zh": "对照不同 GPU 的 splat 排序、透明度、画质和显存；作者速度数据须独立复测。",
+        "en": "Benchmark splat sorting, opacity, quality and VRAM across GPUs; independently verify author speed claims."
+      },
+      "tags": [
+        "WebGPU",
+        "3DGS",
+        "research"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "webdgs-browser-training",
+      "name": "WebDGS",
+      "category": "pipelines",
+      "website": "https://krispy-kenay.github.io/WebDGS/",
+      "repository": "https://github.com/krispy-kenay/WebDGS",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/krispy-kenay/WebDGS",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "可在浏览器本地进行 Gaussian Splatting 训练与实时观察的实验实现。",
+        "en": "A browser-native Gaussian Splatting training and viewing experiment."
+      },
+      "strength": {
+        "zh": "在 WebGPU 中完成前向渲染、反向梯度与训练过程可视化。",
+        "en": "Implements forward rendering, backward gradients and training visualization in WebGPU."
+      },
+      "learning": {
+        "zh": "研究静态网站内训练资源调度与 splat 密度管理，而非假定所有设备可跑。",
+        "en": "Study browser-side training budgets and splat densification without assuming universal device support."
+      },
+      "tags": [
+        "WebGPU",
+        "3DGS",
+        "training"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "gaussian-wang-tile-renderer",
+      "name": "Gaussian Splatting Wang Tiles Renderer",
+      "category": "infrastructure",
+      "website": "https://yunfan.zone/gswt_webpage/",
+      "repository": "https://github.com/zengyf131/gswt_renderer",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/zengyf131/gswt_renderer",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "利用 Wang Tiles 程序化拼接扩展 Gaussian Splatting 地形的 WebGPU 渲染器。",
+        "en": "WebGPU renderer for procedural Wang-tile Gaussian Splatting terrains."
+      },
+      "strength": {
+        "zh": "把预生成片段合并、LOD 混合和无界地形浏览结合起来。",
+        "en": "Combines prepared tile merging, LOD blending and extensible terrain exploration."
+      },
+      "learning": {
+        "zh": "拆解 tile 接缝、视距 LOD 与流式显存；注意仓库仅开放渲染器部分。",
+        "en": "Study tile seams, distance LOD and streaming; the constructor is not included in this repo."
+      },
+      "tags": [
+        "3DGS",
+        "procedural",
+        "terrain"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "hunyuan3d-21",
+      "name": "Hunyuan3D 2.1",
+      "category": "pipelines",
+      "website": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "repository": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "腾讯混元的图像到三维资产生成与 PBR 纹理模型工程。",
+        "en": "Tencent's image-to-3D asset generation and PBR texture pipeline."
+      },
+      "strength": {
+        "zh": "将几何与物理材质生成串接，并公开训练与推理实现供研究。",
+        "en": "Connects shape generation with PBR material synthesis and published research code."
+      },
+      "learning": {
+        "zh": "关注多视图材质一致性、纹理烘焙与游戏 LOD；权重许可要单独核验。",
+        "en": "Assess multiview material fidelity, baking and game LOD; verify model-weight rights separately."
+      },
+      "tags": [
+        "AI3D",
+        "PBR",
+        "generation"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "hunyuanworld-10",
+      "name": "HunyuanWorld 1.0",
+      "category": "pipelines",
+      "website": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0",
+      "repository": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "面向可探索三维世界生成的研究代码和模型发布项目。",
+        "en": "Research code and model release for generating explorable 3D worlds."
+      },
+      "strength": {
+        "zh": "把单物件生成扩展到世界场景层次，涉及场景组织与可浏览表示。",
+        "en": "Moves beyond single objects to organized worlds and navigable representations."
+      },
+      "learning": {
+        "zh": "验证空间一致性、场景连通性、物件尺度与真正碰撞，不只看视频效果。",
+        "en": "Test spatial continuity, world scale, navigability and collisions rather than demos alone."
+      },
+      "tags": [
+        "AI3D",
+        "world-generation"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "microsoft-trellis-original",
+      "name": "Microsoft TRELLIS",
+      "category": "pipelines",
+      "website": "https://github.com/microsoft/TRELLIS",
+      "repository": "https://github.com/microsoft/TRELLIS",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/microsoft/TRELLIS",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "使用结构化三维潜变量进行多种三维表示生成的研究实现。",
+        "en": "Structured-latent 3D generation for meshes, Gaussian splats and radiance representations."
+      },
+      "strength": {
+        "zh": "同一潜表示可解码为不同 3D 格式，便于比较下游资产输出。",
+        "en": "Decodes shared structured latents into multiple 3D output representations."
+      },
+      "learning": {
+        "zh": "比较不同表面表示的网格质量、可编辑性与游戏导入开销。",
+        "en": "Compare output representations for topology, editing and real-time game import costs."
+      },
+      "tags": [
+        "AI3D",
+        "research",
+        "meshes"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "recast-navigation-js",
+      "name": "Recast Navigation JS",
+      "category": "infrastructure",
+      "website": "https://github.com/isaac-mason/recast-navigation-js",
+      "repository": "https://github.com/isaac-mason/recast-navigation-js",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/isaac-mason/recast-navigation-js",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "可在 JavaScript 环境运行的 Recast/Detour 导航网格和寻路集成。",
+        "en": "JavaScript integration of Recast/Detour navmesh generation and routing."
+      },
+      "strength": {
+        "zh": "将可通行多边形构建、寻路与运行时游戏逻辑分开。",
+        "en": "Separates walkability mesh construction and route planning from game logic."
+      },
+      "learning": {
+        "zh": "研究 NPC 半径、坡度、台阶与动态避障；导航网格不代替碰撞体。",
+        "en": "Test agent radius, slopes, steps and obstacles; navmeshes do not replace colliders."
+      },
+      "tags": [
+        "navmesh",
+        "pathfinding",
+        "physics"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "cdlod-terrain",
+      "name": "CDLOD",
+      "category": "infrastructure",
+      "website": "https://github.com/fstrugar/CDLOD",
+      "repository": "https://github.com/fstrugar/CDLOD",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/fstrugar/CDLOD",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "基于视距的四叉树地形层级细节算法原作者代码。",
+        "en": "Original distance-driven quadtree terrain LOD implementation."
+      },
+      "strength": {
+        "zh": "使用距离分层和渐变减少地形层级切换时的几何突变。",
+        "en": "Uses distance selection and geomorph transitions to mitigate terrain LOD popping."
+      },
+      "learning": {
+        "zh": "对照裙边和渐变的边界误差；原实现架构较旧，不能直接复制到 WebGPU。",
+        "en": "Measure skirts versus morph transition; old renderer architecture needs modernization."
+      },
+      "tags": [
+        "LOD",
+        "terrain",
+        "algorithm"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "mapbox-martini",
+      "name": "Mapbox MARTINI",
+      "category": "infrastructure",
+      "website": "https://github.com/mapbox/martini",
+      "repository": "https://github.com/mapbox/martini",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/mapbox/martini",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "从规则高程网格生成误差受控的不规则三角地形网格。",
+        "en": "Error-driven triangulated irregular networks generated from elevation grids."
+      },
+      "strength": {
+        "zh": "以地形误差分配面数，避免对平缓区域平均加密。",
+        "en": "Allocates triangles by terrain error instead of uniform refinement."
+      },
+      "learning": {
+        "zh": "量化邻瓦片接缝、误差阈值与动态更新成本；不等于连续 Morph LOD。",
+        "en": "Measure tile seams, error tolerance and update costs; not automatic geomorph LOD."
+      },
+      "tags": [
+        "terrain",
+        "mesh",
+        "LOD"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "wave-function-collapse",
+      "name": "WaveFunctionCollapse",
+      "category": "infrastructure",
+      "website": "https://github.com/mxgmn/WaveFunctionCollapse",
+      "repository": "https://github.com/mxgmn/WaveFunctionCollapse",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/mxgmn/WaveFunctionCollapse",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "从局部样本模式构建符合邻接约束的新地图与图案。",
+        "en": "Constraint-based procedural map and pattern generation from sample neighborhoods."
+      },
+      "strength": {
+        "zh": "最小熵选择与约束传播形成可控而多样的关卡局部组合。",
+        "en": "Uses entropy-guided choices and propagation for varied constrained layouts."
+      },
+      "learning": {
+        "zh": "做有出口、有连通性和可解条件的关卡，检测无解状态并可靠回退。",
+        "en": "Add reachable exits and solvability constraints, with explicit contradiction fallback."
+      },
+      "tags": [
+        "procedural",
+        "level-design",
+        "WFC"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "bevy-engine",
+      "name": "Bevy Engine",
+      "category": "engines",
+      "website": "https://bevy.org/",
+      "repository": "https://github.com/bevyengine/bevy",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/bevyengine/bevy",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "Rust 编写的数据驱动 ECS 游戏引擎与现代渲染技术生态。",
+        "en": "Rust data-driven ECS game engine and modern renderer ecosystem."
+      },
+      "strength": {
+        "zh": "将组件、系统与资源调度分离，为复杂游戏状态更新提供结构范例。",
+        "en": "Separates components, systems and scheduling for complex gameplay state updates."
+      },
+      "learning": {
+        "zh": "学习实体系统与数据生命周期，不把原生平台能力误认为浏览器全部可用。",
+        "en": "Study ECS lifecycle and scheduling, while checking web platform feature parity."
+      },
+      "tags": [
+        "Rust",
+        "ECS",
+        "engine"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "phaser-html5",
+      "name": "Phaser",
+      "category": "engines",
+      "website": "https://phaser.io/",
+      "repository": "https://github.com/phaserjs/phaser",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/phaserjs/phaser",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "成熟的 HTML5 2D 游戏引擎，包含场景、动画、输入与资源管理。",
+        "en": "Mature HTML5 2D game framework for scenes, animation, input and assets."
+      },
+      "strength": {
+        "zh": "完整的交互和关卡循环可作为轻量浏览器游戏生产参考。",
+        "en": "A complete interaction and scene lifecycle for production-oriented browser games."
+      },
+      "learning": {
+        "zh": "用于卡牌、益智、2D 战斗的状态与交互设计，不硬套 3D 资产路径。",
+        "en": "Reuse patterns for cards, puzzles and 2D combat; keep 3D pipelines separate."
+      },
+      "tags": [
+        "2D",
+        "browser",
+        "game-engine"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "pixijs-2d",
+      "name": "PixiJS",
+      "category": "engines",
+      "website": "https://pixijs.com/",
+      "repository": "https://github.com/pixijs/pixijs",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/pixijs/pixijs",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "强调 2D 高效绘制、动画精灵与交互的浏览器图形框架。",
+        "en": "2D browser rendering framework for sprite batching and interactive scenes."
+      },
+      "strength": {
+        "zh": "可将复杂 2D 图层和动画绘制从游戏规则中解耦。",
+        "en": "Separates efficient 2D display composition from gameplay rules."
+      },
+      "learning": {
+        "zh": "学习批处理、图集和 UI 动效；它本身不是完整 RPG 规则引擎。",
+        "en": "Study batching, atlases and UI animation; not a complete RPG game engine."
+      },
+      "tags": [
+        "2D",
+        "rendering",
+        "sprites"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "gdevelop-creator",
+      "name": "GDevelop",
+      "category": "engines",
+      "website": "https://gdevelop.io/",
+      "repository": "https://github.com/4ian/GDevelop",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/4ian/GDevelop",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "面向游戏快速原型的可视化事件式编辑器和跨平台引擎。",
+        "en": "Visual event-based game editor and cross-platform engine."
+      },
+      "strength": {
+        "zh": "用可视化逻辑、场景与测试缩短从想法到可玩的验证时间。",
+        "en": "Shortens concept-to-playable iteration with visual events and scene workflows."
+      },
+      "learning": {
+        "zh": "拆解玩法事件模板与低门槛制作流程，不盲目照搬编辑器整体。",
+        "en": "Study event templates and accessible production workflows, not wholesale editor copying."
+      },
+      "tags": [
+        "no-code",
+        "prototype",
+        "engine"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "raylib-engine",
+      "name": "raylib",
+      "category": "engines",
+      "website": "https://www.raylib.com/",
+      "repository": "https://github.com/raysan5/raylib",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/raysan5/raylib",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "轻量的跨平台图形、音频和游戏输入编程库。",
+        "en": "Small cross-platform programming library for graphics, audio and game input."
+      },
+      "strength": {
+        "zh": "API 清晰且示例密集，适合验证最小游戏机制和引擎能力。",
+        "en": "Clear APIs and focused examples make gameplay and graphics experiments easy to isolate."
+      },
+      "learning": {
+        "zh": "用最少依赖建立独立输入、物理与渲染教学原型。",
+        "en": "Build minimal independent input, simulation and rendering prototypes."
+      },
+      "tags": [
+        "C",
+        "game-lib",
+        "prototyping"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "dear-imgui",
+      "name": "Dear ImGui",
+      "category": "infrastructure",
+      "website": "https://github.com/ocornut/imgui",
+      "repository": "https://github.com/ocornut/imgui",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/ocornut/imgui",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "专为开发工具而设计的即时模式调试和编辑界面库。",
+        "en": "Immediate-mode GUI library for debugging tools and editors."
+      },
+      "strength": {
+        "zh": "快速构造场景检查器、参数面板和调试仪表盘，而非正式游戏 HUD。",
+        "en": "Builds inspectors and parameter controls rapidly, distinct from final player HUDs."
+      },
+      "learning": {
+        "zh": "借鉴调试工具的可观察性，保留玩家界面与开发者界面分离。",
+        "en": "Use developer diagnostics while keeping production player UI separate."
+      },
+      "tags": [
+        "UI",
+        "debugging",
+        "tools"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "mindustry-source",
+      "name": "Mindustry",
+      "category": "experiences",
+      "website": "https://github.com/Anuken/Mindustry",
+      "repository": "https://github.com/Anuken/Mindustry",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/Anuken/Mindustry",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "结合资源运输、生产链、塔防和即时战略规则的开源游戏。",
+        "en": "Open-source game combining conveyor logistics, production chains and RTS defense."
+      },
+      "strength": {
+        "zh": "生产物流与防守压力互相影响，形成清晰的扩张与反馈循环。",
+        "en": "Production logistics and defense pressure reinforce readable expansion loops."
+      },
+      "learning": {
+        "zh": "研究玩家选择、产能瓶颈和战斗节奏；角色美术和商标权利需区分。",
+        "en": "Analyze choices, bottlenecks and combat pacing; respect separate art and trademark rights."
+      },
+      "tags": [
+        "RTS",
+        "factory",
+        "tower-defense"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "openra-rts",
+      "name": "OpenRA",
+      "category": "experiences",
+      "website": "https://www.openra.net/",
+      "repository": "https://github.com/OpenRA/OpenRA",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/OpenRA/OpenRA",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "用于经典即时战略玩法的开源引擎与可运行模组体系。",
+        "en": "Open-source RTS engine and playable mod ecosystem for classic-style strategy."
+      },
+      "strength": {
+        "zh": "单位指令、规则脚本、阵营平衡与多人同步相互衔接。",
+        "en": "Connects unit commands, rules, faction balancing and multiplayer synchronization."
+      },
+      "learning": {
+        "zh": "研究阵营差异化、寻路与可复现回放；经典游戏素材并不自动获得许可。",
+        "en": "Study faction differentiation, routing and deterministic replays; original franchise assets remain separately licensed."
+      },
+      "tags": [
+        "RTS",
+        "multiplayer",
+        "open-game"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "zero-ad-rts",
+      "name": "0 A.D.",
+      "category": "experiences",
+      "website": "https://play0ad.com/",
+      "repository": "https://github.com/0ad/0ad",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/0ad/0ad",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "历史主题实时战略游戏及其公开引擎研发体系。",
+        "en": "Historical real-time strategy game with open engine development."
+      },
+      "strength": {
+        "zh": "涵盖资源经济、单位编队、建筑与环境细节的完整游戏工程。",
+        "en": "Integrates economy, formations, buildings and environmental detail into a full RTS."
+      },
+      "learning": {
+        "zh": "拆解 AI、编队、战斗信息反馈和美术资源分级；需审查艺术授权。",
+        "en": "Study AI, formations and battle feedback with explicit art/license audits."
+      },
+      "tags": [
+        "RTS",
+        "open-game",
+        "3D"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "veloren-voxel-rpg",
+      "name": "Veloren",
+      "category": "experiences",
+      "website": "https://veloren.net/",
+      "repository": "https://github.com/veloren/veloren",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/veloren/veloren",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "Rust 制作的开源体素世界多人动作角色扮演游戏。",
+        "en": "Rust open-source voxel-world multiplayer action RPG."
+      },
+      "strength": {
+        "zh": "程序化世界、角色动作、协作服务器与装备系统形成完整生态。",
+        "en": "Combines generated worlds, character animation, cooperative servers and equipment."
+      },
+      "learning": {
+        "zh": "研究大地形流式加载、动作状态与网络预测，先验证 Web 端可用性。",
+        "en": "Study streaming, locomotion and networking while checking browser export feasibility."
+      },
+      "tags": [
+        "voxel",
+        "RPG",
+        "multiplayer"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "unciv-strategy",
+      "name": "Unciv",
+      "category": "experiences",
+      "website": "https://github.com/yairm210/Unciv",
+      "repository": "https://github.com/yairm210/Unciv",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/yairm210/Unciv",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "以规则、资源与决策反馈为中心的开源回合制策略游戏。",
+        "en": "Open-source turn-based strategy game focused on rules and decisions."
+      },
+      "strength": {
+        "zh": "将战略回合与数据驱动单位科技树分离，易于测试平衡。",
+        "en": "Keeps turn simulation and data-defined units and technology separable."
+      },
+      "learning": {
+        "zh": "研究科技树、AI 评估、存档与长局耐玩性，不复制特定 IP 表达。",
+        "en": "Study tech trees, AI evaluation, saves and long-session retention without copying IP."
+      },
+      "tags": [
+        "strategy",
+        "turn-based",
+        "open-game"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "endless-sky-open-game",
+      "name": "Endless Sky",
+      "category": "experiences",
+      "website": "https://endless-sky.github.io/",
+      "repository": "https://github.com/endless-sky/endless-sky",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/endless-sky/endless-sky",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "开放世界太空交易、任务和舰船战斗游戏的开源工程。",
+        "en": "Open-source space trading, missions and ship-combat sandbox."
+      },
+      "strength": {
+        "zh": "多分支任务与自由经济行为形成长期自主目标。",
+        "en": "Connects branching missions and open-ended trading into long-term goals."
+      },
+      "learning": {
+        "zh": "研究任务数据模型、经济反馈和内容扩展，不复制作者剧情素材。",
+        "en": "Study mission schemas, economy feedback and extensible content without reusing authored narrative."
+      },
+      "tags": [
+        "space",
+        "quests",
+        "open-game"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "openttd-simulation",
+      "name": "OpenTTD",
+      "category": "experiences",
+      "website": "https://www.openttd.org/",
+      "repository": "https://github.com/OpenTTD/OpenTTD",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/OpenTTD/OpenTTD",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "以网络、运输经济与长期发展为核心的开源经营模拟游戏。",
+        "en": "Open-source transport/economy simulation with long-horizon networks."
+      },
+      "strength": {
+        "zh": "路网、运输和供需关系构成可长期优化的沙盒。",
+        "en": "Road/rail networks and supply-demand dynamics create durable optimization gameplay."
+      },
+      "learning": {
+        "zh": "拆解大规模路径、经济循环和存档兼容，不依赖华丽 3D 也能有深玩法。",
+        "en": "Study large networks, economy loops and save compatibility independent of 3D fidelity."
+      },
+      "tags": [
+        "simulation",
+        "economy",
+        "open-game"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "widelands-rts",
+      "name": "Widelands",
+      "category": "experiences",
+      "website": "https://www.widelands.org/",
+      "repository": "https://github.com/widelands/widelands",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/widelands/widelands",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "注重生产链和道路物流的开源建设与即时战略游戏。",
+        "en": "Open-source building/RTS game driven by economic production chains."
+      },
+      "strength": {
+        "zh": "道路、仓储、工人调配直接影响资源吞吐和战略瓶颈。",
+        "en": "Roads, stockpiles and worker routing shape throughput and strategic constraints."
+      },
+      "learning": {
+        "zh": "学习多层生产链可视化和动态供需，减少 RTS 中无意义等待。",
+        "en": "Study production-chain visualization and dynamic demand to reduce idle RTS phases."
+      },
+      "tags": [
+        "RTS",
+        "economy",
+        "simulation"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "openrct2-park",
+      "name": "OpenRCT2",
+      "category": "experiences",
+      "website": "https://openrct2.io/",
+      "repository": "https://github.com/OpenRCT2/OpenRCT2",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/OpenRCT2/OpenRCT2",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "游乐园建造、游客行为和设施经济模拟的社区开源工程。",
+        "en": "Community-developed theme-park construction and visitor simulation."
+      },
+      "strength": {
+        "zh": "细致的游客代理与经营约束产生可观察的连锁反馈。",
+        "en": "Detailed visitor simulation and management constraints generate visible feedback loops."
+      },
+      "learning": {
+        "zh": "研究游客决策、队列拥堵、景观价值与经营 UI；不能默认原版素材可自由分发。",
+        "en": "Study visitor AI, queues and UI; original game data is not automatically redistributable."
+      },
+      "tags": [
+        "simulation",
+        "visitors",
+        "open-game"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "ldtk-level-editor",
+      "name": "LDtk",
+      "category": "pipelines",
+      "website": "https://ldtk.io/",
+      "repository": "https://github.com/deepnight/ldtk",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/deepnight/ldtk",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "强调结构化关卡数据和规则式瓦片绘制的二维编辑器。",
+        "en": "2D level editor built around structured scene data and rule-based tiles."
+      },
+      "strength": {
+        "zh": "把实体 schema、自动图块与关卡编辑操作组合为可复用工作流。",
+        "en": "Combines entity schemas, autotiles and level editing workflows."
+      },
+      "learning": {
+        "zh": "学习批量地图、标签、交互标注与自动测试数据导出。",
+        "en": "Study batch map authoring, tags, interactive markers and test-data exports."
+      },
+      "tags": [
+        "level-editor",
+        "tilemap",
+        "tools"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "tiled-map-editor",
+      "name": "Tiled Map Editor",
+      "category": "pipelines",
+      "website": "https://www.mapeditor.org/",
+      "repository": "https://github.com/mapeditor/tiled",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/mapeditor/tiled",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "支持多层 Tilemap、对象标注和多格式导出的游戏地图编辑器。",
+        "en": "Tilemap editor with layered maps, object metadata and export formats."
+      },
+      "strength": {
+        "zh": "将地形和逻辑对象分别建层，使规则与地图美术更易协作。",
+        "en": "Separates visual layers and semantic objects for reliable level workflows."
+      },
+      "learning": {
+        "zh": "研究地图格式、触发器标签和自动化关卡一致性检查。",
+        "en": "Study map formats, trigger metadata and automated level consistency tests."
+      },
+      "tags": [
+        "2D",
+        "level-editor",
+        "tilemap"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "colyseus-server",
+      "name": "Colyseus",
+      "category": "infrastructure",
+      "website": "https://colyseus.io/",
+      "repository": "https://github.com/colyseus/colyseus",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/colyseus/colyseus",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "面向多人实时游戏的 Node.js 房间和状态同步服务器框架。",
+        "en": "Node.js framework for realtime multiplayer rooms and state synchronization."
+      },
+      "strength": {
+        "zh": "房间生命周期与状态差量同步减少多人游戏应用层重复代码。",
+        "en": "Room lifecycle and state patches reduce duplicated multiplayer application code."
+      },
+      "learning": {
+        "zh": "做多人游戏网络时测权威状态、断线重连、作弊防护和负载。",
+        "en": "Evaluate authority, reconnects, cheat resistance and load rather than assuming plug-and-play."
+      },
+      "tags": [
+        "multiplayer",
+        "network",
+        "server"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "nakama-game-backend",
+      "name": "Nakama",
+      "category": "infrastructure",
+      "website": "https://heroiclabs.com/nakama/",
+      "repository": "https://github.com/heroiclabs/nakama",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/heroiclabs/nakama",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "提供游戏用户、社交和实时多人功能的开源服务端。",
+        "en": "Open-source server for game identities, social features and realtime multiplayer."
+      },
+      "strength": {
+        "zh": "复用账号、匹配、排行榜和部分实时服务，减少业务基础建设。",
+        "en": "Provides authentication, matchmaking and leaderboard infrastructure as building blocks."
+      },
+      "learning": {
+        "zh": "评估部署成本与延迟，以及玩家隐私；不把后端功能当成留存保证。",
+        "en": "Measure hosting cost, latency and privacy; backend features do not guarantee retention."
+      },
+      "tags": [
+        "backend",
+        "multiplayer",
+        "leaderboard"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "spacetimedb-realtime",
+      "name": "SpacetimeDB",
+      "category": "infrastructure",
+      "website": "https://spacetimedb.com/",
+      "repository": "https://github.com/clockworklabs/SpacetimeDB",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/clockworklabs/SpacetimeDB",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "结合实时数据库和服务端计算的游戏应用数据架构。",
+        "en": "Realtime database architecture combining data storage with server-side computation."
+      },
+      "strength": {
+        "zh": "让状态变更与客户端订阅形成统一的数据交互模式。",
+        "en": "Unifies state mutation and subscribed client updates."
+      },
+      "learning": {
+        "zh": "研究高并发房间的数据一致性与时延，不直接替代游戏物理引擎。",
+        "en": "Test contention, consistency and latency; not a replacement for game physics."
+      },
+      "tags": [
+        "database",
+        "network",
+        "realtime"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "yjs-crdt",
+      "name": "Yjs",
+      "category": "infrastructure",
+      "website": "https://yjs.dev/",
+      "repository": "https://github.com/yjs/yjs",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/yjs/yjs",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "用于多人协作共享文档和场景编辑的 CRDT 数据结构库。",
+        "en": "CRDT-based shared state foundation for collaborative editing."
+      },
+      "strength": {
+        "zh": "支持多人并发修改、离线合并和协作编辑工具的基础机制。",
+        "en": "Supports concurrent edits, offline merging and collaborative tooling."
+      },
+      "learning": {
+        "zh": "用于关卡编辑协作和注释，不把弱一致 CRDT 直接当权威竞技战斗状态。",
+        "en": "Use for collaborative level editing; not authoritative competitive combat simulation."
+      },
+      "tags": [
+        "CRDT",
+        "collaboration",
+        "editor"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "howler-web-audio",
+      "name": "Howler.js",
+      "category": "infrastructure",
+      "website": "https://howlerjs.com/",
+      "repository": "https://github.com/goldfire/howler.js",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/goldfire/howler.js",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "面向浏览器游戏的跨平台音效和音乐播放管理库。",
+        "en": "Cross-browser audio playback library suitable for game sound effects."
+      },
+      "strength": {
+        "zh": "统一音频格式回退、加载与播放控制，减少浏览器音频兼容代码。",
+        "en": "Abstracts audio loading, format fallbacks and playback across browsers."
+      },
+      "learning": {
+        "zh": "研究战斗音效混音和用户手势解锁；音频资源仍需独立授权。",
+        "en": "Test combat mixing and gesture unlock; sound assets still require licenses."
+      },
+      "tags": [
+        "audio",
+        "browser",
+        "game"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "tonejs-synthesis",
+      "name": "Tone.js",
+      "category": "infrastructure",
+      "website": "https://tonejs.github.io/",
+      "repository": "https://github.com/Tonejs/Tone.js",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/Tonejs/Tone.js",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "浏览器中的音乐时序、合成器和音频处理框架。",
+        "en": "Browser-based music scheduling, synthesis and audio processing framework."
+      },
+      "strength": {
+        "zh": "支持程序化声音事件、时间轴与交互反馈，而非只能播放固定文件。",
+        "en": "Supports synthesized sound events and precise scheduling beyond fixed samples."
+      },
+      "learning": {
+        "zh": "研究技能反馈音色与时间同步；实际乐曲和录音版权另行核查。",
+        "en": "Prototype reactive skill audio and timing while auditing music and sample rights."
+      },
+      "tags": [
+        "audio",
+        "synthesis",
+        "WebAudio"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "ktx-official-tools",
+      "name": "Khronos KTX-Software",
+      "category": "pipelines",
+      "website": "https://www.khronos.org/ktx/",
+      "repository": "https://github.com/KhronosGroup/KTX-Software",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/KhronosGroup/KTX-Software",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "Khronos 维护的 KTX 纹理封装、读写和转码工具链。",
+        "en": "Khronos-maintained tools for KTX texture storage and transcoding."
+      },
+      "strength": {
+        "zh": "让纹理以适于 GPU 的压缩形式交付，降低运行时显存和传输压力。",
+        "en": "Packages GPU-friendly compressed textures for efficient runtime delivery."
+      },
+      "learning": {
+        "zh": "基于色彩/法线图角色选择 UASTC/ETC1S，测纹理质量、载入和显存。",
+        "en": "Select codecs by texture role and test quality, startup and VRAM."
+      },
+      "tags": [
+        "KTX2",
+        "textures",
+        "compression"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "assimp-importer",
+      "name": "Assimp",
+      "category": "pipelines",
+      "website": "https://github.com/assimp/assimp",
+      "repository": "https://github.com/assimp/assimp",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/assimp/assimp",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "多种 3D 文件格式的资产导入与数据转换工具库。",
+        "en": "Asset import and conversion library supporting many 3D formats."
+      },
+      "strength": {
+        "zh": "把多源模型统一为可处理的网格、材质和层级数据。",
+        "en": "Normalizes diverse source formats into processable meshes, materials and hierarchy."
+      },
+      "learning": {
+        "zh": "研究真实工业/游戏资产导入的单位、坐标、材质和骨骼信息丢失。",
+        "en": "Measure scale, coordinate, material and skeleton fidelity during import."
+      },
+      "tags": [
+        "import",
+        "3D",
+        "conversion"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "google-filament",
+      "name": "Google Filament",
+      "category": "infrastructure",
+      "website": "https://google.github.io/filament/",
+      "repository": "https://github.com/google/filament",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/google/filament",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "强调物理材质与跨平台一致性的实时渲染引擎。",
+        "en": "Real-time physically based renderer emphasizing cross-platform material consistency."
+      },
+      "strength": {
+        "zh": "成熟的光照、材质和色彩管理可作为游戏资产视觉参考实现。",
+        "en": "A strong reference for lighting, materials and color management."
+      },
+      "learning": {
+        "zh": "以固定相机对比 PBR 外观；不要把不同引擎的曝光结果误当几何错误。",
+        "en": "Use fixed-camera PBR crosschecks without mistaking exposure differences for geometry faults."
+      },
+      "tags": [
+        "PBR",
+        "rendering",
+        "materials"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "playwright-game-qa",
+      "name": "Playwright",
+      "category": "infrastructure",
+      "website": "https://playwright.dev/",
+      "repository": "https://github.com/microsoft/playwright",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/microsoft/playwright",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "适用于浏览器游戏菜单、登录、交互和跨浏览器回归的自动化工具。",
+        "en": "Browser automation framework for interactive game UI and regression tests."
+      },
+      "strength": {
+        "zh": "可用确定输入验证页面流程、异常和截图，不只依赖人工反复点选。",
+        "en": "Enables scripted interaction, failure capture and screenshots across browsers."
+      },
+      "learning": {
+        "zh": "设计输入、碰撞和渲染相关回归；浏览器 UI 成功不等于 3D 物理已正确。",
+        "en": "Automate interaction/visual smoke; UI success alone does not validate physics."
+      },
+      "tags": [
+        "testing",
+        "browser",
+        "automation"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "axe-accessibility",
+      "name": "axe-core",
+      "category": "infrastructure",
+      "website": "https://github.com/dequelabs/axe-core",
+      "repository": "https://github.com/dequelabs/axe-core",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/dequelabs/axe-core",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "程序化检测网页可访问性问题的开源规则引擎。",
+        "en": "Open-source automated web accessibility rule engine."
+      },
+      "strength": {
+        "zh": "可检查菜单、表单和语义可访问性，提升游戏网站的导航和操作质量。",
+        "en": "Audits UI semantics and keyboard issues to improve game-site accessibility."
+      },
+      "learning": {
+        "zh": "与真人键盘/手柄和低视力测试结合，不能仅凭自动规则宣称完全合规。",
+        "en": "Combine automated checks with real keyboard/controller tests; no full compliance claim."
+      },
+      "tags": [
+        "a11y",
+        "testing",
+        "UX"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "chrome-lighthouse",
+      "name": "Lighthouse",
+      "category": "infrastructure",
+      "website": "https://developer.chrome.com/docs/lighthouse/",
+      "repository": "https://github.com/GoogleChrome/lighthouse",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/GoogleChrome/lighthouse",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "衡量网站性能、加载和无障碍体验的自动化审计工具。",
+        "en": "Automated audits for site performance, loading and accessibility."
+      },
+      "strength": {
+        "zh": "把首屏资源、缓存与网页质量变成有证据的报告。",
+        "en": "Turns startup, caching and page quality into reproducible reports."
+      },
+      "learning": {
+        "zh": "用于游戏入口加载与营销页面；WebGL/WebGPU 游戏内 GPU p95 另测。",
+        "en": "Audit game entry and discovery pages; measure in-game GPU timing separately."
+      },
+      "tags": [
+        "performance",
+        "audit",
+        "web"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "sentry-js-monitoring",
+      "name": "Sentry JavaScript",
+      "category": "infrastructure",
+      "website": "https://sentry.io/",
+      "repository": "https://github.com/getsentry/sentry-javascript",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/getsentry/sentry-javascript",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "收集运行时异常、错误链和可选性能问题的前端监控 SDK。",
+        "en": "JavaScript error-monitoring SDK with runtime diagnostics and performance context."
+      },
+      "strength": {
+        "zh": "有助于定位线上 WebGPU 初始化、上下文丢失及跨浏览器异常。",
+        "en": "Can trace WebGPU initialization failures, context loss and browser-specific crashes."
+      },
+      "learning": {
+        "zh": "增加采样与隐私保护；错误收集须征得合理授权且避免含玩家敏感信息。",
+        "en": "Apply sampling and privacy controls; avoid collecting sensitive player data."
+      },
+      "tags": [
+        "observability",
+        "errors",
+        "web"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "posthog-product-analytics",
+      "name": "PostHog",
+      "category": "infrastructure",
+      "website": "https://posthog.com/",
+      "repository": "https://github.com/PostHog/posthog",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/PostHog/posthog",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "产品分析和事件实验平台，适合分析游戏入口、教程与转化漏斗。",
+        "en": "Product analytics and experimentation platform for onboarding funnels."
+      },
+      "strength": {
+        "zh": "将打开、开始、完成、退出等玩家事件形成可比较的转化路径。",
+        "en": "Connects start, tutorial, completion and exit events into comparable funnels."
+      },
+      "learning": {
+        "zh": "事件必须去重、合规且排除开发者试玩，不能直接把点击量算活跃玩家。",
+        "en": "Deduplicate events, separate internal tests, and never equate clicks with active players."
+      },
+      "tags": [
+        "analytics",
+        "retention",
+        "telemetry"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "otel-javascript",
+      "name": "OpenTelemetry JavaScript",
+      "category": "infrastructure",
+      "website": "https://opentelemetry.io/",
+      "repository": "https://github.com/open-telemetry/opentelemetry-js",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/open-telemetry/opentelemetry-js",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "用于客户端和服务端日志、指标与链路追踪的开放遥测工具。",
+        "en": "Open instrumentation for traces, metrics and logs across JS services."
+      },
+      "strength": {
+        "zh": "统一客户端请求、游戏 API、后端响应与运行链路的观察模型。",
+        "en": "Correlates client requests, game APIs and backend response paths."
+      },
+      "learning": {
+        "zh": "研究最小化采集和不上传个人数据；显示链路数据不等于证明某原因。",
+        "en": "Minimize collection and protect privacy; traces are evidence, not causal proof."
+      },
+      "tags": [
+        "telemetry",
+        "observability",
+        "APM"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "mmpose-pose-estimation",
+      "name": "MMPose",
+      "category": "pipelines",
+      "website": "https://mmpose.readthedocs.io/",
+      "repository": "https://github.com/open-mmlab/mmpose",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/open-mmlab/mmpose",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "开源人体姿态估计工具箱，支持多种关键点与人体结构任务。",
+        "en": "Open-source human pose estimation toolbox for keypoint and pose tasks."
+      },
+      "strength": {
+        "zh": "为视频动作参考提供关节追踪起点，能和角色重定向流程解耦。",
+        "en": "Provides joint-tracking inputs for video motion references and retargeting."
+      },
+      "learning": {
+        "zh": "必须补足时间平滑、三维求解、足部接触和运动学验证；2D 关键点非 3D 动捕。",
+        "en": "Add temporal smoothing, depth and foot contacts; 2D keypoints are not full 3D mocap."
+      },
+      "tags": [
+        "mocap",
+        "pose",
+        "animation"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "pytorch3d-toolkit",
+      "name": "PyTorch3D",
+      "category": "pipelines",
+      "website": "https://github.com/facebookresearch/pytorch3d",
+      "repository": "https://github.com/facebookresearch/pytorch3d",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/facebookresearch/pytorch3d",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "三维网格、可微渲染和几何处理的研究工具包。",
+        "en": "Research toolkit for 3D mesh processing and differentiable rendering."
+      },
+      "strength": {
+        "zh": "适合构建几何损失与多视图误差测试，以评估模型重建效果。",
+        "en": "Supports geometry losses and multiview error experiments for reconstruction."
+      },
+      "learning": {
+        "zh": "比较法线、几何和渲染误差；研究结果仍需 WebGPU 真实运行验收。",
+        "en": "Measure normals, geometry and render errors; verify browser runtime independently."
+      },
+      "tags": [
+        "3D",
+        "geometry",
+        "research"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "pmndrs-xr",
+      "name": "React Three XR",
+      "category": "infrastructure",
+      "website": "https://github.com/pmndrs/xr",
+      "repository": "https://github.com/pmndrs/xr",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/pmndrs/xr",
+      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "summary": {
+        "zh": "React Three Fiber 生态的 WebXR 交互和控制器适配工具。",
+        "en": "WebXR interaction and controller integration for React Three Fiber."
+      },
+      "strength": {
+        "zh": "建立手柄、交互空间和沉浸式视图的可复用输入结构。",
+        "en": "Provides reusable spatial input, controllers and immersive view primitives."
+      },
+      "learning": {
+        "zh": "研究平板/PC/XR 不同操作输入，不把桌面鼠标设计直接照搬到 XR。",
+        "en": "Compare tablet, desktop and XR control contracts instead of copying mouse UI."
+      },
+      "tags": [
+        "WebXR",
+        "interaction",
+        "3D"
+      ],
+      "reviewed_on": "2026-11-07"
     }
   ]
 }
