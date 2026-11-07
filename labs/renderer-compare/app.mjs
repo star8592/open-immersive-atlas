@@ -94,8 +94,10 @@ function benchmarkFrame(now,frame){
   const renderer=api==='webgl2'?glRenderer:gpuRenderer;
   if(!renderer){endBenchmark('Missing renderer '+api);return;}
   const canvas=api==='webgl2'?glCanvas:gpuCanvas;
+  const activeFrame=canvas.width===glCanvas.width&&canvas.height===glCanvas.height?
+    frame:cameraFrame(b.frozen.yaw,b.frozen.pitch,b.frozen.distance,canvas.width/canvas.height);
   const t=performance.now();
-  try{renderer.render(frame,{fog:b.fog});}
+  try{renderer.render(activeFrame,{fog:b.fog});}
   catch(e){status(api,'Benchmark error: '+e.message,true);endBenchmark(e.message);return;}
   const callMs=performance.now()-t;
   frames[api]++;push(calls[api],callMs);
