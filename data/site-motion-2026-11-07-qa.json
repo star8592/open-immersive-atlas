@@ -1,0 +1,69 @@
+{
+  "schema": "oia.site-motion-qa.v1",
+  "date": "2026-11-07",
+  "public_urls": [
+    "https://star8592.github.io/open-immersive-atlas/x-web-2026.html",
+    "https://star8592.github.io/open-immersive-atlas/ai-web.html"
+  ],
+  "source": "https://github.com/star8592/open-immersive-atlas/blob/main/data/site-previews-2026-11-07.json",
+  "tool": "Z890 installed Google Chrome 157, isolated headless CDP profile, source live scroll screenshot frames encoded with ffmpeg H264, no audio",
+  "results": {
+    "successful_motion_clips": 11,
+    "by_group": {
+      "x": 7,
+      "previous_x": 2,
+      "ai": 2
+    },
+    "unique_x_post_cards_with_motion": 9,
+    "ai_cards_with_motion": 2,
+    "clip_duration_seconds_range": [
+      3.6,
+      4
+    ],
+    "frame_size": {
+      "width": 640,
+      "height": 392
+    },
+    "codec": "h264",
+    "total_approx_bytes": 1100576,
+    "hosted_clip_public_http": 200,
+    "public_page_http": 200,
+    "source_scraping_authorization": "Original publicly visible sites; no signed-in user's browser or credentials used",
+    "recording_limits": "Actual screen changes from browser scrolling; does not certify a website's 3D interactions, original video player, animation tech stack or FPS",
+    "rejected_clips": [
+      "Spyker Cars recording: startup loading/blank visual quality",
+      "Boutique Hotel preview: insufficient informative progression"
+    ],
+    "mobile_chrome_tests": [
+      {
+        "page": "x-web-2026.html",
+        "cards": 30,
+        "motion_cards": 9,
+        "filtered_to_motion": 9,
+        "dialog_open": true,
+        "video_duration": 4,
+        "ready_state": 4,
+        "video_width": 640,
+        "video_height": 392,
+        "video_playing": true,
+        "overflow": false
+      },
+      {
+        "page": "ai-web.html",
+        "cards": 25,
+        "motion_cards": 2,
+        "filtered_to_motion": 2,
+        "dialog_open": true,
+        "video_duration": 4,
+        "ready_state": 4,
+        "video_width": 640,
+        "video_height": 392,
+        "video_playing": true,
+        "overflow": false
+      }
+    ],
+    "desktop_hover_note": "Headless Chrome reported matchMedia('(hover:hover)') false, so physical-desktop pointer hover was not validated. The click-to-play player was browser-validated on both pages; hover implementation is conditional on real desktop hover support."
+  },
+  "copyright": "Short, credited, muted editorial screen recordings of third-party sites. The source authors retain their rights, and media are not licensed for resale or as client marketing assets.",
+  "productization": "Users can see actual visual movement before opening source, and can open the source for full interactive experience. 2-frame screenshots are kept as separate non-video evidence."
+}
