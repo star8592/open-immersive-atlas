@@ -53,6 +53,18 @@ jobs:
           node --check labs/motion-qa/test-browser.mjs
       - name: Run deterministic motion, grounding, grip and NPC tests
         run: node --test labs/motion-qa/test-core.mjs
+      - name: Validate five independent original engineering implementations
+        run: |
+          node --check labs/five-lane-runtime/physics.mjs
+          node --check labs/five-lane-runtime/lod.mjs
+          node --check labs/five-lane-runtime/rig.mjs
+          node --check labs/five-lane-runtime/assets.mjs
+          node --check labs/five-lane-runtime/nature.mjs
+          node --check labs/five-lane-runtime/app.mjs
+          node --check labs/five-lane-runtime/test-core.mjs
+          node --check labs/five-lane-runtime/test-browser.mjs
+      - name: Run five-lane engineering regression suite
+        run: node --test labs/five-lane-runtime/test-core.mjs
       - name: Validate normalized repository identities and license evidence
         run: python3 scripts/audit_repository_health.py
       - name: Validate independent first-party source radar

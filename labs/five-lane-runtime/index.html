@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Open Immersive Atlas original five independent engineering prototypes: collision, terrain LOD, rig QA, asset routing and painterly nature.">
+<title>Five-Lane Engineering Bench · OIA</title><link rel="icon" href="data:,">
+<style>
+:root{color-scheme:dark;--bg:#09141f;--card:#162837;--card2:#1c3544;--line:#375466;--white:#eaf6fc;--mute:#b3cedb;--accent:#83efd9;--gold:#f0c577;--red:#ff8f86}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse 55vw 36vw at 82% 0,#214656 0,transparent 100%),#09141f;color:var(--white);font:15px/1.55 system-ui,"Noto Sans SC",Arial,sans-serif}
+main{max-width:1390px;padding:25px 25px 65px;margin:auto}header{max-width:1000px;margin:35px 0 23px}
+nav{display:flex;flex-wrap:wrap;gap:20px;font-size:.89rem}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+h1{margin:0 0 12px;font-size:clamp(2.1rem,5.2vw,4.5rem);line-height:1.08;letter-spacing:-.043em}
+h1 span{color:var(--accent)}.sub{color:var(--mute);font-size:1.04rem}
+.caps{font-weight:700;color:var(--accent);font-size:.76rem;letter-spacing:.11em;text-transform:uppercase}
+.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:19px}
+.summary>div{background:#142838;border:1px solid var(--line);border-radius:12px;padding:15px}
+.summary b{font-size:1.7rem;display:block}.summary small{color:var(--mute);font-size:.82rem}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+section.lab{min-width:0;padding:22px 23px;border-radius:17px;border:1px solid var(--line);background:linear-gradient(145deg,var(--card2),var(--card));display:grid;align-content:start;gap:13px}
+section.lab.wide{grid-column:1/-1}h2{margin:3px 0 0;font-size:1.31rem;letter-spacing:-.015em}p{margin:3px 0;color:var(--mute)}
+.bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+input[type=range]{accent-color:var(--accent);flex:1 1 160px}
+select,button,input[type=file]{border:1px solid #5b7784;background:#102d3c;color:var(--white);border-radius:9px;padding:9px 11px;font:inherit;min-width:0}
+select{max-width:100%}button{cursor:pointer;background:#1a5254;border-color:#548f89}button:hover{background:#216a65}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--gold)}
+canvas{display:block;width:100%;height:auto;background:#071821;border:1px solid #345060;border-radius:10px}
+output,pre{display:block;font:12px/1.6 ui-monospace,Consolas,monospace;color:#c9e7ec;white-space:pre-wrap;overflow-wrap:anywhere;max-height:225px;overflow-y:auto;margin:0}
+output{border:1px solid #365768;background:#0a212e;border-radius:9px;padding:12px;min-height:72px}
+.notes{font-size:.82rem;line-height:1.52;color:#b8cbd3}
+.small{font-size:.8rem;color:var(--mute)}
+.pass{color:var(--accent)}.warn{color:var(--gold)}.error{color:var(--red)}
+footer{margin-top:30px;max-width:1050px;padding-top:18px;border-top:1px solid var(--line);color:var(--mute);font-size:.84rem}
+@media(max-width:850px){.grid{grid-template-columns:1fr}section.lab.wide{grid-column:auto}.summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){main{padding:19px 12px 50px}section.lab{padding:17px}.summary>div{padding:10px}}
+</style></head>
+<body><main><nav><a href="../../">← Open Immersive Atlas</a><a href="../">Original Labs / 原创实验</a><a href="README.md">Technical limits / 技术限制</a><a href="https://github.com/star8592/open-immersive-atlas/tree/main/labs/five-lane-runtime">Source / 源码</a></nav>
+<header><div class="caps">Spatial Lab 05 · Five independent original implementations</div>
+<h1><span>Five-Lane</span> Engineering Bench<br>五线工程实验台</h1>
+<div class="sub">从技术收藏进入可验证的工程：地形碰撞和寻路、无缝地形 LOD、GLB 骨架检查、几何资产自动分流、自然材质实验。五条分线独立计算；一处失败不会阻断其他实验。</div></header>
+<button id="exportAll" style="margin:0 0 15px">Export five-lane QA JSON / 导出五线联合检测</button>
+<div class="summary"><div><b>05</b><small>Isolated implementation tracks / 独立模块</small></div>
+<div><b id="tests">—</b><small>Deterministic Node assertions / 数值回归</small></div>
+<div><b id="browserStatus">Loading</b><small>Browser experiments / 浏览器运行</small></div>
+<div><b>0</b><small>Third-party runtime assets / 第三方素材</small></div></div>
+<div class="grid">
+<section class="lab" id="physicsLab"><div class="caps">01 · Collision and navigation</div><h2>角色碰撞与 A* 寻路</h2>
+<p>带速度子步进的 2.5D 胶囊投影碰撞，坡度、台阶和阻挡；独立的网格寻路，不把导航网格混同碰撞体。</p>
+<div class="bar"><label for="terrain">地表 Terrain</label><select id="terrain"><option value="flat">Flat / 平地</option><option value="slope">Slope 22°</option><option value="steep">Steep 55°</option><option value="stairs">Stairs 22cm</option><option value="hills" selected>Hills</option></select>
+<button id="runPhysics">Re-run / 重新模拟</button></div>
+<canvas id="physicsCanvas" width="520" height="240" aria-label="2.5D collision and A-star route visualization"></canvas>
+<output id="physicsOut" aria-live="polite">Calculating…</output><div class="notes">展示受限场景的接触与路径；不是 Rapier 或完整刚体物理引擎。</div></section>
+<section class="lab" id="lodLab"><div class="caps">02 · Shared-edge geometric LOD</div><h2>连续地形 LOD 与接缝量测</h2>
+<p>细密和粗疏两块共用世界坐标边界。渐变高度与边缘约束分离，实时量测共边误差和换档位移。</p>
+<div class="bar"><label for="lodBlend">Geomorph</label><input type="range" id="lodBlend" value="0.45" min="0" max="1" step=".01"><span id="lodValue" class="small">0.45</span></div>
+<canvas id="lodCanvas" width="520" height="240" aria-label="Two adjacent terrain patch border profiles"></canvas>
+<output id="lodOut" aria-live="polite">Calculating…</output><div class="notes">这是算法级边界一致性证明，不代表已完成纹理分页和大型世界流式加载。</div></section>
+<section class="lab" id="rigLab"><div class="caps">03 · Actual local glTF / GLB rig data</div><h2>真实文件骨骼语义预检</h2>
+<p>浏览器本地读取 GLB/glTF 节点与 skin，识别关节名称、左右映射、层级、负缩放与异常旋转。绝不上传或抓取外部资源。</p>
+<div class="bar"><button id="syntheticRig">Synthetic fixture / 原创样例</button><input type="file" id="rigFile" accept=".glb,.gltf,.json" aria-label="Load local GLB or glTF asset for skeleton preflight"></div>
+<canvas id="rigCanvas" width="520" height="240" aria-label="Detected bone-position schematic"></canvas>
+<output id="rigOut" aria-live="polite">Select local model or synthetic fixture.</output>
+<div class="notes">只做关节语义和节点变换预检；不解码蒙皮、动画，不宣称通过 Khronos 全规范认证。</div></section>
+<section class="lab" id="assetLab"><div class="caps">04 · Evidence-driven asset pipeline</div><h2>规则几何重建 vs 有机物减面</h2>
+<p>按平面性、轴对称、可形变与尺寸证据决定策略。没有原始孔位/尺寸时明确拒绝虚构机械精度。</p>
+<div class="bar"><label for="assetPreset">Fixture / 资产类型</label><select id="assetPreset"><option value="bracket">Manufactured bracket / 机械支架</option><option value="ambiguousGear">Ambiguous gear / 尺寸不足齿轮</option><option value="cloth">Deforming cloth / 衣物</option><option value="rock">Organic rock / 岩石</option></select></div>
+<canvas id="assetCanvas" width="520" height="240" aria-label="Asset processing route and LOD budgets"></canvas>
+<output id="assetOut" aria-live="polite">Calculating…</output><div class="notes">这里只计算分流建议与预算，未创建真实网格或代替用户测量数据。</div></section>
+<section class="lab wide" id="natureLab"><div class="caps">05 · Procedural painterly nature</div><h2>自然生态、水彩纸感与氛围对照</h2>
+<p>一份原创地貌与植被数据，切换自然色彩、水彩和墨绘。地形、空气透视和世界空间纹理协调，不只是覆盖一层随机噪声。</p>
+<div class="bar"><label for="natureStyle">Style / 风格</label><select id="natureStyle"><option value="natural">Natural / 自然</option><option value="watercolor" selected>Watercolor / 水彩</option><option value="ink">Ink / 墨绘</option></select><label for="natureSeed">Seed / 种子</label><input type="range" id="natureSeed" min="1" max="32" value="7" step="1"><span id="seedValue" class="small">7</span></div>
+<canvas id="natureCanvas" width="1040" height="300" aria-label="Original procedural landscape with natural and watercolor styles"></canvas>
+<output id="natureOut" aria-live="polite">Calculating…</output>
+<div class="notes">Canvas2D 艺术风格实验；不冒充真正 WebGPU 植被引擎或商业场景美术验收。不同风格需真人盲测与性能对照。</div></section>
+</div>
+<footer>All five workstreams use original deterministic computations and local-only data. Browser demonstration and numerical self-consistency do not certify any production game, imported asset, professional sword animation, CAD dimensions, or high-performance GPU pipeline. / 五条并行实验采用独立计算和本地数据；真实游戏集成与运行设备性能另行验收。
+</footer></main><script type="module" src="app.mjs"></script></body></html>

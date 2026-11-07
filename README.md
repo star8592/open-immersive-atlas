@@ -18,6 +18,12 @@ An original native WebGL2 character-and-sword *diagnostic fixture*, with indepen
 
 **New 2026-11-07:** [Premium Visual Web Atlas — 14 source-grounded inspirations, 10 technique references, bilingual engineering breakdowns and X post watchlist](docs/research/2026-11-07-premium-visual-web-atlas.md). Public research only; private commercial service specifications are not published here. / 新增高级视觉网站技术案例库：公开搜集原创出处与实现方法，商业报价和客户项目不公开。
 
+## Spatial Lab 05 — five independent working prototypes / 五线并发工程实验
+
+**[Open original Five-Lane Engineering Bench / 打开五线工程实验台](labs/five-lane-runtime/)** · [Source, measured acceptance and boundaries / 源码、实测与限制](labs/five-lane-runtime/README.md)
+
+Research streams 01–05 now each have an independent original *diagnostic* module: bounded 2.5D contact and A* navigation, numerically stitched fine/coarse terrain LOD, local glTF/GLB humanoid skeleton preflight, evidence-aware parametric-vs-organic asset routing, and three original procedural 2D painterly nature styles. **47/47 deterministic Node tests passed; actual Chrome interaction and JSON export tests passed with zero page errors or remote asset requests.** These are intentionally bounded demonstrations, **not** a Rapier engine, infinitely streamed terrain, retargeted production humanoid, CAD mesh generator, or WebGPU art pipeline. Private game changes require separate release evidence.
+
 ## Runnable code labs / 原创可运行技术实验
 
 **[Spatial Lab 01 — Procedural Terrain LOD / 原创 WebGL2 地形 LOD 实验](labs/terrain-lod/)**
