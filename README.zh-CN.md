@@ -14,6 +14,8 @@
 
 **[Spatial Lab 02：GLB/glTF 离线资产检查台](labs/glb-inspector/)** 已完成：在浏览器拖入模型，检查 GLB 分块、BufferView、Accessor、网格引用、节点与变换异常，提供英文/中文问题清单和 JSON 报告。**文件只在本地浏览器处理、不上传，不请求模型携带的外部链接。** 已通过 15 项核心测试和独立 Chrome 交互测试。这是基本结构预检，不是 Khronos 完整标准认证和模型外观验收。[查看边界与源码](labs/glb-inspector/README.md)。
 
+**[Spatial Lab 03：WebGPU / WebGL2 同场景对照实验](labs/renderer-compare/)** 现已实现两套独立原生渲染管线：共用一份原创高度场几何、顶点、索引、相机和相似的 GLSL/WGSL 材质。具备四档几何面数、按后端单独渲染、顺序 40 帧预热 + 120 帧采样、JSON 结果导出。已通过几何与相机数学测试、WebGL2 真浏览器与软件 WebGPU 安全降级测试；目前不把 JS 提交耗时与浏览器帧间隔误称 GPU 帧时，也不宣称已经完成真实硬件 WebGPU 性能验收。[技术约束和详细源码](labs/renderer-compare/README.md)。
+
 ## 建档的三个原则
 
 **研究技术，而非搬运他人的作品。** 保留原始链接与出处，分析设计机制；不能因开源代码而默认其模型、音乐、云 API 或商标也被授权。
