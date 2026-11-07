@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Open Immersive Atlas creative-technology people and studio atlas. Evidence-first bilingual searchable expertise and representative works.">
+<meta name="theme-color" content="#101923">
+<title>Creative People Atlas · 创作者技术图谱</title>
+<style>
+:root{color-scheme:dark;--bg:#0e1721;--card:#172736;--line:#395265;--fg:#eaf4f5;--muted:#adc6d0;--accent:#9ae6d1}
+*{box-sizing:border-box}html{font-family:system-ui,-apple-system,"Noto Sans SC",sans-serif}body{margin:0;line-height:1.6;background:radial-gradient(circle at 80% 2%,#234942 0,transparent 42%),var(--bg);color:var(--fg)}
+a{color:var(--accent)}a:hover{text-decoration:none}
+main{max-width:1250px;margin:auto;padding:38px 22px 90px}
+header{max-width:900px;padding:35px 0 22px}
+header h1{font-size:clamp(2rem,5vw,3.7rem);line-height:1.15;margin:10px 0}
+header p{color:var(--muted);max-width:800px}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}
+nav a{text-decoration:none}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 15px}
+input,select,button{color:var(--fg);border:1px solid var(--line);background:#162c38;border-radius:12px;padding:11px 14px;font:inherit}
+input{flex:1 1 320px}select{flex:1 1 185px;max-width:300px}button{cursor:pointer}
+input:focus,select:focus,button:focus{outline:2px solid var(--accent);outline-offset:2px}
+#summary{color:var(--muted);margin:6px 0 21px}
+#results{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:15px}
+article{border:1px solid var(--line);border-radius:17px;background:linear-gradient(150deg,#1d3445,var(--card));padding:21px;display:flex;flex-direction:column;gap:10px}
+article h2{font-size:1.22rem;margin:0;line-height:1.35}article p{margin:0}article small{color:var(--muted)}
+.pillrow{display:flex;flex-wrap:wrap;gap:6px}.pill{border:1px solid #47716b;border-radius:24px;padding:2px 8px;font-size:.76rem;color:#bdeadc}
+.caption{color:var(--accent);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;font-weight:650}
+.works{display:flex;flex-wrap:wrap;gap:8px 15px;margin-top:4px}
+.works a{font-size:.87rem;text-decoration:none}.works a:hover{text-decoration:underline}
+.foot{font-size:.8rem;color:var(--muted);border-top:1px solid #355164;padding-top:9px;overflow-wrap:anywhere}
+#empty{display:none;padding:25px;border:1px dashed var(--line);border-radius:15px}
+footer{margin-top:34px;color:var(--muted);font-size:.88rem}
+@media(max-width:600px){main{padding:24px 16px 60px}#results{grid-template-columns:1fr}header{padding-top:22px}select{max-width:none}}
+</style>
+</head>
+<body><main>
+<nav><a href="./">Atlas home / 首页</a><a href="CREATORS.md">Bilingual profiles / 双语档案</a><a href="CATALOG.md">Projects / 项目库</a><a href="https://github.com/star8592/open-immersive-atlas">GitHub</a></nav>
+<header><p class="caption">Open Immersive Atlas · Creative People Atlas</p>
+<h1>世界优秀创作者技术图谱</h1>
+<p id="lead">按专长找作者，按作品查技术。逐条标注源码、一手证据与授权边界，不将研究参考误称为自研资产。</p></header>
+<div class="filters">
+<input id="q" type="search" aria-label="Search creators / 搜索作者" placeholder="作者、苔藓、水体、Three.js、WebGPU、游戏物理…">
+<select id="area" aria-label="Technical field / 技术领域"><option value="">全部专业 / All fields</option></select>
+<select id="prio" aria-label="Research priority / 研究优先级"><option value="">所有优先级 / Any priority</option><option value="P0">P0 · 最优先</option><option value="P1">P1</option><option value="P2">P2</option></select>
+<button id="lang" type="button" aria-pressed="false">English</button></div>
+<p id="summary" role="status" aria-live="polite">正在读取公开作者档案…</p>
+<section id="results" aria-label="Creator profiles"></section><p id="empty" role="status">没有匹配的作者 / No matching creators.</p>
+<footer>Public research only · No copied assets, third-party code licenses or private implementation. Source links and evidence are shown per creator.</footer>
+</main>
+<script type="module">
+const $=id=>document.getElementById(id);let entries=[],english=false;
+const create=(tag,txt,cls)=>{const e=document.createElement(tag);if(txt!==undefined)e.textContent=txt;if(cls)e.className=cls;return e};
+const link=(title,url)=>{const a=create('a',title);if(/^https:\/\/[^\s]+$/.test(url)||/^(CREATORS|CATALOG)\.md$/.test(url)){a.href=url;a.rel="noopener noreferrer";a.target="_blank"}return a};
+const areas={"natural-effects":["自然效果","Natural effects"],"environment-art":["环境美术","Environment art"],"creative-coding":["创意编程","Creative coding"],"interaction":["交互设计","Interaction"],"rendering":["渲染与几何","Rendering & geometry"],"frameworks":["引擎与框架","Frameworks"],"asset-pipeline":["资产管线","Asset pipeline"],"education":["技术教学","Education"]};
+const t=(zh,en)=>english?en:zh;
+function card(e){
+ const a=create('article');
+ const title=create('h2');title.append(link(e.name,e.profile_url));a.append(title);
+ a.append(create('small',(e.handle||'')+' · '+t(...(areas[e.discipline]||[e.discipline,e.discipline]))+' · '+(e.priority||'')+(e.entity_type?' · '+e.entity_type:'')));
+ const chips=create('div',undefined,'pillrow');for(const tag of (e.tags||[]).slice(0,8))chips.append(create('span',tag,'pill'));a.append(chips);
+ a.append(create('p',e.specialty?.[english?'en':'zh']||''));
+ a.append(create('div',t('值得学习','What to learn'),'caption'));
+ a.append(create('p',e.reusable_methods?.[english?'en':'zh']||''));
+ const works=create('div',undefined,'works');for(const w of e.works||[])works.append(link(w.title,w.url));a.append(works);
+ const foot=create('div',undefined,'foot');foot.append(create('span',t('一手来源：','Evidence: ')));foot.append(link(t('查看来源','Open source'),e.evidence_url));foot.append(create('p',t('权利：','Rights: ')+(e.rights_note||'')));a.append(foot);
+ return a;
+}
+function render(){
+ const q=$('q').value.trim().toLowerCase(),area=$('area').value,prio=$('prio').value;
+ const matches=entries.filter(e=>(!area||e.discipline===area)&&(!prio||e.priority===prio)&&(!q||[e.name,e.handle,e.discipline,...(e.tags||[]),e.specialty?.zh,e.specialty?.en,e.reusable_methods?.zh,e.reusable_methods?.en,...(e.works||[]).map(w=>w.title)].join(' ').toLowerCase().includes(q)));
+ $('results').replaceChildren(...matches.map(card));$('empty').style.display=matches.length?'none':'block';
+ $('summary').textContent=t(`显示 ${matches.length} / ${entries.length} 个档案`,`Showing ${matches.length} of ${entries.length} profiles`);
+ $('lead').textContent=t('按专长找作者，按作品查技术。逐条标注源码、一手证据与授权边界，不将研究参考误称为自研资产。','Find creators by specialty and techniques by representative work. Evidence and rights are explicit; studies are not proprietary assets.');
+}
+for(const id of ['q','area','prio'])$(id).addEventListener(id==='q'?'input':'change',render);
+$('lang').addEventListener('click',()=>{english=!english;$('lang').textContent=english?'中文':'English';$('lang').setAttribute('aria-pressed',String(english));document.documentElement.lang=english?'en':'zh-CN';render()});
+try{
+ const response=await fetch('./data/creators.json',{cache:'no-cache'});if(!response.ok)throw Error('HTTP '+response.status);
+ const payload=await response.json();if(!Array.isArray(payload.creators))throw Error('Invalid profile data');
+ entries=payload.creators;
+ const opts=[...new Set(entries.map(e=>e.discipline))].sort();for(const area of opts){const o=create('option',t(...(areas[area]||[area,area])));o.value=area;$('area').append(o)}
+ render();
+}catch(error){$('summary').textContent='无法加载作者数据库 / Unable to load creator profiles: '+String(error.message);}
+</script></body></html>
