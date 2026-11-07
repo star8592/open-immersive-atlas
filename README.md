@@ -31,6 +31,9 @@ Two original native pipelines use the **same packed terrain geometry and camera*
 
 [Source and limitations / 源码与测量边界](labs/renderer-compare/README.md) · [Browser smoke / 浏览器测试](labs/renderer-compare/test-browser.mjs)
 
+**GPU Timestamp Query upgrade / 真正 GPU 渲染计时：** Spatial Lab 03 now uses optional WebGPU `timestamp-query` and WebGL2 `EXT_disjoint_timer_query_webgl2`, with 24 asynchronous per-backend samples, explicit unsupported/disjoint reporting and downloadable raw sample data. Actual Windows Intel Xe-LPG browser runs succeeded at all four geometry densities (each API collected 24/24 samples), without implying a general API performance ranking. [Bilingual technical case](docs/cases/gpu-browser-timestamp-queries.md) · [Hardware evidence JSON](labs/renderer-compare/evidence/2026-11-07-intel-xe-lpg-gpu-timers.json).  
+**实测升级：** 第三个实验现在支持真正的 GPU 通道时间戳查询；Intel Xe-LPG 的四档几何在 Windows Chrome 已完成 WebGL2/WebGPU 两后端共八组 GPU 计时，结果及限制公开，不把个别数据推广为普遍性能结论。
+
 ## First edition / 首批收录
 
 **73 independently described references · 4 categories · Chinese and English for every record.**
