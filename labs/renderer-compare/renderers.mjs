@@ -129,7 +129,7 @@ export async function createWebGPU(canvas,geometry){
         {shaderLocation:1,offset:12,format:'float32x3'}
       ]}]},
     fragment:{module:shader,entryPoint:'fs',targets:[{format}]},
-    primitive:{topology:'triangle-list',cullMode:'back'},
+    primitive:{topology:'triangle-list',cullMode:'none'},
     depthStencil:{format:'depth24plus',depthWriteEnabled:true,depthCompare:'less'}
   });
   const vb=device.createBuffer({size:geometry.vertices.byteLength,usage:GPUBufferUsage.VERTEX|GPUBufferUsage.COPY_DST});

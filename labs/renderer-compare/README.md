@@ -47,8 +47,9 @@ WebGPU generally requires HTTPS or localhost and a suitable adapter. This lab at
 
 1. **Linux Z890, Chrome 157, headless SwiftShader:** WebGL2 renderer and fallback tests passed. The independent minimal WebGPU clear-only experiment lost its SwiftShader device with "Device was destroyed." Consequently, the lab correctly recognizes the software adapter and skips it by default.
 2. **Windows Chrome, isolated headless browser profile, WebGPU enabled:** both original rendering pipelines initialized with **18,432 triangles / 9,409 vertices / 697 × 300 pixels** and each reached **171 consecutive drawn frames** with WebGL2 error code 0 and WebGPU error code 0.
-3. **Windows sequential sample:** both renderers separately completed **40 warm-up frames + 120 measured frames** at the same dimensions and geometry. JS call p95 was approximately 0.10 ms (WebGL2 draw call path) versus 0.30 ms (WebGPU command encoding/submit path); rAF frame interval p95 was approximately 16.8 ms for both.
-4. **Interpretation:** The above establishes functional compatibility and successful sequential sampling on the tested Windows browser. These numbers do **not** measure GPU shader or render-pass execution time, and they are not proof that WebGL2 outperforms WebGPU. Device/driver details, thermal conditions and repeated independent GPU-timestamp benchmarks are required for actual hardware speed claims.
+3. **WebGPU hardware adapter identification:** The isolated Windows Chrome browser identified an adapter with GPUAdapterInfo **vendor = intel**, **architecture = xe-lpg** (not the Google SwiftShader software adapter). A subsequent live-site session rendered 97 frames on each backend with graphics errors 0. This validates that the tested Windows WebGPU path was backed by an Intel graphics adapter, but does not by itself measure GPU execution time.
+4. **Windows sequential sample:** both renderers separately completed **40 warm-up frames + 120 measured frames** at the same dimensions and geometry. JS call p95 was approximately 0.10 ms (WebGL2 draw call path) versus 0.30 ms (WebGPU command encoding/submit path); rAF frame interval p95 was approximately 16.8 ms for both.
+5. **Interpretation:** The above establishes functional compatibility and successful sequential sampling on the tested Windows browser. These numbers do **not** measure GPU shader or render-pass execution time, and they are not proof that WebGL2 outperforms WebGPU. Device/driver details, thermal conditions and repeated independent GPU-timestamp benchmarks are required for actual hardware speed claims.
 
 **中文说明：** Windows Chrome 同场景两个后端都完成真实绘制，并顺序预热、采样通过。上述 API 调用时间与浏览器帧间隔不能解释为 GPU 算力排名；Linux 无头 SwiftShader 的 WebGPU 失败则通过独立最小程序复现过，属于测试环境的实际局限。
 
@@ -70,6 +71,7 @@ Optional real-browser smoke testing uses Playwright and Chrome when already inst
 
 ## Implementation details / 实现注意事项
 
+- Both pipelines leave face culling disabled to avoid a mismatch in triangle visibility. The test uses the same shared winding and indices. / 两边统一不裁剪背面，确保同一索引数据不会因裁剪策略产生画面差异。
 - WebGL2 clip-space depth is [-1,1], whereas WebGPU clip-space depth is [0,1]. The shared camera projection is converted for WebGPU.
 - A single terrain mesh and one indexed draw call are tested, not texture streaming, 3DGS, advanced LOD, GPU culling, collisions or shadows.
 - GLSL and WGSL implement near-equivalent equations, but color-space and precision differences can yield non-identical pixels. Do not claim strict image parity without measured reference renders.
