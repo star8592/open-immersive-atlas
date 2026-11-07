@@ -1,0 +1,268 @@
+{
+  "schema": "oia-creative-visual-web-x-posts-v1",
+  "as_of": "2026-11-07",
+  "purpose": "Bilingual evidence-indexed X posts about premium visual websites, not third-party content redistribution",
+  "total_records": 11,
+  "verified_archive_records": 10,
+  "uninspected_seed_records": 1,
+  "source_feeds": [
+    {
+      "url": "https://x.yrzhe.top/en/c/landing-pages",
+      "source_type": "third-party-index",
+      "observed_items_at_review": 252,
+      "note": "Count dynamic; indexed original permalinks and archive transcripts, not original X video independently viewed."
+    },
+    {
+      "url": "https://www.landing.love/collection/",
+      "source_type": "website-showcase",
+      "note": "Full-page recordings and tech category filters; independent originals not licensed for reposting."
+    }
+  ],
+  "posts": [
+    {
+      "id": "beyondtheboxcn-2118704959223116082",
+      "author": "BeyondTheBoxCN",
+      "work": null,
+      "posted_on": "2026-11-07",
+      "original_post_url": "https://x.com/BeyondTheBoxCN/status/2118704959223116082",
+      "archived_post_url": null,
+      "site_url": null,
+      "evidence_level": "user-supplied-uninspected",
+      "summary": {
+        "zh": "用户提供的重点种子；原帖视频和正文因 X 403 尚未核验。",
+        "en": "Original user seed; X media and text not inspected."
+      },
+      "declared_stack": [],
+      "commercial_fit": null,
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "greensock-2117685463205171492",
+      "author": "GSAP",
+      "work": "Overworld Audio",
+      "posted_on": "2026-11-04",
+      "original_post_url": "https://x.com/greensock/status/2117685463205171492",
+      "archived_post_url": "https://x.yrzhe.top/en/i/greensock-2117685463205171492",
+      "site_url": "https://overworldaudio.com/",
+      "evidence_level": "third-party-archive-of-original-post",
+      "summary": {
+        "zh": "迷雾蓝色3D迷宫，滚动驱动镜头飞行；GSAP 原帖明确列出 Three.js、VueJS、WebGL。",
+        "en": "Misty 3D maze with scroll-driven camera; original GSAP post names Three.js, VueJS, WebGL."
+      },
+      "declared_stack": [
+        "Three.js",
+        "VueJS",
+        "WebGL"
+      ],
+      "commercial_fit": "3D沉浸式数字展厅与音视频工作室",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "rafaelaugustoms-2118061715359494310",
+      "author": "Rafael Augusto",
+      "work": "Jolt motion engine",
+      "posted_on": "2026-11-05",
+      "original_post_url": "https://x.com/rafaelaugustoms/status/2118061715359494310",
+      "archived_post_url": "https://x.yrzhe.top/en/i/rafaelaugustoms-2118061715359494310",
+      "site_url": "https://jolt.rafaelaugusto.dev",
+      "evidence_level": "third-party-archive-of-author-original-post",
+      "summary": {
+        "zh": "黑底巨型字体、铬金属3D结、原生弹簧驱动的液态遮罩；作者称网页本身用 Jolt Web。",
+        "en": "Chrome torus, massive type and spring-driven liquid masks; author says site uses experimental Jolt Web."
+      },
+      "declared_stack": [
+        "Jolt Web (experimental)",
+        "NativeScript"
+      ],
+      "commercial_fit": "软件与开发者工具的高端动态产品页",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "greensock-2118007670582165879",
+      "author": "GSAP",
+      "work": "Relevo & Vinco",
+      "posted_on": "2026-11-04",
+      "original_post_url": "https://x.com/greensock/status/2118007670582165879",
+      "archived_post_url": "https://x.yrzhe.top/en/i/greensock-2118007670582165879",
+      "site_url": "https://relevovinco.com",
+      "evidence_level": "third-party-archive-of-original-post",
+      "summary": {
+        "zh": "牛皮纸、压印浮雕文字，滚动转场；GSAP 原帖明确列出 ScrollTrigger/ScrollSmoother/SplitText/ScrollTo/useGSAP、Reduced Motion、SVG。",
+        "en": "Kraft-board embossed typography, GSAP-driven page motion with reduced-motion support."
+      },
+      "declared_stack": [
+        "GSAP",
+        "ScrollTrigger",
+        "ScrollSmoother",
+        "SplitText",
+        "ScrollTo",
+        "SVG"
+      ],
+      "commercial_fit": "包装材料/印刷工厂高级品牌站",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "tanish2k-2117812560917561378",
+      "author": "Saurabh Arora",
+      "work": "Plum Autumn Release",
+      "posted_on": "2026-11-04",
+      "original_post_url": "https://x.com/tanish2k/status/2117812560917561378",
+      "archived_post_url": "https://x.yrzhe.top/en/i/tanish2k-2117812560917561378",
+      "site_url": "https://www.plumhq.com/autumn-2026",
+      "evidence_level": "third-party-archive-of-author-original-post",
+      "summary": {
+        "zh": "红色螺旋桨飞机穿过海岛，随滚动下坠的长页叙事与手机演示；未核实制作技术栈。",
+        "en": "Illustrated airplane and scrolling skydive through app demos; implementation stack not verified."
+      },
+      "declared_stack": [],
+      "commercial_fit": "新品发布/年度成果/保险产品发布页",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "holographikco-2117638168333721733",
+      "author": "Holographik",
+      "work": "DeepBook",
+      "posted_on": "2026-11-03",
+      "original_post_url": "https://x.com/holographikco/status/2117638168333721733",
+      "archived_post_url": "https://x.yrzhe.top/en/i/holographikco-2117638168333721733",
+      "site_url": "https://deepbook.tech",
+      "evidence_level": "third-party-archive-of-author-original-post",
+      "summary": {
+        "zh": "夜景交易员电影画面、蓝色内容板块和黑白立体保险库旋钮；制作方称获 Awwwards SOTD 与 Developer Award，技术栈待核。",
+        "en": "Cinematic trading hero, blue product panels, monochrome vault dials; creator award claim, stack unverified."
+      },
+      "declared_stack": [],
+      "commercial_fit": "金融科技/加密行业品牌展示",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "y-molodtsov-2118014408110579987",
+      "author": "Yury Molodtsov",
+      "work": "Syndicator",
+      "posted_on": "2026-11-05",
+      "original_post_url": "https://x.com/y_molodtsov/status/2118014408110579987",
+      "archived_post_url": "https://x.yrzhe.top/en/i/y-molodtsov-2118014408110579987",
+      "site_url": "https://syndicator.one/",
+      "evidence_level": "third-party-archive-of-original-post",
+      "summary": {
+        "zh": "灰底、黑色大标题与真实 RSS 产品界面，浅灰圆角功能卡；来源提到设计者 @karlov_zip，具体栈未知。",
+        "en": "Soft grey, oversized typography, real UI showcase; original post credits @karlov_zip."
+      },
+      "declared_stack": [],
+      "commercial_fit": "SaaS/工具网站的精致非3D风格",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "c-emile-c-2117720852821385417",
+      "author": "emile",
+      "work": "RoutingCat",
+      "posted_on": "2026-11-04",
+      "original_post_url": "https://x.com/c_emile_c/status/2117720852821385417",
+      "archived_post_url": "https://x.yrzhe.top/en/i/c-emile-c-2117720852821385417",
+      "site_url": "https://routingcat.com",
+      "evidence_level": "third-party-archive-of-author-original-post",
+      "summary": {
+        "zh": "奶油纸背景、红色大号黑体字母 R、AB 分流箭头与等宽图表；技术栈未披露。",
+        "en": "Cream editorial backdrop, giant red blackletter R and routing arrows; stack undisclosed."
+      },
+      "declared_stack": [],
+      "commercial_fit": "B2B SaaS与AI工具",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "kdhabibi-2117578808404365701",
+      "author": "Kurosch D. Habibi",
+      "work": "Simsalasim",
+      "posted_on": "2026-11-03",
+      "original_post_url": "https://x.com/KDHabibi/status/2117578808404365701",
+      "archived_post_url": "https://x.yrzhe.top/en/i/kdhabibi-2117578808404365701",
+      "site_url": "https://simsalasim.com/",
+      "evidence_level": "third-party-archive-of-author-original-post",
+      "summary": {
+        "zh": "高饱和摄影、霓虹渐变和大圆角卡片，逐屏展示卖点；技术栈待核。",
+        "en": "Saturated photography, neon gradients, oversized rounded one-claim-per-screen sections."
+      },
+      "declared_stack": [],
+      "commercial_fit": "电信/消费科技企业官网",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "orpetron-2117625777365688579",
+      "author": "Orpetron",
+      "work": "Denada",
+      "posted_on": "2026-11-03",
+      "original_post_url": "https://x.com/orpetron/status/2117625777365688579",
+      "archived_post_url": "https://x.yrzhe.top/en/i/orpetron-2117625777365688579",
+      "site_url": "https://denadaco.com",
+      "evidence_level": "award-account-archive-not-original-builder",
+      "summary": {
+        "zh": "复古电视雪花卡、滚动字带和冰淇淋产品陈列；奖项账号发帖，并非制作方技术复盘。",
+        "en": "Retro TV static, marquee typography, pastel product blocks; awards account, not the original creator."
+      },
+      "declared_stack": [],
+      "commercial_fit": "食品饮料品牌定制官网",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "orpetron-2117631823563932073",
+      "author": "Orpetron",
+      "work": "Shift Robotics",
+      "posted_on": "2026-11-03",
+      "original_post_url": "https://x.com/orpetron/status/2117631823563932073",
+      "archived_post_url": "https://x.yrzhe.top/en/i/orpetron-2117631823563932073",
+      "site_url": "https://shiftrobotics.io",
+      "evidence_level": "award-account-archive-not-original-builder",
+      "summary": {
+        "zh": "整屏街拍视频与简洁白色硬件卡片，突出产品卖点；不是开发团队的源码说明。",
+        "en": "Full-bleed street footage and crisp hardware product cards; third-party award listing."
+      },
+      "declared_stack": [],
+      "commercial_fit": "消费硬件产品官网",
+      "original_video_rehosted": false,
+      "local_reproduction": "not_started",
+      "browser_validation": "not_run",
+      "license_review": "pending",
+      "reviewed_on": "2026-11-07"
+    }
+  ]
+}
