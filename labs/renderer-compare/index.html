@@ -38,14 +38,14 @@ footer{margin-top:22px;color:var(--muted);font-size:.84rem}
 <button id="export" type="button" disabled>Export JSON / 导出</button>
 </section>
 <div class="grid"><section class="view"><h2>WebGL2 <span aria-hidden="true">·</span> GLSL</h2><div class="status" id="status-gl">Initializing / 初始化中…</div><div class="viewport"><canvas id="canvas-gl" aria-label="WebGL2 comparison; drag to orbit, wheel to zoom"></canvas><div id="overlay-gl" class="overlay" hidden></div></div>
-<div class="numbers"><div class="metric"><small>JS render-call p95*</small><b id="call-gl">—</b></div><div class="metric"><small>Drawn frames / 绘制帧</small><b id="frames-gl">—</b></div></div></section>
+<div class="numbers"><div class="metric"><small>JS render-call p95*</small><b id="call-gl">—</b></div><div class="metric"><small>Drawn frames / 绘制帧</small><b id="frames-gl">—</b></div><div class="metric"><small>GPU pass p95 (if supported)</small><b id="gpu-pass-gl">—</b></div></div></section>
 <section class="view"><h2>WebGPU <span aria-hidden="true">·</span> WGSL</h2><div class="status" id="status-gpu">Checking support / 检测支持…</div><div class="viewport"><canvas id="canvas-gpu" aria-label="WebGPU comparison; drag to orbit, wheel to zoom"></canvas><div id="overlay-gpu" class="overlay" hidden></div></div>
-<div class="numbers"><div class="metric"><small>JS submit-call p95*</small><b id="call-gpu">—</b></div><div class="metric"><small>Drawn frames / 绘制帧</small><b id="frames-gpu">—</b></div></div></section></div>
+<div class="numbers"><div class="metric"><small>JS submit-call p95*</small><b id="call-gpu">—</b></div><div class="metric"><small>Drawn frames / 绘制帧</small><b id="frames-gpu">—</b></div><div class="metric"><small>GPU pass p95 (if supported)</small><b id="gpu-pass-gpu">—</b></div></div></section></div>
 <section class="stats"><h2>Measurement / 测量约定</h2>
 <p><strong id="scene-info">Initializing shared geometry…</strong> · <span id="frame-info">Frame interval p95: —</span></p>
 <p id="progress" role="status" aria-live="polite">Ready / 准备就绪</p>
-<pre id="results" class="benchmark">Press “Measure sequentially” to warm up each available renderer, then sample 120 frames separately. / 点击“顺序测量”：先预热再分别采样 120 帧。</pre>
-<p><strong>*Not GPU time / 不是 GPU 渲染耗时。</strong> JS render/submit-call time measures synchronous JavaScript API call duration only; WebGL2 and WebGPU drivers may queue work differently. Frame-interval p95 includes vsync, browser scheduling and other workload. No claim that either API is faster from these numbers alone. / API 调用耗时与 GPU 执行时间不同，单靠此实验不能得出哪种渲染器更快的结论。</p>
+<pre id="results" class="benchmark">Press “Measure sequentially”: 40 warm-up + 120 browser-frame samples per renderer, then 24 asynchronous GPU pass queries where supported. / 顺序测试：每种后端预热 40 帧、采集 120 帧，再对支持计时的 GPU 进行 24 次真正渲染通道计时。</pre>
+<p><strong>Three different metrics / 三种不同指标。</strong> JS render/submit-call time measures synchronous CPU-side calls, while rAF p95 measures browser frame cadence. <strong>GPU pass p95</strong> uses WebGPU timestamp-query or WebGL2 disjoint timer extension <em>only when supported</em>; it measures GPU pass work, not presentation, uploads or entire-game frame time. Unavailable, disjoint and timed-out samples are explicitly excluded and reported. / CPU 提交、浏览器帧间隔、GPU 通道执行耗时分别统计；计时不支持时显示“不支持”，不得伪造数字或据此做普遍性能排名。</p>
 <p>WebGPU requires secure context (HTTPS/localhost) and compatible browser/adapter. WebGL2 remains available if WebGPU is unsupported. / 若 WebGPU 不支持，仍可单独运行 WebGL2。</p></section>
 <footer>Original educational code under MIT. No third-party models or private game assets. / 原创教育实验，零外部模型与私有游戏素材。</footer></main>
 <script type="module" src="./app.mjs"></script></body></html>
