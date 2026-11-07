@@ -1,8 +1,8 @@
 # Curated Projects · 双语项目档案
 
-> **66 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
+> **73 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
 >
-> **66 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
+> **73 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
 
 [Home / 首页](README.md) · [Search / 搜索](index.html) · [Data / 数据](data/projects.json)
 
@@ -264,6 +264,74 @@ English: Applies game-like interaction logic to complex web narratives and large
 English: Study progress, input feedback and runtime organization; verify each project's stack separately.
 
 
+### Tiny Delivery — Sinica
+
+- **Official / 官方**: https://store.steampowered.com/app/3812830/Tiny_Delivery/  
+- **Evidence / 证据**: `creator-article` · **Upstream rights / 上游权属**: Commercial game and Unity Asset Store environment art; no license to copy game's assets or scenes
+
+**中文简介：** 以六轮送货机器人探索绿意浓郁的小镇与林地，具有柔和、绘画般的风格化三维美术。  
+**English:** A delivery-robot adventure through lush small towns and forests, with softly illustrated stylized 3D environments.
+
+**为什么厉害 / Why it stands out**  
+中文：开发者公开拆解了从参考图、草地纹理与植被套件到水岸、苔藓、自然散布及柔和光照的完整氛围制作过程。  
+English: The developer documents the atmosphere-building process from visual references and grass material matching to foliage, shores, moss, natural scattering and lighting.
+
+**值得学习 / What to learn**  
+中文：优先研究叶片和草地的风格一致性、植被生态聚集及镜头，不把作者的 Unity 方案误称为水彩 Shader 或开源游戏。  
+English: Prioritize consistency of leaf and grass artwork, ecological clustering and composition; do not mislabel this Unity game as an open-source watercolor shader.
+
+
+### Dordogne — Hand-painted Watercolor 3D
+
+- **Official / 官方**: https://store.steampowered.com/app/1272840/Dordogne/  
+- **Evidence / 证据**: `creator-article` · **Upstream rights / 上游权属**: Proprietary game and original watercolor artwork; no reproduction rights
+
+**中文简介：** 以真实纸本水彩画投射到三维场景上的叙事探索游戏，呈现直接进入画中世界的氛围。  
+**English:** A narrative exploration game projecting traditional watercolor artworks onto three-dimensional spaces.
+
+**为什么厉害 / Why it stands out**  
+中文：美术总监解释使用 Camera Mapping 把手绘水彩投向简化模型，画中的光影主要由画作本身承担。  
+English: The art director describes camera mapping original painted scenes onto simplified 3D geometry, preserving painterly lighting and shadows.
+
+**值得学习 / What to learn**  
+中文：研究传统绘画与三维空间的结合，适用于固定或半固定镜头；自由旋转视角则需多方向补画或真正的三维材质。  
+English: Study authentic painting projected into 3D for controlled camera views; freely rotating scenes require additional view artwork or fully textured geometry.
+
+
+### Tiny Glade — Painterly Vegetation
+
+- **Official / 官方**: https://store.steampowered.com/app/2198150/Tiny_Glade/  
+- **Evidence / 证据**: `official-product` · **Upstream rights / 上游权属**: Commercial game; source, models and grass renderer not open for reuse
+
+**中文简介：** 温暖精致的可互动微缩建筑与花草世界，官方持续公开草地、花卉、体积雾等技术更新。  
+**English:** A cozy miniature building world with interactive plants, flowers and atmospheric rendering discussed in official technical updates.
+
+**为什么厉害 / Why it stands out**  
+中文：2026年官方说明新草地生成与绘制架构借鉴 Nanite Foliage 理念，让密集花草与远景柔软感同时可控。  
+English: The studio reports a 2026 redesign of grass authoring/rendering inspired by Nanite Foliage ideas, allowing richer meadow plants and softer distant grass.
+
+**值得学习 / What to learn**  
+中文：学习植物品种化、画笔式增密、层次和地面雾气的共同作用；官方并未开源其植被渲染器。  
+English: Study botanical variety, brush-based density editing, atmospheric fog and layered greenery; the proprietary implementation is not released as open source.
+
+
+### Cozy Cottage — Kayla Kosik Art Breakdown
+
+- **Official / 官方**: https://kkosik.artstation.com/projects/KrnQA4  
+- **Evidence / 证据**: `creator-article` · **Upstream rights / 上游权属**: Artist's original scene and concept/third-party art proprietary; tutorial may be read, not copied wholesale
+
+**中文简介：** 专业环境美术师的吉卜力感小屋场景制作拆解，重点展示手绘植物图集与场景美术编排。  
+**English:** A professional environment artist's painterly cottage breakdown centered on handcrafted botanical texture atlases and composition.
+
+**为什么厉害 / Why it stands out**  
+中文：明确展示手绘 Albedo+透明度图集、按叶片外轮廓裁切网格、植物枢轴和手绘天空与纹理分工。  
+English: Documents hand-painted albedo+alpha foliage atlases, silhouette-cut plant geometry with rooted pivots, and painted sky/texture planning.
+
+**值得学习 / What to learn**  
+中文：先画植物、再映射到三维卡片并人工调整形态，严禁用统一绿色球体取代复杂自然叶簇。  
+English: Paint species first, then map and shape them into layered 3D cards; do not replace botanical forms with generic green primitive masses.
+
+
 ## 3D & AI Production Pipelines / 3D 与 AI 工厂
 
 ### AnyScene
@@ -478,6 +546,42 @@ English: Keeps modeling, event states and publishable interactions within the sa
 **值得学习 / What to learn**  
 中文：研究其基于对象的 MCP 编辑与原生 WebGPU/WebGL 输出模型；审查导出和商业条款。  
 English: Study object-level MCP editing and WebGPU/WebGL runtime delivery while reviewing export and commercial terms.
+
+
+### Just a Simple Tree — Mike Fernandez
+
+- **Official / 官方**: https://justasimpletree.com/  
+- **Code / 源码**: https://github.com/MikeFernandez-Pro/just-a-simple-tree  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT source code; separately credited music, sound and demo media require their own rights review
+
+**中文简介：** 基于 Three.js WebGPU/TSL 的六树种可参数化绘画风树木工厂，支持生长、季节、动态树叶与 GLB 导出。  
+**English:** A browser-based Three.js/WebGPU anime tree studio with six species, seasons, growth, animated foliage and GLB export.
+
+**为什么厉害 / Why it stands out**  
+中文：把真实分枝、树叶透明纹理卡、叶簇共享法线、内部 AO、颜色带和分层风动结合，形成可信树冠。  
+English: Combines branching silhouettes, painted leaf cards, clump-inherited normals, internal occlusion, color bands and independent multi-scale wind.
+
+**值得学习 / What to learn**  
+中文：重点研读 foliage.js、wood.js、shading.js、wind.js 与导出流程；柔和水彩氛围需要替换硬边赛璐璐光色。  
+English: Study foliage.js, wood.js, shading.js, wind.js and exports; soften the original cel bands when targeting a watercolor-like look.
+
+
+### Yomotsu Vegetation — Procedural Nature Kit
+
+- **Official / 官方**: https://github.com/yomotsu/vegetation  
+- **Code / 源码**: https://github.com/yomotsu/vegetation  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT repository; separately introduced third-party textures/models require independent rights checks
+
+**中文简介：** 基于 Three.js 的开源程序化植物与自然物件库，包括树木、石头、卵石、草花与苔藓覆盖。  
+**English:** An open Three.js vegetation toolkit generating trees, rocks, pebbles, grass, flowers and optional moss.
+
+**为什么厉害 / Why it stands out**  
+中文：提供种子化可重建资产、五级 LOD、异步 Web Worker 生成、部分碰撞网格，以及 WebGPU/WebGL 双兼容。  
+English: Includes reproducible seeded geometry, five LOD stages, Web Worker generation, solid-object colliders and WebGPU/WebGL compatibility.
+
+**值得学习 / What to learn**  
+中文：吸收种类化的植物与石块程序、苔藓和真实米制接口；最终叶片和花朵仍需美术师定义材质与外形。  
+English: Learn botanical type systems, rock/moss layering and meter-scale APIs; commissioned or authored leaf/flower art must determine the final look.
 
 
 ## Frameworks & Engines / 框架与引擎
@@ -1182,4 +1286,22 @@ English: Separates sessions, reference spaces, anchors, hit tests, hand input, t
 **值得学习 / What to learn**  
 中文：学习按设备与会话模式探测能力、统一输入抽象和XR降级；不能从WebGPU支持推断WebGPU-XR支持。  
 English: Learn device- and session-specific feature detection, portable input abstraction and graceful fallback; WebGPU alone does not establish WebGPU-XR support.
+
+
+### Three.js Field Grass — Painterly Wind
+
+- **Official / 官方**: https://matthew-kissinger.github.io/threejs-field-grass/  
+- **Code / 源码**: https://github.com/matthew-kissinger/threejs-field-grass  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT core library; demo character, animation and media have separate licenses; experimental 0.1.0 release
+
+**中文简介：** 可用于 Three.js 游戏的互动草地工程，包含多叶簇、定向草浪、动态风场和实体经过后的恢复轨迹。  
+**English:** An experimental Three.js grass system with multi-blade tufts, directional wind and settling interaction wakes.
+
+**为什么厉害 / Why it stands out**  
+中文：公开 TSL 着色器、WebGPU/WebGL2 路径、确定性散布与草浪形变，支持海量草叶的统一材料绘制。  
+English: Provides TSL materials with WebGPU/WebGL2 support, deterministic scatter and bounded deformation fields for dense grass.
+
+**值得学习 / What to learn**  
+中文：作为草地动态与地形融合的技术底座，必须先补原创手绘植被材质；注意库要求 Three.js 0.185.x。  
+English: Study motion and terrain integration but supply original botanical art; its pinned Three.js 0.185.x dependency requires careful integration.
 
