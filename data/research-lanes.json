@@ -1,12 +1,12 @@
 {
   "schema": "oia-research-lanes-v1",
   "updated_on": "2026-11-07",
-  "scope": "public-source-based-research-only",
+  "scope": "public first-party research and original synthetic diagnostics; private game integration excluded",
   "parallel_workstreams": 5,
   "run_mode": "on-demand-when-actively-executed",
   "status_legend": {
     "research": "First-pass bilingual case committed; not necessarily experimentally reproduced",
-    "prototype": "No original working demonstration claimed",
+    "prototype": "Each lane has a bounded original synthetic diagnostic; not a full game implementation or production release",
     "game_integration": "Private product changes require separate real-device QA"
   },
   "lanes": [
@@ -23,7 +23,7 @@
       },
       "status": {
         "research": "first-pass-published",
-        "prototype": "not-built",
+        "prototype": "working-diagnostic-demo",
         "game_integration": "not-verified"
       },
       "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/4",
@@ -36,6 +36,15 @@
       "next_test": {
         "zh": "固定时间步的坡道/台阶/墙壁关卡，检测角色穿透和寻路误差",
         "en": "Reproducible slope/stair/wall fixture with fixed-step contact and path tests"
+      },
+      "prototype_file": "labs/five-lane-runtime/physics.mjs",
+      "prototype_url": "https://star8592.github.io/open-immersive-atlas/labs/five-lane-runtime/",
+      "prototype_source": "labs/five-lane-runtime/README.md",
+      "prototype_test": "labs/five-lane-runtime/test-core.mjs",
+      "prototype_evidence": {
+        "unit_tests": "47/47 shared five-lane suite PASS",
+        "browser_test": "Actual Chrome interactive smoke PASS",
+        "scope": "synthetic bounded 2.5D AABB collision + A*; no Rapier rigid-body controller or real-game collider integration"
       }
     },
     {
@@ -51,7 +60,7 @@
       },
       "status": {
         "research": "first-pass-published",
-        "prototype": "not-built",
+        "prototype": "working-diagnostic-demo",
         "game_integration": "not-verified"
       },
       "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/5",
@@ -64,6 +73,15 @@
       "next_test": {
         "zh": "离散 LOD/裙边对比连续渐变，量测相邻边缘误差和时间跳变",
         "en": "Compare discrete skirts against morphing with edge error and temporal popping"
+      },
+      "prototype_file": "labs/five-lane-runtime/lod.mjs",
+      "prototype_url": "https://star8592.github.io/open-immersive-atlas/labs/five-lane-runtime/",
+      "prototype_source": "labs/five-lane-runtime/README.md",
+      "prototype_test": "labs/five-lane-runtime/test-core.mjs",
+      "prototype_evidence": {
+        "unit_tests": "47/47 shared five-lane suite PASS",
+        "browser_test": "Actual Chrome interactive smoke PASS",
+        "scope": "synthetic global-grid shared-edge geomorph LOD; no streaming infinite world, actual game renderer or collision integration"
       }
     },
     {
@@ -99,8 +117,12 @@
       "prototype_evidence": {
         "unit_tests": "38/38 PASS",
         "browser_test": "Chrome WebGL2 interactive smoke PASS",
-        "scope": "synthetic procedural rig, IK, sword phase, NPC utility and terrain; no imported humanoid or private game integration"
-      }
+        "scope": "synthetic rig checks and local glTF/GLB metadata preflight; no fully skinned animation retarget or private-game actor integration",
+        "additional_fixture": "47/47 shared five-lane tests PASS; real Chrome local rig input and mirror flag"
+      },
+      "prototype_file": "labs/five-lane-runtime/rig.mjs",
+      "additional_prototype_url": "https://star8592.github.io/open-immersive-atlas/labs/five-lane-runtime/",
+      "additional_prototype_source": "labs/five-lane-runtime/README.md"
     },
     {
       "id": "lane-04",
@@ -115,7 +137,7 @@
       },
       "status": {
         "research": "first-pass-published",
-        "prototype": "not-built",
+        "prototype": "working-diagnostic-demo",
         "game_integration": "not-verified"
       },
       "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/7",
@@ -128,6 +150,15 @@
       "next_test": {
         "zh": "原创机械形体和有机资产测试集，比较重建精度、LOD 视觉损失及导出结构",
         "en": "Synthetic manufactured/organic fixtures with geometry fidelity and validator checks"
+      },
+      "prototype_file": "labs/five-lane-runtime/assets.mjs",
+      "prototype_url": "https://star8592.github.io/open-immersive-atlas/labs/five-lane-runtime/",
+      "prototype_source": "labs/five-lane-runtime/README.md",
+      "prototype_test": "labs/five-lane-runtime/test-core.mjs",
+      "prototype_evidence": {
+        "unit_tests": "47/47 shared five-lane suite PASS",
+        "browser_test": "Actual Chrome interactive smoke PASS",
+        "scope": "synthetic heuristic classification and evidence policy; no actual CAD parametric geometry or game-quality LOD mesh output"
       }
     },
     {
@@ -143,7 +174,7 @@
       },
       "status": {
         "research": "first-pass-published",
-        "prototype": "not-built",
+        "prototype": "working-diagnostic-demo",
         "game_integration": "not-verified"
       },
       "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/8",
@@ -157,6 +188,15 @@
       "next_test": {
         "zh": "同一原创场景的 PBR/水彩/墨绘盲测，验证自然感、可读性与 GPU 耗时",
         "en": "Original landscape PBR/watercolor/ink ablation with legibility and GPU timing"
+      },
+      "prototype_file": "labs/five-lane-runtime/nature.mjs",
+      "prototype_url": "https://star8592.github.io/open-immersive-atlas/labs/five-lane-runtime/",
+      "prototype_source": "labs/five-lane-runtime/README.md",
+      "prototype_test": "labs/five-lane-runtime/test-core.mjs",
+      "prototype_evidence": {
+        "unit_tests": "47/47 shared five-lane suite PASS",
+        "browser_test": "Actual Chrome interactive smoke PASS",
+        "scope": "synthetic Canvas2D nature and painterly noise study; no production 3D environment or GPU art renderer"
       }
     }
   ]

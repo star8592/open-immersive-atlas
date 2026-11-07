@@ -12,6 +12,8 @@ These experiments are original educational implementations with reproducible con
 
 | [Spatial Lab 04 — Motion & Tactics QA](motion-qa/) | Original WebGL2 3D debug rig, planted-foot contact, fixed-length two-bone IK, sword grip/three phases and inspectable NPC utility / 原创动作、足锁、握剑与 AI 战术诊断 | 38/38 deterministic unit tests + real Chrome 3D terrain/orbit/JSON/browser acceptance PASS; synthetic only / 三维功能验收通过，非真实动捕和人物模型 |
 
+| [Spatial Lab 05 — Five-Lane Engineering Bench](five-lane-runtime/) | Independent original bounded 2.5D contact/A*, shared-edge LOD, local glTF rig audit, evidence-based asset routing, Canvas2D painterly nature / 五个独立计算实验和浏览器看板 | 47/47 deterministic tests + real Chrome interactions, local file import, invalid-file rejection, style switch, JSON export, zero remote requests; **not production game integration** / 五线原型验收通过，非真实游戏集成 |
+
 Run locally / 本地打开：from the repository root, run "python3 -m http.server 8000" and visit http://localhost:8000/labs/terrain-lod/.
 
 Every new lab must include source, a bilingual technical note, non-specialist controls, explicit known limitations, and a test script or objective repeatable test instructions. / 每个新实验必须包含源码、双语说明、交互操作、已知限制与验收方法。

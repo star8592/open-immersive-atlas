@@ -12,6 +12,10 @@
 | **04 Assets / 资产工厂** | [Parametric rebuild vs topology simplification](04-asset-classification-qa.md) | [#7](https://github.com/star8592/open-immersive-atlas/issues/7) | Synthetic regular/organic test assets, official glTF Validator and render QA |
 | **05 Art / 自然美术** | [Watercolor, procedural vegetation, atmosphere](05-painterly-nature.md) | [#8](https://github.com/star8592/open-immersive-atlas/issues/8) | Same-camera PBR/watercolor/ink visual ablation, blind ratings and GPU p95 |
 
+## Five bounded original engineering prototypes / 新增五线原创工程原型
+
+[Open Spatial Lab 05 / 打开五线工程实验台](../../../labs/five-lane-runtime/) — 47/47 deterministic tests + real Chrome functional smoke tests passed. Each stream now has a small original **synthetic diagnostic**, separately from the earlier motion Lab 04. This includes bounded 2.5D collision/nav, shared-edge LOD, local glTF/GLB rig metadata checks, geometry workflow classification, and original Canvas2D painterly nature. **This does not assert five complete game implementations or private game integrations.** See the live [machine-readable status](../../../data/research-lanes.json) and [source/limitations](../../../labs/five-lane-runtime/README.md).
+
 ## Independent lifecycle / 各分线独立推进
 
 1. **Source discovery → verify / 查证原始资料:** Source must be an author repository, documented algorithm/paper or other credible firsthand explanation. Distinguish public code, author claims and independently reproduced performance.
