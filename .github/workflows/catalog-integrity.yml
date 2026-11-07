@@ -28,6 +28,15 @@ jobs:
           node --check labs/glb-inspector/test-browser.mjs
       - name: Run offline GLB structural regression tests
         run: node --test labs/glb-inspector/test-core.mjs
+      - name: Validate original rendering-comparison lab syntax
+        run: |
+          node --check labs/renderer-compare/scene.mjs
+          node --check labs/renderer-compare/renderers.mjs
+          node --check labs/renderer-compare/app.mjs
+          node --check labs/renderer-compare/test-core.mjs
+          node --check labs/renderer-compare/test-browser.mjs
+      - name: Run shared WebGPU/WebGL2 geometry and clip tests
+        run: node --test labs/renderer-compare/test-core.mjs
       - name: Check generated Markdown reproducibility
         run: |
           python3 scripts/build_catalog.py

@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Original WebGPU and WebGL2 browser rendering comparison with identical geometry and reproducible CPU/raf metrics.">
+<link rel="icon" href="data:,"><title>WebGPU / WebGL2 Compare · Open Immersive Atlas</title>
+<style>
+:root{color-scheme:dark;--bg:#0a1420;--panel:#142538;--line:#345069;--text:#ebf4f7;--muted:#a5bccb;--accent:#8cebd5;--warn:#ffdb9f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 75% 0,#17394b,transparent 45%),var(--bg);color:var(--text);font:15px/1.55 system-ui,"Noto Sans SC",sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}header{max-width:1320px;margin:auto;padding:25px 22px 10px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+h1{font-size:clamp(1.7rem,3.5vw,3rem);margin:0;letter-spacing:-.03em}h1 b{color:var(--accent)}
+nav{display:flex;gap:16px;flex-wrap:wrap}main{max-width:1320px;margin:auto;padding:10px 22px 60px}
+.lead{color:#bcd2df;margin:8px 0 22px;max-width:900px}.controls{background:var(--panel);border:1px solid var(--line);border-radius:14px;display:flex;flex-wrap:wrap;align-items:end;gap:13px;padding:16px}
+label.control{display:grid;gap:5px;color:#d6e9ee;font-weight:600;font-size:.86rem}
+select,button{background:#1e394c;color:white;border:1px solid #507589;border-radius:9px;padding:9px 12px;font:inherit;min-height:40px}
+button{cursor:pointer}button.primary{color:#073034;background:#9df3df;border-color:#9df3df;font-weight:700}
+button:hover{filter:brightness(1.12)}button:disabled,select:disabled{opacity:.48;cursor:not-allowed}
+.check{display:flex;align-items:center;gap:7px}input[type=checkbox]{accent-color:var(--accent);height:18px;width:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.view{min-width:0;border:1px solid var(--line);border-radius:14px;background:#132335;overflow:hidden}
+.view h2{font-size:1.08rem;margin:0;padding:13px 17px 8px}.status{padding:0 17px 10px;color:var(--muted);font-size:.85rem;min-height:38px;overflow-wrap:anywhere}
+.viewport{height:340px;position:relative;background:#112935}.viewport canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}
+.viewport canvas:active{cursor:grabbing}.overlay{position:absolute;inset:0;background:#07131be8;color:var(--warn);display:grid;place-items:center;padding:20px;text-align:center}
+.overlay[hidden]{display:none}.numbers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:13px}
+.metric{border-radius:9px;background:#0a1b2b;padding:10px 13px}.metric small{display:block;color:var(--muted)}.metric b{font-size:1.12rem;font-variant-numeric:tabular-nums}
+.stats{margin-top:16px;border:1px solid var(--line);background:#102033;border-radius:14px;padding:18px}
+.stats h2{font-size:1.15rem;margin:0 0 6px}.stats p{color:var(--muted);margin:7px 0}
+.benchmark{white-space:pre-wrap;word-break:break-word;font:12px/1.55 ui-monospace,monospace;padding:15px;background:#091823;border:1px solid #334b60;border-radius:10px;min-height:80px;max-height:330px;overflow:auto}
+footer{margin-top:22px;color:var(--muted);font-size:.84rem}
+@media(max-width:880px){.grid{grid-template-columns:1fr}.viewport{height:300px}}
+</style></head>
+<body><header><h1>Spatial Lab <b>03 / Render APIs</b></h1><nav><a href="../../">← Atlas / 图谱</a><a href="https://github.com/star8592/open-immersive-atlas/tree/main/labs/renderer-compare">Code / 源码</a><a href="https://github.com/star8592/open-immersive-atlas/blob/main/labs/renderer-compare/README.md">Technical notes / 说明</a></nav></header>
+<main><p class="lead">One original procedural terrain mesh, two rendering backends. Same geometry, camera and shader intent; different graphics APIs. / 同一份原创地形网格、相机与近似等价的着色方程，比较 WebGPU 和 WebGL2 的功能与浏览器行为。</p>
+<section class="controls" aria-label="Shared scene controls">
+<label class="control" for="density">Geometry / 网格密度<select id="density"><option value="48">48² · 4,608 triangles</option><option value="96" selected>96² · 18,432 triangles</option><option value="160">160² · 51,200 triangles</option><option value="256">256² · 131,072 triangles</option></select></label>
+<label class="control" for="mode">Render mode / 渲染模式<select id="mode"><option value="both">Both / 同时预览</option><option value="webgl2">WebGL2 only / 单独</option><option value="webgpu">WebGPU only / 单独</option></select></label>
+<label class="check"><input id="fog" type="checkbox" checked> Fog / 距离雾</label>
+<button id="reset" type="button">Reset camera / 重置视角</button>
+<button id="measure" class="primary" type="button">Measure sequentially / 顺序测量</button>
+<button id="export" type="button" disabled>Export JSON / 导出</button>
+</section>
+<div class="grid"><section class="view"><h2>WebGL2 <span aria-hidden="true">·</span> GLSL</h2><div class="status" id="status-gl">Initializing / 初始化中…</div><div class="viewport"><canvas id="canvas-gl" aria-label="WebGL2 comparison; drag to orbit, wheel to zoom"></canvas><div id="overlay-gl" class="overlay" hidden></div></div>
+<div class="numbers"><div class="metric"><small>JS render-call p95*</small><b id="call-gl">—</b></div><div class="metric"><small>Drawn frames / 绘制帧</small><b id="frames-gl">—</b></div></div></section>
+<section class="view"><h2>WebGPU <span aria-hidden="true">·</span> WGSL</h2><div class="status" id="status-gpu">Checking support / 检测支持…</div><div class="viewport"><canvas id="canvas-gpu" aria-label="WebGPU comparison; drag to orbit, wheel to zoom"></canvas><div id="overlay-gpu" class="overlay" hidden></div></div>
+<div class="numbers"><div class="metric"><small>JS submit-call p95*</small><b id="call-gpu">—</b></div><div class="metric"><small>Drawn frames / 绘制帧</small><b id="frames-gpu">—</b></div></div></section></div>
+<section class="stats"><h2>Measurement / 测量约定</h2>
+<p><strong id="scene-info">Initializing shared geometry…</strong> · <span id="frame-info">Frame interval p95: —</span></p>
+<p id="progress" role="status" aria-live="polite">Ready / 准备就绪</p>
+<pre id="results" class="benchmark">Press “Measure sequentially” to warm up each available renderer, then sample 120 frames separately. / 点击“顺序测量”：先预热再分别采样 120 帧。</pre>
+<p><strong>*Not GPU time / 不是 GPU 渲染耗时。</strong> JS render/submit-call time measures synchronous JavaScript API call duration only; WebGL2 and WebGPU drivers may queue work differently. Frame-interval p95 includes vsync, browser scheduling and other workload. No claim that either API is faster from these numbers alone. / API 调用耗时与 GPU 执行时间不同，单靠此实验不能得出哪种渲染器更快的结论。</p>
+<p>WebGPU requires secure context (HTTPS/localhost) and compatible browser/adapter. WebGL2 remains available if WebGPU is unsupported. / 若 WebGPU 不支持，仍可单独运行 WebGL2。</p></section>
+<footer>Original educational code under MIT. No third-party models or private game assets. / 原创教育实验，零外部模型与私有游戏素材。</footer></main>
+<script type="module" src="./app.mjs"></script></body></html>
