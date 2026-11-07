@@ -1469,31 +1469,36 @@
     },
     {
       "id": "gltf-sample-models",
-      "name": "Khronos glTF Sample Models",
+      "name": "Khronos glTF Sample Assets",
       "category": "infrastructure",
-      "website": "https://github.com/KhronosGroup/glTF-Sample-Models",
-      "repository": "https://github.com/KhronosGroup/glTF-Sample-Models",
+      "website": "https://github.khronos.org/glTF-Assets/",
+      "repository": "https://github.com/KhronosGroup/glTF-Sample-Assets",
       "evidence": "source-code",
-      "evidence_url": "https://github.com/KhronosGroup/glTF-Sample-Models",
-      "upstream_license": "Per-model licenses vary; do not assume blanket reuse",
+      "evidence_url": "https://github.com/KhronosGroup/glTF-Sample-Assets",
+      "upstream_license": "Per-model license and credits vary in the actively maintained glTF-Sample-Assets collection; legacy glTF-Sample-Models repository archived",
       "summary": {
-        "zh": "Khronos 维护的 glTF 示例模型集合，覆盖多种材质、动画与扩展测试场景。",
-        "en": "A curated collection of glTF sample assets spanning materials, animation and extensions."
+        "zh": "Khronos 持续维护的 glTF 2.0 示例资产集合，包含按材质与扩展分类的可搜索测试模型。",
+        "en": "The maintained Khronos glTF 2.0 sample-assets collection for material, extension and viewer compatibility."
       },
       "strength": {
         "zh": "提供具备明确参考预期的模型，用于发现不同引擎间 PBR 与格式兼容差异。",
         "en": "Supplies reference assets for testing PBR and compatibility across rendering engines."
       },
       "learning": {
-        "zh": "逐模型核对授权，挑选允许的样本构建多引擎外观回归测试。",
-        "en": "Audit each model's license before using it in cross-engine visual regression tests."
+        "zh": "使用官方活跃集合做跨引擎材质测试，逐模型阅读目录内授权与来源；旧 Sample-Models 仓库已归档。",
+        "en": "Use the active sample-assets collection for cross-engine QA, reading each model license; the old Sample-Models repo is archived."
       },
       "tags": [
         "glTF",
         "fixtures",
         "PBR"
       ],
-      "reviewed_on": "2026-11-07"
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "legacy_id_retained": true,
+        "successor_checked_on": "2026-11-07",
+        "archived_predecessor": "https://github.com/KhronosGroup/glTF-Sample-Models"
+      }
     },
     {
       "id": "draco",
@@ -2702,10 +2707,10 @@
       "name": "0 A.D.",
       "category": "experiences",
       "website": "https://play0ad.com/",
-      "repository": "https://github.com/0ad/0ad",
+      "repository": "https://gitea.wildfiregames.com/0ad/0ad",
       "evidence": "source-code",
-      "evidence_url": "https://github.com/0ad/0ad",
-      "upstream_license": "Public source; verify exact repository license, model weights, datasets, art and trademark rights separately before reuse",
+      "evidence_url": "https://gitea.wildfiregames.com/0ad/0ad",
+      "upstream_license": "Active official Gitea source; individual engine/code and art licenses vary; previous 0ad/0ad GitHub mirror archived in 2024",
       "summary": {
         "zh": "历史主题实时战略游戏及其公开引擎研发体系。",
         "en": "Historical real-time strategy game with open engine development."
@@ -2715,15 +2720,20 @@
         "en": "Integrates economy, formations, buildings and environmental detail into a full RTS."
       },
       "learning": {
-        "zh": "拆解 AI、编队、战斗信息反馈和美术资源分级；需审查艺术授权。",
-        "en": "Study AI, formations and battle feedback with explicit art/license audits."
+        "zh": "研究当前 Gitea 活跃源码的 AI、编队与资源经济；GitHub 旧镜像已归档，不应作为更新源。",
+        "en": "Study current Gitea source for AI, formations and economy; the previous GitHub mirror is archived."
       },
       "tags": [
         "RTS",
         "open-game",
         "3D"
       ],
-      "reviewed_on": "2026-11-07"
+      "reviewed_on": "2026-11-07",
+      "verification": {
+        "repository_checked_on": "2026-11-07",
+        "source_host": "gitea.wildfiregames.com",
+        "old_archived_mirror": "https://github.com/0ad/0ad"
+      }
     },
     {
       "id": "veloren-voxel-rpg",
