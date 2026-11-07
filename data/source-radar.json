@@ -5,7 +5,7 @@
     "zh": "收集高价值的一手标准、制作复盘、玩家体验、商业发行与可授权素材，不与开源代码项目混为一谈。",
     "en": "Track first-party standards, postmortems, player experience, distribution and licensed assets separately from open-source repositories."
   },
-  "record_count": 23,
+  "record_count": 27,
   "sources": [
     {
       "id": "gdc-vault",
@@ -440,6 +440,82 @@
         "en": "Apply game loops, event queues, object reuse and data-oriented design where measurable."
       },
       "rights_note": "Free-to-read web chapters are copyrighted; do not mirror or sell the book content.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "gdc-2026-hidden-ones-kungfu",
+      "category": "专业动作与战斗",
+      "name": "GDC 2026 — The Hidden Ones: Real-Time AI Kung Fu Motion",
+      "url": "https://schedule.gdconf.com/session/the-hidden-ones-real-time-ai-generation-of-kung-fu-motions-presented-by-tencent-games-ai/917893",
+      "source_kind": "conference-session",
+      "summary": {
+        "zh": "腾讯技术团队介绍为格斗游戏生成连贯功夫动作的实战方法，关注足部滑动、手腕和动作衔接。",
+        "en": "Tencent Games' GDC 2026 presentation on realtime Kung Fu motion generation and natural combat transitions."
+      },
+      "learning": {
+        "zh": "研究无标记动作采集、实时推理和后处理的分工；先验证关节方向、持剑手、足锁、招式可辨认度。",
+        "en": "Study markerless capture, inference and postprocessing; validate wrist, sword grip, foot lock and recognizable moves."
+      },
+      "rights_note": "Conference description and recording retain GDC/Tencent rights; no redistribution of talk or commercial game clips.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "gdc-2016-motion-matching",
+      "category": "专业动作与战斗",
+      "name": "GDC — Motion Matching and the Road to Next-Gen Animation",
+      "url": "https://www.gdcvault.com/play/1023280/",
+      "source_kind": "conference-session",
+      "summary": {
+        "zh": "Ubisoft Simon Clavet 介绍按当前姿态与未来移动意图检索动作片段的方法。",
+        "en": "Ubisoft's original GDC session on motion matching with pose and future-trajectory search."
+      },
+      "learning": {
+        "zh": "验证启动、停止、转向、快慢走衔接是否连续，而不是靠单一循环动画反复播放。",
+        "en": "Evaluate start/stop/turn and walk-run transitions with pose-plus-trajectory retrieval."
+      },
+      "rights_note": "GDC session belongs to speaker and conference rights; free viewing does not grant mirror rights.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "gdc-2026-arcraiders-physics-locomotion",
+      "category": "专业动作与战斗",
+      "name": "GDC 2026 — Learning to Move: Physics-Based Enemy Locomotion",
+      "url": "https://schedule.gdconf.com/speaker/singh-blom-martin/81755",
+      "source_kind": "conference-session",
+      "summary": {
+        "zh": "Embark Studios 在 GDC 2026 分享《ARC Raiders》敌人的物理、强化学习与运动控制方向。",
+        "en": "Embark Studios session on learned physics-based enemy locomotion for ARC Raiders."
+      },
+      "learning": {
+        "zh": "研究跌倒恢复、地形适配与受击反应；真实制作方案不等于可直接用于浏览器小游戏。",
+        "en": "Study recovery, terrain adaptation and responsive enemy motion; not a drop-in browser solution."
+      },
+      "rights_note": "Official speaker/session metadata only; no rights to the talk, game art or trained policies.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "gdc-2026-arcraiders-playtest-reset",
+      "category": "设计复盘与商业验证",
+      "name": "GDC 2026 — When Your AAA Game Isn't Fun: ARC Raiders",
+      "url": "https://schedule.gdconf.com/speaker/braga-caio.82287",
+      "source_kind": "conference-session",
+      "summary": {
+        "zh": "Embark Studios 分享技术已成型但玩法不够好玩时，如何通过试玩和反馈重设项目方向。",
+        "en": "Embark Studios' GDC talk about resetting a technically capable game after playtest evidence."
+      },
+      "learning": {
+        "zh": "先用可观察的玩家行为与试玩结果确认玩法价值，避免投入大量美术后才发现核心循环不成立。",
+        "en": "Use observed playtests to validate core game loops before expensive art production."
+      },
+      "rights_note": "GDC session abstract is source evidence; detailed proprietary production metrics are not public.",
       "reviewed_on": "2026-11-07",
       "verification": "first-party-source-reviewed",
       "replication": "not-claimed"
