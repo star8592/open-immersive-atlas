@@ -24,6 +24,13 @@ A local-only browser tool that parses GLB v2 or glTF JSON, checks binary chunk b
 
 [Technical note / 技术边界](labs/glb-inspector/README.md) · [Core tests / 结构测试](labs/glb-inspector/test-core.mjs) · [Browser smoke / 浏览器测试](labs/glb-inspector/test-browser.mjs)
 
+**[Spatial Lab 03 — WebGPU / WebGL2 same-scene comparison / 同场景双后端实验](labs/renderer-compare/)**
+
+Two original native pipelines use the **same packed terrain geometry and camera**, with 4 mesh densities (4,608–131,072 triangles), independent WebGL2 and WebGPU shader code, software-adapter safety guards, and a sequential 40-frame warmup + 120-frame sampling workflow. Browser tests have confirmed the WebGL2 path, software WebGPU rejection/fallback and JSON report export. Hardware WebGPU rendering has **not** been confirmed by this headless environment; neither JavaScript submit-call time nor requestAnimationFrame frame interval equals GPU execution time.  
+同一份几何数据进入 WebGL2 与 WebGPU，具备四档面数、自动后端状态识别、顺序预热采样及报告。已实测 WebGL2 与安全降级；硬件 WebGPU 性能仍需目标浏览器验收。
+
+[Source and limitations / 源码与测量边界](labs/renderer-compare/README.md) · [Browser smoke / 浏览器测试](labs/renderer-compare/test-browser.mjs)
+
 ## First edition / 首批收录
 
 **66 independently described references · 4 categories · Chinese and English for every record.**
