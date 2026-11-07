@@ -1,8 +1,8 @@
 # Curated Projects · 双语项目档案
 
-> **73 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
+> **77 records, reviewed 2026-11-07.** Projects are linked, not mirrored. No claim of local reproduction is made.
 >
-> **73 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
+> **77 条档案，核查日期 2026-11-07。** 仅提供研究性链接和原创分析，未宣称已在本地复现。
 
 [Home / 首页](README.md) · [Search / 搜索](index.html) · [Data / 数据](data/projects.json)
 
@@ -330,6 +330,23 @@ English: Documents hand-painted albedo+alpha foliage atlases, silhouette-cut pla
 **值得学习 / What to learn**  
 中文：先画植物、再映射到三维卡片并人工调整形态，严禁用统一绿色球体取代复杂自然叶簇。  
 English: Paint species first, then map and shape them into layered 3D cards; do not replace botanical forms with generic green primitive masses.
+
+
+### Wildward — Co-op Wilderness Expedition
+
+- **Official / 官方**: https://x.com/PlayWildward/status/2118723059444297933  
+- **Evidence / 证据**: `creator-notes` · **Upstream rights / 上游权属**: Indie game promotional clips; no source or reuse license verified; do not conflate @PlayWildward with the unrelated-seeming medieval fantasy website
+
+**中文简介：** 2026年11月公开展示的一至四人合作荒野探险项目，视频展示越野车、程序化草地、森林与河流环境。  
+**English:** A newly announced 1–4 player cooperative wilderness expedition with Jeep driving, procedural grass and simulated rivers.
+
+**为什么厉害 / Why it stands out**  
+中文：原账号多段视频将车身重量感、地面起伏、植被形变、水面涉水与有氛围的远近景组合成连续的探索镜头。  
+English: The creator's clips combine terrain-reactive Jeep driving, grass contact, water splashes and coherent near-to-far environment composition.
+
+**值得学习 / What to learn**  
+中文：研究车轮接触/悬架、植被动态形变、可模拟河流水面以及高度场地形；所有具体引擎与源码实现暂未确认。  
+English: Study wheel contact and suspension, deformable grass, simulated water and terrain cohesion; specific engine and source remain unverified.
 
 
 ## 3D & AI Production Pipelines / 3D 与 AI 工厂
@@ -1304,4 +1321,58 @@ English: Provides TSL materials with WebGPU/WebGL2 support, deterministic scatte
 **值得学习 / What to learn**  
 中文：作为草地动态与地形融合的技术底座，必须先补原创手绘植被材质；注意库要求 Three.js 0.185.x。  
 English: Study motion and terrain integration but supply original botanical art; its pinned Three.js 0.185.x dependency requires careful integration.
+
+
+### Evan Wallace — WebGL Water
+
+- **Official / 官方**: https://madebyevan.com/webgl-water/  
+- **Code / 源码**: https://github.com/evanw/webgl-water  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT notice in repository index.html; third-party tile texture, cubemaps and other visual assets have separate rights
+
+**中文简介：** 经典浏览器交互水体技术实验，以二维高度场和 GPU 波浪模拟呈现反射、折射及焦散。  
+**English:** A foundational browser water experiment using GPU heightfield waves, reflections, refractions and caustics.
+
+**为什么厉害 / Why it stands out**  
+中文：用户可直接扰动水面或移动浸水球体，原始代码公开，便于研究水面状态与光学着色如何分离。  
+English: Public source allows direct study of interactive water disturbances, moving objects and separate wave/optical shading.
+
+**值得学习 / What to learn**  
+中文：学习高度速度双场、交互冲量和 Fresnel/焦散；泳池范例不能直接当成真实流动河流。  
+English: Learn height/velocity fields, impulses, Fresnel optics and caustics; a pool demo is not automatically a flowing river.
+
+
+### Jean Timex (Su) — WebGPU Water
+
+- **Official / 官方**: https://jeantimex.github.io/webgpu-water/  
+- **Code / 源码**: https://github.com/jeantimex/webgpu-water  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT code verified in LICENSE; underlying demo textures and media require independent attribution
+
+**中文简介：** Evan Wallace 水体技术的 WebGPU 实现，包含 GPU 高度场、实时焦散和浮体交互。  
+**English:** A WebGPU port of the classic interactive water simulation with heightfield waves, caustics and a buoyant object.
+
+**为什么厉害 / Why it stands out**  
+中文：公开以256×256 网格计算水位波动、以1024×1024 纹理渲染焦散并组合光学反射和折射。  
+English: Documents 256×256 wave field, 1024×1024 caustics, Fresnel reflection/refraction and interactive buoyancy.
+
+**值得学习 / What to learn**  
+中文：先验证水波、焦散和浸水物体的统一状态，再实现河流边界、流向、轮胎涉水与泡沫。  
+English: Verify coherent waves, optics and object interaction before adapting to rivers, current fields and tire splashes.
+
+
+### SweK — Single-file WebGL2 Water
+
+- **Official / 官方**: https://github.com/HowdyKeith/swek-webgl2-water  
+- **Code / 源码**: https://github.com/HowdyKeith/swek-webgl2-water  
+- **Evidence / 证据**: `source-code` · **Upstream rights / 上游权属**: MIT code verified in LICENSE; source-independent artwork and input assets must be checked separately
+
+**中文简介：** 零构建依赖的单 HTML 文件 WebGL2 水体模拟，展示浮点纹理乒乓更新、波浪、Fresnel 和焦散。  
+**English:** A standalone single-HTML WebGL2 GPU water demo with ping-pong heightfield waves, Fresnel and caustics.
+
+**为什么厉害 / Why it stands out**  
+中文：将高度场、差分面积焦散和光学混合集中于可阅读的单文件示例，便于最小复现与测试。  
+English: A compact, inspectable implementation of float-texture heightfields, differential-area caustics and optical blending.
+
+**值得学习 / What to learn**  
+中文：作为 WebGL2 水体兼容基线；不要把画面波纹直接等同于真实河流流体求解或车辆浮力。  
+English: Use as a reproducible WebGL2 baseline, not as proof of full flowing-water or vehicle-buoyancy physics.
 
