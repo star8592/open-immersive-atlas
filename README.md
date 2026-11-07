@@ -8,6 +8,12 @@
 > **This is a curated, evidence-based index and knowledge archive — not a fork of any third-party product and not a replacement for Three.js, A-Frame, or Blender.**  
 > 本仓库是经过出处核验的双语精选技术索引，不是第三方产品镜像，也不是一个新的 3D 引擎。
 
+## Spatial Lab 04 — measurable motion and tactical AI / 可测量动作与战术
+
+**[Open original 3D debug lab / 打开原创三维实验](labs/motion-qa/)** · [Source, tests and limitations / 源码、测试与边界](labs/motion-qa/README.md)
+
+An original native WebGL2 character-and-sword *diagnostic fixture*, with independent mathematical modules for terrain/stance, fixed-length leg IK and knee direction, semantic right-hand sword socket, three timed gestures and explainable NPC utility AI. It passed **38/38 deterministic tests** and an independent actual-Chrome 3D smoke test (3 terrains, 3 techniques, orbit, NPC decisions, 6/6 built-in fixture checks, JSON export, no external requests or JS/GL errors). **This is not a rigged human skinned GLB, licensed sword mocap or proof of a private game's visual motion quality.** / 真实浏览器和数值测试已通过，但尚未把真实人物的骨骼动画或武术动捕整合进来。
+
 ## Premium immersive web / 高端视觉网站技术专题
 
 **New 2026-11-07:** [Premium Visual Web Atlas — 14 source-grounded inspirations, 10 technique references, bilingual engineering breakdowns and X post watchlist](docs/research/2026-11-07-premium-visual-web-atlas.md). Public research only; private commercial service specifications are not published here. / 新增高级视觉网站技术案例库：公开搜集原创出处与实现方法，商业报价和客户项目不公开。

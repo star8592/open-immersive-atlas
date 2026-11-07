@@ -40,6 +40,19 @@ jobs:
           node --check labs/renderer-compare/test-cdp-windows.cjs
       - name: Run shared WebGPU/WebGL2 geometry and clip tests
         run: node --test labs/renderer-compare/test-core.mjs labs/renderer-compare/test-timing.mjs
+      - name: Validate original motion and tactics lab syntax
+        run: |
+          node --check labs/motion-qa/terrain.mjs
+          node --check labs/motion-qa/kinematics.mjs
+          node --check labs/motion-qa/combat.mjs
+          node --check labs/motion-qa/tactics.mjs
+          node --check labs/motion-qa/acceptance.mjs
+          node --check labs/motion-qa/visual.mjs
+          node --check labs/motion-qa/app.mjs
+          node --check labs/motion-qa/test-core.mjs
+          node --check labs/motion-qa/test-browser.mjs
+      - name: Run deterministic motion, grounding, grip and NPC tests
+        run: node --test labs/motion-qa/test-core.mjs
       - name: Validate normalized repository identities and license evidence
         run: python3 scripts/audit_repository_health.py
       - name: Validate independent first-party source radar
