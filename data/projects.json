@@ -1860,6 +1860,218 @@
         "input"
       ],
       "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "tiny-delivery-sinica",
+      "name": "Tiny Delivery — Sinica",
+      "category": "experiences",
+      "website": "https://store.steampowered.com/app/3812830/Tiny_Delivery/",
+      "repository": null,
+      "evidence": "creator-article",
+      "evidence_url": "https://medium.com/@sinitsyndev/step-by-step-environment-creation-breakdown-in-unity-4073f1a73125",
+      "upstream_license": "Commercial game and Unity Asset Store environment art; no license to copy game's assets or scenes",
+      "summary": {
+        "zh": "以六轮送货机器人探索绿意浓郁的小镇与林地，具有柔和、绘画般的风格化三维美术。",
+        "en": "A delivery-robot adventure through lush small towns and forests, with softly illustrated stylized 3D environments."
+      },
+      "strength": {
+        "zh": "开发者公开拆解了从参考图、草地纹理与植被套件到水岸、苔藓、自然散布及柔和光照的完整氛围制作过程。",
+        "en": "The developer documents the atmosphere-building process from visual references and grass material matching to foliage, shores, moss, natural scattering and lighting."
+      },
+      "learning": {
+        "zh": "优先研究叶片和草地的风格一致性、植被生态聚集及镜头，不把作者的 Unity 方案误称为水彩 Shader 或开源游戏。",
+        "en": "Prioritize consistency of leaf and grass artwork, ecological clustering and composition; do not mislabel this Unity game as an open-source watercolor shader."
+      },
+      "tags": [
+        "painterly",
+        "vegetation",
+        "Unity",
+        "environment-art",
+        "art-direction"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "dordogne-watercolor",
+      "name": "Dordogne — Hand-painted Watercolor 3D",
+      "category": "experiences",
+      "website": "https://store.steampowered.com/app/1272840/Dordogne/",
+      "repository": null,
+      "evidence": "creator-article",
+      "evidence_url": "https://automaton-media.com/en/interviews/20230621-19630/",
+      "upstream_license": "Proprietary game and original watercolor artwork; no reproduction rights",
+      "summary": {
+        "zh": "以真实纸本水彩画投射到三维场景上的叙事探索游戏，呈现直接进入画中世界的氛围。",
+        "en": "A narrative exploration game projecting traditional watercolor artworks onto three-dimensional spaces."
+      },
+      "strength": {
+        "zh": "美术总监解释使用 Camera Mapping 把手绘水彩投向简化模型，画中的光影主要由画作本身承担。",
+        "en": "The art director describes camera mapping original painted scenes onto simplified 3D geometry, preserving painterly lighting and shadows."
+      },
+      "learning": {
+        "zh": "研究传统绘画与三维空间的结合，适用于固定或半固定镜头；自由旋转视角则需多方向补画或真正的三维材质。",
+        "en": "Study authentic painting projected into 3D for controlled camera views; freely rotating scenes require additional view artwork or fully textured geometry."
+      },
+      "tags": [
+        "watercolor",
+        "camera-mapping",
+        "art-direction",
+        "hybrid-2d-3d"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "tiny-glade-foliage",
+      "name": "Tiny Glade — Painterly Vegetation",
+      "category": "experiences",
+      "website": "https://store.steampowered.com/app/2198150/Tiny_Glade/",
+      "repository": null,
+      "evidence": "official-product",
+      "evidence_url": "https://steamcommunity.com/app/2198150/allnews",
+      "upstream_license": "Commercial game; source, models and grass renderer not open for reuse",
+      "summary": {
+        "zh": "温暖精致的可互动微缩建筑与花草世界，官方持续公开草地、花卉、体积雾等技术更新。",
+        "en": "A cozy miniature building world with interactive plants, flowers and atmospheric rendering discussed in official technical updates."
+      },
+      "strength": {
+        "zh": "2026年官方说明新草地生成与绘制架构借鉴 Nanite Foliage 理念，让密集花草与远景柔软感同时可控。",
+        "en": "The studio reports a 2026 redesign of grass authoring/rendering inspired by Nanite Foliage ideas, allowing richer meadow plants and softer distant grass."
+      },
+      "learning": {
+        "zh": "学习植物品种化、画笔式增密、层次和地面雾气的共同作用；官方并未开源其植被渲染器。",
+        "en": "Study botanical variety, brush-based density editing, atmospheric fog and layered greenery; the proprietary implementation is not released as open source."
+      },
+      "tags": [
+        "foliage",
+        "art-direction",
+        "meadow",
+        "atmosphere",
+        "authoring"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "cozy-cottage-kayla-kosik",
+      "name": "Cozy Cottage — Kayla Kosik Art Breakdown",
+      "category": "experiences",
+      "website": "https://kkosik.artstation.com/projects/KrnQA4",
+      "repository": null,
+      "evidence": "creator-article",
+      "evidence_url": "https://www.exp-points.com/kayla-kosik-creating-a-stylized-cozy-cottage-in-unity",
+      "upstream_license": "Artist's original scene and concept/third-party art proprietary; tutorial may be read, not copied wholesale",
+      "summary": {
+        "zh": "专业环境美术师的吉卜力感小屋场景制作拆解，重点展示手绘植物图集与场景美术编排。",
+        "en": "A professional environment artist's painterly cottage breakdown centered on handcrafted botanical texture atlases and composition."
+      },
+      "strength": {
+        "zh": "明确展示手绘 Albedo+透明度图集、按叶片外轮廓裁切网格、植物枢轴和手绘天空与纹理分工。",
+        "en": "Documents hand-painted albedo+alpha foliage atlases, silhouette-cut plant geometry with rooted pivots, and painted sky/texture planning."
+      },
+      "learning": {
+        "zh": "先画植物、再映射到三维卡片并人工调整形态，严禁用统一绿色球体取代复杂自然叶簇。",
+        "en": "Paint species first, then map and shape them into layered 3D cards; do not replace botanical forms with generic green primitive masses."
+      },
+      "tags": [
+        "foliage-atlas",
+        "hand-painted",
+        "environment-art",
+        "Unity",
+        "botanical-design"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "just-a-simple-tree",
+      "name": "Just a Simple Tree — Mike Fernandez",
+      "category": "pipelines",
+      "website": "https://justasimpletree.com/",
+      "repository": "https://github.com/MikeFernandez-Pro/just-a-simple-tree",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/MikeFernandez-Pro/just-a-simple-tree",
+      "upstream_license": "MIT source code; separately credited music, sound and demo media require their own rights review",
+      "summary": {
+        "zh": "基于 Three.js WebGPU/TSL 的六树种可参数化绘画风树木工厂，支持生长、季节、动态树叶与 GLB 导出。",
+        "en": "A browser-based Three.js/WebGPU anime tree studio with six species, seasons, growth, animated foliage and GLB export."
+      },
+      "strength": {
+        "zh": "把真实分枝、树叶透明纹理卡、叶簇共享法线、内部 AO、颜色带和分层风动结合，形成可信树冠。",
+        "en": "Combines branching silhouettes, painted leaf cards, clump-inherited normals, internal occlusion, color bands and independent multi-scale wind."
+      },
+      "learning": {
+        "zh": "重点研读 foliage.js、wood.js、shading.js、wind.js 与导出流程；柔和水彩氛围需要替换硬边赛璐璐光色。",
+        "en": "Study foliage.js, wood.js, shading.js, wind.js and exports; soften the original cel bands when targeting a watercolor-like look."
+      },
+      "tags": [
+        "Three.js",
+        "WebGPU",
+        "foliage",
+        "tree-generator",
+        "GLB",
+        "MIT"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "threejs-field-grass",
+      "name": "Three.js Field Grass — Painterly Wind",
+      "category": "infrastructure",
+      "website": "https://matthew-kissinger.github.io/threejs-field-grass/",
+      "repository": "https://github.com/matthew-kissinger/threejs-field-grass",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/matthew-kissinger/threejs-field-grass",
+      "upstream_license": "MIT core library; demo character, animation and media have separate licenses; experimental 0.1.0 release",
+      "summary": {
+        "zh": "可用于 Three.js 游戏的互动草地工程，包含多叶簇、定向草浪、动态风场和实体经过后的恢复轨迹。",
+        "en": "An experimental Three.js grass system with multi-blade tufts, directional wind and settling interaction wakes."
+      },
+      "strength": {
+        "zh": "公开 TSL 着色器、WebGPU/WebGL2 路径、确定性散布与草浪形变，支持海量草叶的统一材料绘制。",
+        "en": "Provides TSL materials with WebGPU/WebGL2 support, deterministic scatter and bounded deformation fields for dense grass."
+      },
+      "learning": {
+        "zh": "作为草地动态与地形融合的技术底座，必须先补原创手绘植被材质；注意库要求 Three.js 0.185.x。",
+        "en": "Study motion and terrain integration but supply original botanical art; its pinned Three.js 0.185.x dependency requires careful integration."
+      },
+      "tags": [
+        "Three.js",
+        "TSL",
+        "WebGPU",
+        "grass",
+        "wind",
+        "MIT"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "yomotsu-vegetation",
+      "name": "Yomotsu Vegetation — Procedural Nature Kit",
+      "category": "pipelines",
+      "website": "https://github.com/yomotsu/vegetation",
+      "repository": "https://github.com/yomotsu/vegetation",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/yomotsu/vegetation",
+      "upstream_license": "MIT repository; separately introduced third-party textures/models require independent rights checks",
+      "summary": {
+        "zh": "基于 Three.js 的开源程序化植物与自然物件库，包括树木、石头、卵石、草花与苔藓覆盖。",
+        "en": "An open Three.js vegetation toolkit generating trees, rocks, pebbles, grass, flowers and optional moss."
+      },
+      "strength": {
+        "zh": "提供种子化可重建资产、五级 LOD、异步 Web Worker 生成、部分碰撞网格，以及 WebGPU/WebGL 双兼容。",
+        "en": "Includes reproducible seeded geometry, five LOD stages, Web Worker generation, solid-object colliders and WebGPU/WebGL compatibility."
+      },
+      "learning": {
+        "zh": "吸收种类化的植物与石块程序、苔藓和真实米制接口；最终叶片和花朵仍需美术师定义材质与外形。",
+        "en": "Learn botanical type systems, rock/moss layering and meter-scale APIs; commissioned or authored leaf/flower art must determine the final look."
+      },
+      "tags": [
+        "Three.js",
+        "vegetation",
+        "moss",
+        "rock",
+        "WebGPU",
+        "MIT"
+      ],
+      "reviewed_on": "2026-11-07"
     }
   ]
 }
