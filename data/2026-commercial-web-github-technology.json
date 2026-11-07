@@ -32,7 +32,9 @@
       },
       "repo_2026_evidence": "README and LICENSE show 2026 original project; GitHub search created >=2026",
       "runtime": "not executed",
-      "repository_url": "https://github.com/blendi-remade/dioramas"
+      "repository_url": "https://github.com/blendi-remade/dioramas",
+      "demo_url": "https://github.com/blendi-remade/dioramas",
+      "preview_source": "repository-overview-no-live-demo-confirmed"
     },
     {
       "repo": "oso95/scroll-world",
@@ -59,7 +61,9 @@
       },
       "repo_2026_evidence": "repository discovered with created >=2026 query; README describes 2026-07 verification",
       "runtime": "not executed",
-      "repository_url": "https://github.com/oso95/scroll-world"
+      "repository_url": "https://github.com/oso95/scroll-world",
+      "demo_url": "https://github.com/oso95/scroll-world",
+      "preview_source": "repository-overview-not-generated-live-site"
     },
     {
       "repo": "enabled404/prism-liquid-glass",
@@ -87,7 +91,9 @@
       },
       "repo_2026_evidence": "GitHub search created >=2026 and LICENSE 2026",
       "runtime": "not executed",
-      "repository_url": "https://github.com/enabled404/prism-liquid-glass"
+      "repository_url": "https://github.com/enabled404/prism-liquid-glass",
+      "demo_url": "https://liquid-glass-carousel-taupe.vercel.app/",
+      "preview_source": "live-demo-from-original-README"
     },
     {
       "repo": "jaydickinson/free-gsap-effects",
@@ -113,7 +119,9 @@
       },
       "repo_2026_evidence": "2026 LICENSE",
       "runtime": "not executed",
-      "repository_url": "https://github.com/jaydickinson/free-gsap-effects"
+      "repository_url": "https://github.com/jaydickinson/free-gsap-effects",
+      "demo_url": "https://gsapvault.com/",
+      "preview_source": "live-product-library-from-README"
     },
     {
       "repo": "itsjwill/motion-primitives-website",
@@ -140,7 +148,9 @@
       },
       "repo_2026_evidence": "found through GitHub query created >=2026",
       "runtime": "not executed",
-      "repository_url": "https://github.com/itsjwill/motion-primitives-website"
+      "repository_url": "https://github.com/itsjwill/motion-primitives-website",
+      "demo_url": "https://nextjs-animated-components.vercel.app/",
+      "preview_source": "live-demo-from-README"
     },
     {
       "repo": "MengTo/sublevel-studio",
@@ -166,7 +176,9 @@
       },
       "repo_2026_evidence": "found through GitHub created >=2026 search",
       "runtime": "not executed",
-      "repository_url": "https://github.com/MengTo/sublevel-studio"
+      "repository_url": "https://github.com/MengTo/sublevel-studio",
+      "demo_url": "https://mengto.github.io/sublevel-studio/",
+      "preview_source": "live-demo-from-README"
     },
     {
       "repo": "hyeonsangjeon/Repolis",
@@ -191,7 +203,9 @@
       },
       "repo_2026_evidence": "2026 LICENSE",
       "runtime": "not executed",
-      "repository_url": "https://github.com/hyeonsangjeon/Repolis"
+      "repository_url": "https://github.com/hyeonsangjeon/Repolis",
+      "demo_url": "https://hyeonsangjeon.github.io/Repolis/",
+      "preview_source": "live-demo-from-README"
     }
   ],
   "rules": [
