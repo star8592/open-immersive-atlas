@@ -72,9 +72,12 @@ async function main(){
     await page.locator('#visible').uncheck();
     await page.waitForFunction(()=>window.__oiaMotionQA.getState().ai?.action==='search',{timeout:5000});
     await page.locator('#visible').check();
+    await page.locator('#view').scrollIntoViewIfNeeded();
+    const currentBox=await page.locator('#view').boundingBox();
+    assert.ok(currentBox?.width>400);
     const yawBefore=(await page.evaluate(()=>window.__oiaMotionQA.getState())).camera.yaw;
-    await page.mouse.move(box.x+box.width*.50,box.y+box.height*.55);
-    await page.mouse.down();await page.mouse.move(box.x+box.width*.60,box.y+box.height*.58,{steps:5});await page.mouse.up();
+    await page.mouse.move(currentBox.x+currentBox.width*.50,currentBox.y+currentBox.height*.55);
+    await page.mouse.down();await page.mouse.move(currentBox.x+currentBox.width*.60,currentBox.y+currentBox.height*.58,{steps:5});await page.mouse.up();
     await page.mouse.wheel(0,-220);
     await page.waitForTimeout(150);
     const afterOrbit=await page.evaluate(()=>window.__oiaMotionQA.getState());
