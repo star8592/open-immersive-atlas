@@ -14,7 +14,7 @@ test('ground normals are unit length',()=>{for(const m of ['flat','slope','steps
 test('invalid terrain query fails closed',()=>assert.throws(()=>terrainHeight(Infinity,2,'flat')));
 test('smoothstep is clipped and deterministic',()=>{near(smoothstep(-1),0);near(smoothstep(2),1);near(smoothstep(.5),.5)});
 test('root moves forward at declared speed',()=>near(rootPosition(3,.7)[2],2.1));
-test('both feet alternate stance at first sample',()=>assert.notEqual(footContact(.05,'left').stance,footContact(.05,'right').stance));
+test('both feet alternate stance outside the deliberate double-support interval',()=>assert.notEqual(footContact(.27,'left').stance,footContact(.27,'right').stance));
 test('foot trajectory never underground at swing',()=>{
  for(let i=0;i<=200;i++){const t=i/60;for(const side of ['left','right']){
  const foot=footContact(t,side,.7,'slope');assert.ok(foot.position[1]>=terrainHeight(foot.position[0],foot.position[2],'slope')+.064)}}
