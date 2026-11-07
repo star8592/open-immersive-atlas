@@ -18,3 +18,13 @@ Evidence values: `source-code` = source actually public; `creator-notes` = autho
 - Have you run `python3 scripts/validate_catalog.py` then `python3 scripts/build_catalog.py`? / 是否通过验证并重建目录？
 
 For new entries please use GitHub issues or pull requests. Avoid bulk links without meaningful technical analysis; five curated, verifiable references beat fifty speculative ones. / 不接受只有链接、没有技术机制的简单堆砌。
+
+## Creator and project-team profiles / 作者与团队档案
+
+Add `data/creators.json` profiles with **evidence-backed** `name`, `id`, `discipline`, `profile_url`, `works[]`, original bilingual `specialty.zh/en`, `reusable_methods.zh/en`, source `evidence_url`, rights and `reviewed_on`. / 作者资料应包含经过核实的专长、代表作和可借鉴方法，不能只抄首页简介。
+
+- Individual artists/engineers may be listed in the personal creator index. A social account representing an unnamed team or game must be labeled `entity_type: project-team` or similar. / 项目账号不能冒充个人作者。
+- Link related OIA project entries and authored technical cases when source-backed; don't invent GitHub source, hardware benchmarks, game engines or release dates from a marketing clip. / 没有源码不写成开源。
+- Use `creators.html` for public browsing; it fetches `data/creators.json` via HTTP. It must never transmit personal data, scrape protected social posts, or embed unlicensed third-party media. / 网页仅显示公开链接和原创文字。
+
+Review sources and authorship periodically; track missing evidence separately from confirmed facts. / 持续维护证据状态，发现新技术后追加版本研究。
