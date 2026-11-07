@@ -159,7 +159,7 @@ def main():
     jobs=load_jobs(opts.dataset,[x.strip() for x in opts.ids.split(",") if x.strip()])
     if not jobs:
         raise ValueError("Selected IDs do not match dataset")
-    with tempfile.TemporaryDirectory(prefix="oia-chrome-motion-") as tmpdir:
+    with tempfile.TemporaryDirectory(prefix="oia-chrome-motion-", ignore_cleanup_errors=True) as tmpdir:
         process,port=cap.start_chrome(pathlib.Path(tmpdir))
         try:
             with concurrent.futures.ThreadPoolExecutor(max_workers=opts.workers) as pool:
