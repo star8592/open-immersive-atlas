@@ -1,0 +1,62 @@
+{
+  "schema": "oia.ai_visual_web_browser_qa.v1",
+  "date": "2026-11-07",
+  "scope": "AI Visual Web catalog page and source-data rendering",
+  "repository": "star8592/open-immersive-atlas",
+  "entrypoint": "https://star8592.github.io/open-immersive-atlas/ai-web.html",
+  "data": "data/ai-visual-commercial-sites-2026-11-07.json",
+  "hardware": "Z890 Linux",
+  "browser": "Google Chrome 157 headless isolated profile",
+  "tests": [
+    {
+      "name": "fetch_public_html_on_machine",
+      "result": "pass",
+      "http_status": 200
+    },
+    {
+      "name": "fetch_local_catalog_html_and_json",
+      "result": "pass",
+      "html_http_status": 200,
+      "json_http_status": 200
+    },
+    {
+      "name": "javascript_syntax",
+      "result": "pass",
+      "method": "node --check extracted inline browser script"
+    },
+    {
+      "name": "render_25_example_cards",
+      "result": "pass",
+      "expected": 25,
+      "actual": 25
+    },
+    {
+      "name": "search_chinese_hotel",
+      "result": "pass",
+      "query": "酒店",
+      "matched_cards": 3
+    },
+    {
+      "name": "industry_filter_saas_and_evidence_case",
+      "result": "pass",
+      "matched_cards": 1
+    },
+    {
+      "name": "language_switch_to_english",
+      "result": "pass",
+      "observed_counter": "1 matching examples"
+    },
+    {
+      "name": "public_github_pages_http",
+      "result": "pass",
+      "status": 200
+    }
+  ],
+  "limitations": [
+    "HTTP 200 and browser DOM rendering do not prove all external linked example sites are live or their stated technology stacks independently verified.",
+    "This was desktop headless browser automation, not field traffic or real user mobile Safari performance.",
+    "Records describe websites and posted creator evidence; third-party assets not duplicated or re-licensed.",
+    "No private marketplace customer details or business pricing data are included."
+  ],
+  "source_evidence_note": "Source counts and links were taken from creator/award/showcase pages observed 2026-11-07; gallery listing is not independent full-code or performance QA."
+}
