@@ -26,8 +26,8 @@ A local-only browser tool that parses GLB v2 or glTF JSON, checks binary chunk b
 
 **[Spatial Lab 03 — WebGPU / WebGL2 same-scene comparison / 同场景双后端实验](labs/renderer-compare/)**
 
-Two original native pipelines use the **same packed terrain geometry and camera**, with 4 mesh densities (4,608–131,072 triangles), independent WebGL2 and WebGPU shader code, software-adapter safety guards, and a sequential 40-frame warmup + 120-frame sampling workflow. Browser tests have confirmed the WebGL2 path, software WebGPU rejection/fallback and JSON report export. Hardware WebGPU rendering has **not** been confirmed by this headless environment; neither JavaScript submit-call time nor requestAnimationFrame frame interval equals GPU execution time.  
-同一份几何数据进入 WebGL2 与 WebGPU，具备四档面数、自动后端状态识别、顺序预热采样及报告。已实测 WebGL2 与安全降级；硬件 WebGPU 性能仍需目标浏览器验收。
+Two original native pipelines use the **same packed terrain geometry and camera**, with 4 mesh densities (4,608–131,072 triangles), independent WebGL2 and WebGPU shader code, software-adapter safety guards, and a sequential 40-frame warmup + 120-frame sampling workflow. Browser tests have confirmed the WebGL2 path, software WebGPU rejection/fallback and JSON report export. **A separate Windows Chrome browser session confirmed both WebGL2 and WebGPU pipelines rendering 171 frames each without graphics errors, then completed 120 independently sampled frames per backend at 697 × 300 pixels with 18,432 triangles.** Linux headless SwiftShader remains explicitly unsupported. JS submit-call time and requestAnimationFrame intervals are **not GPU execution time** and do not establish an API speed ranking.  
+同一份几何数据进入 WebGL2 和 WebGPU；Windows Chrome 实测两套管线各连续绘制 171 帧、分别完成 120 帧采样，图形错误码为零。Linux 无头软件 GPU 仍不稳定，不将 JS 提交耗时或帧间隔混称 GPU 执行时间。
 
 [Source and limitations / 源码与测量边界](labs/renderer-compare/README.md) · [Browser smoke / 浏览器测试](labs/renderer-compare/test-browser.mjs)
 
