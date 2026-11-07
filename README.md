@@ -3,7 +3,7 @@
 **Discover outstanding 3D experiences. Understand how they work. Learn from the best.**  
 **发现卓越的三维作品，理解它们如何实现，向最优秀的创作者学习。**
 
-[中文说明](README.zh-CN.md) · [Five Research Lanes / 五线并行研究](research.html) · [Bilingual catalog / 双语目录](CATALOG.md) · [Interactive explorer / 交互检索](index.html) · [Creator Atlas / 作者图谱](creators.html) · [Creator profiles / 作者资料](CREATORS.md) · [Contribute / 参与贡献](CONTRIBUTING.md)
+[中文说明](README.zh-CN.md) · [Primary Source Radar / 一手资料雷达](sources.html) · [Five Research Lanes / 五线并行研究](research.html) · [Bilingual catalog / 双语目录](CATALOG.md) · [Interactive explorer / 交互检索](index.html) · [Creator Atlas / 作者图谱](creators.html) · [Creator profiles / 作者资料](CREATORS.md) · [Contribute / 参与贡献](CONTRIBUTING.md)
 
 > **This is a curated, evidence-based index and knowledge archive — not a fork of any third-party product and not a replacement for Three.js, A-Frame, or Blender.**  
 > 本仓库是经过出处核验的双语精选技术索引，不是第三方产品镜像，也不是一个新的 3D 引擎。
@@ -34,9 +34,19 @@ Two original native pipelines use the **same packed terrain geometry and camera*
 **GPU Timestamp Query upgrade / 真正 GPU 渲染计时：** Spatial Lab 03 now uses optional WebGPU `timestamp-query` and WebGL2 `EXT_disjoint_timer_query_webgl2`, with 24 asynchronous per-backend samples, explicit unsupported/disjoint reporting and downloadable raw sample data. Actual Windows Intel Xe-LPG browser runs succeeded at all four geometry densities (each API collected 24/24 samples), without implying a general API performance ranking. [Bilingual technical case](docs/cases/gpu-browser-timestamp-queries.md) · [Hardware evidence JSON](labs/renderer-compare/evidence/2026-11-07-intel-xe-lpg-gpu-timers.json).  
 **实测升级：** 第三个实验现在支持真正的 GPU 通道时间戳查询；Intel Xe-LPG 的四档几何在 Windows Chrome 已完成 WebGL2/WebGPU 两后端共八组 GPU 计时，结果及限制公开，不把个别数据推广为普遍性能结论。
 
+## Expanded game intelligence / 游戏研发视野扩展（2026-11-07）
+
+**45 additional source-verified public repositories** have been catalogued across research-grade WebGPU/3DGS, AI asset generation, procedural levels, playable RTS/simulation/RPG references, game engines, multiplayer infrastructure, audio, automation, accessibility and analytics. The catalog now has **122 bilingual project records**. Public repository existence was verified; **their runtime quality and licensing for individual art, model weights and datasets are not automatically verified**.
+
+**18 original-source references**, separately indexed in the [searchable Source Radar](sources.html), cover GDC technical talks, developer postmortems, IGDA research, Steamworks/itch publishing, accessibility, W3C/Khronos standards, CC0 art licensing and current research papers. Not every resource is free or usable commercially; each has an explicit rights caveat.
+
+- [Source Radar / 一手资料与行业情报](sources.html)
+- [What to adopt and validate / 本轮研究结论及验收路线](docs/research/broad-discovery-2026-11-07.md)
+- [Machine-readable project catalog / 项目 JSON](data/projects.json) · [Source Radar JSON / 资料 JSON](data/source-radar.json)
+
 ## First edition / 首批收录
 
-**77 independently described references · 4 categories · Chinese and English for every record.**
+**122 independently described references · 4 categories · Chinese and English for every record.**
 
 | Category / 分类 | Contents / 内容 |
 |---|---|
