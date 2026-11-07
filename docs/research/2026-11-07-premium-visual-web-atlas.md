@@ -58,6 +58,31 @@ Each row includes a directly attributable creator write-up, official work or awa
 | Spatial navigation / 空间导航 | Spline or original scene + semantic HTML links | 体验馆、创意品牌 / immersive showrooms | SEO、后退导航、加载 / crawlability and page flow |
 | Interactive brand symbol / 品牌互动标志 | stateful hover/drag + shader/GSAP | B2B 品牌 / B2B brand | 花哨盖过营销 CTA / distracts from conversions |
 
+## B2. Direct X post shortlist and feed audit / 最新 X 原帖实录
+
+**Machine-readable bilingual records / 双语结构化档案：** [data/creative-visual-web-x-posts.json](../../data/creative-visual-web-x-posts.json) — **10 X permalink records traced through a third-party archive, 1 user-supplied uninspected seed**. Each item has author/date/post permalink/archived transcription/brand link/explicitly disclosed technology/rights and reproduction state. Original X media was **not independently fetched**; third-party textual archives are evidence of the posts, not proof we played every video. / 10 条追溯 X 原帖及第三方归档的记录、1 条尚无法读取的用户原帖；我们没有冒称在 X 上独立播放了全部视频。
+
+| Work / 作品 | Original X post / 原帖 | Confirmed details / 已有依据 | How it transfers to original client work / 可学习点 |
+|---|---|---|---|
+| **Overworld Audio** | [@greensock 2026-11-04](https://x.com/greensock/status/2117685463205171492) | GSAP quote explicitly names Three.js, VueJS, WebGL; blue 3D audio-world maze and camera fly-through. / 蓝色 3D 迷宫与滚动飞行 | Original sound-studio immersive lobby / 原创声音工作室交互首页 |
+| **Jolt** | [@rafaelaugustoms 2026-11-05](https://x.com/rafaelaugustoms/status/2118061715359494310) | Author explicitly names Jolt Web as experimental, spring-driven shaders and liquid masks. / 弹簧驱动 Shader | Premium software hero with original geometry; do not promise untested production support. / 高端软件动效 |
+| **Relevo & Vinco** | [@greensock 2026-11-04](https://x.com/greensock/status/2118007670582165879) | GSAP ScrollTrigger, ScrollSmoother, SplitText, ScrollTo, SVG, reduced motion disclosed; paper embossing visual. / 压印纸纹与滚动叙事 | Industrial materials and craft manufacturer identity / 制造与印刷行业高端官网 |
+| **Plum Autumn Release** | [@tanish2k 2026-11-04](https://x.com/tanish2k/status/2117812560917561378) | Creator's seasonal release story and skydiving landing page; technical stack unverified. / 滚动跳伞叙事 | Original yearly product reveal / 年度品牌发布 |
+| **DeepBook** | [@Holographikco 2026-11-03](https://x.com/Holographikco/status/2117638168333721733) | Creator reports Awwwards Site of the Day + Developer Award, cinematic trader and monochrome product dials. / 电影化金融科技视觉 | Fintech brand launch; do not imply award or technical stack for our work. / 金融品牌官网 |
+| **Syndicator** | [@y_molodtsov 2026-11-05](https://x.com/y_molodtsov/status/2118014408110579987) | Product supporter credits designer @karlov_zip; editorial typography and UI demo. / 优质排版与真实产品展示 | High-end SaaS page without expensive WebGL / 低技术成本高设计感 |
+| **RoutingCat** | [@c_emile_c 2026-11-04](https://x.com/c_emile_c/status/2117720852821385417) | Product-builder post; cream/red typographic system + metrics UI. / 奶油色与红字的品牌系统 | Conversion-driven AI product branding / B2B产品视觉 |
+| **Simsalasim** | [@KDHabibi 2026-11-03](https://x.com/KDHabibi/status/2117578808404365701) | Founder reports site launch; neon gradients and portrait cards. / 渐变摄影与大卡片 | Consumer tech branding / 消费科技视觉 |
+| **Denada** | [@orpetron 2026-11-03](https://x.com/orpetron/status/2117625777365688579) | Award curator, **not original studio**; retro static / pastel product site. / 奖项机构分享非作者技术复盘 | Food and beverage brand visuals / 食品品牌 |
+| **Shift Robotics** | [@orpetron 2026-11-03](https://x.com/orpetron/status/2117631823563932073) | Award curator, **not original studio**; full-bleed video and hardware selling points. / 硬件商品视觉叙事 | Premium physical-product showcase / 智能硬件品牌 |
+
+### Collection engines / 长期筛选入口
+
+- [WHAT NEW IN X — Landing Page Design](https://x.yrzhe.top/en/c/landing-pages): a **third-party X post index** with **252 records shown on the inspected 2026-11-07 collection page** (the index changes dynamically). Captures original permalinks and descriptions; prioritize original maker disclosure over reshare/awards. / 可通过类别筛选动效、3D、WebGL 与行业。
+- [Landing Love — collection](https://www.landing.love/collection/): full-page site recordings, category selectors for 3D / GSAP / Three.js / WebGL. **Counts vary by crawl**; directory membership alone is not a rights grant or benchmark. / 可逐个研究可交互页面完整体验。
+- [Codrops author case studies](https://tympanus.net/codrops/tag/case-study/): source-grounded implementation notes and production postmortems; pair with creator posts. / 由演示回溯作者工程复盘。
+
+**Verification discipline / 来源证据分层：** author X post mirrored by independent index ≠ original platform opened; original creator's technology disclosure ≠ our own reproducing the website; visual style resemblance ≠ asset licence or permission to reuse branded work. / 账号内容、真实技术和版权授权严格区分。
+
 ## C. X post watchlist, evidence levels / X 帖子雷达与证据等级
 
 **Seed: 1 permalink, uninspected** — [@BeyondTheBoxCN / status 2118704959223116082](https://x.com/BeyondTheBoxCN/status/2118704959223116082). Original content was inaccessible via this research environment on 2026-11-07. It remains a **pending item**; zero stack claims.
