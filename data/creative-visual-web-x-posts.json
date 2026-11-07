@@ -4,7 +4,7 @@
   "purpose": "Bilingual evidence-indexed X posts about premium visual websites, not third-party content redistribution",
   "total_records": 11,
   "verified_archive_records": 10,
-  "uninspected_seed_records": 1,
+  "uninspected_seed_records": 0,
   "source_feeds": [
     {
       "url": "https://x.yrzhe.top/en/c/landing-pages",
@@ -22,23 +22,40 @@
     {
       "id": "beyondtheboxcn-2118704959223116082",
       "author": "BeyondTheBoxCN",
-      "work": null,
+      "work": "HTML-in-Canvas × game-like web apps",
       "posted_on": "2026-11-07",
       "original_post_url": "https://x.com/BeyondTheBoxCN/status/2118704959223116082",
       "archived_post_url": null,
       "site_url": null,
-      "evidence_level": "user-supplied-uninspected",
+      "evidence_level": "original-x-dom-read-via-authenticated-z890-browser",
       "summary": {
-        "zh": "用户提供的重点种子；原帖视频和正文因 X 403 尚未核验。",
-        "en": "Original user seed; X media and text not inspected."
+        "zh": "已用 DevControl/Zoria 访问 Z890 上现有已登录 Chrome 的 X 原帖，读取正文及评论：Chrome 157 HTML-in-Canvas 把可交互 HTML/Dom 元素与 2D/WebGL/WebGPU Canvas 结合。作者举出 3D 商场、游戏内可操作网站和 3D 工厂设备管理三个未来场景，并链接 @clockmaker 的嵌入式视频；未声称已独立分析视频每帧。Chrome 官方 2026-10-26 博文确认 Chrome 157 稳定版支持 API；跨浏览器仍需要检测与降级。",
+        "en": "Original X post and comments read from an already signed-in Chrome session on the owner's Z890 through DevControl/Zoria. Post proposes HTML-in-Canvas for 3D malls, live HTML terminals inside games and 3D factory dashboards, with an embedded @clockmaker video. Video frames not independently inspected. Chrome official Oct 26 2026 confirms stable Chrome 157 shipping; other browsers need feature detection/fallback."
       },
-      "declared_stack": [],
-      "commercial_fit": null,
+      "declared_stack": [
+        "Chrome 157 HTML-in-Canvas API",
+        "2D Canvas",
+        "WebGL",
+        "WebGPU",
+        "DOM"
+      ],
+      "commercial_fit": "3D 产品展厅 / 3D 工业数字孪生界面 / 游戏式互动网页 / 可操作品牌官网",
       "original_video_rehosted": false,
       "local_reproduction": "not_started",
       "browser_validation": "not_run",
       "license_review": "pending",
-      "reviewed_on": "2026-11-07"
+      "reviewed_on": "2026-11-07",
+      "source_validation": {
+        "method": "Zoria Control browser_targets + browser_snapshot",
+        "device_hostname": "master-MS-iCraft-Z890-Arctic",
+        "existing_logged_in_chrome_session": true,
+        "original_post_text_read": true,
+        "replies_read": true,
+        "embedded_video_present": true,
+        "embedded_video_frames_inspected": false,
+        "technical_primary_reference": "https://developer.chrome.com/blog/html-in-canvas",
+        "framework_support_reference": "https://developer.chrome.com/docs/web-platform/html-in-canvas"
+      }
     },
     {
       "id": "greensock-2117685463205171492",
@@ -264,5 +281,7 @@
       "license_review": "pending",
       "reviewed_on": "2026-11-07"
     }
-  ]
+  ],
+  "original_x_browser_verified_records": 1,
+  "source_strategy": "Prefer Zoria/DevControl's already authorized Z890 Chrome session for original X posts first; if this is unavailable, mark pending and use web/third-party archive as fallback. Do not infer login failure from external web crawler 403."
 }
