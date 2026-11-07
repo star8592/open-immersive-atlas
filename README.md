@@ -3,7 +3,7 @@
 **Discover outstanding 3D experiences. Understand how they work. Learn from the best.**  
 **发现卓越的三维作品，理解它们如何实现，向最优秀的创作者学习。**
 
-[AI Premium Business Web Explorer / AI 高级商业网站](ai-web.html) · [中文说明](README.zh-CN.md) · [Primary Source Radar / 一手资料雷达](sources.html) · [Five Research Lanes / 五线并行研究](research.html) · [Bilingual catalog / 双语目录](CATALOG.md) · [Interactive explorer / 交互检索](index.html) · [Creator Atlas / 作者图谱](creators.html) · [Creator profiles / 作者资料](CREATORS.md) · [Contribute / 参与贡献](CONTRIBUTING.md)
+[2026 X Commercial Web / 2026 商业网站原帖](x-web-2026.html) · [AI Premium Business Web Explorer / AI 高级商业网站](ai-web.html) · [中文说明](README.zh-CN.md) · [Primary Source Radar / 一手资料雷达](sources.html) · [Five Research Lanes / 五线并行研究](research.html) · [Bilingual catalog / 双语目录](CATALOG.md) · [Interactive explorer / 交互检索](index.html) · [Creator Atlas / 作者图谱](creators.html) · [Creator profiles / 作者资料](CREATORS.md) · [Contribute / 参与贡献](CONTRIBUTING.md)
 
 > **This is a curated, evidence-based index and knowledge archive — not a fork of any third-party product and not a replacement for Three.js, A-Frame, or Blender.**  
 > 本仓库是经过出处核验的双语精选技术索引，不是第三方产品镜像，也不是一个新的 3D 引擎。
