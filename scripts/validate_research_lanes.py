@@ -15,11 +15,19 @@ assert len({x["id"] for x in lanes}) == 5
 assert {x["number"] for x in lanes} == {1, 2, 3, 4, 5}
 for lane in lanes:
     title = lane["id"]
-    assert lane["status"] == {
-        "research": "first-pass-published",
-        "prototype": "not-built",
-        "game_integration": "not-verified",
-    }, f"{title}: avoid claiming unverified implementations"
+    assert lane["status"]["research"] == "first-pass-published"
+    assert lane["status"]["game_integration"] == "not-verified", f"{title}: private-game integration is unverified"
+    if title == "lane-03":
+        assert lane["status"]["prototype"] == "working-diagnostic-demo", f"{title}: existing original experiment must be tracked"
+        for field in ("prototype_source", "prototype_test"):
+            asset = ROOT / lane[field]
+            assert asset.is_file() and asset.resolve().is_relative_to(ROOT), f"{title}: missing prototype {field}"
+        assert lane["prototype_url"] == "https://star8592.github.io/open-immersive-atlas/labs/motion-qa/"
+        evidence = lane.get("prototype_evidence", {})
+        assert evidence.get("unit_tests") == "38/38 PASS"
+        assert "synthetic" in evidence.get("scope", "")
+    else:
+        assert lane["status"]["prototype"] == "not-built", f"{title}: unsupported prototype claim"
     for field in ("name", "focus", "next_test"):
         assert all(isinstance(lane[field].get(k), str) and lane[field][k].strip()
                    for k in ("zh", "en")), f"{title}: {field} needs both languages"
