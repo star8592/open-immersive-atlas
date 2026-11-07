@@ -153,5 +153,38 @@ function mount(url,label,opts={}){
  }
  return shell;
 }
-window.OIASiteMedia={load,mount,get,normalizeUrl};
+function featured(items,container){
+ if(!container)return 0;
+ container.replaceChildren();
+ let count=0;
+ const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ const dataSaver=Boolean(navigator.connection&&navigator.connection.saveData);
+ for(const item of items){
+  const entry=get(item.url);
+  if(!entry||!secureMotionAsset(entry.motion))continue;
+  const card=el("article","oia-reel-card");
+  const media=el("div","oia-reel-media");
+  const video=el("video","oia-reel-video");
+  video.muted=true;video.playsInline=true;video.loop=true;video.controls=true;
+  video.preload="metadata";video.autoplay=!reduce&&!dataSaver;
+  video.src=secureMotionAsset(entry.motion);
+  video.poster=secureAsset(entry.cover)||"";
+  video.setAttribute("aria-label",item.title+" 浏览器真实滚动录屏，无声音");
+  media.append(video);
+  const tag=el("span","oia-reel-evidence","Chrome 实拍 · 静音滚动");
+  media.append(tag);
+  card.append(media);
+  const body=el("div","oia-reel-body");
+  body.append(el("strong",null,item.title));
+  body.append(el("p",null,item.description||"在原始网站真实录制的短时滚动片段"));
+  const links=el("div","oia-reel-links");
+  const action=el("button","oia-reel-enlarge","放大播放 ↗");action.type="button";
+  action.onclick=()=>showMotion(entry,item.title,item.url);
+  const link=el("a",null,"原始网站 ↗");link.href=item.url;link.rel="noopener noreferrer";link.target="_blank";
+  links.append(action,link);body.append(links);card.append(body);container.append(card);
+  count++;
+ }
+ return count;
+}
+window.OIASiteMedia={load,mount,get,normalizeUrl,featured};
 })();
