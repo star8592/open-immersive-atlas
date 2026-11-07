@@ -26,7 +26,7 @@ A local-only browser tool that parses GLB v2 or glTF JSON, checks binary chunk b
 
 ## First edition / 首批收录
 
-**66 independently described references · 4 categories · Chinese and English for every record.**
+**73 independently described references · 4 categories · Chinese and English for every record.**
 
 | Category / 分类 | Contents / 内容 |
 |---|---|
@@ -105,3 +105,13 @@ These essays are authored analysis of public sources, **not** upstream source mi
 - [WebXR spatial input / 多设备空间输入](docs/cases/webxr-spatial-interaction.md) — capability detection and fallback / 设备能力探测与降级。
 
 These are independently researched public guides, **not** evidence of internal game deployment. / 以上为公开研究文档，尚不等于内部游戏已集成。
+
+## Painterly Nature Research / 绘画式自然场景技术专题
+
+**New technical direction: artistic quality first, geometry/LOD optimization later. / 新方向：先完成美术表达，再优化几何与性能。**
+
+- [Painterly Nature Production Playbook / 绘画式自然场景制作总纲](docs/cases/painterly-nature-3d-production-playbook.md) — artist-authored foliage atlases, cutout leaf silhouettes, tree-canopy normals, ecological clustering, atmospherics, true watercolor camera mapping and WebGPU/WebGL2 implementation candidates. / 手绘叶片、植物形态、自然散布、光影与可运行浏览器技术。
+- [Tiny Delivery original creator environment article analysis / 原作者环境技术剖析](docs/cases/sinica-tiny-delivery-environment.md).
+- [Tiny Delivery terrain transitions and grounded trails / 地表材质与轮迹专题](docs/cases/sinica-terrain-heightblend-vfx.md).
+
+New verified references include Tiny Delivery, Dordogne, Tiny Glade, Kayla Kosik's Cozy Cottage, Just a Simple Tree, Three.js Field Grass and Yomotsu Vegetation. **These are evidence-indexed studies, not claims of locally integrated high-fidelity gameplay.** / 以上仅为公开技术与美术方法研究，不代表游戏已经完成美术重构。
