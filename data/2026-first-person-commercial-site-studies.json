@@ -22,7 +22,9 @@
       ],
       "design_zh": "80 年代办公机器、官僚文件语言、复古结构控制和现代三维交互，让订阅式设计服务形成强烈记忆点。",
       "commercial_zh": "适合设计订阅、B2B 创意服务、Web3 商业和高差异化咨询机构。",
-      "evidence": "first person Codrops case study; site first release date not independently audited"
+      "evidence": "first person Codrops case study; site first release date not independently audited",
+      "live_url": "https://pxpush.com/",
+      "live_source_verification": "original author/portfolio or primary business site lookup 2026-11-07"
     },
     {
       "slug": "kononenko",
@@ -45,7 +47,9 @@
       ],
       "design_zh": "网格/列表/无限画廊三种可切换作品查看方式；草图发光显影、同一 DOM 对应多张 WebGL 平面及页面转场。",
       "commercial_zh": "建筑事务所、地产展示、工业设计工作室高价值项目集。",
-      "evidence": "2026-09-18 author implementation article describes a full new branded website; actual X status not retrieved"
+      "evidence": "2026-09-18 author implementation article describes a full new branded website; actual X status not retrieved",
+      "live_url": "https://kononenkogroup.com/",
+      "live_source_verification": "original author/portfolio or primary business site lookup 2026-11-07"
     },
     {
       "slug": "house-of-yellow",
@@ -68,7 +72,9 @@
       ],
       "design_zh": "原创运动品牌体系，视频不是背景填充而是业务核心；两种项目档案视图、SVG 形变与影像联动。",
       "commercial_zh": "短剧、视频制作公司、影视及摄影工作室的高级官网、项目档案和客户转化。",
-      "evidence": "first-person 2026 article about launch of redesigned branded studio website"
+      "evidence": "first-person 2026 article about launch of redesigned branded studio website",
+      "live_url": "https://houseofyellow.nl/",
+      "live_source_verification": "original author/portfolio or primary business site lookup 2026-11-07"
     },
     {
       "slug": "chems-studio",
@@ -85,7 +91,9 @@
       ],
       "design_zh": "将多年摄影、影像与创意作品重排为可探索视觉档案，保持电影作品节奏又让用户按项目查找。",
       "commercial_zh": "广告代理、品牌影像、摄影工作室与影视制作公司网站。",
-      "evidence": "2026 original creator case study; page first launch month not separately verified"
+      "evidence": "2026 original creator case study; page first launch month not separately verified",
+      "live_url": "https://www.chems.studio/",
+      "live_source_verification": "original author/portfolio or primary business site lookup 2026-11-07"
     },
     {
       "slug": "dash-creative",
@@ -103,7 +111,9 @@
       ],
       "design_zh": "品牌Logo 的吸附式磁力交互，与 iOS 风格卡片动效结合；概念统一而非炫技堆叠。",
       "commercial_zh": "品牌服务机构、B2B 电商咨询与数字创意代理。",
-      "evidence": "2026 firsthand studio-authored redesign case study"
+      "evidence": "2026 firsthand studio-authored redesign case study",
+      "live_url": "https://www.dashcreative.co/",
+      "live_source_verification": "original author/portfolio or primary business site lookup 2026-11-07"
     }
   ],
   "policy": "Do not merge these into X-post count or claim precise launch date from case study publication date. No copying of site visuals or source.",
