@@ -34,6 +34,39 @@ const el=(tag,cls,text)=>{
 function secureAsset(path){
  return typeof path==="string"&&/^assets\/site-previews\/2026-11-07\/[a-zA-Z0-9_\/-]+\.webp$/.test(path)?"./"+path:null
 }
+
+function secureMotionAsset(path){
+ return typeof path==="string" && /^assets\/site-previews\/2026-11-07\/motion\/[a-zA-Z0-9_-]+\.mp4$/.test(path)
+   ? "./"+path : null;
+}
+function showMotion(entry,title,url){
+ const src=secureMotionAsset(entry.motion);
+ if(!src)return;
+ // Build the dialog only on explicit click. Never auto-open or download a
+ // third party clip; this is our short, silent recording of the live site.
+ const dlg=el("dialog","oia-image-dialog oia-motion-dialog");
+ const top=el("div","oia-dialog-head");
+ top.append(el("strong",null,title+" · 浏览器实录"));
+ const close=el("button","oia-dialog-close","关闭 ×");
+ close.type="button";top.append(close);dlg.append(top);
+ const body=el("div","oia-dialog-body");
+ const video=el("video","oia-motion-large");
+ video.controls=true;video.muted=true;video.loop=true;video.playsInline=true;
+ video.preload="metadata";video.autoplay=true;video.poster=secureAsset(entry.cover)||"";
+ video.src=src;video.setAttribute("aria-label",title+" 的真实网页滚动效果");
+ body.append(video);
+ const foot=el("div","oia-dialog-foot");
+ foot.append(el("span",null,"Z890 Chrome 实录 · 无声 · 仅展示短段真实网页滚动；不是原作者宣传视频"));
+ const link=el("a",null,"访问原站 ↗");link.target="_blank";link.rel="noopener noreferrer";
+ link.href=/^https:\/\//.test(url||"")?url:entry.url;foot.append(link);
+ body.append(foot);dlg.append(body);document.body.append(dlg);
+ const finish=()=>{video.pause();video.removeAttribute("src");video.load();dlg.remove()};
+ close.addEventListener("click",()=>dlg.close());
+ dlg.addEventListener("click",ev=>{if(ev.target===dlg)dlg.close()});
+ dlg.addEventListener("close",finish,{once:true});
+ dlg.showModal();
+ video.play().catch(()=>{/* Native controls provide user-initiated playback. */});
+}
 function get(url){
  const k=normalizeUrl(url);return entries.get(k)||entries.get(k.replace(/\/$/,""))||null
 }
@@ -83,6 +116,35 @@ function mount(url,label,opts={}){
  const labelBadge=el("span","snapshot-label",(entry.status==="official_cover"?"官网公开预览图（非截图）":(opts.kind||"真实网站截图"))+" · "+(opts.year||"2026"));open.append(labelBadge);
  open.onclick=()=>preview(entry,label,url);
  shell.append(open);
+ const motion=secureMotionAsset(entry.motion);
+ if(motion){
+  const motionVideo=el("video","snapshot-motion");
+  motionVideo.muted=true;motionVideo.playsInline=true;motionVideo.loop=true;
+  motionVideo.preload="none";motionVideo.poster=secureAsset(entry.cover)||"";
+  motionVideo.setAttribute("aria-hidden","true");
+  motionVideo.tabIndex=-1;motionVideo.disablePictureInPicture=true;
+  let initialized=false;
+  const hoverPermitted=()=>(
+    window.matchMedia("(hover: hover)").matches
+    && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    && !(navigator.connection&&navigator.connection.saveData)
+  );
+  const start=()=>{
+   if(!hoverPermitted())return;
+   if(!initialized){motionVideo.src=motion;initialized=true}
+   motionVideo.play().catch(()=>shell.classList.remove("motion-playing"));
+  };
+  const stop=()=>{shell.classList.remove("motion-playing");motionVideo.pause()};
+  motionVideo.addEventListener("playing",()=>shell.classList.add("motion-playing"));
+  motionVideo.addEventListener("error",stop);
+  shell.append(motionVideo);
+  shell.addEventListener("mouseenter",start);
+  shell.addEventListener("mouseleave",stop);
+  const play=el("button","snapshot-motion-button","▶ 实录动效");
+  play.type="button";play.setAttribute("aria-label","播放 "+label+" 的实拍网页滚动视频");
+  play.onclick=()=>{stop();showMotion(entry,label,url)};
+  shell.append(play);
+ }
  if(secureAsset(entry.scroll)){
   const toggle=el("button","snapshot-contrast","对比滚动画面");toggle.type="button";
   toggle.setAttribute("aria-label","切换 "+label+" 的首屏与滚动截图");
