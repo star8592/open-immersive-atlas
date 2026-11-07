@@ -34,3 +34,24 @@ dialog.oia-image-dialog::backdrop{background:#000e;backdrop-filter:blur(7px)}
 .snapshot-shell .snapshot-motion-button:hover,.snapshot-shell .snapshot-motion-button:focus-visible{background:#f1ffd9;color:#111}
 .oia-motion-dialog .oia-motion-large{width:100%;height:auto;max-height:70vh;display:block;background:#0c1720;border-radius:6px;object-fit:contain}
 @media(prefers-reduced-motion:reduce){.snapshot-shell .snapshot-motion{transition:none}.snapshot-shell.motion-playing .snapshot-motion{opacity:0}}
+
+/* Featured playable recordings. Video frames are factual captures of the
+   site's live scroll state, not original 3D source or authored demo footage. */
+.oia-motion-reel{margin:27px 0 30px}
+.oia-reel-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;justify-content:space-between;margin-bottom:14px}
+.oia-reel-head h2{margin:0;color:#f4fff5;font-size:clamp(1.25rem,2vw,1.65rem);letter-spacing:-.035em}
+.oia-reel-head p{margin:0;color:#b4c9d0;font-size:.82rem}
+.oia-motion-reel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.oia-reel-card{display:flex;flex-direction:column;border:1px solid #496571;border-radius:16px;background:linear-gradient(160deg,#182d38,#101a23);overflow:hidden;min-height:0}
+.oia-reel-media{position:relative;background:#0f1923}
+.oia-reel-video{display:block;width:100%;height:auto;aspect-ratio:640/392;object-fit:cover;background:#132331}
+.oia-reel-evidence{position:absolute;pointer-events:none;top:10px;left:10px;border:1px solid #9bbfb86b;background:#06111dcb;border-radius:6px;padding:4px 7px;color:#e9ffff;font:700 11px/1.25 system-ui,sans-serif}
+.oia-reel-body{padding:16px 17px 18px;display:flex;flex-direction:column;gap:7px;flex:1}
+.oia-reel-body strong{color:#f0f8f1;letter-spacing:-.022em;font-size:1rem;line-height:1.26}
+.oia-reel-body p{margin:0;color:#b8cbd1;font-size:.81rem;line-height:1.55;flex:1}
+.oia-reel-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:5px}
+.oia-reel-links button{border:1px solid #c3f78f;background:#c8fc91;border-radius:8px;color:#153124;padding:6px 10px;font:700 12px/1.4 system-ui,sans-serif;cursor:pointer}
+.oia-reel-links a{color:#dcffa7;font:700 12px/1.5 system-ui,sans-serif}
+.oia-reel-links button:focus-visible,.oia-reel-links a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:1010px){.oia-motion-reel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.oia-motion-reel-grid{grid-template-columns:1fr}.oia-motion-reel{margin:18px 0 26px}}
