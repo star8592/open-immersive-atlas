@@ -1,10 +1,10 @@
 # Open Immersive Atlas · 开放沉浸式技术图谱
 
-[English / 主 README](README.md) · [完整双语目录](CATALOG.md) · [交互检索页](index.html)
+[English / 主 README](README.md) · [完整双语目录](CATALOG.md) · [交互检索页](index.html) · [作者技术图谱](creators.html) · [作者档案目录](CREATORS.md)
 
 **我们不是在复刻一个 Three.js，而是在建立一座可持续增长的 3D 技术图书馆。** 收录高质量三维网站、交互游戏、AI 三维工具、渲染算法、开源游戏引擎、资产制作与验收工具。每个项目都有中英文介绍、独特优势、值得学习的实现机制、原作者链接与许可证信息。
 
-**四大分类：** 沉浸式 3D 作品｜AI 3D 工厂｜框架与游戏引擎｜渲染、物理与工程基础设施。当前收录 **73** 条，按真实一手证据和较谨慎的许可表述建档。
+**四大分类：** 沉浸式 3D 作品｜AI 3D 工厂｜框架与游戏引擎｜渲染、物理与工程基础设施。当前收录 **77** 条，按真实一手证据和较谨慎的许可表述建档。
 
 ## 原创可运行技术实验
 
@@ -74,4 +74,13 @@
 - [《Tiny Delivery》原作者生态场景与材质拆解](docs/cases/sinica-tiny-delivery-environment.md)
 - [草地/泥土高度混合、真实接触轮迹技术](docs/cases/sinica-terrain-heightblend-vfx.md)
 
-本轮补入 Tiny Delivery、Dordogne、Tiny Glade、Kayla Kosik Cozy Cottage，以及三项可研究的 Three.js 植被开源技术，总计 **73 条双语档案**。私有游戏代码、美术资产及专有试验继续与公开仓库隔离。
+本轮补入 Tiny Delivery、Dordogne、Tiny Glade、Kayla Kosik Cozy Cottage，以及三项可研究的 Three.js 植被开源技术，此前完成 **73 条双语档案**。私有游戏代码、美术资产及专有试验继续与公开仓库隔离。
+
+## Wildward：从作者公开视频研究驾驶、草和水（2026-11-07）
+
+已经核查 @PlayWildward 的三段实际视频，以及 2026-11-05 的项目介绍：这是一款声称支持一到四人合作的荒野探险项目，公开提到程序化地形、草被接触响应、越野车地形重量感和模拟河流。**引擎、物理求解器和正式源码尚未核实，不能把视觉表现当成完成证明；同名中世纪奇幻网站也未确认属于该账号。**
+
+- [Wildward：视频分镜、公开证据、真实 HTML5 水体/车辆/草地技术路径与独立验收](docs/cases/wildward-procedural-expedition-driving-water.md)
+- [按专长搜索作者与团队账号](creators.html) · [完整中英双语作者目录](CREATORS.md)
+
+本轮新增 Wildward、Evan Wallace WebGL Water、jeantimex WebGPU Water、SweK WebGL2 Water 四条可核查条目，**项目库总计 77 条**。作者资料目前是 **16 位个人作者 + 1 个项目账号**，分开分类以免误认团队身份。
