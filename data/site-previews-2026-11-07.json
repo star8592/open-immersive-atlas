@@ -19,7 +19,8 @@
     "extras": {
       "total": 12,
       "captured": 8
-    }
+    },
+    "official_cover_fallbacks": 10
   },
   "sites": [
     {
@@ -29,8 +30,11 @@
       "final_url": "https://www.moto-card.com/",
       "title": "Moto Card | Homepage",
       "captured_at": "2026-11-07T07:11:56.339488+00:00",
-      "status": "low_detail_capture",
-      "reason": "Likely blank/loading/single-color screenshot"
+      "status": "official_cover",
+      "reason": "Likely blank/loading/single-color screenshot",
+      "cover": "assets/site-previews/2026-11-07/x/2114360471176519828-official.webp",
+      "fallback_media_url": "https://cdn.prod.website-files.com/6a7ad390f189a22016c86fa4/6a7ad390f189a22016c87017_OG2.png",
+      "capture_method": "official_site_og_image_not_a_browser_screenshot"
     },
     {
       "id": "2114396765705138392",
@@ -166,8 +170,11 @@
       "final_url": "https://docky.site/",
       "title": "Docky",
       "captured_at": "2026-11-07T07:10:57.091723+00:00",
-      "status": "low_detail_capture",
-      "reason": "Likely blank/loading/single-color screenshot"
+      "status": "official_cover",
+      "reason": "Likely blank/loading/single-color screenshot",
+      "cover": "assets/site-previews/2026-11-07/x/2116164793908224262-official.webp",
+      "fallback_media_url": "https://docky.site/img/web.webp",
+      "capture_method": "public_page_img_not_browser_screenshot"
     },
     {
       "id": "2116231597402022281",
@@ -189,8 +196,11 @@
       "final_url": "https://mecha-xyz.webflow.io/",
       "title": "Mecha Capital | Robotics & AI Investment in Legacy Ind.",
       "captured_at": "2026-11-07T07:10:51.302190+00:00",
-      "status": "low_detail_capture",
-      "reason": "Likely blank/loading/single-color screenshot"
+      "status": "official_cover",
+      "reason": "Likely blank/loading/single-color screenshot",
+      "cover": "assets/site-previews/2026-11-07/x/2116455886566588907-official.webp",
+      "fallback_media_url": "https://cdn.prod.website-files.com/6a180066e6ba27b81a7ef915/6a180066e6ba27b81a7ef9c3_OG-1%20(1).png",
+      "capture_method": "official_site_og_image_not_a_browser_screenshot"
     },
     {
       "id": "2116482832008728860",
@@ -237,8 +247,11 @@
       "final_url": "https://www.seeedstudio.com/regoogles?__cf_chl_rt_tk=FKGY5u0WqmgR2AO0E4Khnw.q7bcNdj051EPwhKtewJ8-1794035434-1.0.1.1-y56FEePxYS5BqpP0.G5JT.KAg3StwK74exnO.y0UUwQ",
       "title": "Just a moment...",
       "captured_at": "2026-11-07T07:10:33.522649+00:00",
-      "status": "blocked_or_error_page",
-      "reason": "Just a moment... "
+      "status": "official_cover",
+      "reason": "Just a moment... ",
+      "cover": "assets/site-previews/2026-11-07/x/2117163296197579094-official.webp",
+      "fallback_media_url": "https://279070161-sketch.github.io/reGoggles/assets/images/1-1-%E5%8F%B3%E4%BE%A7%E4%BB%B0%E8%A7%86%E6%97%A0%E9%95%9C%E7%89%87.webp",
+      "capture_method": "official_site_og_image_not_a_browser_screenshot"
     },
     {
       "id": "2117172172707746118",
@@ -285,8 +298,11 @@
       "final_url": "https://overworldaudio.com/",
       "title": "Overworld Audio",
       "captured_at": "2026-11-07T07:10:38.346680+00:00",
-      "status": "low_detail_capture",
-      "reason": "Likely blank/loading/single-color screenshot"
+      "status": "official_cover",
+      "reason": "Likely blank/loading/single-color screenshot",
+      "cover": "assets/site-previews/2026-11-07/previous/greensock-2117685463205171492-official.webp",
+      "fallback_media_url": "https://overworldaudio.com/cms/7e26c8ca614e1c4de677e7a6951d0d634b91b9af-og.jpg",
+      "capture_method": "official_site_og_image_not_a_browser_screenshot"
     },
     {
       "id": "greensock-2118007670582165879",
@@ -436,8 +452,11 @@
       "final_url": "https://tympanus.net/codrops/2026/04/06/building-the-maxima-therapy-website-react-gsap-and-dabbling-with-ai/",
       "title": "请稍候…",
       "captured_at": "2026-11-07T07:11:03.259954+00:00",
-      "status": "low_detail_capture",
-      "reason": "Likely blank/loading/single-color screenshot"
+      "status": "official_cover",
+      "reason": "Likely blank/loading/single-color screenshot",
+      "cover": "assets/site-previews/2026-11-07/ai/ai-maxima-official.webp",
+      "fallback_media_url": "https://tympanus.net/codrops/wp-content/uploads/2026/04/maxima-2.webp",
+      "capture_method": "official_site_og_image_not_a_browser_screenshot"
     },
     {
       "id": "ai-mihaela",
@@ -728,8 +747,11 @@
       "final_url": "https://www.dashcreative.co/",
       "title": "Dash Creative | Multi-award-winning Shopify Premier Partner",
       "captured_at": "2026-11-07T07:16:26.690323+00:00",
-      "status": "low_detail_capture",
-      "reason": "Likely blank/loading/single-color screenshot"
+      "status": "official_cover",
+      "reason": "Likely blank/loading/single-color screenshot",
+      "cover": "assets/site-previews/2026-11-07/extras/study-dash-creative-official.webp",
+      "fallback_media_url": "https://cdn.prod.website-files.com/6968e56d81d433e1858d385b/69e63a40437a432d01b7b2f2_Favicon.png",
+      "capture_method": "official_site_og_image_not_a_browser_screenshot"
     },
     {
       "id": "study-house-of-yellow",
@@ -738,8 +760,11 @@
       "final_url": "https://houseofyellow.nl/",
       "title": "HOY | House Of Yellow",
       "captured_at": "2026-11-07T07:16:18.616175+00:00",
-      "status": "low_detail_capture",
-      "reason": "Likely blank/loading/single-color screenshot"
+      "status": "official_cover",
+      "reason": "Likely blank/loading/single-color screenshot",
+      "cover": "assets/site-previews/2026-11-07/extras/study-house-of-yellow-official.webp",
+      "fallback_media_url": "https://houseofyellow.nl/wp-content/uploads/2026/05/share-image.jpg",
+      "capture_method": "official_site_og_image_not_a_browser_screenshot"
     },
     {
       "id": "study-kononenko",
@@ -748,8 +773,11 @@
       "final_url": "https://kononenkogroup.com/",
       "title": "Kononenko Architectural Bureau",
       "captured_at": "2026-11-07T07:16:11.485382+00:00",
-      "status": "low_detail_capture",
-      "reason": "Likely blank/loading/single-color screenshot"
+      "status": "official_cover",
+      "reason": "Likely blank/loading/single-color screenshot",
+      "cover": "assets/site-previews/2026-11-07/extras/study-kononenko-official.webp",
+      "fallback_media_url": "https://images.prismic.io/kononenko/ajJbI41P9HI4UmtO_hero_hd.jpg?auto=format,compress",
+      "capture_method": "official_site_og_image_not_a_browser_screenshot"
     },
     {
       "id": "study-px-push",
@@ -807,8 +835,11 @@
       "final_url": "https://hyeonsangjeon.github.io/Repolis/",
       "title": "Repolis · hyeonsangjeon's City of Repos",
       "captured_at": "2026-11-07T07:16:49.689640+00:00",
-      "status": "low_detail_capture",
-      "reason": "Likely blank/loading/single-color screenshot"
+      "status": "official_cover",
+      "reason": "Likely blank/loading/single-color screenshot",
+      "cover": "assets/site-previews/2026-11-07/extras/tech-hyeonsangjeon--Repolis-official.webp",
+      "fallback_media_url": "https://hyeonsangjeon.github.io/Repolis/assets/social-preview.png",
+      "capture_method": "official_site_og_image_not_a_browser_screenshot"
     },
     {
       "id": "tech-itsjwill--motion-primitives-website",
@@ -849,5 +880,6 @@
       "scroll": "assets/site-previews/2026-11-07/extras/tech-oso95--scroll-world-scroll.webp",
       "scroll_visual_change": 30.67
     }
-  ]
+  ],
+  "rights_note": "Official OG images, where available, are labelled official_cover, never misrepresented as browser screenshots. Rights stay with publishers."
 }
