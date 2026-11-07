@@ -25,13 +25,15 @@ Both backends receive identical Float32 vertex buffers and Uint32 indices. There
 - **Both / 双画面对照** — shows both canvases for qualitative comparison; not a controlled throughput benchmark.
 - **WebGL2 only / 仅 WebGL2** — stable fallback and compatibility check.
 - **WebGPU only / 仅 WebGPU** — tests the real native WebGPU pipeline, if supported.
-- **Sequential measurement / 顺序测试** — freezes camera, warms up each available renderer for 40 frames, then takes 120 separate frame samples. Exports local JSON with frame intervals and synchronous API-call statistics.
+- **Sequential measurement / 顺序测试** — freezes camera, warms up each available renderer for 40 frames, then takes 120 separate frame samples. After these CPU/browser samples, each backend **if it supports GPU timer queries** executes another **24 isolated render-pass GPU timing queries** with asynchronous readback. Exports JSON including unsupported, disjoint, timeout and partial sampling outcomes; never fills in invented GPU numbers.
 
-The two measurements have different meanings:
+The three measurements have different meanings:
 
 1. **JavaScript render/submit-call p95:** wall-clock JavaScript time spent inside synchronous rendering/API submission code. WebGL2 draw calls and WebGPU command encoding can enqueue actual GPU work differently. **This is not GPU execution time and not a directly comparable GPU pass benchmark.**
 2. **requestAnimationFrame interval p95:** presentation cadence including CPU, vsync, browser scheduling and compositor. **This is not GPU time.**
-3. **No independent GPU timestamp query** is collected in the first edition. No claim of raw GPU throughput, VRAM cost, hardware FPS superiority or exact color pixel equality is supported.
+3. **GPU render-pass elapsed p95 (new, conditional):** WebGPU uses the `timestamp-query` device feature and a render-pass beginning/end timestamp pair, resolved to a readback buffer and asynchronously mapped. WebGL2 uses `EXT_disjoint_timer_query_webgl2` with `TIME_ELAPSED_EXT`, polling availability and refusing disjoint results. Both timestamps are expressed in nanoseconds and converted to milliseconds. **Only the render pass is measured**; CPU preparation, upload, presentation and the rest of the game frame are outside scope.
+4. **Support boundaries:** if either API's query feature is unavailable, the lab reports `unsupported` with `null` p95 instead of invented timings. 24 queries are attempted when supported; dropped/disjoint/timed-out results reduce the collected count and are marked `partial` or `unavailable`.
+5. **No universal API ranking:** measured GPU pass times can reflect driver, backend, browser, timer precision, device clock, scene complexity and concurrent workloads. 24 pass samples are an illustrative measurement, not a certified performance comparison.
 
 Even sequential samples have confounders: background browser tasks, GPU clocks, thermal conditions and OS scheduling. / 即使分别测试，也存在时钟、浏览器和操作系统噪声，不能仅凭一次结果排名。
 
@@ -53,6 +55,16 @@ WebGPU generally requires HTTPS or localhost and a suitable adapter. This lab at
 
 **中文说明：** Windows Chrome 同场景两个后端都完成真实绘制，并顺序预热、采样通过。上述 API 调用时间与浏览器帧间隔不能解释为 GPU 算力排名；Linux 无头 SwiftShader 的 WebGPU 失败则通过独立最小程序复现过，属于测试环境的实际局限。
 
+## Real GPU timer query extension / 新增 GPU 通道计时
+
+- Source: [WebGL2 EXT_disjoint_timer_query_webgl2](https://registry.khronos.org/webgl/extensions/EXT_disjoint_timer_query_webgl2/) and [W3C WebGPU render-pass timestampWrites](https://www.w3.org/TR/webgpu/#timestamp-queries).
+- `getTimerSupport()` describes capability and a precise unsupported reason; `measureGpuPass()` performs a single independent draw plus asynchronous query readback.
+- WebGPU requests the `timestamp-query` optional device feature *only* when supported. If the feature request fails, a normal rendering device remains available without GPU timing.
+- GPU timestamps are often quantized or limited for privacy/security and implementation-defined. Small durations can have substantial quantization uncertainty.
+- **2026-11-07 first test:** Linux Chrome 157 software WebGL2 exposed the extension and completed 24/24 timer queries. In this **software renderer**, observed values are for the software stack only; **not hardware-GPU throughput evidence**. Windows Intel Xe-LPG WebGPU timestamp support and real hardware timing are tested independently from this result.
+
+`gpuPassMs` in the exported JSON stores `supported`, `method`, `requested`, `collected`, `p50Ms`, `p95Ms`, `status`, `reason`, and accepted individual `samplesMs`, so users can independently recompute percentiles. Any `null` p95 must be interpreted as missing measurement, **never 0 ms**.
+
 ## Run / 运行
 
 From repository root / 在仓库根目录运行：
@@ -67,7 +79,17 @@ Core tests / 核心测试：
 
     node --test labs/renderer-compare/test-core.mjs
 
-Optional real-browser smoke testing uses Playwright and Chrome when already installed; visiting the public site does not install any dependencies. / 网站零第三方脚本依赖，无需安装 Node 包。
+Optional real-browser smoke testing uses Playwright and Chrome when already installed; visiting the public site does not install any dependencies.
+
+[Anonymized four-density hardware test evidence / 四档实测结果](evidence/2026-11-07-intel-xe-lpg-gpu-timers.json) · [Bilingual timer-query research / 计时查询专题](../../docs/cases/gpu-browser-timestamp-queries.md)
+
+**Windows built-in Node + Chrome hardware test / Windows 无额外软件硬件验收** (new isolated Chrome profile; does not take over user's existing browser):
+
+    node labs/renderer-compare/test-cdp-windows.cjs
+
+For hard acceptance of both features on a test machine, set environment variables `OIA_REQUIRE_WEBGPU=1` and `OIA_REQUIRE_GPU_TIMESTAMPS=1`. This optional script runs a localhost-only temporary HTTP server, launches a disposable Chrome session, captures the result JSON and cleans up. It requests the experimental browser WebGPU API but uploads no user files.
+
+**Caveat:** a timestamp-query-capable device/driver is required to obtain actual GPU pass values. The script prints `supported=false` and null metrics when the optional feature is unavailable instead of claiming a pass. / 网站零第三方脚本依赖，无需安装 Node 包。
 
 ## Implementation details / 实现注意事项
 
@@ -75,7 +97,7 @@ Optional real-browser smoke testing uses Playwright and Chrome when already inst
 - WebGL2 clip-space depth is [-1,1], whereas WebGPU clip-space depth is [0,1]. The shared camera projection is converted for WebGPU.
 - A single terrain mesh and one indexed draw call are tested, not texture streaming, 3DGS, advanced LOD, GPU culling, collisions or shadows.
 - GLSL and WGSL implement near-equivalent equations, but color-space and precision differences can yield non-identical pixels. Do not claim strict image parity without measured reference renders.
-- Actual GPU performance analysis should use hardware validation, real adapter information, viewport pixels, repeated runs, warmup, and optional timestamp queries where supported.
+- GPU-pass timing is now supported where the platform offers timestamp-query/EXT_disjoint_timer_query_webgl2. Hardware comparisons still require real adapter information, matching viewport dimensions, repeated independent runs, adequate warmup and temperature/clock controls.
 
 Primary platform references: [MDN WebGPU](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API) and [GPUCanvasContext](https://developer.mozilla.org/en-US/docs/Web/API/GPUCanvasContext/configure).
 

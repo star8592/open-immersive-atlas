@@ -16,6 +16,8 @@
 
 **[Spatial Lab 03：WebGPU / WebGL2 同场景对照实验](labs/renderer-compare/)** 现已实现两套独立原生渲染管线：共用一份原创高度场几何、顶点、索引、相机和相似的 GLSL/WGSL 材质。具备四档几何面数、按后端单独渲染、顺序 40 帧预热 + 120 帧采样、JSON 结果导出。已通过几何与相机数学测试、Linux Chrome 的 WebGL2 降级测试；**另在 Windows Chrome 真实浏览器中实测两套渲染管线各连续绘制 171 帧，并分别完成 120 帧顺序采样，双方图形错误码均为零**。但 JS 提交耗时、浏览器帧间隔并非 GPU 真正执行时间，仍不据此断言哪个 API 性能更好。[技术约束和详细源码](labs/renderer-compare/README.md)。
 
+**真实 GPU 时间戳已接入第三个实验。** WebGPU 使用 `timestamp-query`，WebGL2 使用 `EXT_disjoint_timer_query_webgl2`。Intel Xe-LPG 在 Windows Chrome 中完成四档几何的两套后端计时，每档各 24/24 个有效样本，支持下载含原始采样数据的 JSON 报告。[阅读双语技术研究](docs/cases/gpu-browser-timestamp-queries.md) · [查看匿名化硬件数据](labs/renderer-compare/evidence/2026-11-07-intel-xe-lpg-gpu-timers.json)。此结果不代表所有 GPU 或游戏 WebGPU 都更快。
+
 ## 建档的三个原则
 
 **研究技术，而非搬运他人的作品。** 保留原始链接与出处，分析设计机制；不能因开源代码而默认其模型、音乐、云 API 或商标也被授权。

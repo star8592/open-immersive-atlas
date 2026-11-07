@@ -1,5 +1,6 @@
 import {createGrid,cameraFrame,sampleSummary,VERSION} from './scene.mjs';
 import {createWebGL2,createWebGPU} from './renderers.mjs';
+import {timingSummary} from './timing.mjs';
 const $=id=>document.getElementById(id);
 const glCanvas=$('canvas-gl'),gpuCanvas=$('canvas-gpu'),density=$('density'),mode=$('mode'),fog=$('fog');
 const measureBtn=$('measure'),exportBtn=$('export'),progress=$('progress'),output=$('results');
@@ -29,6 +30,12 @@ function updateUI(){
   $('call-gl').textContent=calls.webgl2.length?sampleSummary(calls.webgl2).p95Ms.toFixed(3)+' ms':'—';
   $('call-gpu').textContent=calls.webgpu.length?sampleSummary(calls.webgpu).p95Ms.toFixed(3)+' ms':'—';
   $('frames-gl').textContent=String(frames.webgl2);$('frames-gpu').textContent=String(frames.webgpu);
+  for(const [api,id,renderer] of [['webgl2','gpu-pass-gl',glRenderer],['webgpu','gpu-pass-gpu',gpuRenderer]]){
+    const timing=lastResults?.rendererModes?.[api]?.gpuPassMs;
+    const support=renderer?.getTimerSupport?.();
+    $(id).textContent=timing?.collected?timing.p95Ms.toFixed(3)+' ms / '+timing.collected:
+      support?.available?'Ready / 可测':'Unsupported / 不支持';
+  }
 }
 function available(api){return api==='webgl2'?!!glRenderer:!!gpuRenderer;}
 function renderApi(api,frame){
@@ -58,6 +65,10 @@ function snapshot(){
     glError:glRenderer?.getError()??'UNAVAILABLE',
     gpuError:gpuRenderer?.getError()??'UNAVAILABLE',
     gpuAdapter:gpuRenderer?.getAdapterInfo?.()||null,
+    gpuTimingSupport:{
+      webgl2:glRenderer?.getTimerSupport?.()||{available:false,reason:'WebGL2 unavailable'},
+      webgpu:gpuRenderer?.getTimerSupport?.()||{available:false,reason:'WebGPU unavailable'}
+    },
     benchmarkActive:!!benchmark,benchmarkResult:lastResults};
 }
 window.__oiaCompare=Object.freeze({getState:snapshot});
@@ -65,14 +76,14 @@ function endBenchmark(error=''){
   const b=benchmark;
   if(!b)return;
   if(error)b.errors.push(error);
-  lastResults={schema:'OIA-RENDER-COMPARE-1',timestamp:new Date().toISOString(),
+  lastResults={schema:'OIA-RENDER-COMPARE-2',timestamp:new Date().toISOString(),
     scene:{segments:geometry.segments,triangles:geometry.triangles,vertexCount:geometry.vertexCount,
       verticesBytes:geometry.vertexBytes,indicesBytes:geometry.indexBytes},
     resolution:{webgl2:[glCanvas.width,glCanvas.height],webgpu:[gpuCanvas.width,gpuCanvas.height]},
     fog:b.fog,rendererModes:b.results,unavailable:b.unavailable,errors:b.errors,
     system:{userAgent:navigator.userAgent,secureContext:isSecureContext,
       webgpuAdapter:gpuRenderer?.getAdapterInfo?.()||null},
-    caveat:'JS render-call time is not GPU time. rAF interval includes presentation, vsync and browser scheduling; no cross-API performance superiority claim.'};
+    caveat:'GPU pass queries (when supported) measure GPU execution scoped to a pass, not presentation, uploads, CPU calls or the full game frame. JS render-call durations and rAF frame intervals are different quantities. Unsupported, disjoint and partial results remain explicit; no universal API performance ranking.'};
   benchmark=null;measureBtn.disabled=false;exportBtn.disabled=false;
   density.disabled=false;mode.disabled=false;fog.disabled=false;$('reset').disabled=false;
   progress.textContent=error?'Measurement stopped / 测试中止: '+error:'Sequential sampling completed / 顺序采样结束';
@@ -86,7 +97,7 @@ function beginBenchmark(){
   lastResults=null;exportBtn.disabled=true;
   density.disabled=true;mode.disabled=true;fog.disabled=true;$('reset').disabled=true;
   benchmark={phases,idx:0,frame:0,warmup:40,samples:120,
-    currentCalls:[],currentIntervals:[],results:{},unavailable,errors:[],
+    currentCalls:[],currentIntervals:[],results:{},unavailable,errors:[],gpuSampling:false,
     fog:fog.checked,frozen:{...cam},lastFrame:0};
   progress.textContent='Warmup / 预热 '+phases[0]+'…';output.textContent='Measurement in progress / 正在采样…';
 }
@@ -111,8 +122,39 @@ function benchmarkFrame(now,frame){
   b.results[api]={sampleFrames:b.currentCalls.length,
     jsCallMs:sampleSummary(b.currentCalls),rafIntervalMs:sampleSummary(b.currentIntervals),
     canvasPixels:canvas.width*canvas.height};
-  b.idx++;if(b.idx>=b.phases.length){endBenchmark();return;}
+  b.idx++;if(b.idx>=b.phases.length){void measureGpuPasses(b);return;}
   b.frame=0;b.lastFrame=0;b.currentCalls=[];b.currentIntervals=[];
+}
+async function measureGpuPasses(b){
+  b.gpuSampling=true;
+  for(const api of b.phases){
+    if(benchmark!==b)return;
+    const renderer=api==='webgl2'?glRenderer:gpuRenderer;
+    const support=renderer?.getTimerSupport?.()||{available:false,reason:'Renderer unavailable'};
+    const result={...timingSummary([],24),supported:!!support.available,method:support.method||null,
+      status:support.available?'pending':'unsupported',reason:support.reason||null,samplesMs:[]};
+    b.results[api].gpuPassMs=result;
+    if(!support.available)continue;
+    const canvas=api==='webgl2'?glCanvas:gpuCanvas;
+    const camera=cameraFrame(b.frozen.yaw,b.frozen.pitch,b.frozen.distance,canvas.width/canvas.height);
+    const samples=[];let rejected=0,exception=null;
+    for(let i=0;i<24;i++){
+      if(benchmark!==b)return;
+      progress.textContent='GPU timestamp query / GPU 真正计时 '+api+' '+(i+1)+'/24';
+      try{
+        const duration=await renderer.measureGpuPass(camera,{fog:b.fog});
+        if(typeof duration==='number'&&Number.isFinite(duration)&&duration>=0)samples.push(duration);
+        else rejected++;
+      }catch(e){exception=String(e.message||e);break;}
+    }
+    Object.assign(result,timingSummary(samples,24),{
+      status:exception?'error':samples.length===24?'complete':samples.length?'partial':'unavailable',
+      reason:exception||(rejected?rejected+' GPU samples unavailable, disjoint or timed out':null),
+      rejected,
+      samplesMs:samples.map(value=>Number(value.toFixed(6)))
+    });
+  }
+  if(benchmark===b){endBenchmark();updateUI();}
 }
 function frameLoop(now){
   requestAnimationFrame(frameLoop);
@@ -123,7 +165,7 @@ function frameLoop(now){
   const active=benchmark?.frozen||cam;
   // One camera transform is used by both renderers at identical viewport dimensions.
   const fGL=cameraFrame(active.yaw,active.pitch,active.distance,glCanvas.width/glCanvas.height);
-  if(benchmark){benchmarkFrame(now,fGL);}
+  if(benchmark){if(!benchmark.gpuSampling)benchmarkFrame(now,fGL);}
   else {
     if(mode.value!=='webgpu')renderApi('webgl2',fGL);
     if(mode.value!=='webgl2'){

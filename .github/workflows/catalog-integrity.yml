@@ -34,9 +34,12 @@ jobs:
           node --check labs/renderer-compare/renderers.mjs
           node --check labs/renderer-compare/app.mjs
           node --check labs/renderer-compare/test-core.mjs
+          node --check labs/renderer-compare/timing.mjs
+          node --check labs/renderer-compare/test-timing.mjs
           node --check labs/renderer-compare/test-browser.mjs
+          node --check labs/renderer-compare/test-cdp-windows.cjs
       - name: Run shared WebGPU/WebGL2 geometry and clip tests
-        run: node --test labs/renderer-compare/test-core.mjs
+        run: node --test labs/renderer-compare/test-core.mjs labs/renderer-compare/test-timing.mjs
       - name: Check generated Markdown reproducibility
         run: |
           python3 scripts/build_catalog.py

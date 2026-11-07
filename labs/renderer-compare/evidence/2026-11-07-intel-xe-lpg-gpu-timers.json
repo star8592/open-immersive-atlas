@@ -1,0 +1,123 @@
+{
+  "schema": "OIA_GPU_PASS_EVIDENCE_V1",
+  "date": "2026-11-07",
+  "source_ref": "feat/gpu-timestamps-20261107@c812ee6e87a04e1ddca422d213d078cdcc549e3a",
+  "environment": {
+    "os": "Windows 11",
+    "browser": "HeadlessChrome 156.0.0.0",
+    "gpu_adapter": {
+      "vendor": "intel",
+      "architecture": "xe-lpg"
+    },
+    "viewport_pixels": {
+      "width": 697,
+      "height": 300
+    },
+    "browser_flags": "--headless=new --enable-unsafe-webgpu --ignore-gpu-blocklist",
+    "chrome_profile": "disposable isolated local test profile",
+    "external_assets": false
+  },
+  "scene": "Original procedural terrain, same packed geometry, same camera, both face-culling disabled",
+  "measurement": {
+    "each_backend": "40 CPU/browser-frame warmup + 120 browser-frame samples, followed by 24 independent asynchronous GPU pass queries",
+    "webgl2_method": "EXT_disjoint_timer_query_webgl2 / TIME_ELAPSED_EXT",
+    "webgpu_method": "WebGPU timestamp-query / GPURenderPassDescriptor.timestampWrites",
+    "gpu_duration_units": "milliseconds",
+    "scope": "GPU pass/GL time elapsed for own render invocation, not total frame, GPU utilization or end-to-end runtime",
+    "status": "both timer query features available and all GPU samples read successfully",
+    "n_sessions_per_density": 1
+  },
+  "observations": [
+    {
+      "segments": 48,
+      "triangles": 4608,
+      "renderer_frames": {
+        "webgl2": 175,
+        "webgpu": 175
+      },
+      "gpu_pass_ms": {
+        "webgl2": {
+          "n": 24,
+          "p50": 0.067552,
+          "p95": 0.141927
+        },
+        "webgpu": {
+          "n": 24,
+          "p50": 0.023021,
+          "p95": 0.042344
+        }
+      }
+    },
+    {
+      "segments": 96,
+      "triangles": 18432,
+      "renderer_frames": {
+        "webgl2": 173,
+        "webgpu": 173
+      },
+      "gpu_pass_ms": {
+        "webgl2": {
+          "n": 24,
+          "p50": 0.072604,
+          "p95": 0.646041
+        },
+        "webgpu": {
+          "n": 24,
+          "p50": 0.026927,
+          "p95": 0.070572
+        }
+      }
+    },
+    {
+      "segments": 160,
+      "triangles": 51200,
+      "renderer_frames": {
+        "webgl2": 180,
+        "webgpu": 180
+      },
+      "gpu_pass_ms": {
+        "webgl2": {
+          "n": 24,
+          "p50": 0.110468,
+          "p95": 0.9675
+        },
+        "webgpu": {
+          "n": 24,
+          "p50": 0.07401,
+          "p95": 0.196145
+        }
+      }
+    },
+    {
+      "segments": 256,
+      "triangles": 131072,
+      "renderer_frames": {
+        "webgl2": 179,
+        "webgpu": 179
+      },
+      "gpu_pass_ms": {
+        "webgl2": {
+          "n": 24,
+          "p50": 0.207447,
+          "p95": 0.367187
+        },
+        "webgpu": {
+          "n": 24,
+          "p50": 0.170259,
+          "p95": 0.332289
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "One session per geometry density; independent repeated trials still required to establish confidence intervals.",
+    "WebGL2 timed scope includes GL clear, draw and state changes; WebGPU timestampWrites span an individual render pass and may not include all identical API overhead.",
+    "Browser launched with explicit experimental/unsafe WebGPU flags; standard end-user availability must be verified separately.",
+    "Graphics adapter timing granularity and timestamp quantization can differ.",
+    "Single indexed terrain mesh and modest 697x300 viewport do not represent multi-material, shadowed, animated 3D games.",
+    "Browser chrome was headless; real foreground rendering, thermals, and other GPU workloads may differ.",
+    "Timing is GPU pass duration, not frame presentation latency, total end-to-end game frame or VRAM pressure.",
+    "Do not infer WebGPU is universally faster from these p50/p95 observations."
+  ],
+  "rights": "Original public educational experiment; no private models, user identifiers, file paths, secrets or third-party assets included"
+}
