@@ -27,6 +27,12 @@
 
 **Commercial boundary:** original architecture and art only; never sell copied third-party X videos. Device compatibility/feature detection and performance evidence are mandatory before claiming the API is production-ready on a customer's browser.
 
+### Verified original media chain / 已通过用户浏览器追到的视频原作者
+
+The signed-in Z890 Chrome X post links to **[@clockmaker's X video](https://x.com/clockmaker/status/2118490890927067597/video/1)**. This precise video URL was obtained by activating the `clockmaker` reference in the original @BeyondTheBoxCN post, not guessed from the external X crawler. Original author is **Yasunobu Ikeda (池田泰延), ICS MEDIA**, and a first-party [HTML-in-Canvas technical article published by ICS MEDIA](https://ics.media/entry/260825/) provides three reproducible demonstrations: one-shot `drawElementImage`, automatic `paint/requestPaint`, and transformed yet interactive 2D DOM. / 从用户 X 原帖点开后取得准确的原作者视频链接，进一步找到 ICS 原创教程和三个演示；不得声称已对视频逐帧审核。
+
+A **private original implementation** now exists: [three premium visual web demo sources in CommerceFlow](https://github.com/star8592/CommerceFlow/tree/main/demos/premium-visual-web) — accessible to repository collaborators only. Six software-browser responsive/interaction tests passed, plus a separate Z890 Chrome157 headless SwiftShader smoke returned `WebGL2 ACTIVE` and native Canvas2D HTML-in-Canvas paint. **This is not a reproduction of @clockmaker's audiovisual work or a claim of client deployment.** / 技术方法的原创实验已完成第一版，未复制作者视频与美术作品。
+
 ## A. First 14 source-grounded inspirations / 首批 14 个可核验案例
 
 Each row includes a directly attributable creator write-up, official work or award listing; "stack" describes only what that source actually states. / 只归档来源已经披露的技术，不猜测网站后端。
