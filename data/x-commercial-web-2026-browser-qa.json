@@ -1,0 +1,83 @@
+{
+  "schema": "oia.x-web-2026.qa.v1",
+  "checked_at": "2026-11-07",
+  "device": "Z890 Ubuntu / current Chrome 157",
+  "source_ref": "https://github.com/star8592/open-immersive-atlas/blob/main/x-web-2026.html",
+  "public_url": "https://star8592.github.io/open-immersive-atlas/x-web-2026.html",
+  "browser_method": "isolated Chrome157 headless profile, local static HTTP server and GitHub Pages HTTP check; does not use the signed-in X profile",
+  "tests": [
+    {
+      "name": "public_github_pages_http",
+      "expected": 200,
+      "actual": 200,
+      "status": "pass"
+    },
+    {
+      "name": "dataset_json_http",
+      "expected": 200,
+      "actual": 200,
+      "status": "pass"
+    },
+    {
+      "name": "js_syntax_node_check",
+      "status": "pass"
+    },
+    {
+      "name": "initial_x_cards_from_two_datasets",
+      "expected": 30,
+      "actual": 30,
+      "status": "pass"
+    },
+    {
+      "name": "github_source_cards",
+      "expected": 7,
+      "actual": 7,
+      "status": "pass"
+    },
+    {
+      "name": "launch_redesign_evidence_counter",
+      "expected": 10,
+      "actual": 10,
+      "status": "pass",
+      "note": "Includes one independent 2026 conceptual project; does not represent ten confirmed client launches."
+    },
+    {
+      "name": "browser_query_industry",
+      "input": "工业",
+      "expected": "greater than zero",
+      "actual": 4,
+      "status": "pass"
+    },
+    {
+      "name": "browser_filter_launch",
+      "expected": 10,
+      "actual": 10,
+      "status": "pass"
+    },
+    {
+      "name": "browser_filter_feature_or_unknown",
+      "expected": 20,
+      "actual": 20,
+      "status": "pass"
+    },
+    {
+      "name": "browser_filter_fintech_b2b",
+      "expected": 1,
+      "actual": 1,
+      "status": "pass"
+    },
+    {
+      "name": "mobile_width_390_no_horizontal_overflow",
+      "expected": false,
+      "actual": false,
+      "status": "pass"
+    }
+  ],
+  "limitations": [
+    "External X originals for the new 19 records were archived with precise status links but not each opened in user signed-in Chrome; logged-in X account connection independently verified.",
+    "X Explore search area did not provide semantically editable input through current Zoria browser_act, browser_action_not_supported; no false claim of having issued internal X keyword searches.",
+    "Third-party website screenshots and videos were not copied; code for the gallery does not embed external unlicensed site images.",
+    "No commercial site has been independently benchmarked for conversion or performance.",
+    "2026 archive post date does not prove original website was first published in 2026."
+  ]
+}
