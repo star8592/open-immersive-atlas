@@ -121,6 +121,7 @@ function loop(now){
 window.__oiaMotionQA={
   getState:()=>({ready:!!renderer,frames:state.frames,playing:state.playing,
     terrain:state.terrain,speed:state.speed,technique:state.technique,time:state.time,
+    camera:{yaw:state.yaw,pitch:state.pitch,distance:state.cameraDistance},
     ai:state.aiState.decision,stats:state.stats,renderError:state.renderError,
     acceptance:state.acceptance}),
   runAcceptance:(options)=>runAcceptance(options)
