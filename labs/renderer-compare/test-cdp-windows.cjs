@@ -109,6 +109,8 @@ async function main(){
       const t=measure.gpuPassMs;
       assert.ok(t,'GPU timer result must be present even when unsupported');
       assert.equal(t.requested,24);
+      assert.equal(t.samplesMs.length,t.collected,'Raw GPU samples must match collected count');
+      assert.ok(t.samplesMs.every(n=>Number.isFinite(n)&&n>=0),'Raw GPU sample values must be valid');
       if(t.supported&&t.collected===0&&process.env.OIA_REQUIRE_GPU_TIMESTAMPS==='1')
         throw Error(api+' advertised GPU timestamps but none were collected: '+(t.reason||t.status));
       if(!t.supported)assert.equal(t.p95Ms,null,'Unsupported timers must be null');
