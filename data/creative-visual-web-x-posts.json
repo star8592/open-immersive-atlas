@@ -2,7 +2,7 @@
   "schema": "oia-creative-visual-web-x-posts-v1",
   "as_of": "2026-11-07",
   "purpose": "Bilingual evidence-indexed X posts about premium visual websites, not third-party content redistribution",
-  "total_records": 11,
+  "total_records": 12,
   "verified_archive_records": 10,
   "uninspected_seed_records": 0,
   "source_feeds": [
@@ -54,8 +54,12 @@
         "embedded_video_present": true,
         "embedded_video_frames_inspected": false,
         "technical_primary_reference": "https://developer.chrome.com/blog/html-in-canvas",
-        "framework_support_reference": "https://developer.chrome.com/docs/web-platform/html-in-canvas"
-      }
+        "framework_support_reference": "https://developer.chrome.com/docs/web-platform/html-in-canvas",
+        "embedded_video_original_link_followed_in_logged_in_chrome": true,
+        "embedded_video_frame_review": "not_completed",
+        "technical_author_study": "https://ics.media/entry/260825/"
+      },
+      "related_creator_video_url": "https://x.com/clockmaker/status/2118490890927067597/video/1"
     },
     {
       "id": "greensock-2117685463205171492",
@@ -280,8 +284,34 @@
       "browser_validation": "not_run",
       "license_review": "pending",
       "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "clockmaker-2118490890927067597",
+      "author": "clockmaker (IKEDA Yasunobu / 池田泰延)",
+      "work": "HTML-in-Canvas demonstration video",
+      "posted_on": null,
+      "original_post_url": "https://x.com/clockmaker/status/2118490890927067597/video/1",
+      "archived_post_url": null,
+      "site_url": "https://ics.media/entry/260825/",
+      "evidence_level": "linked-video-url-confirmed-from-original-X-post-via-logged-in-browser;frames-not-inspected",
+      "summary": {
+        "zh": "从 BeyondTheBoxCN 原帖直接点击其嵌入的 @clockmaker 视频，核实跳转到这个真实 X 视频状态；视频画面尚未逐帧核查。关联的 ICS 原创教程演示 live HTML、paint/requestPaint 及2D几何交互。",
+        "en": "Followed the embedded @clockmaker video link directly from the authenticated X post; URL verified, individual frames not audited. Related ICS MEDIA tutorial demonstrates live DOM, requestPaint and 2D hit-testing."
+      },
+      "declared_stack": [
+        "HTML-in-Canvas",
+        "Canvas2D",
+        "drawElementImage",
+        "requestPaint"
+      ],
+      "commercial_fit": "可操作动态网页/营销交互/交互式产品配置器",
+      "original_video_rehosted": false,
+      "local_reproduction": "partial-original-Canvas2D-prototype-in-private-commerceflow",
+      "browser_validation": "Chrome157-headless-SwiftShader-feature-activated",
+      "license_review": "original-media-not-redistributable",
+      "reviewed_on": "2026-11-07"
     }
   ],
-  "original_x_browser_verified_records": 1,
+  "original_x_browser_verified_records": 2,
   "source_strategy": "Prefer Zoria/DevControl's already authorized Z890 Chrome session for original X posts first; if this is unavailable, mark pending and use web/third-party archive as fallback. Do not infer login failure from external web crawler 403."
 }
