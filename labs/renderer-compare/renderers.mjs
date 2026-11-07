@@ -104,8 +104,14 @@ export function convertClipToWebGPU(glVP){
 }
 export async function createWebGPU(canvas,geometry){
   if(!navigator.gpu)throw Error('WebGPU API unavailable (HTTPS and a supported browser are required)');
-  const adapter=await navigator.gpu.requestAdapter({powerPreference:'low-power'});
+  const adapter=await navigator.gpu.requestAdapter({powerPreference:'high-performance'});
   if(!adapter)throw Error('Browser provided no compatible WebGPU adapter');
+  const info=adapter.info||{};
+  const rendererName=[info.vendor,info.architecture,info.description].filter(Boolean).join(' ');
+  const software=/swiftshader|llvmpipe|lavapipe|software/i.test(rendererName);
+  if(software&&!new URL(location.href).searchParams.has('allowSoftwareWebGPU')){
+    throw Error('Only a software WebGPU adapter is available ('+rendererName+'). Comparison disabled to protect WebGL2; open on hardware or use ?allowSoftwareWebGPU for diagnostic-only testing.');
+  }
   const device=await adapter.requestDevice();
   const ctx=canvas.getContext('webgpu');
   if(!ctx){device.destroy();throw Error('WebGPU canvas unavailable');}
@@ -133,12 +139,14 @@ export async function createWebGPU(canvas,geometry){
   device.queue.writeBuffer(ib,0,geometry.indices);
   const bind=device.createBindGroup({layout:pipeline.getBindGroupLayout(0),entries:[{binding:0,resource:{buffer:ub}}]});
   const uniforms=new Float32Array(24);
-  let depth=null,w=0,h=0,lost=false,disposed=false;
-  device.lost.then(()=>{lost=true;}).catch(()=>{lost=true;});
+  let depth=null,w=0,h=0,lost=false,disposed=false,lostReason='',deviceError='';
+  device.addEventListener('uncapturederror',event=>{deviceError=event.error?.message||'Uncaptured GPU error';});
+  device.lost.then(info=>{lost=true;lostReason=(info?.reason||'unknown')+': '+(info?.message||'device lost');})
+    .catch(e=>{lost=true;lostReason=e?.message||'device lost';});
   return{
     api:'WebGPU',
     render(frame,flags){
-      if(disposed||lost)throw Error('WebGPU device lost or renderer destroyed');
+      if(disposed||lost||deviceError)throw Error('WebGPU unavailable: '+(lostReason||deviceError||'renderer destroyed'));
       if(w!==canvas.width||h!==canvas.height){
         depth?.destroy();w=canvas.width;h=canvas.height;
         depth=device.createTexture({size:[w,h],format:'depth24plus',usage:GPUTextureUsage.RENDER_ATTACHMENT});
@@ -157,7 +165,7 @@ export async function createWebGPU(canvas,geometry){
       pass.drawIndexed(geometry.indices.length);pass.end();
       device.queue.submit([encoder.finish()]);
     },
-    getError:()=>lost?'DEVICE_LOST':0,
+    getError:()=>lost?lostReason||'DEVICE_LOST':deviceError||0,
     destroy(){if(disposed)return;disposed=true;depth?.destroy();vb.destroy();ib.destroy();ub.destroy();ctx.unconfigure();device.destroy();}
   };
 }
