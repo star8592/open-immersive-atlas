@@ -9,7 +9,23 @@
 
 **English:** Curate outstanding visual websites and first-party creator posts, annotated with verifiable engineering mechanisms, legal reuse boundaries, independent original study ideas and practical device tests. Prioritize art direction plus working interaction; no redistribution of another studio's production work.
 
-**Seed awaiting primary-post inspection / 尚待读取正文的原始 X 线索:** https://x.com/BeyondTheBoxCN/status/2118704959223116082 — X returned 403 to this research pass; **do not infer video contents, framework or author from this URL**.
+**Original X post now independently text-verified in existing signed-in Chrome / 原帖已通过已登录设备核验正文：** [@BeyondTheBoxCN / status 2118704959223116082](https://x.com/BeyondTheBoxCN/status/2118704959223116082). The first external text fetch returned 403, but this is *not* an access failure for the user's existing Z890 Chrome session. A DevControl/Zoria browser snapshot successfully read the original Chinese post and discussion. Topic: **Chrome 157 HTML-in-Canvas**; embedded @clockmaker video seen in the DOM, frames not yet independently examined. The Chrome developer blog independently confirms stable API shipping on 2026-10-26. / Z890 已登录 Chrome 成功读取正文；最初外部网页抓取 403 并不意味着用户设备无法浏览 X，视频帧仍待逐帧核对。
+
+## Priority technology: Chrome 157 HTML-in-Canvas / 优先研究：原生可交互 HTML 进入 3D 场景
+
+**Primary evidence / 一手官方资料:** [Chrome official release, Oct 26 2026](https://developer.chrome.com/blog/html-in-canvas), [API overview](https://developer.chrome.com/docs/web-platform/html-in-canvas), [WebGL/WebGPU UI guide](https://developer.chrome.com/docs/modern-web-guidance/guides/visual-design/interactive-content-in-3d-scenes), [WICG explainer](https://github.com/WICG/html-in-canvas).
+
+**Actual user-supplied post:** Z890 existing signed-in Chrome + DevControl/Zoria browser snapshot; no new login required. It describes future 3D malls, in-world websites and factory dashboards and links embedded @clockmaker media. Independent video frame review remains outstanding.
+
+**Verified implementation:** `<canvas content="drawable">` + descendant `drawable`, Canvas2D `drawElementImage()`; for 3D, WebGL/WebGPU integration and `canvas.updateElementGeometry()` keep interactive DOM geometry aligned. Browser still supports screen readers, find-in-page and form controls per official docs. Chrome 157 ships API stable; **not** universal Chrome/Firefox/Safari equivalence. Check feature support and retain a semantic HTML experience on unsupported browsers. Three.js `THREE.HTMLTexture` is experimental; PlayCanvas, Babylon.js and PixiJS also have APIs, but require version-specific QA. / HTML 保留真实可操作性，但所有功能和兼容性都要本机测，不能凭帖子等同已验收。
+
+**Prioritized original demos / 下一批原创演示选题：**
+- **3D equipment showroom** — clickable GLB machine with live HTML specification/quotation cards bound to product hotspots; semantic normal product page fallback. / 工业设备三维展厅带原生参数表单。
+- **3D retail showroom** — original mall scene with product catalog and clickable cart, standard HTML storefront behind the immersion layer. / 3D 商场商品卡、正常的购物导航。
+- **3D operations dashboard** — fictional factory devices with interactive machine telemetry forms; fabricated test data labeled as demonstration. / 工厂数字孪生演示，不接真实控制权、不伪造生产数据。
+- **Cinematic web content composer** — WebGL shader over real editable, selectable, translatable DOM; export demo with browser-specific support checks. / 真正可选中、可编辑、可搜索的电影式网页内容。
+
+**Commercial boundary:** original architecture and art only; never sell copied third-party X videos. Device compatibility/feature detection and performance evidence are mandatory before claiming the API is production-ready on a customer's browser.
 
 ## A. First 14 source-grounded inspirations / 首批 14 个可核验案例
 
@@ -58,9 +74,34 @@ Each row includes a directly attributable creator write-up, official work or awa
 | Spatial navigation / 空间导航 | Spline or original scene + semantic HTML links | 体验馆、创意品牌 / immersive showrooms | SEO、后退导航、加载 / crawlability and page flow |
 | Interactive brand symbol / 品牌互动标志 | stateful hover/drag + shader/GSAP | B2B 品牌 / B2B brand | 花哨盖过营销 CTA / distracts from conversions |
 
+## B2. Direct X post shortlist and feed audit / 最新 X 原帖实录
+
+**Machine-readable bilingual records / 双语结构化档案：** [data/creative-visual-web-x-posts.json](../../data/creative-visual-web-x-posts.json) — **10 original X permalinks traced through a third-party archive + 1 user original X DOM-verified in signed-in Z890 Chrome**. Each item has author/date/post permalink/archived transcription/brand link/explicitly disclosed technology/rights and reproduction state. 10 archived-media records were **not independently played**; the user-supplied X source was separately text-verified directly in Chrome. / 第三方归档的10条并未逐帧播放，用户提供的一条 X 原帖则已在本机浏览器直接读取正文与评论。 / 10 条追溯 X 原帖及第三方归档的记录、1 条尚无法读取的用户原帖；我们没有冒称在 X 上独立播放了全部视频。
+
+| Work / 作品 | Original X post / 原帖 | Confirmed details / 已有依据 | How it transfers to original client work / 可学习点 |
+|---|---|---|---|
+| **Overworld Audio** | [@greensock 2026-11-04](https://x.com/greensock/status/2117685463205171492) | GSAP quote explicitly names Three.js, VueJS, WebGL; blue 3D audio-world maze and camera fly-through. / 蓝色 3D 迷宫与滚动飞行 | Original sound-studio immersive lobby / 原创声音工作室交互首页 |
+| **Jolt** | [@rafaelaugustoms 2026-11-05](https://x.com/rafaelaugustoms/status/2118061715359494310) | Author explicitly names Jolt Web as experimental, spring-driven shaders and liquid masks. / 弹簧驱动 Shader | Premium software hero with original geometry; do not promise untested production support. / 高端软件动效 |
+| **Relevo & Vinco** | [@greensock 2026-11-04](https://x.com/greensock/status/2118007670582165879) | GSAP ScrollTrigger, ScrollSmoother, SplitText, ScrollTo, SVG, reduced motion disclosed; paper embossing visual. / 压印纸纹与滚动叙事 | Industrial materials and craft manufacturer identity / 制造与印刷行业高端官网 |
+| **Plum Autumn Release** | [@tanish2k 2026-11-04](https://x.com/tanish2k/status/2117812560917561378) | Creator's seasonal release story and skydiving landing page; technical stack unverified. / 滚动跳伞叙事 | Original yearly product reveal / 年度品牌发布 |
+| **DeepBook** | [@Holographikco 2026-11-03](https://x.com/Holographikco/status/2117638168333721733) | Creator reports Awwwards Site of the Day + Developer Award, cinematic trader and monochrome product dials. / 电影化金融科技视觉 | Fintech brand launch; do not imply award or technical stack for our work. / 金融品牌官网 |
+| **Syndicator** | [@y_molodtsov 2026-11-05](https://x.com/y_molodtsov/status/2118014408110579987) | Product supporter credits designer @karlov_zip; editorial typography and UI demo. / 优质排版与真实产品展示 | High-end SaaS page without expensive WebGL / 低技术成本高设计感 |
+| **RoutingCat** | [@c_emile_c 2026-11-04](https://x.com/c_emile_c/status/2117720852821385417) | Product-builder post; cream/red typographic system + metrics UI. / 奶油色与红字的品牌系统 | Conversion-driven AI product branding / B2B产品视觉 |
+| **Simsalasim** | [@KDHabibi 2026-11-03](https://x.com/KDHabibi/status/2117578808404365701) | Founder reports site launch; neon gradients and portrait cards. / 渐变摄影与大卡片 | Consumer tech branding / 消费科技视觉 |
+| **Denada** | [@orpetron 2026-11-03](https://x.com/orpetron/status/2117625777365688579) | Award curator, **not original studio**; retro static / pastel product site. / 奖项机构分享非作者技术复盘 | Food and beverage brand visuals / 食品品牌 |
+| **Shift Robotics** | [@orpetron 2026-11-03](https://x.com/orpetron/status/2117631823563932073) | Award curator, **not original studio**; full-bleed video and hardware selling points. / 硬件商品视觉叙事 | Premium physical-product showcase / 智能硬件品牌 |
+
+### Collection engines / 长期筛选入口
+
+- [WHAT NEW IN X — Landing Page Design](https://x.yrzhe.top/en/c/landing-pages): a **third-party X post index** with **252 records shown on the inspected 2026-11-07 collection page** (the index changes dynamically). Captures original permalinks and descriptions; prioritize original maker disclosure over reshare/awards. / 可通过类别筛选动效、3D、WebGL 与行业。
+- [Landing Love — collection](https://www.landing.love/collection/): full-page site recordings, category selectors for 3D / GSAP / Three.js / WebGL. **Counts vary by crawl**; directory membership alone is not a rights grant or benchmark. / 可逐个研究可交互页面完整体验。
+- [Codrops author case studies](https://tympanus.net/codrops/tag/case-study/): source-grounded implementation notes and production postmortems; pair with creator posts. / 由演示回溯作者工程复盘。
+
+**Verification discipline / 来源证据分层：** author X post mirrored by independent index ≠ original platform opened; original creator's technology disclosure ≠ our own reproducing the website; visual style resemblance ≠ asset licence or permission to reuse branded work. / 账号内容、真实技术和版权授权严格区分。
+
 ## C. X post watchlist, evidence levels / X 帖子雷达与证据等级
 
-**Seed: 1 permalink, uninspected** — [@BeyondTheBoxCN / status 2118704959223116082](https://x.com/BeyondTheBoxCN/status/2118704959223116082). Original content was inaccessible via this research environment on 2026-11-07. It remains a **pending item**; zero stack claims.
+**Seed: original X post directly text-inspected / 原帖已直接读取** — [@BeyondTheBoxCN / status 2118704959223116082](https://x.com/BeyondTheBoxCN/status/2118704959223116082). Existing Z890 signed-in Chrome accessible via DevControl/Zoria; post explains interactive HTML surfaces inside Canvas and imagines an explorable 3D mall, in-game live website and 3D factory operations UI. The attached @clockmaker video appeared in accessibility metadata; visuals not independently frame-audited. Official Chrome reference: [HTML-in-Canvas in Chrome 157](https://developer.chrome.com/blog/html-in-canvas). Browser support: Chrome 157+ and capability-dependent; implement detection and normal DOM fallback. / 已用真实登录设备核验正文，Chrome 157 正式上线不意味着所有浏览器兼容。
 
 **Discovery lanes / 持续检索线路：**
 - X keyword combinations: `("interactive website" OR "creative developer" OR "immersive website") (threejs OR WebGL OR GSAP)`, `"website breakdown" "shader"`, `"built this site" "React Three Fiber"`, `"scroll storytelling" "portfolio"`; inspect creator links and the actual runnable website.
