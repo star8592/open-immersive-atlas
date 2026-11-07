@@ -85,6 +85,18 @@ async function main(){
     assert.equal(initial.available.webgl2,true,'WebGL2 baseline unavailable');
     assert.equal(initial.triangles,18432);
     if(process.env.OIA_REQUIRE_WEBGPU==='1')assert.equal(initial.available.webgpu,true,'Hardware WebGPU is required for this run');
+    const selected=String(process.env.OIA_GRID_SEGMENTS||'96');
+    if(!['48','96','160','256'].includes(selected))throw Error('OIA_GRID_SEGMENTS must be 48, 96, 160 or 256');
+    if(selected!=='96'){
+      await evaluate('(()=>{const e=document.getElementById("density");e.value="'+selected+'";e.dispatchEvent(new Event("change"))})()');
+      let updated={};
+      for(let i=0;i<70;i++){
+        await wait(180);updated=await state();
+        if(updated.ready&&updated.triangles===Number(selected)**2*2)break;
+      }
+      assert.equal(updated.triangles,Number(selected)**2*2,'Density rebuild was not completed');
+      assert.equal(updated.ready,true,'Density reload must be complete before benchmark');
+    }
     await evaluate('document.getElementById("measure").click()');
     let finished={};
     for(let i=0;i<160;i++){await wait(300);finished=await state();if(finished.benchmarkResult)break;}
