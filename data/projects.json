@@ -2072,6 +2072,127 @@
         "MIT"
       ],
       "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "wildward-coop-expedition",
+      "name": "Wildward — Co-op Wilderness Expedition",
+      "category": "experiences",
+      "website": "https://x.com/PlayWildward/status/2118723059444297933",
+      "repository": null,
+      "evidence": "creator-notes",
+      "evidence_url": "https://x.com/PlayWildward/status/2118672374379717001",
+      "upstream_license": "Indie game promotional clips; no source or reuse license verified; do not conflate @PlayWildward with the unrelated-seeming medieval fantasy website",
+      "summary": {
+        "zh": "2026年11月公开展示的一至四人合作荒野探险项目，视频展示越野车、程序化草地、森林与河流环境。",
+        "en": "A newly announced 1–4 player cooperative wilderness expedition with Jeep driving, procedural grass and simulated rivers."
+      },
+      "strength": {
+        "zh": "原账号多段视频将车身重量感、地面起伏、植被形变、水面涉水与有氛围的远近景组合成连续的探索镜头。",
+        "en": "The creator's clips combine terrain-reactive Jeep driving, grass contact, water splashes and coherent near-to-far environment composition."
+      },
+      "learning": {
+        "zh": "研究车轮接触/悬架、植被动态形变、可模拟河流水面以及高度场地形；所有具体引擎与源码实现暂未确认。",
+        "en": "Study wheel contact and suspension, deformable grass, simulated water and terrain cohesion; specific engine and source remain unverified."
+      },
+      "tags": [
+        "procedural-world",
+        "co-op",
+        "vehicle-physics",
+        "simulated-water",
+        "grass-interaction",
+        "camera"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "evan-wallace-webgl-water",
+      "name": "Evan Wallace — WebGL Water",
+      "category": "infrastructure",
+      "website": "https://madebyevan.com/webgl-water/",
+      "repository": "https://github.com/evanw/webgl-water",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/evanw/webgl-water/blob/master/index.html",
+      "upstream_license": "MIT notice in repository index.html; third-party tile texture, cubemaps and other visual assets have separate rights",
+      "summary": {
+        "zh": "经典浏览器交互水体技术实验，以二维高度场和 GPU 波浪模拟呈现反射、折射及焦散。",
+        "en": "A foundational browser water experiment using GPU heightfield waves, reflections, refractions and caustics."
+      },
+      "strength": {
+        "zh": "用户可直接扰动水面或移动浸水球体，原始代码公开，便于研究水面状态与光学着色如何分离。",
+        "en": "Public source allows direct study of interactive water disturbances, moving objects and separate wave/optical shading."
+      },
+      "learning": {
+        "zh": "学习高度速度双场、交互冲量和 Fresnel/焦散；泳池范例不能直接当成真实流动河流。",
+        "en": "Learn height/velocity fields, impulses, Fresnel optics and caustics; a pool demo is not automatically a flowing river."
+      },
+      "tags": [
+        "water",
+        "webgl",
+        "heightfield",
+        "caustics",
+        "simulation"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "jeantimex-webgpu-water",
+      "name": "Jean Timex (Su) — WebGPU Water",
+      "category": "infrastructure",
+      "website": "https://jeantimex.github.io/webgpu-water/",
+      "repository": "https://github.com/jeantimex/webgpu-water",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/jeantimex/webgpu-water/blob/main/README.md",
+      "upstream_license": "MIT code verified in LICENSE; underlying demo textures and media require independent attribution",
+      "summary": {
+        "zh": "Evan Wallace 水体技术的 WebGPU 实现，包含 GPU 高度场、实时焦散和浮体交互。",
+        "en": "A WebGPU port of the classic interactive water simulation with heightfield waves, caustics and a buoyant object."
+      },
+      "strength": {
+        "zh": "公开以256×256 网格计算水位波动、以1024×1024 纹理渲染焦散并组合光学反射和折射。",
+        "en": "Documents 256×256 wave field, 1024×1024 caustics, Fresnel reflection/refraction and interactive buoyancy."
+      },
+      "learning": {
+        "zh": "先验证水波、焦散和浸水物体的统一状态，再实现河流边界、流向、轮胎涉水与泡沫。",
+        "en": "Verify coherent waves, optics and object interaction before adapting to rivers, current fields and tire splashes."
+      },
+      "tags": [
+        "webgpu",
+        "water",
+        "heightfield",
+        "caustics",
+        "buoyancy"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    {
+      "id": "swek-webgl2-water",
+      "name": "SweK — Single-file WebGL2 Water",
+      "category": "infrastructure",
+      "website": "https://github.com/HowdyKeith/swek-webgl2-water",
+      "repository": "https://github.com/HowdyKeith/swek-webgl2-water",
+      "evidence": "source-code",
+      "evidence_url": "https://github.com/HowdyKeith/swek-webgl2-water/blob/main/README.md",
+      "upstream_license": "MIT code verified in LICENSE; source-independent artwork and input assets must be checked separately",
+      "summary": {
+        "zh": "零构建依赖的单 HTML 文件 WebGL2 水体模拟，展示浮点纹理乒乓更新、波浪、Fresnel 和焦散。",
+        "en": "A standalone single-HTML WebGL2 GPU water demo with ping-pong heightfield waves, Fresnel and caustics."
+      },
+      "strength": {
+        "zh": "将高度场、差分面积焦散和光学混合集中于可阅读的单文件示例，便于最小复现与测试。",
+        "en": "A compact, inspectable implementation of float-texture heightfields, differential-area caustics and optical blending."
+      },
+      "learning": {
+        "zh": "作为 WebGL2 水体兼容基线；不要把画面波纹直接等同于真实河流流体求解或车辆浮力。",
+        "en": "Use as a reproducible WebGL2 baseline, not as proof of full flowing-water or vehicle-buoyancy physics."
+      },
+      "tags": [
+        "webgl2",
+        "water",
+        "heightfield",
+        "fresnel",
+        "single-file"
+      ],
+      "reviewed_on": "2026-11-07"
     }
   ]
 }
