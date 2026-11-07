@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Open Immersive Atlas — curated AI-assisted visual websites, bilingual commercial industry reference and source evidence.">
-<link rel="icon" href="data:,"><title>AI Visual Web · Open Immersive Atlas</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="./assets/site-preview-gallery.css"><title>AI Visual Web · Open Immersive Atlas</title>
 <style>
 :root{color-scheme:dark;--bg:#090e13;--panel:#131c26;--panel2:#152532;--text:#f2f3ec;--muted:#afbcbc;--accent:#c9ff91;--line:#304251;--pink:#d8b4fd}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:system-ui,-apple-system,"Noto Sans SC","Segoe UI",sans-serif;margin:0;background:var(--bg);color:var(--text);line-height:1.6}
@@ -35,12 +35,12 @@ footer{padding:25px 0 55px;color:#9bb0b8;border-top:1px solid #293740;font-size:
 </style></head><body><a class="skip" href="#records">跳至案例 / Skip to gallery</a><div class="shell">
 <nav><a class="logo" href="./">OIA / 开放沉浸式图谱</a><a href="./">Atlas 首页</a><a href="./x-web-2026.html">X 2026 最新商业网站</a><a href="./sources.html">Sources / 来源</a><a href="./creators.html">Creators / 作者</a><button id="lang" type="button" aria-label="Switch Chinese and English">English</button></nav>
 <main><header class="hero"><div class="eyebrow">RESEARCH COLLECTION / 2026.11.07</div><h1>AI meets <em>visual</em> business web.</h1><p id="lead" class="lead">从 AI 建站作品到真实商业应用：不只收集漂亮画面，还研究每个行业为什么需要网站、需要什么交互，以及哪些技术可以合法用于原创项目。</p><div class="stats"><div class="stat"><b id="total">—</b><small id="totalLabel">收录作品 / Examples</small></div><div class="stat"><b id="firstParty">—</b><small id="firstLabel">创作者或原项目案例 / Cases</small></div><div class="stat"><b id="prompts">—</b><small id="promptLabel">AI 提示词演示 / Prompt demos</small></div></div></header>
-<p id="note" class="note">证据分层：作者自行声明 ≠ 所有代码都由 AI 完成；演示网站 ≠ 真实付费客户或完整业务系统。本图谱只提供来源链接与独立摘要，不转载或转卖第三方素材。</p>
+<p id="note" class="note">现在每个案例展示独立 Chrome 采集的真实站点封面；有滚动前后两帧的可以切换，点击放大。截图不可用会明确标记。证据分层：作者自行声明 ≠ 所有代码都由 AI 完成；演示网站 ≠ 真实付费客户或完整业务系统。本图谱只提供来源链接与独立摘要，不转载或转卖第三方素材。</p>
 <section aria-label="Filter website examples" id="records"><div class="controls"><input id="query" type="search" autocomplete="off" placeholder="搜索行业、设计、作品、业务目标 / Search" aria-label="Search by industry or technique"><select id="vertical" aria-label="Industry filter"><option value="">全部行业 / All industries</option></select><select id="type" aria-label="Evidence type"><option value="">全部证据 / All evidence</option><option value="case">创作者/原项目案例 / Creator case</option><option value="preview">AI 单提示词演示 / Prompt preview</option></select></div>
 <div class="resultline"><span id="count" aria-live="polite">Loading / 正在加载…</span><span>OPEN RESEARCH · CC / LINKS ONLY</span></div><div id="grid" class="grid"></div><p id="empty" class="empty" hidden>没有匹配项 / No matching examples.</p></section>
 <section class="research"><h2 id="heading">继续研究，而不是只收藏图片</h2><p id="closing">本站所有案例均附有原始作品或来源入口。部分 AI 使用方式由作者或展馆申报，仍需检查技术栈、运行效果及许可。报价、客户需求、私有生产代码不放进公开库。</p><div class="researchlinks"><a href="https://github.com/star8592/open-immersive-atlas/blob/main/docs/research/2026-11-07-ai-visual-web-commercial-verticals.md">Bilingual study / 双语研究</a><a href="./data/ai-visual-commercial-sites-2026-11-07.json">Machine JSON / 结构化数据</a><a href="./sources.html">Source Radar / 技术来源</a></div></section>
 </main><footer>Open Immersive Atlas · Original descriptions, source links and independent research. External media and artworks belong to their creators.</footer>
-</div><script>
+</div><script src="./assets/site-preview-gallery.js"></script><script>
 "use strict";
 const $=id=>document.getElementById(id), el=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n;};
 let items=[],lang="zh";
@@ -56,12 +56,12 @@ $("total").textContent=items.length;$("firstParty").textContent=items.filter(x=>
 const query=$("query").value.trim().toLocaleLowerCase(),vert=$("vertical").value,type=$("type").value;
 const matched=items.filter(x=>(!vert||x.industry===vert)&&(!type||(type==="preview"?(x.source_type==="curated-gallery-lists-live-prompt-demo"):(x.source_type!=="curated-gallery-lists-live-prompt-demo")))&&(!query||[x.title,x.industry,label(x.industry),x.visual_features,x.business_goal,x.ai_origin].join(" ").toLocaleLowerCase().includes(query)));
 $("count").textContent=t.matching(matched.length);const grid=$("grid");grid.replaceChildren();$("empty").hidden=matched.length>0;$("empty").textContent=t.notFound;
-matched.forEach((x,i)=>{const card=el("article",undefined,"case");const pattern=el("div",undefined,"visual");pattern.append(el("span",String(i+1).padStart(2,"0"),"num"));card.append(pattern);const body=el("div",undefined,"casebody");const kind=x.source_type==="curated-gallery-lists-live-prompt-demo"?(lang==="zh"?"AI 预览演示":"AI prompt demo"):(lang==="zh"?"项目/创作者申报":"Creator/real-site case");body.append(el("div",label(x.industry)+" / "+kind,"meta"));body.append(el("h2",x.title));body.append(el("p",x.visual_features));body.append(el("p",(lang==="zh"?"需求目标 / ":"Business goal / ")+x.business_goal,"fit"));const links=el("div",undefined,"links");
+matched.forEach((x,i)=>{const card=el("article",undefined,"case");card.append(window.OIASiteMedia.mount(x.live_url,x.title,{year:"2026"}));const body=el("div",undefined,"casebody");const kind=x.source_type==="curated-gallery-lists-live-prompt-demo"?(lang==="zh"?"AI 预览演示":"AI prompt demo"):(lang==="zh"?"项目/创作者申报":"Creator/real-site case");body.append(el("div",label(x.industry)+" / "+kind,"meta"));body.append(el("h2",x.title));body.append(el("p",x.visual_features));body.append(el("p",(lang==="zh"?"需求目标 / ":"Business goal / ")+x.business_goal,"fit"));const links=el("div",undefined,"links");
 for(const [url,labelText,css] of [[x.live_url,t.site,""],[x.source_url,t.source,"secondary"]]){if(/^https:\/\//.test(url||"")){const a=el("a",labelText+" ↗",css);a.href=url;a.target="_blank";a.rel="noopener noreferrer";links.append(a)}}
 body.append(links);card.append(body);grid.append(card)});
 }
 async function init(){
-try{const response=await fetch("./data/ai-visual-commercial-sites-2026-11-07.json",{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const data=await response.json();if(!Array.isArray(data.examples))throw Error("Invalid record format");items=data.examples;
+try{await window.OIASiteMedia.load();const response=await fetch("./data/ai-visual-commercial-sites-2026-11-07.json",{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const data=await response.json();if(!Array.isArray(data.examples))throw Error("Invalid record format");items=data.examples;
 const industries=[...new Set(items.map(x=>x.industry))].sort();for(const x of industries){const option=document.createElement("option");option.value=x;option.textContent=label(x)+" / "+x;$("vertical").append(option)}
 render();
 }catch(err){$("count").textContent="无法载入数据 / Unable to load: "+String(err.message);$("empty").hidden=false}
