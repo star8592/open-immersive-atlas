@@ -1,0 +1,639 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-11-07",
+  "mission": {
+    "zh": "建立有一手证据、可按专长检索的原创双语创作者技术档案，不镜像或重新授权第三方作品。",
+    "en": "An evidence-led bilingual index of creators, specialties and learnable techniques; linked works retain their owners' rights."
+  },
+  "creators": [
+    {
+      "id": "theo-tillberg",
+      "name": "Theo Tillberg",
+      "handle": "@theo_t",
+      "discipline": "natural-effects",
+      "tags": [
+        "moss",
+        "shell-texturing",
+        "procedural-nature",
+        "webgl",
+        "shader",
+        "creative-coding"
+      ],
+      "profile_url": "https://github.com/ttillberg",
+      "works": [
+        {
+          "title": "Codevember 2026 / 05 Moss",
+          "url": "https://ttillberg.github.io/codevember-2026/05/",
+          "kind": "demo"
+        },
+        {
+          "title": "Moss source / 源码",
+          "url": "https://github.com/ttillberg/codevember-2026/tree/main/05",
+          "kind": "source"
+        }
+      ],
+      "specialty": {
+        "zh": "基于真实苔藓和地衣形态的互动表面覆盖、绘画笔刷、生长与复杂材质演出。",
+        "en": "Interactive moss/lichen growth, paintable surfaces and expressive multi-layer vegetation materials."
+      },
+      "reusable_methods": {
+        "zh": "学习 16 层 shell undercoat、实例化细枝、五物种权重混合、表面法线与光照；按需改造可生长苔藓系统。",
+        "en": "Study shell-textured undercoat, instanced fronds, five-species weight blending, surface normals and responsive lighting."
+      },
+      "evidence_url": "https://github.com/ttillberg/codevember-2026/blob/main/05/README.md",
+      "rights_note": "Repository MIT (credit Theo Tillberg); fonts, demo visuals and dependencies need independent notice checks.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-inspected"
+    },
+    {
+      "id": "ricardo-cabello",
+      "name": "Ricardo Cabello (mr.doob)",
+      "handle": "@mrdoob",
+      "discipline": "frameworks",
+      "tags": [
+        "threejs",
+        "webgpu",
+        "interactive-systems",
+        "codevember",
+        "creative-coding"
+      ],
+      "profile_url": "https://github.com/mrdoob",
+      "works": [
+        {
+          "title": "Three.js",
+          "url": "https://github.com/mrdoob/three.js",
+          "kind": "source"
+        },
+        {
+          "title": "Codevember 2026",
+          "url": "https://github.com/mrdoob/codevember-2026",
+          "kind": "source"
+        }
+      ],
+      "specialty": {
+        "zh": "Three.js 创建者；擅长把三维渲染、物理表现与交互实验组织为小而精的可运行作品。",
+        "en": "Creator of Three.js, known for practical browser rendering experiments and compact interactive studies."
+      },
+      "reusable_methods": {
+        "zh": "研究渲染器 API、创意编码演示、材质与动态模拟的最小复现；逐个核对每日主题源码。",
+        "en": "Study renderer architecture and self-contained procedural experiments; verify each daily piece directly from source."
+      },
+      "evidence_url": "https://github.com/mrdoob/codevember-2026/blob/main/README.md",
+      "rights_note": "Three.js MIT; individual demo source and third-party resources have separate rights.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "jaume-sanchez-elias",
+      "name": "Jaume Sánchez Elias (Spite)",
+      "handle": "@thespite",
+      "discipline": "creative-coding",
+      "tags": [
+        "shader",
+        "webgl",
+        "procedural-form",
+        "codevember",
+        "interactive-art"
+      ],
+      "profile_url": "https://github.com/spite",
+      "works": [
+        {
+          "title": "Codevember 2021 / Grass",
+          "url": "https://spite.github.io/codevember-2021/29/",
+          "kind": "demo"
+        },
+        {
+          "title": "Codevember 2021 source",
+          "url": "https://github.com/spite/codevember-2021",
+          "kind": "source"
+        }
+      ],
+      "specialty": {
+        "zh": "长期研究 WebGL 着色器、生成式形态、感知与交互反馈；也是 Codevember 主题的重要推动者。",
+        "en": "Creative WebGL and shader experiments exploring generative form, input, motion and visual perception."
+      },
+      "reusable_methods": {
+        "zh": "学习从概念词到可交互视觉实验的方法，研究动态草形与图形反馈；不能将可见源码默认视为 MIT。",
+        "en": "Study prompt-to-prototype exploration and procedural motion; public code is not automatically MIT licensed."
+      },
+      "evidence_url": "https://github.com/spite/codevember-2021/blob/main/README.md",
+      "rights_note": "2021 repository explicitly says 'Ask and we’ll see'; permission required before code reuse.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "bruno-simon",
+      "name": "Bruno Simon",
+      "handle": "@bruno_simon",
+      "discipline": "interaction",
+      "tags": [
+        "playable-portfolio",
+        "threejs",
+        "rapier",
+        "game-feel",
+        "webgpu",
+        "education"
+      ],
+      "profile_url": "https://bruno-simon.com/",
+      "works": [
+        {
+          "title": "Folio 2025",
+          "url": "https://bruno-simon.com/",
+          "kind": "demo"
+        },
+        {
+          "title": "Folio source",
+          "url": "https://github.com/brunosimon/folio-2025",
+          "kind": "source"
+        },
+        {
+          "title": "Three.js Journey",
+          "url": "https://threejs-journey.com/",
+          "kind": "article"
+        }
+      ],
+      "specialty": {
+        "zh": "可游玩的 3D 个人网站、车辆操作、物理交互、场景细节与工程教学的结合。",
+        "en": "Playable 3D portfolios combining responsive vehicle controls, physics and polished scene presentation."
+      },
+      "reusable_methods": {
+        "zh": "学习从玩家输入、摄像机、物理、世界构建到细节反馈的完整游戏体验；保留原创角色与资产。",
+        "en": "Transfer complete interaction loops, camera/physics coupling and polished audiovisual feedback into original games."
+      },
+      "evidence_url": "https://github.com/brunosimon/folio-2025",
+      "rights_note": "Folio source may be MIT; check exact repository and music/model/third-party asset notices individually; course content is not open.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "sunag",
+      "name": "Sunag",
+      "handle": "@sea3dformat",
+      "discipline": "rendering",
+      "tags": [
+        "webgpu",
+        "tsl",
+        "threejs",
+        "node-material",
+        "material-systems"
+      ],
+      "profile_url": "https://github.com/sunag",
+      "works": [
+        {
+          "title": "Three.js Shading Language",
+          "url": "https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language",
+          "kind": "article"
+        },
+        {
+          "title": "Three.js",
+          "url": "https://github.com/mrdoob/three.js",
+          "kind": "source"
+        }
+      ],
+      "specialty": {
+        "zh": "Three.js 节点着色和 TSL/WebGPU 体系的重要贡献者，使复杂材质逐步具备跨渲染后端的表达能力。",
+        "en": "A key contributor to Three.js node materials and its TSL/WebGPU ecosystem."
+      },
+      "reusable_methods": {
+        "zh": "研究 TSL 材质图、WebGPURenderer/回退语义、自定义 Shader 迁移和可测的材质兼容矩阵。",
+        "en": "Study TSL node graphs, renderer compatibility and verified WebGPU/WebGL2 material migration."
+      },
+      "evidence_url": "https://bruno-simon.com/",
+      "rights_note": "Three.js MIT; individual shaders, examples and bundled media must retain their own notices.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "paul-henschel",
+      "name": "Paul Henschel (drcmda)",
+      "handle": "@drcmda",
+      "discipline": "frameworks",
+      "tags": [
+        "react-three-fiber",
+        "r3f",
+        "drei",
+        "ecosystem",
+        "composable-scenes"
+      ],
+      "profile_url": "https://github.com/drcmda",
+      "works": [
+        {
+          "title": "React Three Fiber",
+          "url": "https://github.com/pmndrs/react-three-fiber",
+          "kind": "source"
+        },
+        {
+          "title": "gltfjsx",
+          "url": "https://github.com/pmndrs/gltfjsx",
+          "kind": "source"
+        }
+      ],
+      "specialty": {
+        "zh": "React Three Fiber 的创建者，擅长可组合的三维场景、组件化交互和前端状态管理。",
+        "en": "Creator of React Three Fiber, focused on composable 3D components and interactive React scenes."
+      },
+      "reusable_methods": {
+        "zh": "学习场景组件边界、输入与状态驱动、3D 资产封装与游戏代码组织；勿把抽象层误当美术本身。",
+        "en": "Study reusable scene modules, state-driven interaction and asset components without confusing architecture with art quality."
+      },
+      "evidence_url": "https://github.com/pmndrs/react-three-fiber/blob/master/packages/fiber/package.json",
+      "rights_note": "R3F source MIT; third-party models and examples have independent rights.",
+      "priority": "P1",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "garrett-johnson",
+      "name": "Garrett Johnson",
+      "handle": "@gkjohnson",
+      "discipline": "rendering",
+      "tags": [
+        "bvh",
+        "raycasting",
+        "path-tracing",
+        "csg",
+        "geometry"
+      ],
+      "profile_url": "https://github.com/gkjohnson",
+      "works": [
+        {
+          "title": "three-mesh-bvh",
+          "url": "https://github.com/gkjohnson/three-mesh-bvh",
+          "kind": "source"
+        },
+        {
+          "title": "three-gpu-pathtracer",
+          "url": "https://github.com/gkjohnson/three-gpu-pathtracer",
+          "kind": "source"
+        }
+      ],
+      "specialty": {
+        "zh": "高效几何查询、BVH、CSG、路径追踪和 Web 三维光照质量研究。",
+        "en": "Fast mesh queries, BVH, constructive geometry and physically based path tracing for browser 3D."
+      },
+      "reusable_methods": {
+        "zh": "学习高面数场景射线交互、空间查询和离线/渐进式高品质渲染，用实测确定加速收益。",
+        "en": "Study ray queries, spatial acceleration and progressive render comparisons without assuming runtime FPS benefits."
+      },
+      "evidence_url": "https://github.com/gkjohnson",
+      "rights_note": "Project-specific open-source licenses; sample meshes/environments are separately licensed.",
+      "priority": "P1",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "don-mccurdy",
+      "name": "Don McCurdy",
+      "handle": "@donmccurdy",
+      "discipline": "asset-pipeline",
+      "tags": [
+        "gltf",
+        "glb",
+        "compression",
+        "asset-qa",
+        "meshoptimizer"
+      ],
+      "profile_url": "https://github.com/donmccurdy",
+      "works": [
+        {
+          "title": "glTF Transform",
+          "url": "https://gltf-transform.dev/",
+          "kind": "site"
+        },
+        {
+          "title": "glTF Transform source",
+          "url": "https://github.com/donmccurdy/glTF-Transform",
+          "kind": "source"
+        }
+      ],
+      "specialty": {
+        "zh": "glTF 资产转换、压缩、编辑与规范化工具的关键作者；适合构建可靠的游戏模型工厂。",
+        "en": "Author of glTF Transform, focused on reproducible glTF editing, optimization and asset conversion."
+      },
+      "reusable_methods": {
+        "zh": "学习格式校验、纹理压缩、材质与节点清理及可复现转换，不在美术确认前强行降低视觉质量。",
+        "en": "Study reproducible format transformations and texture compression, with art-fidelity QA before optimization."
+      },
+      "evidence_url": "https://github.com/donmccurdy/glTF-Transform/blob/main/README.md",
+      "rights_note": "glTF Transform MIT; input/output models preserve their original asset rights.",
+      "priority": "P1",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "yuri-artiukh",
+      "name": "Yuri Artiukh (akella)",
+      "handle": "@akella",
+      "discipline": "creative-coding",
+      "tags": [
+        "shader",
+        "postprocessing",
+        "webgl",
+        "r3f",
+        "typography",
+        "lights"
+      ],
+      "profile_url": "https://tympanus.net/codrops/author/akella/",
+      "works": [
+        {
+          "title": "Codrops demos and breakdowns",
+          "url": "https://tympanus.net/codrops/author/akella/",
+          "kind": "article"
+        },
+        {
+          "title": "3D Glass Portal Card",
+          "url": "https://tympanus.net/codrops/author/akella/",
+          "kind": "article"
+        }
+      ],
+      "specialty": {
+        "zh": "擅长 Shader、镜面玻璃、体积光、文字变形和交互网页效果的源码拆解与教学。",
+        "en": "Creative developer known for shader breakdowns, glass effects, volumetric rays and animated typography."
+      },
+      "reusable_methods": {
+        "zh": "学习从参考网站拆出可验证的渲染通道、纹理坐标与后处理，再用于原创游戏场景。",
+        "en": "Extract testable shader and postprocessing mechanisms from reference work before original implementation."
+      },
+      "evidence_url": "https://tympanus.net/codrops/author/akella/",
+      "rights_note": "Article prose, demo code, images and third-party assets may have different licenses; inspect per example.",
+      "priority": "P1",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "maxime-heckel",
+      "name": "Maxime Heckel",
+      "handle": "@MaximeHeckel",
+      "discipline": "education",
+      "tags": [
+        "shader",
+        "react-three-fiber",
+        "graphics-education",
+        "interactive-diagrams"
+      ],
+      "profile_url": "https://blog.maximeheckel.com/",
+      "works": [
+        {
+          "title": "The Study of Shaders with React Three Fiber",
+          "url": "https://blog.maximeheckel.com/posts/the-study-of-shaders-with-react-three-fiber/",
+          "kind": "article"
+        }
+      ],
+      "specialty": {
+        "zh": "擅长把着色器、光照和三维图形原理拆解成能交互验证的教学可视化。",
+        "en": "Explains shaders and real-time graphics through interactive visual explanations."
+      },
+      "reusable_methods": {
+        "zh": "借鉴分步参数分析、可运行的演示、技术与视觉原因一一对应的验证方式。",
+        "en": "Use progressive visual explanations, controlled parameters and inspectable shader experiments."
+      },
+      "evidence_url": "https://blog.maximeheckel.com/",
+      "rights_note": "Educational article and demo rights require individual review; do not mirror paid or copyrighted content.",
+      "priority": "P2",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "akihiro-oyamada",
+      "name": "Akihiro Oyamada (Yomotsu)",
+      "handle": "@yomotsu",
+      "discipline": "natural-effects",
+      "tags": [
+        "vegetation",
+        "moss",
+        "rocks",
+        "lod",
+        "threejs",
+        "ground-fog"
+      ],
+      "profile_url": "https://github.com/yomotsu",
+      "works": [
+        {
+          "title": "Vegetation",
+          "url": "https://github.com/yomotsu/vegetation",
+          "kind": "source"
+        },
+        {
+          "title": "Ground Fog experiment",
+          "url": "https://yomotsu.github.io/ground-fog/",
+          "kind": "demo"
+        }
+      ],
+      "specialty": {
+        "zh": "基于 Three.js 的自然物体生成和空间渲染，涵盖树木、卵石、草花、苔藓和雾。",
+        "en": "Procedural natural objects and spatial rendering experiments with trees, pebbles, flowers, moss and fog."
+      },
+      "reusable_methods": {
+        "zh": "研究种子生成、真实碰撞几何、地表苔藓、Workers 和 LOD；以精细美术设计决定最终风格。",
+        "en": "Study seeded vegetation, grounded moss, collider separation and async generation; retain authored art direction."
+      },
+      "evidence_url": "https://github.com/yomotsu/vegetation/blob/main/README.md",
+      "rights_note": "Vegetation MIT; inspect any linked textures, 3D assets and demo rights separately.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "mike-fernandez",
+      "name": "Mike Fernandez",
+      "handle": "@Rahzell83",
+      "discipline": "natural-effects",
+      "tags": [
+        "painterly-trees",
+        "foliage",
+        "webgpu",
+        "tsl",
+        "glb-export"
+      ],
+      "profile_url": "https://github.com/MikeFernandez-Pro",
+      "works": [
+        {
+          "title": "Just a Simple Tree",
+          "url": "https://justasimpletree.com/",
+          "kind": "demo"
+        },
+        {
+          "title": "Source",
+          "url": "https://github.com/MikeFernandez-Pro/just-a-simple-tree",
+          "kind": "source"
+        }
+      ],
+      "specialty": {
+        "zh": "以分枝骨架、叶簇继承法线和纹理卡片制作风格化树木，并提供浏览器参数编辑与 GLB 导出。",
+        "en": "Procedural stylized trees using branch structures, leaf-clump normals and paintable canopy cards."
+      },
+      "reusable_methods": {
+        "zh": "研究可重建的树木物种结构、风动与跨引擎导出；保留视觉验证，避免树冠变成重复球团。",
+        "en": "Reuse botanical branching and leaf-card methods, wind and export design; verify silhouette from every angle."
+      },
+      "evidence_url": "https://github.com/MikeFernandez-Pro/just-a-simple-tree/blob/main/README.md",
+      "rights_note": "MIT source; separately credited audio, model and demonstration media retain their own rights.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "matthew-kissinger",
+      "name": "Matthew Kissinger",
+      "handle": "@matthew-kissinger",
+      "discipline": "natural-effects",
+      "tags": [
+        "grass",
+        "wind",
+        "webgpu",
+        "webgl2",
+        "tsl",
+        "interaction"
+      ],
+      "profile_url": "https://github.com/matthew-kissinger",
+      "works": [
+        {
+          "title": "Three.js Field Grass",
+          "url": "https://matthew-kissinger.github.io/threejs-field-grass/",
+          "kind": "demo"
+        },
+        {
+          "title": "Source",
+          "url": "https://github.com/matthew-kissinger/threejs-field-grass",
+          "kind": "source"
+        }
+      ],
+      "specialty": {
+        "zh": "互动风格化草地、确定性散布、多尺度风场和角色穿过时的草浪反馈。",
+        "en": "Interactive stylized grass with deterministic scatter, layered wind and settling body wakes."
+      },
+      "reusable_methods": {
+        "zh": "学习密度和地形接触规则、风场与交互形变；草叶美术纹理必须单独设计。",
+        "en": "Transfer terrain-aware density sampling, wind and responsive grass; author final leaf/grass textures separately."
+      },
+      "evidence_url": "https://github.com/matthew-kissinger/threejs-field-grass/blob/main/README.md",
+      "rights_note": "Core MIT; demonstration character and animation have CC BY 4.0 and/or Adobe terms.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "artem-sinica",
+      "name": "Artem Sinica (Sinica)",
+      "handle": "@artem_sini39436",
+      "discipline": "environment-art",
+      "tags": [
+        "tiny-delivery",
+        "vegetation",
+        "riverbank",
+        "color-script",
+        "unity",
+        "cozy-3d"
+      ],
+      "profile_url": "https://store.steampowered.com/app/3812830/Tiny_Delivery/",
+      "works": [
+        {
+          "title": "Tiny Delivery",
+          "url": "https://store.steampowered.com/app/3812830/Tiny_Delivery/",
+          "kind": "game"
+        },
+        {
+          "title": "Environment breakdown",
+          "url": "https://medium.com/@sinitsyndev/step-by-step-environment-creation-breakdown-in-unity-4073f1a73125",
+          "kind": "article"
+        }
+      ],
+      "specialty": {
+        "zh": "温暖精致的微缩自然世界，善于用植物组合、自然河岸、材质与光色营造柔和氛围。",
+        "en": "Developer of a lush cozy 3D world combining natural foliage, shorelines, material harmony and gentle lighting."
+      },
+      "reusable_methods": {
+        "zh": "学习先锁定参考图与艺术方向，再叠加可信尺度的植被生态和手工场景布局，而非照搬游戏资源。",
+        "en": "Study reference-led art direction, scale, botanical clustering, natural shores and authored composition."
+      },
+      "evidence_url": "https://medium.com/@sinitsyndev/step-by-step-environment-creation-breakdown-in-unity-4073f1a73125",
+      "rights_note": "Commercial game/art assets; creator notes are study references, not a license to copy.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "kayla-kosik",
+      "name": "Kayla Kosik",
+      "handle": "@kkosik",
+      "discipline": "environment-art",
+      "tags": [
+        "hand-painted",
+        "foliage-atlas",
+        "stylized-environment",
+        "texture-art",
+        "composition"
+      ],
+      "profile_url": "https://kkosik.artstation.com/",
+      "works": [
+        {
+          "title": "Cozy Cottage artwork",
+          "url": "https://kkosik.artstation.com/projects/KrnQA4",
+          "kind": "site"
+        },
+        {
+          "title": "Cozy Cottage breakdown",
+          "url": "https://www.exp-points.com/kayla-kosik-creating-a-stylized-cozy-cottage-in-unity",
+          "kind": "article"
+        }
+      ],
+      "specialty": {
+        "zh": "手绘植物图集、按轮廓裁切的叶片网格、场景构图、天空与环境材质统一。",
+        "en": "Environment artist specializing in hand-painted foliage atlases, silhouette-cut vegetation and cozy scenes."
+      },
+      "reusable_methods": {
+        "zh": "先绘制植物种类与材质，再建网格并合成空间与光线；不以屏幕后处理代替原始美术。",
+        "en": "Paint distinct botanical species first, map them onto trimmed geometry and compose lighting and sky coherently."
+      },
+      "evidence_url": "https://www.exp-points.com/kayla-kosik-creating-a-stylized-cozy-cottage-in-unity",
+      "rights_note": "Artwork and breakdown retain artist and third-party rights; do not copy textures or models.",
+      "priority": "P0",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    },
+    {
+      "id": "cedric-babouche",
+      "name": "Cédric Babouche",
+      "handle": "@cedric-babouche",
+      "discipline": "environment-art",
+      "tags": [
+        "watercolor",
+        "camera-mapping",
+        "art-direction",
+        "hybrid-2d-3d",
+        "dordogne"
+      ],
+      "profile_url": "https://store.steampowered.com/app/1272840/Dordogne/",
+      "works": [
+        {
+          "title": "Dordogne",
+          "url": "https://store.steampowered.com/app/1272840/Dordogne/",
+          "kind": "game"
+        },
+        {
+          "title": "Watercolor art direction interview",
+          "url": "https://automaton-media.com/en/interviews/20230621-19630/",
+          "kind": "article"
+        }
+      ],
+      "specialty": {
+        "zh": "真实水彩绘画与三维摄影机投射的融合，擅长用传统画面构成叙事氛围。",
+        "en": "Art director associated with genuine painted watercolor projected into navigable 3D scenes."
+      },
+      "reusable_methods": {
+        "zh": "研究多视角 Camera Mapping、绘画光影与叙事镜头，但自由旋转视角需额外三维材质覆盖。",
+        "en": "Study camera-mapped artwork and artistic lighting, with clear limitations for unrestricted 3D camera orbit."
+      },
+      "evidence_url": "https://automaton-media.com/en/interviews/20230621-19630/",
+      "rights_note": "Dordogne paintings and game assets are proprietary; cited interviews are not a grant of reuse rights.",
+      "priority": "P1",
+      "reviewed_on": "2026-11-07",
+      "research_status": "source-linked"
+    }
+  ]
+}
