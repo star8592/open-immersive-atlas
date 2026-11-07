@@ -59,12 +59,23 @@ async function runOne(url,extraArgs,tag){
     assert.equal(reset.camera.distance,32);
     // The measurement uses only the available API for each phase; no FPS pass threshold.
     await page.locator('#measure').click();
-    await page.waitForFunction(()=>window.__oiaCompare?.getState()?.benchmarkResult!==null,{timeout:45000});
+    await page.waitForFunction(()=>window.__oiaCompare?.getState()?.benchmarkResult!==null,{timeout:80000});
     const done=await page.evaluate(()=>window.__oiaCompare.getState());
     assert.ok(done.benchmarkResult.rendererModes.webgl2.sampleFrames===120);
     assert.ok(done.benchmarkResult.rendererModes.webgl2.jsCallMs.p95Ms>=0);
     assert.ok(done.benchmarkResult.rendererModes.webgl2.rafIntervalMs.count>0);
     if(done.available.webgpu)assert.equal(done.benchmarkResult.rendererModes.webgpu.sampleFrames,120);
+    for(const api of Object.keys(done.benchmarkResult.rendererModes)){
+      const sample=done.benchmarkResult.rendererModes[api].gpuPassMs;
+      assert.ok(sample,'Every renderer must explicitly report GPU timer support or absence');
+      assert.equal(sample.requested,24);
+      assert.ok(['complete','partial','unsupported','unavailable','error'].includes(sample.status));
+      if(sample.status==='unsupported')assert.equal(sample.p95Ms,null,'Unsupported GPU queries must not fake GPU timings');
+      if(sample.collected>0){
+        assert.ok(Number.isFinite(sample.p95Ms)&&sample.p95Ms>=0);
+        assert.equal(sample.units,'ms');
+      }
+    }
     const downloadPromise=page.waitForEvent('download');
     await page.locator('#export').click();const download=await downloadPromise;
     assert.equal(download.suggestedFilename(),'oia-webgpu-webgl2-comparison.json');
@@ -77,6 +88,7 @@ async function runOne(url,extraArgs,tag){
       available:done.available,
       webgpuStatus:await page.locator('#status-gpu').textContent(),
       scene:{triangles:done.triangles,vertices:done.vertexCount},measured:Object.keys(done.benchmarkResult.rendererModes),
+      gpuTimers:Object.fromEntries(Object.entries(done.benchmarkResult.rendererModes).map(([api,x])=>[api,x.gpuPassMs])),
       screenshot:path};
   }finally{await browser.close();}
 }
