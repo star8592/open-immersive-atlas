@@ -79,7 +79,7 @@
       },
       "status": {
         "research": "first-pass-published",
-        "prototype": "not-built",
+        "prototype": "working-diagnostic-demo",
         "game_integration": "not-verified"
       },
       "issue_url": "https://github.com/star8592/open-immersive-atlas/issues/6",
@@ -92,6 +92,14 @@
       "next_test": {
         "zh": "原创双腿骨架测试，记录滑步距离、膝盖反折与落脚误差",
         "en": "Original two-leg rig measuring planted-foot drift, knee inversion and grounding"
+      },
+      "prototype_url": "https://star8592.github.io/open-immersive-atlas/labs/motion-qa/",
+      "prototype_source": "labs/motion-qa/README.md",
+      "prototype_test": "labs/motion-qa/test-core.mjs",
+      "prototype_evidence": {
+        "unit_tests": "38/38 PASS",
+        "browser_test": "Chrome WebGL2 interactive smoke PASS",
+        "scope": "synthetic procedural rig, IK, sword phase, NPC utility and terrain; no imported humanoid or private game integration"
       }
     },
     {

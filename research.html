@@ -25,6 +25,7 @@ article h2{margin:0;font-size:1.22rem}article p{color:#d2e4eb;margin:0}.kicker{f
 let data=null,lang='zh';const $=id=>document.getElementById(id);
 const make=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 const status={zh:'研究首稿已发布 · 原创原型未开始 · 游戏集成未验证',en:'Research case published · Original prototype not built · Game integration unverified'};
+const motionStatus={zh:'合成动作诊断原型已实测通过 · 真实人物尚未集成',en:'Synthetic motion debugger tested · Real character integration unverified'};
 function render(){
  $('language').textContent=lang==='zh'?'English':'中文';
  $('lead').textContent=lang==='zh'?
@@ -42,12 +43,14 @@ function render(){
   article.append(make('div',(lang==='zh'?'分线 ':'LANE ')+String(item.number).padStart(2,'0'),'kicker'));
   article.append(make('h2',item.name[lang]));
   article.append(make('p',item.focus[lang]));
-  article.append(make('div',status[lang],'status'));
+  article.append(make('div',item.status.prototype==='working-diagnostic-demo'?motionStatus[lang]:status[lang],'status'));
   const what=make('p',(lang==='zh'?'下一项测试：':'Next test: ')+item.next_test[lang]);article.append(what);
   const links=make('div',undefined,'links');
   const study=make('a',lang==='zh'?'深入阅读 / 双语档案':'Read bilingual case');study.href='https://github.com/star8592/open-immersive-atlas/blob/main/'+item.research_file;study.rel='noopener noreferrer';
   const issue=make('a',lang==='zh'?'独立研究任务':'Independent issue');issue.href=item.issue_url;issue.rel='noopener noreferrer';
-  links.append(study,issue);article.append(links);grid.append(article);
+  links.append(study,issue);
+  if(item.prototype_url){const demo=make('a',lang==='zh'?'已验收原创实验 / 打开演示':'Open tested original prototype');demo.href=item.prototype_url;demo.rel='noopener noreferrer';links.append(demo);}
+  article.append(links);grid.append(article);
  }
 }
 $('language').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';render();});

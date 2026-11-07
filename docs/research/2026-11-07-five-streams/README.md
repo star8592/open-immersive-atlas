@@ -1,6 +1,6 @@
 # Five independent Web3D research streams · 五线并行研究
 
-**Status / 当前状态 (2026-11-07):** Five original bilingual, primary-source-linked research case notes have been committed, and five independent public GitHub issues opened. **This is five parallel research workstreams, not five continuously running autonomous agents and not five completed implementations.** / 已完成五份双语研究档案和五个独立 GitHub 任务；不冒充后台全天候智能体，也不冒充游戏功能全部落地。
+**Status / 当前状态 (2026-11-07):** Five original bilingual, primary-source-linked research case notes have been committed, and five independent public GitHub issues opened. **These are five parallel research workstreams, not continuously running autonomous agents or five finished implementations. Lane 03 now has a separately tested original synthetic motion debugger, while real character-game integration remains unverified.** / 已完成五份双语研究档案和五个独立 GitHub 任务；不冒充后台全天候智能体，也不冒充游戏功能全部落地。
 
 [Public machine-readable state / 可机器读取的五线状态](../../../data/research-lanes.json) · [OIA interactive research board / 五线网页看板](../../../research.html) · [Open original Spatial Labs / 原创技术实验](../../../labs/)
 
@@ -8,7 +8,7 @@
 |---|---|---|---|
 | **01 Physics / 碰撞导航** | [Rapier, BVH and Recast](01-terrain-collision-navigation.md) | [#4](https://github.com/star8592/open-immersive-atlas/issues/4) | Fixed-step collision course, slopes, stairs and NPC navmesh |
 | **02 Terrain / 地形 LOD** | [CDLOD, clipmaps, RTIN](02-continuous-terrain-lod.md) | [#5](https://github.com/star8592/open-immersive-atlas/issues/5) | Edge cracks, morph transitions, temporal popping across camera paths |
-| **03 Motion / 人物动作** | [Animation blending and foot IK](03-locomotion-foot-ik.md) | [#6](https://github.com/star8592/open-immersive-atlas/issues/6) | Joint-axis correctness, grounded feet, anti-skating, gait transitions |
+| **03 Motion / 人物动作** | [Animation blending and foot IK](03-locomotion-foot-ik.md) | [#6](https://github.com/star8592/open-immersive-atlas/issues/6) | [Synthetic WebGL2 motion QA prototype: 38/38 tests PASS](../../../labs/motion-qa/); real imported humanoid and private game motion remain unverified |
 | **04 Assets / 资产工厂** | [Parametric rebuild vs topology simplification](04-asset-classification-qa.md) | [#7](https://github.com/star8592/open-immersive-atlas/issues/7) | Synthetic regular/organic test assets, official glTF Validator and render QA |
 | **05 Art / 自然美术** | [Watercolor, procedural vegetation, atmosphere](05-painterly-nature.md) | [#8](https://github.com/star8592/open-immersive-atlas/issues/8) | Same-camera PBR/watercolor/ink visual ablation, blind ratings and GPU p95 |
 
