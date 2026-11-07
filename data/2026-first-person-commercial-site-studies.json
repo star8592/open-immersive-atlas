@@ -1,0 +1,114 @@
+{
+  "schema": "oia.creator-commercial-sites-2026-v1",
+  "date": "2026-11-07",
+  "count": 5,
+  "scope": "Original first-party commercial site case studies dated 2026; distinct from Twitter 19 posts; X status unknown",
+  "items": [
+    {
+      "slug": "px-push",
+      "year": 2026,
+      "date": "2026-08-07",
+      "project": "PX PUSH",
+      "industry": "Web3/Freedom-Tech design subscription",
+      "source": "https://tympanus.net/codrops/2026/08/07/the-department-is-open-building-the-px-push-website/",
+      "authors": "Lewis Webber",
+      "original_x_status": null,
+      "status": "creator-original-article-2026",
+      "tech_claimed_by_creator": [
+        "Nuxt",
+        "Three.js",
+        "GSAP",
+        "WebGL"
+      ],
+      "design_zh": "80 年代办公机器、官僚文件语言、复古结构控制和现代三维交互，让订阅式设计服务形成强烈记忆点。",
+      "commercial_zh": "适合设计订阅、B2B 创意服务、Web3 商业和高差异化咨询机构。",
+      "evidence": "first person Codrops case study; site first release date not independently audited"
+    },
+    {
+      "slug": "kononenko",
+      "year": 2026,
+      "date": "2026-09-18",
+      "project": "Kononenko Architectural Bureau",
+      "industry": "Architecture and real estate design",
+      "source": "https://tympanus.net/codrops/2026/09/18/kononenko-architectural-bureau/",
+      "authors": "Artem Shcherban / Reksa Andhika",
+      "original_x_status": null,
+      "status": "creator-original-article-2026",
+      "tech_claimed_by_creator": [
+        "Nuxt 4",
+        "SCSS",
+        "Prismic CMS",
+        "GSAP SplitText ScrollTrigger",
+        "Lenis",
+        "Three.js WebGL",
+        "Cloudflare Pages"
+      ],
+      "design_zh": "网格/列表/无限画廊三种可切换作品查看方式；草图发光显影、同一 DOM 对应多张 WebGL 平面及页面转场。",
+      "commercial_zh": "建筑事务所、地产展示、工业设计工作室高价值项目集。",
+      "evidence": "2026-09-18 author implementation article describes a full new branded website; actual X status not retrieved"
+    },
+    {
+      "slug": "house-of-yellow",
+      "year": 2026,
+      "date": "2026-09-16",
+      "project": "House of Yellow",
+      "industry": "Creative video agency",
+      "source": "https://tympanus.net/codrops/2026/09/16/house-of-yellow/",
+      "authors": "Mees Verberne",
+      "original_x_status": null,
+      "status": "creator-original-article-2026",
+      "tech_claimed_by_creator": [
+        "GSAP",
+        "Lenis",
+        "ScrollTrigger",
+        "SplitText",
+        "MorphSVG",
+        "Swup.js",
+        "Vimeo"
+      ],
+      "design_zh": "原创运动品牌体系，视频不是背景填充而是业务核心；两种项目档案视图、SVG 形变与影像联动。",
+      "commercial_zh": "短剧、视频制作公司、影视及摄影工作室的高级官网、项目档案和客户转化。",
+      "evidence": "first-person 2026 article about launch of redesigned branded studio website"
+    },
+    {
+      "slug": "chems-studio",
+      "year": 2026,
+      "date": "2026-08-08",
+      "project": "Chems Studio",
+      "industry": "Film / fashion / culture agency",
+      "source": "https://tympanus.net/codrops/2026/08/08/designing-a-flexible-digital-archive-for-chems-studios-creative-practice/",
+      "authors": "Nicolas Leuliet",
+      "original_x_status": null,
+      "status": "creator-original-article-2026",
+      "tech_claimed_by_creator": [
+        "Webflow"
+      ],
+      "design_zh": "将多年摄影、影像与创意作品重排为可探索视觉档案，保持电影作品节奏又让用户按项目查找。",
+      "commercial_zh": "广告代理、品牌影像、摄影工作室与影视制作公司网站。",
+      "evidence": "2026 original creator case study; page first launch month not separately verified"
+    },
+    {
+      "slug": "dash-creative",
+      "year": 2026,
+      "date": "2026-07-21",
+      "project": "Dash Creative — Magnetic Commerce",
+      "industry": "Brand identity / B2B commerce",
+      "source": "https://tympanus.net/codrops/2026/07/21/magnetic-commerce-building-the-dash-creative-website/",
+      "authors": "Dash Studio",
+      "original_x_status": null,
+      "status": "creator-original-article-2026",
+      "tech_claimed_by_creator": [
+        "Webflow",
+        "WebGL"
+      ],
+      "design_zh": "品牌Logo 的吸附式磁力交互，与 iOS 风格卡片动效结合；概念统一而非炫技堆叠。",
+      "commercial_zh": "品牌服务机构、B2B 电商咨询与数字创意代理。",
+      "evidence": "2026 firsthand studio-authored redesign case study"
+    }
+  ],
+  "policy": "Do not merge these into X-post count or claim precise launch date from case study publication date. No copying of site visuals or source.",
+  "sources": [
+    "https://tympanus.net/codrops/tag/case-study/",
+    "https://tympanus.net/codrops/2026/09/18/kononenko-architectural-bureau/"
+  ]
+}
