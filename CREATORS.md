@@ -1,8 +1,8 @@
 # Creative Technology People Atlas · 创意技术大师档案
 
-> **16 independent creator profiles · 2026-11-07**. Original bilingual annotations only. Profiles include creators, educators and environment artists; this is not a fame ranking or blanket asset license.
+> **16 individual creator profiles + 1 project account · 2026-11-07**. Original bilingual annotations only. Profiles include creators, educators and environment artists; this is not a fame ranking or blanket asset license.
 >
-> **16 位作者建档**。收录创作者、技术作者和环境美术师，不表示人物排名、合作关系或第三方素材可自由商用。
+> **16 位个人作者 + 1 个项目账号建档**。收录创作者、技术作者和环境美术师，不表示人物排名、合作关系或第三方素材可自由商用。
 
 [Search creators / 检索作者](creators.html) · [Machine-readable data / JSON](data/creators.json) · [Home / 首页](README.md) · [Contribute / 参与](CONTRIBUTING.md)
 
@@ -261,4 +261,18 @@
 **English**: Use progressive visual explanations, controlled parameters and inspectable shader experiments.
 
 **代表作 / Representative works**：[The Study of Shaders with React Three Fiber](https://blog.maximeheckel.com/posts/the-study-of-shaders-with-react-three-fiber/)
+
+
+## Project and studio accounts / 项目与团队账号（成员身份未核实）
+
+### Wildward (@PlayWildward) — collaborative wilderness expedition
+
+- **Official public profile / 原始账号：** https://x.com/PlayWildward
+- **Source posts / 原始视频：** [Driving, interactions & simulated water / 驾驶与模拟水](https://x.com/PlayWildward/status/2118723059444297933) · [Jeep and procedural grass / 车辆与程序化草](https://x.com/PlayWildward/status/2118672374379717001) · [Procedural world & autumn / 程序化秋季世界](https://x.com/PlayWildward/status/2118380623672787389) · [Project introduction / 项目介绍](https://x.com/PlayWildward/status/2118369897654927406)
+- **Deep technical case / 技术拆解：** [Procedural wilderness, vehicle and simulated water](docs/cases/wildward-procedural-expedition-driving-water.md)
+- **What they show / 展示能力：** 以三维越野车贯穿程序化森林、自然地形、草被交互和河流水体的多系统视觉表达；项目称支持一至四人合作。
+- **English:** A cooperative wilderness project presenting Jeep driving, terrain response, grass interaction and simulated rivers in cohesive 3D scenes.
+- **What to learn / 值得学习：** 研究车轮接地、植被动态、涉水波纹、光色构图及地表生态过渡；目前只有公开视频，真实引擎和源码未核实。
+- **Source vs unknown / 证据限制：** 作者声明程序化世界、草地交互、模拟水、1–4 人合作；未公开验证引擎、源码或真实多人联机。这个 X 账号不能无证据关联到同名中世纪奇幻网站。
+- **Rights / 权利：** Source videos are promotional posts, not open-source or reusable game assets. Do not associate with wildwardgames.com medieval-fantasy studio without direct identity proof.
 
