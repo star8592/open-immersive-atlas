@@ -57,6 +57,7 @@ function snapshot(){
     frameIntervalP95Ms:sampleSummary(intervals).p95Ms,
     glError:glRenderer?.getError()??'UNAVAILABLE',
     gpuError:gpuRenderer?.getError()??'UNAVAILABLE',
+    gpuAdapter:gpuRenderer?.getAdapterInfo?.()||null,
     benchmarkActive:!!benchmark,benchmarkResult:lastResults};
 }
 window.__oiaCompare=Object.freeze({getState:snapshot});
@@ -69,7 +70,8 @@ function endBenchmark(error=''){
       verticesBytes:geometry.vertexBytes,indicesBytes:geometry.indexBytes},
     resolution:{webgl2:[glCanvas.width,glCanvas.height],webgpu:[gpuCanvas.width,gpuCanvas.height]},
     fog:b.fog,rendererModes:b.results,unavailable:b.unavailable,errors:b.errors,
-    system:{userAgent:navigator.userAgent,secureContext:isSecureContext},
+    system:{userAgent:navigator.userAgent,secureContext:isSecureContext,
+      webgpuAdapter:gpuRenderer?.getAdapterInfo?.()||null},
     caveat:'JS render-call time is not GPU time. rAF interval includes presentation, vsync and browser scheduling; no cross-API performance superiority claim.'};
   benchmark=null;measureBtn.disabled=false;exportBtn.disabled=false;
   density.disabled=false;mode.disabled=false;fog.disabled=false;$('reset').disabled=false;
