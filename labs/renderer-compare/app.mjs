@@ -132,7 +132,7 @@ async function measureGpuPasses(b){
     const renderer=api==='webgl2'?glRenderer:gpuRenderer;
     const support=renderer?.getTimerSupport?.()||{available:false,reason:'Renderer unavailable'};
     const result={...timingSummary([],24),supported:!!support.available,method:support.method||null,
-      status:support.available?'pending':'unsupported',reason:support.reason||null};
+      status:support.available?'pending':'unsupported',reason:support.reason||null,samplesMs:[]};
     b.results[api].gpuPassMs=result;
     if(!support.available)continue;
     const canvas=api==='webgl2'?glCanvas:gpuCanvas;
@@ -150,7 +150,8 @@ async function measureGpuPasses(b){
     Object.assign(result,timingSummary(samples,24),{
       status:exception?'error':samples.length===24?'complete':samples.length?'partial':'unavailable',
       reason:exception||(rejected?rejected+' GPU samples unavailable, disjoint or timed out':null),
-      rejected
+      rejected,
+      samplesMs:samples.map(value=>Number(value.toFixed(6)))
     });
   }
   if(benchmark===b){endBenchmark();updateUI();}
