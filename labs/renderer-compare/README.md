@@ -63,7 +63,7 @@ WebGPU generally requires HTTPS or localhost and a suitable adapter. This lab at
 - GPU timestamps are often quantized or limited for privacy/security and implementation-defined. Small durations can have substantial quantization uncertainty.
 - **2026-11-07 first test:** Linux Chrome 157 software WebGL2 exposed the extension and completed 24/24 timer queries. In this **software renderer**, observed values are for the software stack only; **not hardware-GPU throughput evidence**. Windows Intel Xe-LPG WebGPU timestamp support and real hardware timing are tested independently from this result.
 
-`gpuPassMs` in the exported JSON stores `supported`, `method`, `requested`, `collected`, `p50Ms`, `p95Ms`, `status` and `reason`. Any `null` p95 must be interpreted as missing measurement, **never 0 ms**.
+`gpuPassMs` in the exported JSON stores `supported`, `method`, `requested`, `collected`, `p50Ms`, `p95Ms`, `status`, `reason`, and accepted individual `samplesMs`, so users can independently recompute percentiles. Any `null` p95 must be interpreted as missing measurement, **never 0 ms**.
 
 ## Run / 运行
 
@@ -80,6 +80,8 @@ Core tests / 核心测试：
     node --test labs/renderer-compare/test-core.mjs
 
 Optional real-browser smoke testing uses Playwright and Chrome when already installed; visiting the public site does not install any dependencies.
+
+[Anonymized four-density hardware test evidence / 四档实测结果](evidence/2026-11-07-intel-xe-lpg-gpu-timers.json) · [Bilingual timer-query research / 计时查询专题](../../docs/cases/gpu-browser-timestamp-queries.md)
 
 **Windows built-in Node + Chrome hardware test / Windows 无额外软件硬件验收** (new isolated Chrome profile; does not take over user's existing browser):
 
