@@ -79,7 +79,15 @@ Core tests / 核心测试：
 
     node --test labs/renderer-compare/test-core.mjs
 
-Optional real-browser smoke testing uses Playwright and Chrome when already installed; visiting the public site does not install any dependencies. / 网站零第三方脚本依赖，无需安装 Node 包。
+Optional real-browser smoke testing uses Playwright and Chrome when already installed; visiting the public site does not install any dependencies.
+
+**Windows built-in Node + Chrome hardware test / Windows 无额外软件硬件验收** (new isolated Chrome profile; does not take over user's existing browser):
+
+    node labs/renderer-compare/test-cdp-windows.cjs
+
+For hard acceptance of both features on a test machine, set environment variables `OIA_REQUIRE_WEBGPU=1` and `OIA_REQUIRE_GPU_TIMESTAMPS=1`. This optional script runs a localhost-only temporary HTTP server, launches a disposable Chrome session, captures the result JSON and cleans up. It requests the experimental browser WebGPU API but uploads no user files.
+
+**Caveat:** a timestamp-query-capable device/driver is required to obtain actual GPU pass values. The script prints `supported=false` and null metrics when the optional feature is unavailable instead of claiming a pass. / 网站零第三方脚本依赖，无需安装 Node 包。
 
 ## Implementation details / 实现注意事项
 
