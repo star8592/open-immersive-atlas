@@ -20,7 +20,8 @@
       "total": 12,
       "captured": 8
     },
-    "official_cover_fallbacks": 10
+    "official_cover_fallbacks": 10,
+    "real_motion_previews": 11
   },
   "sites": [
     {
@@ -47,7 +48,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/x/2114396765705138392-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/x/2114396765705138392-scroll.webp",
-      "scroll_visual_change": 126.7
+      "scroll_visual_change": 126.7,
+      "motion": "assets/site-previews/2026-11-07/motion/2114396765705138392.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 3.6,
+      "motion_codec": "H264",
+      "motion_bytes": 126536,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "2114651377561731159",
@@ -72,7 +80,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/x/2114759050886045888-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/x/2114759050886045888-scroll.webp",
-      "scroll_visual_change": 173.16
+      "scroll_visual_change": 173.16,
+      "motion": "assets/site-previews/2026-11-07/motion/2114759050886045888.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 3.6,
+      "motion_codec": "H264",
+      "motion_bytes": 161110,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "2115202683652985258",
@@ -97,7 +112,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/x/2115210467862065538-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/x/2115210467862065538-scroll.webp",
-      "scroll_visual_change": 63.23
+      "scroll_visual_change": 63.23,
+      "motion": "assets/site-previews/2026-11-07/motion/2115210467862065538.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 4.0,
+      "motion_codec": "H264",
+      "motion_bytes": 26311,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "2115210780656513043",
@@ -135,7 +157,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/x/2115554807750828071-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/x/2115554807750828071-scroll.webp",
-      "scroll_visual_change": 57.71
+      "scroll_visual_change": 57.71,
+      "motion": "assets/site-previews/2026-11-07/motion/2115554807750828071.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 4.0,
+      "motion_codec": "H264",
+      "motion_bytes": 45768,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "2115787941272555550",
@@ -148,7 +177,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/x/2115787941272555550-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/x/2115787941272555550-scroll.webp",
-      "scroll_visual_change": 128.31
+      "scroll_visual_change": 128.31,
+      "motion": "assets/site-previews/2026-11-07/motion/2115787941272555550.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 4.0,
+      "motion_codec": "H264",
+      "motion_bytes": 124838,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "2116093622051344685",
@@ -213,7 +249,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/x/2116482832008728860-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/x/2116482832008728860-scroll.webp",
-      "scroll_visual_change": 114.05
+      "scroll_visual_change": 114.05,
+      "motion": "assets/site-previews/2026-11-07/motion/2116482832008728860.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 4.0,
+      "motion_codec": "H264",
+      "motion_bytes": 201567,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "2116963894640209967",
@@ -238,7 +281,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/x/2116996185026449648-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/x/2116996185026449648-scroll.webp",
-      "scroll_visual_change": 215.3
+      "scroll_visual_change": 215.3,
+      "motion": "assets/site-previews/2026-11-07/motion/2116996185026449648.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 4.0,
+      "motion_codec": "H264",
+      "motion_bytes": 42465,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "2117163296197579094",
@@ -328,7 +378,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/previous/holographikco-2117638168333721733-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/previous/holographikco-2117638168333721733-scroll.webp",
-      "scroll_visual_change": 111.52
+      "scroll_visual_change": 111.52,
+      "motion": "assets/site-previews/2026-11-07/motion/holographikco-2117638168333721733.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 4.0,
+      "motion_codec": "H264",
+      "motion_bytes": 112372,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "kdhabibi-2117578808404365701",
@@ -341,7 +398,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/previous/kdhabibi-2117578808404365701-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/previous/kdhabibi-2117578808404365701-scroll.webp",
-      "scroll_visual_change": 86.43
+      "scroll_visual_change": 86.43,
+      "motion": "assets/site-previews/2026-11-07/motion/kdhabibi-2117578808404365701.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 4.0,
+      "motion_codec": "H264",
+      "motion_bytes": 141792,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "orpetron-2117625777365688579",
@@ -623,7 +687,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/ai/lovable-prompt-game-studio-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/ai/lovable-prompt-game-studio-scroll.webp",
-      "scroll_visual_change": 192.16
+      "scroll_visual_change": 192.16,
+      "motion": "assets/site-previews/2026-11-07/motion/lovable-prompt-game-studio.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 4.0,
+      "motion_codec": "H264",
+      "motion_bytes": 92012,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "lovable-prompt-health-saas",
@@ -674,7 +745,14 @@
       "reason": "",
       "cover": "assets/site-previews/2026-11-07/ai/lovable-prompt-recording-studio-cover.webp",
       "scroll": "assets/site-previews/2026-11-07/ai/lovable-prompt-recording-studio-scroll.webp",
-      "scroll_visual_change": 42.54
+      "scroll_visual_change": 42.54,
+      "motion": "assets/site-previews/2026-11-07/motion/lovable-prompt-recording-studio.mp4",
+      "motion_kind": "real_public_website_scroll_capture",
+      "motion_provenance": "Z890 Chrome 157 isolated profile, actual website, no sound, no original author video downloaded",
+      "motion_duration_sec": 4.0,
+      "motion_codec": "H264",
+      "motion_bytes": 25795,
+      "motion_checked": "ffprobe_codec_dimensions_duration_size_validated"
     },
     {
       "id": "lovable-prompt-salon",
@@ -881,5 +959,6 @@
       "scroll_visual_change": 30.67
     }
   ],
-  "rights_note": "Official OG images, where available, are labelled official_cover, never misrepresented as browser screenshots. Rights stay with publishers."
+  "rights_note": "Official OG images, where available, are labelled official_cover, never misrepresented as browser screenshots. Rights stay with publishers.",
+  "motion_policy": "Videos are short muted live-browser recordings of scrolling through attributed third-party websites, not synthetic interpolation, not the original author video, and not proof of site source-code performance. Original publisher rights are retained."
 }
