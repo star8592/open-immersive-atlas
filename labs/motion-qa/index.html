@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spatial Lab 04 · Motion & Tactics QA / 动作战术质量实验</title>
+<meta name="description" content="Original WebGL2 3D debug rig with measured foot contact, two-bone IK, sword socket phases, and explainable NPC decisions.">
+<link rel="icon" href="data:,">
+<style>
+:root{color-scheme:dark;--bg:#08131d;--panel:#132735;--panel2:#193543;--line:#345769;--ink:#edf6fb;--muted:#b4cdd8;--accent:#7ef3d1;--warn:#f2b96f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% -5%,#1c5061,transparent 45%),var(--bg);color:var(--ink);font:15px/1.5 system-ui,"Noto Sans SC",sans-serif}
+main{max-width:1390px;margin:auto;padding:26px 25px 55px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:.9rem}
+h1{font-size:clamp(2rem,5vw,3.65rem);letter-spacing:-.04em;line-height:1.08;margin:30px 0 12px}h1 b{color:var(--accent)}
+.lead{color:var(--muted);max-width:1000px;margin:0 0 20px}
+.workspace{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(320px,.85fr);gap:16px;align-items:start}
+.stage{border:1px solid var(--line);border-radius:19px;overflow:hidden;background:#081c27;position:relative}
+canvas{width:100%;height:590px;display:block;touch-action:none;cursor:grab}
+canvas:active{cursor:grabbing}
+.ontop{position:absolute;left:19px;top:18px;background:rgba(7,19,28,.8);border:1px solid #34546a;border-radius:10px;padding:10px 13px;pointer-events:none;font-size:.81rem;max-width:calc(100% - 38px)}
+.ontop strong{display:block;color:var(--accent)}.ontop span{color:var(--muted)}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+.metric{border:1px solid var(--line);background:var(--panel);border-radius:13px;padding:15px 12px;min-width:0}
+.metric small{display:block;color:var(--muted);font-size:.75rem}.metric b{display:block;font-size:1.29rem;margin-top:4px;overflow-wrap:anywhere}
+aside{background:linear-gradient(155deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:19px;padding:23px;display:grid;gap:16px}
+aside h2{font-size:1.14rem;margin:0}
+label{font-weight:600;display:block;font-size:.89rem;margin-bottom:6px}
+select,input[type=range],button{width:100%}select,button{background:#0d2734;color:var(--ink);border:1px solid #557184;border-radius:9px;padding:11px;font:inherit}
+button{cursor:pointer;background:#164b51;border-color:#498c83}button.secondary{background:#152b3d}
+input[type=range]{accent-color:var(--accent)}.control{display:grid;gap:3px}.fieldvalue{color:var(--accent);font-variant-numeric:tabular-nums;font-size:.8rem}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.checks{border:1px solid var(--line);background:#122430;border-radius:14px;padding:17px;margin-top:15px}
+.checks h2{margin:0 0 9px;font-size:1.05rem}.checks p{color:var(--muted);margin:0 0 8px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:340px;overflow-y:auto;color:#d7e7ef;font:12px/1.5 ui-monospace,monospace}
+.footer{color:var(--muted);font-size:.85rem;max-width:1100px;margin-top:17px}.footnote{color:var(--warn)}
+@media(max-width:930px){.workspace{grid-template-columns:1fr}canvas{height:440px}}
+@media(max-width:500px){main{padding:20px 13px 40px}aside{padding:15px}.metrics{grid-template-columns:1fr 1fr}canvas{height:350px}}
+</style></head><body><main>
+<nav><a href="../../">← OIA / 技术图谱</a><a href="../">Original Labs / 原创实验室</a><a href="https://github.com/star8592/open-immersive-atlas/tree/main/labs/motion-qa">Source / 源码</a><a href="README.md">Evidence & limits / 约束</a></nav>
+<header>
+<h1><b>Motion & Tactics</b><br>可测量的动作与战术</h1>
+<p class="lead">Spatial Lab 04 — 一套真正的 WebGL2 三维调试场景，拆分演示地形接触、固定骨长的双骨 IK、左右手语义、右手握剑与招式时间窗、可解释的 NPC 策略选择。所有人物与道具均由原创程序几何构成，不使用第三方动作素材。</p>
+</header>
+<div class="workspace"><div>
+<div class="stage"><canvas id="view" aria-label="Original WebGL2 procedural character, sword and terrain visual debugger"></canvas>
+<div class="ontop"><strong>LIVE 3D DEBUG / 实时三维诊断</strong><span>Drag to orbit · Wheel to zoom / 拖动旋转、滚轮缩放</span><div id="state">Initializing / 初始化中…</div></div></div>
+<div class="metrics">
+<div class="metric"><small>Planted foot drift / 支撑脚滑动</small><b id="drift">—</b></div>
+<div class="metric"><small>Worst IK reach error / IK 目标差</small><b id="reach">—</b></div>
+<div class="metric"><small>Sword grip gap / 剑柄握持误差</small><b id="grip">—</b></div>
+<div class="metric"><small>Attack phase / 招式阶段</small><b id="attack">—</b></div>
+<div class="metric"><small>NPC decision / 敌人决策</small><b id="npc">—</b></div>
+<div class="metric"><small>WebGL2 / GPU status</small><b id="gpu">—</b></div>
+</div>
+<section class="checks"><h2>Reproducible Quality Audit / 一键质量检查</h2>
+<p>每条动作质量指标来自实际数值计算；“通过”只证明这个原创测试夹具内的条件，不能等同于真实人物模型已经修复。</p>
+<div class="actions"><button id="audit">Run 6 checks / 执行六项检查</button><button id="export" class="secondary" disabled>Export JSON / 导出报告</button></div>
+<pre id="report">No acceptance run yet / 尚未运行验收</pre></section>
+</div>
+<aside>
+<h2>Fixture Controls / 实验控制</h2>
+<div class="control"><label for="terrain">Collider surface / 地表夹具</label>
+<select id="terrain"><option value="flat">Flat / 平地</option><option value="slope" selected>Slope / 坡地</option><option value="steps">Steps / 台阶</option></select></div>
+<div class="control"><label for="speed">Root travel speed / 根节点速度</label><input id="speed" type="range" min="0" max="1.2" step="0.05" value="0.7"><span class="fieldvalue" id="speed-value">0.70 m/s</span></div>
+<div class="control"><label for="technique">Original sword technique / 原创招式</label>
+<select id="technique"><option value="thrust">Advance & thrust / 进步刺</option><option value="diagonal">Diagonal cut / 斜劈</option><option value="parry">Cross parry / 横格</option></select></div>
+<div class="control"><label for="time">Animation time / 动作时间</label><input id="time" type="range" min="0" max="3.9" step="0.01" value="0.2"><span class="fieldvalue" id="time-value">0.20 s</span></div>
+<div class="actions"><button id="play">Pause / 暂停</button><button id="reset" class="secondary">Reset / 重置</button></div>
+<h2>Enemy Utility AI / 敌人可解释决策</h2>
+<div class="control"><label for="distance">Target distance / 目标距离</label><input id="distance" type="range" min="0.2" max="6" step="0.1" value="2.2"><span class="fieldvalue" id="distance-value">2.2 m</span></div>
+<div class="control"><label for="health">Enemy health / 敌人生命</label><input id="health" type="range" min="0" max="1" step="0.05" value="0.9"><span class="fieldvalue" id="health-value">90%</span></div>
+<div><label><input id="visible" type="checkbox" checked> Target visible / 目标可见</label></div>
+<div class="checks" style="margin:0"><div id="decision">No AI tick</div><small style="color:var(--muted)">Scores are deterministic, not an ML model / 规则分数可复现，非机器学习模型</small></div>
+</aside></div>
+<p class="footer"><span class="footnote">Scope / 范围：</span> This is procedural debugger geometry with original analytical IK and timed gestures. No imported skinned GLB, no user video, no real sword motion capture, no full physics collision engine or multiplayer AI. GPU p95 and physical game integration require separate evidence. / 此实验不声称具备真实动捕、专业剑术招式库或完整物理引擎。</p>
+</main><script type="module" src="./app.mjs"></script></body></html>
