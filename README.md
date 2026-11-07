@@ -8,6 +8,10 @@
 > **This is a curated, evidence-based index and knowledge archive — not a fork of any third-party product and not a replacement for Three.js, A-Frame, or Blender.**  
 > 本仓库是经过出处核验的双语精选技术索引，不是第三方产品镜像，也不是一个新的 3D 引擎。
 
+## Premium immersive web / 高端视觉网站技术专题
+
+**New 2026-11-07:** [Premium Visual Web Atlas — 14 source-grounded inspirations, 10 technique references, bilingual engineering breakdowns and X post watchlist](docs/research/2026-11-07-premium-visual-web-atlas.md). Public research only; private commercial service specifications are not published here. / 新增高级视觉网站技术案例库：公开搜集原创出处与实现方法，商业报价和客户项目不公开。
+
 ## Runnable code labs / 原创可运行技术实验
 
 **[Spatial Lab 01 — Procedural Terrain LOD / 原创 WebGL2 地形 LOD 实验](labs/terrain-lod/)**
