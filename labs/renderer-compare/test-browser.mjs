@@ -44,8 +44,10 @@ async function runOne(url,extraArgs,tag){
     assert.equal(second.triangles,51200);
     assert.equal(second.vertexCount,25921);
     await page.locator('#fog').uncheck();
-    await page.locator('#canvas-gl').hover();
-    await page.mouse.move(350,300);await page.mouse.down();await page.mouse.move(500,355,{steps:6});await page.mouse.up();
+    const rect=await page.locator('#canvas-gl').boundingBox();
+    assert.ok(rect?.width>100&&rect?.height>100);
+    const x=rect.x+rect.width*.42,y=rect.y+rect.height*.48;
+    await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(x+Math.min(140,rect.width*.26),y+Math.min(45,rect.height*.16),{steps:6});await page.mouse.up();
     await page.mouse.wheel(0,-230);
     await page.waitForTimeout(300);
     const moved=await page.evaluate(()=>window.__oiaCompare.getState());
