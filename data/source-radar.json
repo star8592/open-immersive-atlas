@@ -5,7 +5,7 @@
     "zh": "收集高价值的一手标准、制作复盘、玩家体验、商业发行与可授权素材，不与开源代码项目混为一谈。",
     "en": "Track first-party standards, postmortems, player experience, distribution and licensed assets separately from open-source repositories."
   },
-  "record_count": 18,
+  "record_count": 23,
   "sources": [
     {
       "id": "gdc-vault",
@@ -345,6 +345,101 @@
         "en": "Validate generated levels for reachability and pacing, not visual novelty alone."
       },
       "rights_note": "GDC sessions may be paywalled/copyrighted; reference only.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "game-ai-pro-practical-articles",
+      "category": "AI 与战斗设计",
+      "name": "Game AI Pro — Online Chapters",
+      "url": "https://www.gameaipro.com/",
+      "source_kind": "creator-book",
+      "summary": {
+        "zh": "汇集游戏 AI 从行为树、策略规划、导航到自动化 AI 测试的真实产业章节。",
+        "en": "Professional game AI chapters spanning behavior trees, tactics, navigation and automated tests."
+      },
+      "learning": {
+        "zh": "优先研究自动 AI 测试、游戏节奏、空间查询和可解释决策；章节免费阅读但不得擅自转载。",
+        "en": "Study AI tests, pacing, spatial queries and explainable decisions; free reading is not permission to rehost."
+      },
+      "rights_note": "Individual authors and CRC Press retain chapter copyrights; link only, no PDFs mirrored.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "gaffer-fixed-step",
+      "category": "物理与网络同步",
+      "name": "Gaffer On Games — Fix Your Timestep!",
+      "url": "https://www.gafferongames.com/post/fix_your_timestep/",
+      "source_kind": "author-article",
+      "summary": {
+        "zh": "Glenn Fiedler 解释固定物理时间步、渲染更新和模拟积压失控的权威技术文章。",
+        "en": "Glenn Fiedler's original guide to fixed timesteps, rendering cadence and simulation backlog."
+      },
+      "learning": {
+        "zh": "用稳定物理步长复核角色碰撞与运动，不把不同浏览器 FPS 直接送进物理积分。",
+        "en": "Design fixed-step movement tests and avoid feeding variable frame deltas into unstable physics."
+      },
+      "rights_note": "Copyright belongs to author; original summary and link only.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "gaffer-network-physics",
+      "category": "物理与网络同步",
+      "name": "Gaffer On Games — Networked Physics",
+      "url": "https://www.gafferongames.com/categories/networked-physics/",
+      "source_kind": "author-article",
+      "summary": {
+        "zh": "原作者系统讲解确定性锁步、状态快照插值、同步与网络物理的差异。",
+        "en": "Author's series on lockstep, snapshot interpolation, state synchronization and networked physics."
+      },
+      "learning": {
+        "zh": "为浏览器多人对战定义服务器权威、延迟补偿、状态重播和反作弊的实验边界。",
+        "en": "Define authoritative multiplayer, replay, interpolation, latency and anti-cheat experiments."
+      },
+      "rights_note": "Articles are author-copyrighted; examples require separate license review.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "level-design-book",
+      "category": "关卡设计与玩家体验",
+      "name": "The Level Design Book",
+      "url": "https://book.leveldesignbook.com/",
+      "source_kind": "professional-book",
+      "summary": {
+        "zh": "开放在线阅读的关卡设计教材，涵盖 Blockout、战斗布局、场景引导、测试与发行。",
+        "en": "Open online level-design book covering blockout, combat layouts, environmental storytelling and iteration."
+      },
+      "learning": {
+        "zh": "在堆美术素材前先完成可玩的布局草图、战斗路线与玩家动线。",
+        "en": "Build playable blockouts and combat sightlines before expensive final environment art."
+      },
+      "rights_note": "Book pages are CC BY-NC-SA 4.0, not a blanket commercial reuse grant.",
+      "reviewed_on": "2026-11-07",
+      "verification": "first-party-source-reviewed",
+      "replication": "not-claimed"
+    },
+    {
+      "id": "game-programming-patterns",
+      "category": "游戏架构与生产工程",
+      "name": "Game Programming Patterns — Robert Nystrom",
+      "url": "https://gameprogrammingpatterns.com/",
+      "source_kind": "author-book",
+      "summary": {
+        "zh": "作者公开免费网页阅读版，讲游戏循环、状态、事件队列、数据局部性与对象池。",
+        "en": "Author's online book on game loops, state, event queues, data locality and object pools."
+      },
+      "learning": {
+        "zh": "为游戏状态切换、战斗事件、对象复用和运行时调度建立可维护设计依据。",
+        "en": "Apply game loops, event queues, object reuse and data-oriented design where measurable."
+      },
+      "rights_note": "Free-to-read web chapters are copyrighted; do not mirror or sell the book content.",
       "reviewed_on": "2026-11-07",
       "verification": "first-party-source-reviewed",
       "replication": "not-claimed"
