@@ -145,6 +145,7 @@ export async function createWebGPU(canvas,geometry){
     .catch(e=>{lost=true;lostReason=e?.message||'device lost';});
   return{
     api:'WebGPU',
+    getAdapterInfo:()=>({vendor:String(info.vendor||''),architecture:String(info.architecture||''),device:String(info.device||''),description:String(info.description||'')}),
     render(frame,flags){
       if(disposed||lost||deviceError)throw Error('WebGPU unavailable: '+(lostReason||deviceError||'renderer destroyed'));
       if(w!==canvas.width||h!==canvas.height){
