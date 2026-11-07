@@ -14,7 +14,7 @@
 
 **[Spatial Lab 02：GLB/glTF 离线资产检查台](labs/glb-inspector/)** 已完成：在浏览器拖入模型，检查 GLB 分块、BufferView、Accessor、网格引用、节点与变换异常，提供英文/中文问题清单和 JSON 报告。**文件只在本地浏览器处理、不上传，不请求模型携带的外部链接。** 已通过 15 项核心测试和独立 Chrome 交互测试。这是基本结构预检，不是 Khronos 完整标准认证和模型外观验收。[查看边界与源码](labs/glb-inspector/README.md)。
 
-**[Spatial Lab 03：WebGPU / WebGL2 同场景对照实验](labs/renderer-compare/)** 现已实现两套独立原生渲染管线：共用一份原创高度场几何、顶点、索引、相机和相似的 GLSL/WGSL 材质。具备四档几何面数、按后端单独渲染、顺序 40 帧预热 + 120 帧采样、JSON 结果导出。已通过几何与相机数学测试、WebGL2 真浏览器与软件 WebGPU 安全降级测试；目前不把 JS 提交耗时与浏览器帧间隔误称 GPU 帧时，也不宣称已经完成真实硬件 WebGPU 性能验收。[技术约束和详细源码](labs/renderer-compare/README.md)。
+**[Spatial Lab 03：WebGPU / WebGL2 同场景对照实验](labs/renderer-compare/)** 现已实现两套独立原生渲染管线：共用一份原创高度场几何、顶点、索引、相机和相似的 GLSL/WGSL 材质。具备四档几何面数、按后端单独渲染、顺序 40 帧预热 + 120 帧采样、JSON 结果导出。已通过几何与相机数学测试、Linux Chrome 的 WebGL2 降级测试；**另在 Windows Chrome 真实浏览器中实测两套渲染管线各连续绘制 171 帧，并分别完成 120 帧顺序采样，双方图形错误码均为零**。但 JS 提交耗时、浏览器帧间隔并非 GPU 真正执行时间，仍不据此断言哪个 API 性能更好。[技术约束和详细源码](labs/renderer-compare/README.md)。
 
 ## 建档的三个原则
 
