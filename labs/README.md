@@ -8,6 +8,8 @@ These experiments are original educational implementations with reproducible con
 
 | [Spatial Lab 02 — GLB Asset Inspector](glb-inspector/) | Local glTF/GLB structural preflight; bounded parsing, bilingual findings, JSON export / 结构检查与诊断导出 | 15/15 Node core tests + independent headless Chrome upload/export/privacy smoke pass; **not** official Khronos certification / 通过结构及浏览器验收，非官方完整认证 |
 
+| [Spatial Lab 03 — WebGPU vs WebGL2](renderer-compare/) | Identical original terrain geometry, two shader pipelines, sequential sampling and adapter fallback / 同场景双后端、顺序测试与故障回退 | 8/8 deterministic tests, WebGL2 browser smoke & software fallback PASS; hardware WebGPU remains unverified / 核心与 WebGL2 验收通过，硬件 WebGPU 待测 |
+
 Run locally / 本地打开：from the repository root, run "python3 -m http.server 8000" and visit http://localhost:8000/labs/terrain-lod/.
 
 Every new lab must include source, a bilingual technical note, non-specialist controls, explicit known limitations, and a test script or objective repeatable test instructions. / 每个新实验必须包含源码、双语说明、交互操作、已知限制与验收方法。
