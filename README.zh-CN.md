@@ -4,7 +4,7 @@
 
 **我们不是在复刻一个 Three.js，而是在建立一座可持续增长的 3D 技术图书馆。** 收录高质量三维网站、交互游戏、AI 三维工具、渲染算法、开源游戏引擎、资产制作与验收工具。每个项目都有中英文介绍、独特优势、值得学习的实现机制、原作者链接与许可证信息。
 
-**四大分类：** 沉浸式 3D 作品｜AI 3D 工厂｜框架与游戏引擎｜渲染、物理与工程基础设施。当前收录 **66** 条，按真实一手证据和较谨慎的许可表述建档。
+**四大分类：** 沉浸式 3D 作品｜AI 3D 工厂｜框架与游戏引擎｜渲染、物理与工程基础设施。当前收录 **73** 条，按真实一手证据和较谨慎的许可表述建档。
 
 ## 原创可运行技术实验
 
@@ -60,4 +60,14 @@
 - [React Three Rapier：刚体碰撞、车辆接地、持剑与真实空间交互](docs/cases/react-three-rapier-physics.md)
 - [WebXR Samples：空间坐标、手势与设备兼容性](docs/cases/webxr-spatial-interaction.md)
 
-本轮将收录数扩至 66 条。新文档是源码研究，不代表内部项目已有测试结果或已生产发布。
+此前一轮将收录数扩至 66 条。新文档是源码研究，不代表内部项目已有测试结果或已生产发布。
+
+## 绘画式自然场景：美术优先专题（2026-11-07）
+
+这次的关键纠偏是：**不要再把风格化三维误解为廉价低面数几何拼装。** 先有植物的美术造型、手绘材质、空间分布与统一光影，再谈 LOD 和实例化优化。
+
+- [《Painterly Nature》公开研究总纲：手绘草木、树冠、地表、水岸、三维水彩融合与可执行验收](docs/cases/painterly-nature-3d-production-playbook.md)
+- [《Tiny Delivery》原作者生态场景与材质拆解](docs/cases/sinica-tiny-delivery-environment.md)
+- [草地/泥土高度混合、真实接触轮迹技术](docs/cases/sinica-terrain-heightblend-vfx.md)
+
+本轮补入 Tiny Delivery、Dordogne、Tiny Glade、Kayla Kosik Cozy Cottage，以及三项可研究的 Three.js 植被开源技术，总计 **73 条双语档案**。私有游戏代码、美术资产及专有试验继续与公开仓库隔离。
