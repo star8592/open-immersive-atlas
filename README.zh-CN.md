@@ -1,6 +1,6 @@
 # Open Immersive Atlas · 开放沉浸式技术图谱
 
-[English / 主 README](README.md) · [一手资料与行业情报雷达](sources.html) · [五线并行研究看板](research.html) · [完整双语目录](CATALOG.md) · [交互检索页](index.html) · [作者技术图谱](creators.html) · [作者档案目录](CREATORS.md)
+[AI 高级商业网站案例检索 / AI Visual Web](ai-web.html) · [English / 主 README](README.md) · [一手资料与行业情报雷达](sources.html) · [五线并行研究看板](research.html) · [完整双语目录](CATALOG.md) · [交互检索页](index.html) · [作者技术图谱](creators.html) · [作者档案目录](CREATORS.md)
 
 **我们不是在复刻一个 Three.js，而是在建立一座可持续增长的 3D 技术图书馆。** 收录高质量三维网站、交互游戏、AI 三维工具、渲染算法、开源游戏引擎、资产制作与验收工具。每个项目都有中英文介绍、独特优势、值得学习的实现机制、原作者链接与许可证信息。
 
