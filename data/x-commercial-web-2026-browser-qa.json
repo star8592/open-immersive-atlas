@@ -71,6 +71,24 @@
       "expected": false,
       "actual": false,
       "status": "pass"
+    },
+    {
+      "name": "creator_first_person_2026_cases_render",
+      "expected": 5,
+      "actual": 5,
+      "status": "pass"
+    },
+    {
+      "name": "total_rendered_card_count_with_sources",
+      "expected": 42,
+      "actual": 42,
+      "status": "pass"
+    },
+    {
+      "name": "pinned_commit_fetch_for_latest_page_instead_of_stale_main_cache",
+      "expected": "42 cards in Chrome",
+      "actual": "42 cards in Chrome",
+      "status": "pass"
     }
   ],
   "limitations": [
@@ -79,5 +97,9 @@
     "Third-party website screenshots and videos were not copied; code for the gallery does not embed external unlicensed site images.",
     "No commercial site has been independently benchmarked for conversion or performance.",
     "2026 archive post date does not prove original website was first published in 2026."
-  ]
+  ],
+  "last_checked_at": "2026-11-07",
+  "additional_primary_author_cases": 5,
+  "source_study_json": "data/2026-first-person-commercial-site-studies.json",
+  "public_url_update_note": "GitHub Pages may cache previous main revision briefly after commit; local test used content-addressed raw GitHub commit 842333be0fdf8381f82d723438026aa06ddca81d."
 }
