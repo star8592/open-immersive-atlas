@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
+<meta name="description" content="Open Immersive Atlas source radar: verified original technical standards, game postmortems, licensing, player experience and distribution research.">
+<title>Original Source Radar · OIA</title>
+<style>
+:root{color-scheme:dark;--bg:#08121b;--panel:#132635;--line:#305266;--text:#ebf4f7;--mute:#afc5d2;--accent:#89ead5}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 75% 0,#1c4451,transparent 45%),var(--bg);color:var(--text);font:15px/1.65 system-ui,"Noto Sans SC",sans-serif}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+main{max-width:1200px;margin:auto;padding:24px 22px 75px}nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:.9rem}
+nav div{display:flex;gap:18px;flex-wrap:wrap}h1{font-size:clamp(2rem,5vw,3.8rem);letter-spacing:-.035em;line-height:1.09;margin:43px 0 15px}
+h1 em{font-style:normal;color:var(--accent)}.intro{max-width:900px;color:var(--mute);font-size:1.07rem}
+.filters{display:flex;flex-wrap:wrap;gap:11px;margin:24px 0}input,select,button{font:inherit;color:var(--text);background:var(--panel);border:1px solid #466478;border-radius:10px;padding:11px 13px}
+input{flex:1 1 290px}select{min-width:210px}button{cursor:pointer;background:#244c52;border-color:#568d81}
+.summary{color:var(--mute);margin:13px 0 19px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(315px,1fr));gap:15px}
+article{display:flex;flex-direction:column;gap:9px;background:linear-gradient(135deg,#183747,#10212f);border:1px solid var(--line);border-radius:15px;padding:21px;min-height:270px}
+.tag{font-size:.79rem;color:var(--accent);font-weight:700;letter-spacing:.07em}article h2{font-size:1.13rem;margin:0}
+article p{color:#d9e9ef;margin:0}.small{font-size:.83rem;color:var(--mute)}
+article .links{margin-top:auto;padding-top:11px;font-size:.95rem}.warning{color:var(--mute);margin-top:26px;border-top:1px solid var(--line);padding-top:18px}
+@media(max-width:500px){main{padding:21px 15px 55px}.grid{grid-template-columns:1fr}}
+</style></head><body><main>
+<nav><div><a href="./">← OIA / 首页</a><a href="./research.html">Five research lanes / 五线研究</a><a href="https://github.com/star8592/open-immersive-atlas/blob/main/data/source-radar.json">JSON / 数据源</a></div><button id="toggle" type="button">English</button></nav>
+<h1><em>Original Source Radar</em><br>一手资料与行业情报雷达</h1>
+<p id="intro" class="intro">不只收藏代码：同时查证游戏制作复盘、行业研究、玩家体验、浏览器标准、游戏发行和合法美术资源。不同内容使用不同证据级别，保持原作者权利。</p>
+<div class="filters"><input id="query" type="search" autocomplete="off" placeholder="检索主题、价值、原作者… / Search sources" aria-label="Search sources">
+<select id="category" aria-label="Filter by domain"><option value="">所有领域 / All categories</option></select></div>
+<p id="summary" class="summary" aria-live="polite">Loading / 正在载入…</p><div id="grid" class="grid"></div>
+<p id="disclaimer" class="warning">本页面仅列出可靠的原始资料入口及原创摘要。不自动抓取受版权保护的演讲、收费文章、私有后台或第三方素材。许可需要按具体内容核实。</p>
+</main><script>
+const $=id=>document.getElementById(id),node=(tag,txt,cls)=>{const el=document.createElement(tag);if(txt!==undefined)el.textContent=txt;if(cls)el.className=cls;return el;};
+let records=[],lang='zh';const q=$('query'),c=$('category'),grid=$('grid');
+const lead={zh:'不只收藏代码：同时查证游戏制作复盘、行业研究、玩家体验、浏览器标准、游戏发行和合法美术资源。不同内容使用不同证据级别，保持原作者权利。',
+en:'Beyond code: verified original game postmortems, industry reports, accessibility guidelines, browser standards, distribution evidence and licensed art. Respect authorship and source boundaries.'};
+const warning={zh:'这里提供的是原始资料链接与原创摘要，不复制付费演讲、私有账户数据或第三方素材。来源许可逐项核查；资料阅读并不等于已经完成技术复现。',
+en:'Original citations and summaries only; no copying of paywalled talks, private analytics or third-party art. Each resource has its own rights, and reading is not the same as independent replication.'};
+function render(){
+ $('intro').textContent=lead[lang];$('disclaimer').textContent=warning[lang];$('toggle').textContent=lang==='zh'?'English':'中文';
+ const filter=q.value.toLocaleLowerCase().trim(),selected=c.value;grid.replaceChildren();
+ const matches=records.filter(x=>(!selected||x.category===selected)&&(!filter||
+  [x.name,x.category,x.summary.zh,x.summary.en,x.learning.zh,x.learning.en,x.source_kind].join(' ').toLocaleLowerCase().includes(filter)));
+ $('summary').textContent=(lang==='zh'?'当前检索：':'Matching sources: ')+matches.length+' / '+records.length;
+ for(const item of matches){
+  const card=node('article');card.append(node('div',item.category+' · '+item.source_kind,'tag'));card.append(node('h2',item.name));
+  card.append(node('p',item.summary[lang]));card.append(node('p',(lang==='zh'?'借鉴与行动：':'What to learn: ')+item.learning[lang]));
+  card.append(node('p',item.rights_note,'small'));
+  const links=node('div',undefined,'links');const link=node('a',lang==='zh'?'查看原始资料':'Open original source');
+  link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';links.append(link);card.append(links);grid.append(card);
+ }
+ if(!matches.length)grid.append(node('p',lang==='zh'?'没有符合的资料；请更换关键词。':'No matching sources. Try a broader keyword.','small'));
+}
+$('toggle').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';render()});
+q.addEventListener('input',render);c.addEventListener('change',render);
+fetch('./data/source-radar.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{
+ if(d.schema!=='oia-primary-source-radar-v1'||!Array.isArray(d.sources))throw Error('Unsupported data schema');
+ records=d.sources;
+ for(const category of [...new Set(records.map(x=>x.category))].sort()){
+  const opt=node('option',category);opt.value=category;c.append(opt);
+ }render();
+}).catch(err=>{$('summary').textContent='Failed to load sources / 无法载入数据: '+err.message});
+</script></body></html>
