@@ -15,7 +15,7 @@ function normalizeUrl(u){
 }
 function put(entry){
  const keys=[entry.url,entry.final_url,...(entry.aliases||[])].map(normalizeUrl).filter(Boolean);
- for(const key of keys)if(!entries.has(key)||entry.status==="captured")entries.set(key,entry);
+ for(const key of keys)if(!entries.has(key)||(entry.status==="captured"||entry.status==="official_cover"))entries.set(key,entry);
 }
 async function load(){
  if(manifestLoaded)return entries;
@@ -50,7 +50,7 @@ function dialog(){
  const top=el("div","oia-dialog-head");const ttl=el("strong");
  ttl.id="oia-image-caption";const close=el("button","oia-dialog-close","关闭 ×");close.type="button";close.addEventListener("click",()=>box.close());top.append(ttl,close);
  const body=el("div","oia-dialog-body");const image=el("img");image.id="oia-image-large";image.alt="真实网站截图";body.append(image);
- const foot=el("div","oia-dialog-foot");const text=el("span",null,"来自真实网站的浏览器截图；原站版权归创作者");const buttons=el("div");
+ const foot=el("div","oia-dialog-foot");const text=el("span",null,"截图或网站官方公开配图；原站版权归创作者");const buttons=el("div");
  const swap=el("button","oia-dialog-swap","查看滚动后的画面");swap.type="button";swap.id="oia-image-swap";
  const original=el("a",null,"打开原始网站 ↗");original.id="oia-image-site";original.rel="noopener noreferrer";original.target="_blank";buttons.append(swap,document.createTextNode("　"),original);foot.append(text,buttons);body.append(foot);box.append(top,body);document.body.append(box);
  box.addEventListener("click",ev=>{if(ev.target===box)box.close()});
@@ -63,24 +63,24 @@ function preview(entry,title,url){
  const c=secureAsset(entry.cover),s=secureAsset(entry.scroll);
  if(!c)return;
  function update(){large.src=alt&&s?s:c;swap.textContent=alt?"返回首屏截图":"查看滚动后的画面";swap.disabled=!s}
- box.querySelector("#oia-image-caption").textContent=title;
+ box.querySelector("#oia-image-caption").textContent=title+(entry.status==="official_cover"?" · 官方预览配图（非网页截图）":" · 真实网页截图");
  original.href=url&&/^https:\/\//.test(url)?url:entry.url;
  alt=false;swap.onclick=()=>{alt=!alt;update()};update();
  if(!box.open)box.showModal()
 }
 function mount(url,label,opts={}){
  const entry=get(url);
- if(!entry||entry.status!=="captured"||!secureAsset(entry.cover)){
+ if(!entry||!["captured","official_cover"].includes(entry.status)||!secureAsset(entry.cover)){
   return missing(entry?.reason||"已记录，后续重试采集");
  }
  const shell=el("div","snapshot-shell");
- shell.dataset.screenshotSource="chrome";
+ shell.dataset.screenshotSource=entry.status==="official_cover"?"official_metadata_image":"chrome";
  const open=el("button","snapshot-open");open.type="button";open.title="放大查看 "+label+" 的真实网页截图";open.setAttribute("aria-label",open.title);
  const cover=el("img","snapshot-cover");cover.src=secureAsset(entry.cover);cover.alt=label+"：浏览器实拍首屏";cover.loading="lazy";cover.decoding="async";open.append(cover);
  if(secureAsset(entry.scroll)){
   const scroll=el("img","snapshot-scroll");scroll.src=secureAsset(entry.scroll);scroll.alt="";scroll.loading="lazy";scroll.decoding="async";open.append(scroll)
  }
- const labelBadge=el("span","snapshot-label",(opts.kind||"真实网站截图")+" · "+(opts.year||"2026"));open.append(labelBadge);
+ const labelBadge=el("span","snapshot-label",(entry.status==="official_cover"?"官网公开预览图（非截图）":(opts.kind||"真实网站截图"))+" · "+(opts.year||"2026"));open.append(labelBadge);
  open.onclick=()=>preview(entry,label,url);
  shell.append(open);
  if(secureAsset(entry.scroll)){
