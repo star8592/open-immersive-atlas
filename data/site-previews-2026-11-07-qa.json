@@ -1,0 +1,85 @@
+{
+  "schema": "oia.site_visual_gallery_qa.v1",
+  "date": "2026-11-07",
+  "repository": "star8592/open-immersive-atlas",
+  "public_pages": [
+    "https://star8592.github.io/open-immersive-atlas/x-web-2026.html",
+    "https://star8592.github.io/open-immersive-atlas/ai-web.html"
+  ],
+  "method": "Z890 Google Chrome 157 isolated headless CDP source captures; public GitHub Pages re-tested with Chrome; independent official page OG fallback when capture unavailable",
+  "catalog_visual_coverage": {
+    "total_original_site_and_project_urls": 67,
+    "chrome_real_site_screenshots": 57,
+    "official_site_share_or_page_images_labeled_non_screenshots": 10,
+    "with_visual": 67,
+    "webp_assets": 110,
+    "scroll_frame_pairs": "actual post-scroll screenshots, not full motion capture"
+  },
+  "tests": [
+    {
+      "name": "manifest_references_exist_in_repo",
+      "result": "pass",
+      "actual": 67,
+      "expected": 67
+    },
+    {
+      "name": "x_web_public_http",
+      "result": "pass",
+      "http": 200
+    },
+    {
+      "name": "ai_web_public_http",
+      "result": "pass",
+      "http": 200
+    },
+    {
+      "name": "manifest_public_http",
+      "result": "pass",
+      "http": 200
+    },
+    {
+      "name": "sample_webp_public_http",
+      "result": "pass",
+      "http": 200
+    },
+    {
+      "name": "x_web_public_browser_render",
+      "result": "pass",
+      "cards": 42,
+      "cards_with_visual": 41,
+      "cards_without_linkable_site": 1
+    },
+    {
+      "name": "ai_web_local_browser_render",
+      "result": "pass",
+      "cards": 25,
+      "cards_with_visual": 25
+    },
+    {
+      "name": "local_mobile_390_x_screenshot_lightbox",
+      "result": "pass",
+      "lightbox": true,
+      "after_scroll_toggle": true,
+      "horizontal_overflow": false
+    },
+    {
+      "name": "local_mobile_390_ai_screenshot_lightbox",
+      "result": "pass",
+      "lightbox": true,
+      "after_scroll_toggle": true,
+      "horizontal_overflow": false
+    },
+    {
+      "name": "javascript_node_check",
+      "result": "pass"
+    }
+  ],
+  "caveats": [
+    "The browser screenshots reflect the current public website as loaded on 2026-11-07, not an archival guarantee of the exact page state when the X author posted.",
+    "Ten official visual images are metadata OG images or direct website page imagery, not screenshots; label transparently.",
+    "Two-frame CSS crossfade previews a post-scroll webpage state and is NOT playback of real in-site animations, video, hover effects or a recording.",
+    "One X article is a technical post without a directly linkable external commercial website; its card explicitly retains no-site-media fallback.",
+    "Third-party media is shown as credited editorial thumbnail with the site source, not relicensed for client marketing or resale.",
+    "No GitHub sources or third-party websites were copied as commercial templates."
+  ]
+}
